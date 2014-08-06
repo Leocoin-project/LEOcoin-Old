@@ -23,7 +23,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tabMain">
       <attribute name="title">
@@ -155,7 +155,7 @@
           <widget class="QValidatedLineEdit" name="proxyIp">
            <property name="maximumSize">
             <size>
-             <width>140</width>
+             <width>220</width>
              <height>16777215</height>
             </size>
            </property>
@@ -181,7 +181,7 @@
           <widget class="QLineEdit" name="proxyPort">
            <property name="maximumSize">
             <size>
-             <width>55</width>
+             <width>75</width>
              <height>16777215</height>
             </size>
            </property>
@@ -193,7 +193,7 @@
          <item>
           <widget class="QLabel" name="socksVersionLabel">
            <property name="text">
-            <string>SOCKS &amp;Version:</string>
+            <string>SOCKS &amp;V:</string>
            </property>
            <property name="textFormat">
             <enum>Qt::PlainText</enum>
@@ -205,6 +205,18 @@
          </item>
          <item>
           <widget class="QValueComboBox" name="socksVersion">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="toolTip">
             <string>SOCKS version of the proxy (e.g. 5)</string>
            </property>
@@ -217,7 +229,7 @@
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>40</width>
+             <width>10</width>
              <height>20</height>
             </size>
            </property>

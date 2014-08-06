@@ -371,15 +371,15 @@ QVariant TransactionTableModel::txAddressDecoration(const TransactionRecord *wtx
     switch(wtx->type)
     {
     case TransactionRecord::Generated:
-        return QIcon(":/icons/tx_mined");
+        return QIcon(":/icons/tmined_coins");
     case TransactionRecord::RecvWithAddress:
     case TransactionRecord::RecvFromOther:
-        return QIcon(":/icons/tx_input");
+        return QIcon(":/icons/received_coins");
     case TransactionRecord::SendToAddress:
     case TransactionRecord::SendToOther:
-        return QIcon(":/icons/tx_output");
+        return QIcon(":/icons/sent_coins");
     default:
-        return QIcon(":/icons/tx_inout");
+        return QIcon(":/icons/orange_transactions");
     }
     return QVariant();
 }

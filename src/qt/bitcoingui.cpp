@@ -49,10 +49,17 @@
 #include <QDateTime>
 #include <QMovie>
 #include <QFileDialog>
+#if QT_VERSION < 0x050000
 #include <QDesktopServices>
+#else
+#include <QStandardPaths>
+#endif
 #include <QTimer>
 #include <QDragEnterEvent>
-#include <QUrl>
+#if QT_VERSION < 0x050000
+ #include <QUrl>
+#endif
+#include <QMimeData>
 #include <QStyle>
 
 #include <iostream>
@@ -70,6 +77,48 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 {
     resize(850, 550);
     setWindowTitle(tr("LEOcoin") + " - " + tr("Wallet"));
+
+    qApp->setStyleSheet(
+                "QMainWindow { background: #e8e8e8;font-family:'Open Sans,sans-serif'; } " \
+                "QCheckBox { spacing: 5px; } "\
+                "QCheckBox::indicator { width: 24px; height: 24px; }" \
+                "QCheckBox::indicator:unchecked { image: url(:/images/checkbox_unchecked); }" \
+                "QCheckBox::indicator:checked { image: url(:/images/checkbox_checked); }" \
+                "QComboBox  { border: 1px solid gray; border-radius: 3px; padding: 1px 18px 1px 3px; }" \
+                "QComboBox:editable  { background: white; }" \
+                "QComboBox:!editable, QComboBox::drop-down:editable { background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #E1E1E1, stop: 0.4 #DDDDDD, stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3); } " \
+                "QComboBox:!editable:on, QComboBox::drop-down:editable:on  { background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #D3D3D3, stop: 0.4 #D8D8D8, stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1); } " \
+                "QComboBox:on  { /* shift the text when the popup opens */ padding-top: 3px; padding-left: 4px; } " \
+                "QComboBox::drop-down  { subcontrol-origin: padding; subcontrol-position: top right; width: 15px; border-left-width: 1px; border-left-color: darkgray; border-left-style: solid; /* just a single line */ border-top-right-radius: 3px; /* same radius as the QComboBox */ border-bottom-right-radius: 3px; } " \
+                "QComboBox::down-arrow1  { image: url(/usr/share/icons/crystalsvg/16x16/actions/1downarrow.png); } " \
+                "QComboBox::down-arrow:on  { /* shift the arrow when popup is open */ top: 1px; left: 1px; }" \
+                "QLineEdit { border: 0px; border-radius1: 10px; padding: 0 8px; background: #c7c8ca; selection-background-color: #eea734; margin: 6px; }" \
+                "QLabel { color: #404041; } " \
+                "QTableView { background: #c7c8ca; border-color: #e8e8e8; margin: 6px; } " \
+                "QTableView QHeaderView { } " \
+                "QTableView QAbstractItemView { margin: 4px; min-height: 28px; border: 3px; } " \
+                "QStatusBar { background: #a7aaac; } " \
+                    "#frame { } QToolBar QLabel { padding-top:15px;padding-bottom:10px;margin:0px; border: 0px; border-color: yellow;} " \
+                    "#spacer { background:#a7aaac;border:none; } " \
+                    "#toolbar { height:100%;padding-top:20px; background: #e8e8e8; text-align: left; min-width:200px;max-width:200px; border: none; margin: -2px; padding: -2px; } " \
+                "QToolBar QToolButton { font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; width:200px; color: black; text-align: left; background-color: #a7aaac } " \
+                "QToolBar QToolButton:hover:!checked { color: #eea734; background-color: #a7aaac; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
+                "QToolBar QToolButton:pressed { color: #404041; background-color: #e8e8e8; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
+                "QToolBar QToolButton:checked { color: #eea734; background-color: #e8e8e8; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
+                "QToolBar QToolButton:disabled { color: grey font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
+                    "#labelMiningIcon { padding-left:5px;font-family:Open Sans;width:100%;font-size:10px;text-align:center;color:grey; } " \
+                "QMenu { background: #a7aaac; color: #404041; padding-bottom:10px; border: 1px solid grey; } " \
+                "QMenu::item { color:#404041; background-color: transparent; } " \
+                "QMenu::item:selected { color: #282828; background-color: #e8e8e8; } " \
+                "QMenuBar { background: #a7aaac; color: #404041; } " \
+                "QMenuBar::item { font-size:12px;padding-bottom:12px;padding-top:12px;padding-left:15px;padding-right:15px;color:#282828; background-color: transparent; } " \
+                "QMenuBar::item:selected { color: #e8e8e8; background-color: #282828); }"
+                "QTabWidget {background-color: #e8e8e8; }" \
+                "#debug QLabel {color: white; }" \
+                "QDateTime {}"
+    );
+
+
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -192,40 +241,58 @@ void BitcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Overview"), this);
+    //const QSize& iconsize = new QSize(64,64);
+
+//    overviewAction = new QAction(QIcon(":/icons/overview"), tr("&My Wallet"), this);
+    QIcon overviewIcon;
+    overviewIcon.addFile(":/icons/grey_overview", QSize(), QIcon::Normal, QIcon::Off);
+    overviewIcon.addFile(":/icons/orange_overview", QSize(), QIcon::Active, QIcon::Off);
+    overviewIcon.addFile(":/icons/orange_overview", QSize(), QIcon::Normal, QIcon::On);
+    overviewAction = new QAction(overviewIcon, tr("&My Wallet"), this);
     overviewAction->setToolTip(tr("Show general overview of wallet"));
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-   // sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-   // sendCoinsAction->setToolTip(tr("Send LEOcoins to a LEOcoin address"));
-
-  //  sendCoinsAction->setCheckable(true);
-   // sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
-    //tabGroup->addAction(sendCoinsAction);
-
-       sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-      // sendCoinsAction->setStatusTip(tr("Send coins to a LEOcoin address"));
-       sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
-       sendCoinsAction->setCheckable(true);
-       sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
-       tabGroup->addAction(sendCoinsAction);
-
-
-    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive coins"), this);
-    receiveCoinsAction->setToolTip(tr("Show the list of addresses for receiving payments"));
-    receiveCoinsAction->setCheckable(true);
-    receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
-    tabGroup->addAction(receiveCoinsAction);
-
-    historyAction = new QAction(QIcon(":/icons/history"), tr("&Transactions"), this);
+//    historyAction = new QAction(QIcon(":/icons/history"), tr("&Transactions"), this);
+    QIcon historyIcon;
+    historyIcon.addFile(":/icons/grey_transactions", QSize(), QIcon::Normal, QIcon::Off);
+    historyIcon.addFile(":/icons/orange_transactions", QSize(), QIcon::Active, QIcon::Off);
+    historyIcon.addFile(":/icons/orange_transactions", QSize(), QIcon::Normal, QIcon::On);
+    historyAction = new QAction(historyIcon, tr("&Transactions"), this);
     historyAction->setToolTip(tr("Browse transaction history"));
     historyAction->setCheckable(true);
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
-    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Address Book"), this);
+//    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
+    QIcon sendIcon;
+    sendIcon.addFile(":/icons/grey_send", QSize(), QIcon::Normal, QIcon::Off);
+    sendIcon.addFile(":/icons/orange_send", QSize(), QIcon::Active, QIcon::Off);
+    sendIcon.addFile(":/icons/orange_send", QSize(), QIcon::Normal, QIcon::On);
+    sendCoinsAction = new QAction(sendIcon, tr("&Send"), this);
+    sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
+    sendCoinsAction->setCheckable(true);
+    sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
+    tabGroup->addAction(sendCoinsAction);
+
+//    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
+    QIcon receiveIcon;
+    receiveIcon.addFile(":/icons/grey_receive", QSize(), QIcon::Normal, QIcon::Off);
+    receiveIcon.addFile(":/icons/orange_receive", QSize(), QIcon::Active, QIcon::Off);
+    receiveIcon.addFile(":/icons/orange_receive", QSize(), QIcon::Normal, QIcon::On);
+    receiveCoinsAction = new QAction(receiveIcon, tr("&Receive"), this);
+    receiveCoinsAction->setToolTip(tr("Show the list of addresses for receiving payments"));
+    receiveCoinsAction->setCheckable(true);
+    receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
+    tabGroup->addAction(receiveCoinsAction);
+
+//    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Address Book"), this);
+    QIcon addressBookIcon;
+    addressBookIcon.addFile(":/icons/grey_addressbook", QSize(), QIcon::Normal, QIcon::Off);
+    addressBookIcon.addFile(":/icons/orange_addressbook", QSize(), QIcon::Active, QIcon::Off);
+    addressBookIcon.addFile(":/icons/orange_addressbook", QSize(), QIcon::Normal, QIcon::On);
+    addressBookAction = new QAction(addressBookIcon, tr("&Address Book"), this);
     addressBookAction->setToolTip(tr("Edit the list of stored addresses and labels"));
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
@@ -252,7 +319,12 @@ void BitcoinGUI::createActions()
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
-    optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
+//    optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
+    QIcon optionsIcon;
+    optionsIcon.addFile(":/icons/grey_settings", QSize(), QIcon::Normal, QIcon::Off);
+    optionsIcon.addFile(":/icons/orange_settings", QSize(), QIcon::Active, QIcon::Off);
+    optionsIcon.addFile(":/icons/orange_settings", QSize(), QIcon::Normal, QIcon::On);
+    optionsAction = new QAction(optionsIcon, tr("&Options..."), this);
     optionsAction->setToolTip(tr("Modify configuration options for LEOcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
@@ -266,7 +338,12 @@ void BitcoinGUI::createActions()
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
 
-    exportAction = new QAction(QIcon(":/icons/export"), tr("&Export..."), this);
+//    exportAction = new QAction(QIcon(":/icons/export"), tr("&Export..."), this);
+    QIcon exportIcon;
+    exportIcon.addFile(":/icons/grey_export", QSize(), QIcon::Normal, QIcon::Off);
+    exportIcon.addFile(":/icons/orange_export", QSize(), QIcon::Active, QIcon::Off);
+    exportIcon.addFile(":/icons/orange_export", QSize(), QIcon::Normal, QIcon::On);
+    exportAction = new QAction(exportIcon, tr("&Export..."), this);
     exportAction->setToolTip(tr("Export the data in the current tab to a file"));
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setToolTip(tr("Open debugging and diagnostic console"));
@@ -317,18 +394,31 @@ void BitcoinGUI::createMenuBar()
 
 void BitcoinGUI::createToolBars()
 {
-    QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
+    QToolBar *toolbar = addToolBar(tr("Screens toolbar"));
+    toolbar->setObjectName("toolbar");
+    addToolBar(Qt::LeftToolBarArea,toolbar);
+    toolbar->setOrientation(Qt::Vertical);
+    toolbar->setMovable( false );
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    toolbar->setIconSize(QSize(50,25));
     toolbar->addAction(overviewAction);
     toolbar->addAction(sendCoinsAction);
     toolbar->addAction(receiveCoinsAction);
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
+    toolbar->addAction(exportAction);
+    toolbar->addAction(optionsAction);
+
+    QWidget* spacer = new QWidget();
+    spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    toolbar->addWidget(spacer);
+    spacer->setObjectName("spacer");
+
 
     QToolBar *toolbar2 = addToolBar(tr("Actions toolbar"));
     toolbar2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-    toolbar2->addAction(exportAction);
     toolbar2->addAction(openRPCConsoleAction);
+    toolbar2->setVisible(false);
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
@@ -470,11 +560,11 @@ void BitcoinGUI::setNumConnections(int count)
     QString icon;
     switch(count)
     {
-    case 0: icon = ":/icons/connect_0"; break;
-    case 1: case 2: case 3: icon = ":/icons/connect_1"; break;
-    case 4: case 5: case 6: icon = ":/icons/connect_2"; break;
-    case 7: case 8: case 9: icon = ":/icons/connect_3"; break;
-    default: icon = ":/icons/connect_4"; break;
+    case 0: icon = ":/icons/net_0"; break;
+    case 1: case 2: case 3: icon = ":/icons/net_1"; break;
+    case 4: case 5: case 6: icon = ":/icons/net_2"; break;
+    case 7: case 8: case 9: icon = ":/icons/net_3"; break;
+    default: icon = ":/icons/net_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to LEOcoin network", "", count));
@@ -797,7 +887,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
         break;
     case WalletModel::Unlocked:
         labelEncryptionIcon->show();
-        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelEncryptionIcon->setPixmap(QIcon(":/icons/grey_unlock").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
@@ -805,7 +895,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
         break;
     case WalletModel::Locked:
         labelEncryptionIcon->show();
-        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_closed").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelEncryptionIcon->setPixmap(QIcon(":/icons/orange_lock").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
@@ -828,7 +918,11 @@ void BitcoinGUI::encryptWallet(bool status)
 
 void BitcoinGUI::backupWallet()
 {
-    QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
+    #if QT_VERSION < 0x050000
+         QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
+    #else
+        QString saveDir = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
+    #endif
     QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
     if(!filename.isEmpty()) {
         if(!walletModel->backupWallet(filename)) {

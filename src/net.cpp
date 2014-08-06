@@ -1369,14 +1369,14 @@ void ThreadOpenConnections2(void* parg)
     // Connect to specific addresses
     if (mapArgs.count("-connect") && mapMultiArgs["-connect"].size() > 0)
     {
-        for (int64 nLoop = 0;; nLoop++)
+        for (int64 nloop = 0;; nloop++)
         {
             ProcessOneShot();
             BOOST_FOREACH(string strAddr, mapMultiArgs["-connect"])
             {
                 CAddress addr;
                 OpenNetworkConnection(addr, NULL, strAddr.c_str());
-                for (int i = 0; i < 10 && i < nLoop; i++)
+                for (int i = 0; i < 10 && i < nloop; i++)
                 {
                     Sleep(500);
                     if (fShutdown)

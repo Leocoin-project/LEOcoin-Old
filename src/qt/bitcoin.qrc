@@ -40,10 +40,37 @@
         <file alias="filesave">res/icons/filesave.png</file>
         <file alias="qrcode">res/icons/qrcode.png</file>
         <file alias="debugwindow">res/icons/debugwindow.png</file>
+        <file alias="grey_export">res/icons/grey_export.png</file>
+        <file alias="grey_mine">res/icons/grey_mine.png</file>
+        <file alias="grey_overview">res/icons/grey_overview.png</file>
+        <file alias="grey_receive">res/icons/grey_receive.png</file>
+        <file alias="grey_send">res/icons/grey_send.png</file>
+        <file alias="grey_settings">res/icons/grey_settings.png</file>
+        <file alias="grey_transactions">res/icons/grey_transactions.png</file>
+        <file alias="grey_unlock">res/icons/grey_unlock.png</file>
+        <file alias="net_0">res/icons/net_0.png</file>
+        <file alias="net_1">res/icons/net_1.png</file>
+        <file alias="net_2">res/icons/net_2.png</file>
+        <file alias="net_3">res/icons/net_3.png</file>
+        <file alias="net_4">res/icons/net_4.png</file>
+        <file alias="orange_lock">res/icons/orange_lock.png</file>
+        <file alias="orange_mine">res/icons/orange_mine.png</file>
+        <file alias="orange_overview">res/icons/orange_overview.png</file>
+        <file alias="orange_receive">res/icons/orange_receive.png</file>
+        <file alias="orange_send">res/icons/orange_send.png</file>
+        <file alias="orange_settings">res/icons/orange_settings.png</file>
+        <file alias="orange_sync">res/icons/orange_sync.png</file>
+        <file alias="orange_transactions">res/icons/orange_transactions.png</file>
+        <file alias="mined_coins">res/icons/mined_coins.png</file>
+        <file alias="received_coins">res/icons/received_coins.png</file>
+        <file alias="sent_coins">res/icons/sent_coins.png</file>
+        <file alias="grey_addressbook">res/icons/grey_addressbook.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
         <file alias="splash">res/images/splash2.jpg</file>
+        <file alias="checkbox_checked">res/images/checkbox_checked.png</file>
+        <file alias="checkbox_unchecked">res/images/checkbox_unchecked.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
