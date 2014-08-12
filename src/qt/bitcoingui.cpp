@@ -100,7 +100,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
                 "QStatusBar { background: #a7aaac; } " \
                     "#frame { } QToolBar QLabel { padding-top:15px;padding-bottom:10px;margin:0px; border: 0px; border-color: yellow;} " \
                     "#spacer { background:#a7aaac;border:none; } " \
-                    "#toolbar { height:100%;padding-top:20px; background: #e8e8e8; text-align: left; min-width:200px;max-width:200px; border: none; margin: -2px; padding: -2px; } " \
+                    "#toolbar { height:100%;padding-top:20px; background: #e8e8e8; text-align: left; min-width:200px;max-width:200px; border: 0px; margin: -2px; padding: -2px; } " \
                 "QToolBar QToolButton { font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; width:200px; color: black; text-align: left; background-color: #a7aaac } " \
                 "QToolBar QToolButton:hover:!checked { color: #eea734; background-color: #a7aaac; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
                 "QToolBar QToolButton:pressed { color: #404041; background-color: #e8e8e8; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
