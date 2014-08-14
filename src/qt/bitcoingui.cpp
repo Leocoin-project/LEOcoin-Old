@@ -92,36 +92,37 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
                 "QComboBox::drop-down  { subcontrol-origin: padding; subcontrol-position: top right; width: 15px; border-left-width: 1px; border-left-color: darkgray; border-left-style: solid; /* just a single line */ border-top-right-radius: 3px; /* same radius as the QComboBox */ border-bottom-right-radius: 3px; } " \
                 "QComboBox::down-arrow1  { image: url(/usr/share/icons/crystalsvg/16x16/actions/1downarrow.png); } " \
                 "QComboBox::down-arrow:on  { /* shift the arrow when popup is open */ top: 1px; left: 1px; }" \
-                "QLineEdit { border: 0px; border-radius1: 10px; padding: 0 8px; background: #c7c8ca; selection-background-color: #eea734; margin: 6px; }" \
-                "QLabel { color: #404041; } " \
+                "QLineEdit { border: 0px; border-radius1: 10px; padding: 0 4px; background: #c7c8ca; selection-background-color: #eea734; margin: 6px; }" \
                 "QTableView { background: #c7c8ca; border-color: #e8e8e8; margin: 6px; } " \
                 "QTableView QHeaderView { } " \
-                "QTableView QAbstractItemView { margin: 4px; min-height: 28px; border: 3px; } " \
                 "QStatusBar { background: #a7aaac; } " \
-                    "#frame { } QToolBar QLabel { padding-top:15px;padding-bottom:10px;margin:0px; border: 0px; border-color: yellow;} " \
-                    "#spacer { background:#a7aaac;border:none; } " \
-                    "#toolbar { height:100%;padding-top:20px; background: #e8e8e8; text-align: left; min-width:200px;max-width:200px; border: 0px; margin: -2px; padding: -2px; } " \
-                "QToolBar QToolButton { font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; width:200px; color: black; text-align: left; background-color: #a7aaac } " \
-                "QToolBar QToolButton:hover:!checked { color: #eea734; background-color: #a7aaac; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
-                "QToolBar QToolButton:pressed { color: #404041; background-color: #e8e8e8; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
-                "QToolBar QToolButton:checked { color: #eea734; background-color: #e8e8e8; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
-                "QToolBar QToolButton:disabled { color: grey font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
-                "QToolButton { font-family:Open Sans; color: black; text-align: left; background-color: #a7aaac } " \
-                "QToolButton:hover:!checked { color: #eea734; background-color: #a7aaac; border: none; font-family:Open Sans; } " \
-                "QToolButton:pressed { color: #404041; background-color: #e8e8e8; border: none; font-family:Open Sans; } " \
-                "QToolButton:checked { color: #eea734; background-color: #e8e8e8; border: none; font-family:Open Sans; } " \
-                "QToolButton:disabled { color: grey font-family:Open Sans; } " \
+                "#frame { } QToolBar QLabel { padding-top:15px;padding-bottom:10px;margin:0px; border: 0px; border-color: yellow;} " \
+                "#spacer { background:#a7aaac;border:none; } " \
+                "QToolButton { border: none; color: black; background-color: #eea734; } " \
+                "#toolbar { height:100%;padding-top:20px; background: #e8e8e8; text-align: left; min-width:200px;max-width:200px; border: 0px; margin: -2px; padding: -2px; } " \
+                "#toolbar > QToolButton { font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; width:200px; color: black; text-align: left; background-color: #a7aaac } " \
+                "#toolbar > QToolButton:hover:!checked { color: #eea734; background-color: #a7aaac; border: none; font-family:Open Sans; } " \
+                "#toolbar > QToolButton:pressed { color: #404041; background-color: #e8e8e8; border: none; font-family:Open Sans; } " \
+                "#toolbar > QToolButton:checked { color: #eea734; background-color: #e8e8e8; border: none; font-family:Open Sans; } " \
+                "#toolbar > QToolButton:disabled { color: grey font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
                     "#labelMiningIcon { padding-left:5px;font-family:Open Sans;width:100%;font-size:10px;text-align:center;color:grey; } " \
                 "QMenu { background: #a7aaac; color: #404041; padding-bottom:10px; border: 1px solid grey; } " \
                 "QMenu::item { color:#404041; background-color: transparent; } " \
                 "QMenu::item:selected { color: #282828; background-color: #e8e8e8; } " \
                 "QMenuBar { background: #a7aaac; color: #404041; } " \
                 "QMenuBar::item { font-size:12px;padding-bottom:12px;padding-top:12px;padding-left:15px;padding-right:15px;color:#282828; background-color: transparent; } " \
-                "QMenuBar::item:selected { color: #e8e8e8; background-color: #282828); }"
+                "QMenuBar::item:selected { color: #e8e8e8; background-color: #282828); }" \
+                "#progressBarLabel { border: none; } " \
+                "QLabel { color: #404041; } " \
                 "QTabWidget {background-color: #e8e8e8; }" \
                 "#debug QLabel {color: white; }" \
+                "QToolButton1:hover:!checked { color: #eea734; background-color: #a7aaac; border: none; font-family:Open Sans; } " \
+                "QToolButton1:pressed { color: #404041; background-color: #e8e8e8; border: none; font-family:Open Sans; } " \
+                "QToolButton1:checked { color: #eea734; background-color: #e8e8e8; border: none; font-family:Open Sans; } " \
+                "QToolButton1:disabled { color: grey font-family:Open Sans; } " \
                 "QDateTime {}"
     );
+    //                "QTableView QAbstractItemView { margin: 4px; min-height: 28px; border: 3px; } " \
 
 
 #ifndef Q_OS_MAC
@@ -180,7 +181,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     frameBlocks->setMinimumWidth(56);
     frameBlocks->setMaximumWidth(56);
     QHBoxLayout *frameBlocksLayout = new QHBoxLayout(frameBlocks);
-    frameBlocksLayout->setContentsMargins(3,0,3,0);
+    frameBlocksLayout->setContentsMargins(0,1,0,1);
+//    frameBlocksLayout->setContentsMargins(3,0,3,0);
     frameBlocksLayout->setSpacing(3);
     labelEncryptionIcon = new QLabel();
     labelConnectionsIcon = new QLabel();
@@ -199,6 +201,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     progressBar = new QProgressBar();
     progressBar->setAlignment(Qt::AlignCenter);
     progressBar->setVisible(false);
+    progressBar->setStyleSheet("QProgressBar { border: none; font-size1:9px; text-align: center; color:rgba(0,0,0,100); border-radius: 5px; background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(182, 182, 182, 100), stop:1 rgba(209, 209, 209, 100)); }" \
+                               "QProgressBar::chunk{ background-color: #eea734; border: none; }");
+
 
     // Override style sheet for progress bar for styles that have a segmented progress bar,
     // as they make the text unreadable (workaround for issue #1071)
@@ -206,14 +211,17 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     QString curStyle = qApp->style()->metaObject()->className();
     if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
     {
-        progressBar->setStyleSheet("QProgressBar { background-color: #e8e8e8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF8000, stop: 1 orange); border-radius: 7px; margin: 0px; }");
+        progressBar->setStyleSheet(
+                    "QProgressBar { background-color: #e8e8e8; border: none; border-radius: 7px; padding: 1px; text-align: center; } " \
+                    "QProgressBar::chunk { background: #eea734); border-radius: 7px; margin: 0px; }");
     }
 
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
 
-    syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
+    syncIconMovie = new QMovie(":/movies/update_spinner", "gif", this);
+    syncIconMovie->setScaledSize(QSize(24,24));
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), this, SLOT(gotoHistoryPage()));

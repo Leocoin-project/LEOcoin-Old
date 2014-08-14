@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>340</width>
-    <height>530</height>
+    <height>556</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -170,7 +170,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="btnSaveAs">
+         <widget class="QToolButton" name="btnSaveAs">
           <property name="text">
            <string>&amp;Save As...</string>
           </property>
@@ -186,8 +186,9 @@
  <customwidgets>
   <customwidget>
    <class>BitcoinAmountField</class>
-   <extends>QSpinBox</extends>
+   <extends>QLineEdit</extends>
    <header>bitcoinamountfield.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>
