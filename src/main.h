@@ -89,6 +89,13 @@ extern int64 nTransactionFee;
 // Minimum disk space required - used in CheckDiskSpace()
 static const uint64 nMinDiskSpace = 52428800;
 
+static const char* pubGenesis[] = {
+    "026905adf49c7ae57cc140852c2515a0e50aea205ed5bbbe1ea80cfb4db94b5154",
+    "03f727468d86a1b517f535fbaf3464e4be5ec4cde404edb02587d60e5a1c4e1486",
+    "034d720743a60c3cf6c6e5ec1e0f8b0210c9a1a31e2d5d9badecc98d91fa50b816",
+    "0345f8c3ed0efc80bf982050b02d2868fc11864db154b76e8a5849842f505f3568",
+    "021f26783a13106274cb82f00789811ff551af78daaf59af3d6e9e1c8f4e30bc18"
+};
 
 class CReserveKey;
 class CTxDB;
