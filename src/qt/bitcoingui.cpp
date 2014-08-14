@@ -101,11 +101,12 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
                     "#frame { } QToolBar QLabel { padding-top:15px;padding-bottom:10px;margin:0px; border: 0px; border-color: yellow;} " \
                     "#spacer { background:#a7aaac;border:none; } " \
                     "#toolbar { height:100%;padding-top:20px; background: #e8e8e8; text-align: left; min-width:200px;max-width:200px; border: none; margin: -2px; padding: -2px; } " \
-                "QToolBar QToolButton { font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; width:200px; color: black; text-align: left; background-color: #a7aaac } " \
-                "QToolBar QToolButton:hover:!checked { color: #eea734; background-color: #a7aaac; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
-                "QToolBar QToolButton:pressed { color: #404041; background-color: #e8e8e8; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
-                "QToolBar QToolButton:checked { color: #eea734; background-color: #e8e8e8; border: none; font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
-                "QToolBar QToolButton:disabled { color: grey font-family:Open Sans;padding-left:20px;padding-top:10px;padding-bottom:10px; } " \
+                "QToolBar QToolButton { font-family:Open Sans;padding-left:0px;padding-top:10px;padding-bottom:10px; width:200px; color: black; text-align: left; background-color: #a7aaac } " \
+                "QToolBar QToolButton:hover:!checked { color: #eea734; background-color: #a7aaac; border: none; } " \
+                "QToolBar QToolButton:pressed { color: #404041; background-color: #e8e8e8; border: none; } " \
+                "QToolBar QToolButton:checked { color: #eea734; background-color: #e8e8e8; border: none; } " \
+                "QToolBar QToolButton:disabled { color: grey; } " \
+                "QToolButton { color: black; background-color: #eea734; border: none; text-align: center; min-height: 24px; } " \
                     "#labelMiningIcon { padding-left:5px;font-family:Open Sans;width:100%;font-size:10px;text-align:center;color:grey; } " \
                 "QMenu { background: #a7aaac; color: #404041; padding-bottom:10px; border: 1px solid grey; } " \
                 "QMenu::item { color:#404041; background-color: transparent; } " \
@@ -194,6 +195,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     progressBar = new QProgressBar();
     progressBar->setAlignment(Qt::AlignCenter);
     progressBar->setVisible(false);
+    progressBar->setStyleSheet("QProgressBar { background-color: #e8e8e8; border: 0px solid grey; border-radius: 7px; padding: 1px; text-align: center; } " \
+                               "QProgressBar::chunk { background: #eea734; border-radius: 7px; margin: 0px; }");
 
     // Override style sheet for progress bar for styles that have a segmented progress bar,
     // as they make the text unreadable (workaround for issue #1071)
@@ -201,14 +204,16 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     QString curStyle = qApp->style()->metaObject()->className();
     if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
     {
-        progressBar->setStyleSheet("QProgressBar { background-color: #e8e8e8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF8000, stop: 1 orange); border-radius: 7px; margin: 0px; }");
+        progressBar->setStyleSheet("QProgressBar { background-color: #e8e8e8; border: 0px solid grey; border-radius: 7px; padding: 1px; text-align: center; } " \
+                                   "QProgressBar::chunk { background: #eea734; border-radius: 7px; margin: 0px; }");
     }
 
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
 
-    syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
+    syncIconMovie = new QMovie(":/movies/update_spinner", "gif", this);
+    syncIconMovie->setScaledSize(QSize(24,24));
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), this, SLOT(gotoHistoryPage()));

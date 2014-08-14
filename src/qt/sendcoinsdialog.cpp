@@ -180,7 +180,7 @@ void SendCoinsDialog::clear()
 
     updateRemoveEnabled();
 
-    ui->sendButton->setDefault(true);
+//    ui->sendButton->setDefault(true);
 }
 
 void SendCoinsDialog::reject()

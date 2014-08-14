@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>740</width>
-    <height>450</height>
+    <height>491</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_info">
       <attribute name="title">
@@ -319,19 +319,6 @@
          </property>
         </widget>
        </item>
-       <item row="15" column="0">
-        <widget class="QPushButton" name="openDebugLogfileButton">
-         <property name="toolTip">
-          <string>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
-         </property>
-         <property name="text">
-          <string>&amp;Open</string>
-         </property>
-         <property name="autoDefault">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
        <item row="16" column="0">
         <widget class="QLabel" name="labelCLOptions">
          <property name="font">
@@ -342,19 +329,6 @@
          </property>
          <property name="text">
           <string>Command-line options</string>
-         </property>
-        </widget>
-       </item>
-       <item row="17" column="0">
-        <widget class="QPushButton" name="showCLOptionsButton">
-         <property name="toolTip">
-          <string>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</string>
-         </property>
-         <property name="text">
-          <string>&amp;Show</string>
-         </property>
-         <property name="autoDefault">
-          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -370,6 +344,38 @@
           </size>
          </property>
         </spacer>
+       </item>
+       <item row="15" column="0">
+        <widget class="QToolButton" name="openDebugLogfileButton">
+         <property name="minimumSize">
+          <size>
+           <width>174</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
+         </property>
+         <property name="text">
+          <string>&amp;Open</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="0">
+        <widget class="QToolButton" name="showCLOptionsButton">
+         <property name="minimumSize">
+          <size>
+           <width>174</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</string>
+         </property>
+         <property name="text">
+          <string>&amp;Show</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -416,7 +422,7 @@
           <widget class="QLineEdit" name="lineEdit"/>
          </item>
          <item>
-          <widget class="QPushButton" name="clearButton">
+          <widget class="QToolButton" name="clearButton">
            <property name="maximumSize">
             <size>
              <width>24</width>
@@ -435,9 +441,6 @@
            </property>
            <property name="shortcut">
             <string notr="true">Ctrl+L</string>
-           </property>
-           <property name="autoDefault">
-            <bool>false</bool>
            </property>
           </widget>
          </item>

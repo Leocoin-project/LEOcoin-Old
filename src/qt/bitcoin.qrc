@@ -65,15 +65,18 @@
         <file alias="received_coins">res/icons/received_coins.png</file>
         <file alias="sent_coins">res/icons/sent_coins.png</file>
         <file alias="grey_addressbook">res/icons/grey_addressbook.png</file>
+        <file alias="orange_addressbook">res/icons/orange_addressbook.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
-        <file alias="splash">res/images/splash2.jpg</file>
+        <file alias="splash">res/images/splash2.png</file>
         <file alias="checkbox_checked">res/images/checkbox_checked.png</file>
         <file alias="checkbox_unchecked">res/images/checkbox_unchecked.png</file>
+        <file>res/images/splash2.png</file>
     </qresource>
     <qresource prefix="/movies">
-        <file alias="update_spinner">res/movies/update_spinner.mng</file>
+        <file alias="update_spinner1">res/movies/update_spinner1.mng</file>
+        <file alias="update_spinner">res/movies/update_spinner.gif</file>
     </qresource>
     <qresource prefix="/translations">
         <file alias="中国的(CN)">locale/bitcoin_zh_CN.qm</file>
