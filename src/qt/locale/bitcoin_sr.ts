@@ -5,12 +5,10 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About LEOcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+39"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -19,12 +17,10 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+45"/>
         <source>LEOcoin: Copyright © 2014 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>
 This is experimental software.
 
@@ -42,102 +38,82 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressBookPage</name>
     <message>
-        <location filename="../forms/addressbookpage.ui" line="+14"/>
         <source>Address Book</source>
         <translation>Адресар</translation>
     </message>
     <message>
-        <location line="+22"/>
-        <source>Double-click to edit address or label</source>
-        <translation>Кликните два пута да промените адресу и/или ознаку</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Create a new address</source>
-        <translation>Направите нову адресу</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Копирајте изабрану адресу на системски clipboard</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>Sign a message to prove you own a LEOcoin address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-45"/>
-        <source>&amp;New Address</source>
-        <translation>&amp;Нова адреса</translation>
-    </message>
-    <message>
-        <location line="-46"/>
         <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+63"/>
+        <source>Double-click to edit address or label</source>
+        <translation>Кликните два пута да промените адресу и/или ознаку</translation>
+    </message>
+    <message>
+        <source>Create a new address</source>
+        <translation>Направите нову адресу</translation>
+    </message>
+    <message>
+        <source>&amp;New Address</source>
+        <translation>&amp;Нова адреса</translation>
+    </message>
+    <message>
+        <source>Copy the currently selected address to the system clipboard</source>
+        <translation>Копирајте изабрану адресу на системски clipboard</translation>
+    </message>
+    <message>
         <source>&amp;Copy Address</source>
         <translation>&amp;Копирај адресу</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Show &amp;QR Code</source>
         <translation>Прикажи &amp;QR Code</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <source>Sign a message to prove you own a LEOcoin address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Sign &amp;Message</source>
         <translation>Потпиши &amp;Поруку</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Verify a message to ensure it was signed with a specified LEOcoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>Delete the currently selected address from the list</source>
-        <translation>Избришите тренутно изабрану адресу са листе</translation>
-    </message>
-    <message>
-        <location line="-14"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Потврди поруку</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <source>Delete the currently selected address from the list</source>
+        <translation>Избришите тренутно изабрану адресу са листе</translation>
+    </message>
+    <message>
         <source>&amp;Delete</source>
         <translation>&amp;Избриши</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+65"/>
         <source>Copy &amp;Label</source>
         <translation>Копирај &amp;Назив</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>&amp;Edit</source>
         <translation>&amp;Измени</translation>
     </message>
     <message>
-        <location line="+250"/>
         <source>Export Address Book Data</source>
         <translation>Извоз података из адресара</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
         <translation>Зарезом одвојене вредности (*.csv)</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Error exporting</source>
         <translation>Грешка током извоза</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Could not write to file %1.</source>
         <translation>Није могуће писати у фајл %1.</translation>
     </message>
@@ -145,17 +121,14 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+142"/>
         <source>Label</source>
         <translation>Назив</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Address</source>
         <translation>Адреса</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>(no label)</source>
         <translation>(без назива)</translation>
     </message>
@@ -163,254 +136,273 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AskPassphraseDialog</name>
     <message>
-        <location filename="../forms/askpassphrasedialog.ui" line="+26"/>
         <source>Passphrase Dialog</source>
         <translation>Поље за унос лозинке</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Enter passphrase</source>
         <translation>Унесите лозинку</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>New passphrase</source>
         <translation>Нова лозинка</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Repeat new passphrase</source>
         <translation>Поновите нову лозинку</translation>
     </message>
     <message>
-        <location filename="../askpassphrasedialog.cpp" line="+33"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Унесите нову лозинку за приступ новчанику.&lt;br/&gt;Молимо Вас да лозинка буде &lt;b&gt;10 или више насумице одабраних знакова&lt;/b&gt;, или &lt;b&gt;осам или више речи&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Encrypt wallet</source>
         <translation>Шифровање новчаника</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>Ова радња захтева лозинку Вашег новчаника да би га откључала.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Unlock wallet</source>
         <translation>Откључавање новчаника</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
         <translation>Ова радња захтева да унесете лозинку да би дешифровали новчаник.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Decrypt wallet</source>
         <translation>Дешифровање новчаника</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Change passphrase</source>
         <translation>Промените лозинку</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
         <translation>Унесите стару и нову лозинку новчаника.</translation>
     </message>
     <message>
-        <location line="+46"/>
         <source>Confirm wallet encryption</source>
         <translation>Потврдите шифровање новчаника</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
         <translation>Упозорење: Уколико сте шифровали Ваш новчаник и изгубили лозинку,  ви ћете &lt;b&gt;ИЗГУБИТИ СВЕ НОВЧИЋЕ&lt;/b&gt;!</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Да ли сте сигурни да желите шифровање новчаника?</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <source>LEOcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>ВАЖНО: Све претходне сигурносне копије ваше датотеке новчаника би требало заменити са ново креираном, шифрованом датотеком новчаника. Из безбедносних разлога, претходне сигурносне копије нешифроване датотеке новчаника, постаће неупотребљиве оног момента када почнете користити нови шифровани новчаник. </translation>
-    </message>
-    <message>
-        <location line="+100"/>
-        <location line="+24"/>
-        <source>Warning: The Caps Lock key is on!</source>
-        <translation>Упозоренје: Caps Lock тастер је укључен!</translation>
-    </message>
-    <message>
-        <location line="-130"/>
-        <location line="+58"/>
         <source>Wallet encrypted</source>
         <translation>Новчаник је шифрован</translation>
     </message>
     <message>
-        <location line="-43"/>
-        <location line="+7"/>
-        <location line="+42"/>
-        <location line="+6"/>
+        <source>LEOcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>ВАЖНО: Све претходне сигурносне копије ваше датотеке новчаника би требало заменити са ново креираном, шифрованом датотеком новчаника. Из безбедносних разлога, претходне сигурносне копије нешифроване датотеке новчаника, постаће неупотребљиве оног момента када почнете користити нови шифровани новчаник. </translation>
+    </message>
+    <message>
         <source>Wallet encryption failed</source>
         <translation>Неуспело шифровање новчаника</translation>
     </message>
     <message>
-        <location line="-54"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
         <translation>Настала је унутрашња грешка током шифровања новчаника. Ваш новчаник није шифрован.</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <location line="+48"/>
         <source>The supplied passphrases do not match.</source>
         <translation>Лозинке које сте унели се не подударају.</translation>
     </message>
     <message>
-        <location line="-37"/>
         <source>Wallet unlock failed</source>
         <translation>Неуспело откључавање новчаника</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+11"/>
-        <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
         <translation>Лозинка коју сте унели за дешифровање новчаника је нетачна.</translation>
     </message>
     <message>
-        <location line="-20"/>
         <source>Wallet decryption failed</source>
         <translation>Неуспело дешифровање новчаника</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Wallet passphrase was successfully changed.</source>
         <translation>Лозинка за приступ новчанику је успешно промењена.</translation>
+    </message>
+    <message>
+        <source>Warning: The Caps Lock key is on!</source>
+        <translation>Упозоренје: Caps Lock тастер је укључен!</translation>
     </message>
 </context>
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+343"/>
-        <source>Sign &amp;message...</source>
-        <translation>Потпиши &amp;поруку</translation>
+        <source>A fatal error occurred. LEOcoin can no longer continue safely and will quit.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+256"/>
-        <source>Synchronizing with network...</source>
-        <translation>Синхронизација са мрежом у току...</translation>
-    </message>
-    <message>
-        <location line="-520"/>
         <source>LEOcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+178"/>
+        <source>Wallet</source>
+        <translation>Новчаник</translation>
+    </message>
+    <message>
+        <source>&amp;My Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show general overview of wallet</source>
         <translation>Погледајте општи преглед новчаника</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Трансакције</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Browse transaction history</source>
         <translation>Претражите историјат трансакција</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>&amp;Address Book</source>
-        <translation>&amp;Адресар</translation>
+        <source>&amp;Send</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Edit the list of stored addresses and labels</source>
-        <translation>Уредите запамћене адресе и њихове називе</translation>
+        <source>&amp;Receive</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-11"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Преглед листе адреса за прихватање уплата</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <source>&amp;Address Book</source>
+        <translation>&amp;Адресар</translation>
+    </message>
+    <message>
+        <source>Edit the list of stored addresses and labels</source>
+        <translation>Уредите запамћене адресе и њихове називе</translation>
+    </message>
+    <message>
         <source>E&amp;xit</source>
         <translation>И&amp;злаз</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Quit application</source>
         <translation>Прекини апликацију</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <source>&amp;About LEOcoin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show information about LEOcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>About &amp;Qt</source>
         <translation>О &amp;Qt-у</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Show information about Qt</source>
         <translation>Покажи информације о Qt-у</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>&amp;Options...</source>
         <translation>&amp;Опције...</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Modify configuration options for LEOcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Покажи / Сакриј</translation>
+    </message>
+    <message>
         <source>&amp;Encrypt Wallet...</source>
         <translation>&amp;Шифровање новчаника...</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>Encrypt or decrypt wallet</source>
+        <translation>Шифровање или дешифровање новчаника</translation>
+    </message>
+    <message>
         <source>&amp;Backup Wallet...</source>
         <translation>&amp;Резервна копија новчаника...</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <source>Backup wallet to another location</source>
+        <translation>Направи резервну копију новчаника на другој локацији</translation>
+    </message>
+    <message>
         <source>&amp;Change Passphrase...</source>
         <translation>&amp;Промена лозинке...</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Промена лозинке којом се шифрује новчаник</translation>
+    </message>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation>Потпиши &amp;поруку</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Потврди поруку</translation>
+    </message>
+    <message>
+        <source>&amp;Export...</source>
+        <translation>&amp;Извези...</translation>
+    </message>
+    <message>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Извоз података из тренутне картице у датотеку</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Прозор за отклон грешака</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Отвори конзолу за отклон грешака и дијагнозу</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Датотека</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation>&amp;Подешавања</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>&amp;Помоћ</translation>
+    </message>
+    <message>
         <source>Screens toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+44"/>
-        <location line="+60"/>
+        <source>Actions toolbar</source>
+        <translation>Трака са алаткама</translation>
+    </message>
+    <message>
+        <source>[testnet]</source>
+        <translation>[testnet]</translation>
+    </message>
+    <message>
         <source>LEOcoin client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location line="+69"/>
         <source>%n active connection(s) to LEOcoin network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -418,194 +410,87 @@ This product includes software developed by the OpenSSL Project for use in the O
             <numerusform></numerusform>
         </translation>
     </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation>Синхронизација са мрежом у току...</translation>
+    </message>
     <message numerus="yes">
-        <location line="+26"/>
         <source>~%n block(s) remaining</source>
-        <translation>
-            <numerusform>~%n блок преостао</numerusform>
-            <numerusform>~%n блока преостала</numerusform>
-            <numerusform>~%n блокова преостало</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
         <translation>Од историје трансакција је преузето %1 од %2 блокова (%3 завршено)</translation>
     </message>
     <message>
-        <location line="-256"/>
-        <source>&amp;Export...</source>
-        <translation>&amp;Извези...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Export the data in the current tab to a file</source>
-        <translation>Извоз података из тренутне картице у датотеку</translation>
-    </message>
-    <message>
-        <location line="-15"/>
-        <source>Encrypt or decrypt wallet</source>
-        <translation>Шифровање или дешифровање новчаника</translation>
-    </message>
-    <message>
-        <location line="-81"/>
-        <source>&amp;My Wallet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>&amp;Send</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Receive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>&amp;About LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Backup wallet to another location</source>
-        <translation>Направи резервну копију новчаника на другој локацији</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>Промена лозинке којом се шифрује новчаник</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Debug window</source>
-        <translation>&amp;Прозор за отклон грешака</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Open debugging and diagnostic console</source>
-        <translation>Отвори конзолу за отклон грешака и дијагнозу</translation>
-    </message>
-    <message>
-        <location line="-10"/>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;Потврди поруку</translation>
-    </message>
-    <message>
-        <location line="-265"/>
-        <source>Wallet</source>
-        <translation>Новчаник</translation>
-    </message>
-    <message>
-        <location line="+256"/>
-        <source>&amp;Show / Hide</source>
-        <translation>&amp;Покажи / Сакриј</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>&amp;File</source>
-        <translation>&amp;Датотека</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>&amp;Settings</source>
-        <translation>&amp;Подешавања</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>&amp;Help</source>
-        <translation>&amp;Помоћ</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>Actions toolbar</source>
-        <translation>Трака са алаткама</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <location line="+9"/>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
-    </message>
-    <message>
-        <location line="+169"/>
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation>Од историје трансакције преузето %1 блокова</translation>
     </message>
     <message numerus="yes">
-        <location line="+22"/>
         <source>%n second(s) ago</source>
-        <translation>
-            <numerusform>пре %n секунд</numerusform>
-            <numerusform>пре %n секунд(и)е</numerusform>
-            <numerusform>пре %n секунди</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location line="+4"/>
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>пре %n минут</numerusform>
-            <numerusform>пре %n минута</numerusform>
-            <numerusform>пре %n минута</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location line="+4"/>
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>пре %n сат</numerusform>
-            <numerusform>пре %n сата</numerusform>
-            <numerusform>пре %n сати</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location line="+4"/>
         <source>%n day(s) ago</source>
-        <translation>
-            <numerusform>пре %n дан</numerusform>
-            <numerusform>пре %n дана</numerusform>
-            <numerusform>пре %n дана</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Up to date</source>
         <translation>Ажурно</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Catching up...</source>
         <translation>Ажурирање у току...</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Last received block was generated %1.</source>
         <translation>Последњи примљени блок је креиран %1</translation>
     </message>
     <message>
-        <location line="+59"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
         <translation>Трансакција је преко дозвољеног износа. Можете и даље извршити слање уз провизију од %1, а намењена је за чворишта (nodes) која обрађују Вашу трансакцију и помаже као подршка мрежи. Да ли желите да платите провизију?</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Confirm transaction fee</source>
         <translation>Потврди провизију за трансакцију</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Sent transaction</source>
         <translation>Послата трансакција</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Incoming transaction</source>
         <translation>Пристигла трансакција</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Date: %1
 Amount: %2
 Type: %3
@@ -614,57 +499,41 @@ Address: %4
         <translation>Datum: %1⏎ Iznos: %2⏎ Tip: %3⏎ Adresa: %4⏎</translation>
     </message>
     <message>
-        <location line="+100"/>
-        <location line="+15"/>
         <source>URI handling</source>
         <translation>руковање URI-јем</translation>
     </message>
     <message>
-        <location line="-15"/>
-        <location line="+15"/>
         <source>URI can not be parsed! This can be caused by an invalid LEOcoin address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Новчаник је &lt;b&gt;шифрован&lt;/b&gt; и тренутно &lt;b&gt;откључан&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>Новчаник је &lt;b&gt;шифрован&lt;/b&gt; и тренутно &lt;b&gt;закључан&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Backup Wallet</source>
         <translation>Резервна копија новчаника</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Wallet Data (*.dat)</source>
         <translation>Датотека новчаника (*.dat)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Backup Failed</source>
         <translation>Неуспела резервна копија</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation>Појавила се грешка у покушају снимања датотеке новчаника на нову локацију.</translation>
-    </message>
-    <message>
-        <location filename="../bitcoin.cpp" line="+112"/>
-        <source>A fatal error occurred. LEOcoin can no longer continue safely and will quit.</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+87"/>
         <source>Network Alert</source>
         <translation>Упозорење са мреже</translation>
     </message>
@@ -672,67 +541,54 @@ Address: %4
 <context>
     <name>EditAddressDialog</name>
     <message>
-        <location filename="../forms/editaddressdialog.ui" line="+14"/>
         <source>Edit Address</source>
         <translation>Измени Адресу</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>&amp;Label</source>
         <translation>&amp;Назив</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>The label associated with this address book entry</source>
         <translation>Назив повезан са овим уносом у адресар</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>&amp;Address</source>
         <translation>&amp;Адреса</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
         <translation>Адреса повезана са овим уносом у адресар. Могућа промена само за адресе које су за слање.</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+20"/>
         <source>New receiving address</source>
         <translation>Нова адреса за пријем</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>New sending address</source>
         <translation>Нова адреса за слање</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Edit receiving address</source>
         <translation>Измени адресу за пријем</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Edit sending address</source>
         <translation>Измени адресу за слање</translation>
     </message>
     <message>
-        <location line="+60"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
         <translation>Унесена адреса &quot;%1&quot; се већ налази у адресару.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>The entered address &quot;%1&quot; is not a valid LEOcoin address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Could not unlock wallet.</source>
         <translation>Немогуће откључати новчаник.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>New key generation failed.</source>
         <translation>Неуспешно креирање новог кључа</translation>
     </message>
@@ -740,43 +596,34 @@ Address: %4
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+436"/>
-        <location line="+12"/>
         <source>LEOcoin-Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-12"/>
         <source>version</source>
         <translation>верзија</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Usage:</source>
         <translation>Коришћење:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>command-line options</source>
         <translation>oпције командне линије</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>UI options</source>
         <translation>UI поставке</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Set language, for example &quot;de_DE&quot; (default: system locale)</source>
         <translation>Подеси језик, на пример &quot;de_DE&quot; (подрезумевано: језик локалног система)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Start minimized</source>
         <translation>Покрени се минимизиран</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Show splash screen on startup (default: 1)</source>
         <translation>Прикажи уводни екран при покретању (подразумевано: 1)</translation>
     </message>
@@ -784,194 +631,154 @@ Address: %4
 <context>
     <name>OptionsDialog</name>
     <message>
-        <location filename="../forms/optionsdialog.ui" line="+14"/>
         <source>Options</source>
         <translation>Поставке</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>&amp;Main</source>
         <translation>&amp;Главни</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
         <translation>Опциона провизија за трансакцију по kB која обезбеђује бржу обраду. Већина трансакција је од 1 kB. Препоручује се провизија од 0.01.</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
         <translation>Плати &amp;провизију за трансакцију</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>Automatically start LEOcoin after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>&amp;Start LEOcoin on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
         <translation>Одвајање базе података блокова и адреса приликом искључивања. То значи да се могу изместити у други дата директоријум, али се том приликом успорава гашење. Новчаник је увек одвојен.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>&amp;Detach databases at shutdown</source>
         <translation>&amp;Одвој базу података приликом гашења</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>&amp;Network</source>
         <translation>&amp;Мрежа</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Map port using &amp;UPnP</source>
         <translation>Мапирај порт користећи &amp;UPnP</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>&amp;Connect through SOCKS proxy:</source>
         <translation>&amp;Повежи се кроз SOCKS proxy:</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Proxy &amp;IP:</source>
         <translation>Proxy &amp;IP:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>IP address of the proxy (e.g. 127.0.0.1)</source>
         <translation>IP адреса за proxy (пример: 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>&amp;Port:</source>
         <translation>&amp;Порт:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Port of the proxy (e.g. 9050)</source>
         <translation>Порт за proxy (пример: 9050)</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>SOCKS version of the proxy (e.g. 5)</source>
-        <translation>SOCKS верзија за proxy (пример: 5)</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>&amp;Window</source>
-        <translation>&amp;Прозор</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Show only a tray icon after minimizing the window.</source>
-        <translation>Покажите само tray икону после минимизирања прозора.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;Минимизирај у траy уместо у taskbar</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>Минимизирај уместо изласка из апликације приликом затварања прозора. Када је ова опција омогућена, затварање апликације се врши једино кроз одабир опције Quit у менију.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>M&amp;inimize on close</source>
-        <translation>M&amp;инимизирај приликом затварања</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>&amp;Display</source>
-        <translation>&amp;Екран</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>User Interface &amp;language:</source>
-        <translation>&amp;Језик корисничког интерфејса:</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting LEOcoin.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
-        <source>Whether to show LEOcoin addresses in the transaction list or not.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-22"/>
-        <source>&amp;Unit to show amounts in:</source>
-        <translation>&amp;Јединица за приказивање износа:</translation>
-    </message>
-    <message>
-        <location line="-133"/>
         <source>SOCKS &amp;V:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+146"/>
+        <source>SOCKS version of the proxy (e.g. 5)</source>
+        <translation>SOCKS верзија за proxy (пример: 5)</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Прозор</translation>
+    </message>
+    <message>
+        <source>Show only a tray icon after minimizing the window.</source>
+        <translation>Покажите само tray икону после минимизирања прозора.</translation>
+    </message>
+    <message>
+        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <translation>&amp;Минимизирај у траy уместо у taskbar</translation>
+    </message>
+    <message>
+        <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
+        <translation>Минимизирај уместо изласка из апликације приликом затварања прозора. Када је ова опција омогућена, затварање апликације се врши једино кроз одабир опције Quit у менију.</translation>
+    </message>
+    <message>
+        <source>M&amp;inimize on close</source>
+        <translation>M&amp;инимизирај приликом затварања</translation>
+    </message>
+    <message>
+        <source>&amp;Display</source>
+        <translation>&amp;Екран</translation>
+    </message>
+    <message>
+        <source>User Interface &amp;language:</source>
+        <translation>&amp;Језик корисничког интерфејса:</translation>
+    </message>
+    <message>
+        <source>The user interface language can be set here. This setting will take effect after restarting LEOcoin.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Unit to show amounts in:</source>
+        <translation>&amp;Јединица за приказивање износа:</translation>
+    </message>
+    <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
         <translation>Изаберите подразумевани најмањи део WhiteCoina за приказ у интерфејсу и приликом слања новчића.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <source>Whether to show LEOcoin addresses in the transaction list or not.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>&amp;Display addresses in transaction list</source>
         <translation>&amp;Прикажи адресе у листи трансакција</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>&amp;OK</source>
         <translation>&amp;У реду</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Прекини</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>&amp;Apply</source>
         <translation>&amp;Примени</translation>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+55"/>
         <source>default</source>
         <translation>подразумевано</translation>
     </message>
     <message>
-        <location line="+147"/>
-        <location line="+9"/>
         <source>Warning</source>
         <translation>Упозорење</translation>
     </message>
     <message>
-        <location line="-9"/>
-        <location line="+9"/>
         <source>This setting will take effect after restarting LEOcoin.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
         <translation>Унесена proxy адреса није исправна</translation>
     </message>
@@ -979,74 +786,58 @@ Address: %4
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+19"/>
         <source>Form</source>
         <translation>Форма</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location line="+430"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-237"/>
-        <source>Stake:</source>
-        <translation>Камата:</translation>
-    </message>
-    <message>
-        <location line="+147"/>
-        <source>Number of transactions:</source>
-        <translation>Број трансакција:</translation>
-    </message>
-    <message>
-        <location line="-97"/>
-        <source>Unconfirmed:</source>
-        <translation>Непотврђено:</translation>
-    </message>
-    <message>
-        <location line="-250"/>
         <source>Wallet</source>
         <translation>Новчаник</translation>
     </message>
     <message>
-        <location line="+300"/>
-        <source>Immature:</source>
-        <translation>Недоспело:</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Mined balance that has not yet matured</source>
-        <translation>Изрударен салдо који није сазрео</translation>
-    </message>
-    <message>
-        <location line="+114"/>
-        <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Недавне трансакције&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <location line="-274"/>
         <source>Your current balance</source>
         <translation>Ваше тренутно стање рачуна</translation>
     </message>
     <message>
-        <location line="+113"/>
-        <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Укупан износ трансакција који још није потврђен, и још увек није урачунат у тренутно стање рачуна</translation>
+        <source>Stake:</source>
+        <translation>Камата:</translation>
     </message>
     <message>
-        <location line="-50"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation>Износ новчића на којима се обрачунава камата, и нису урачунати у тренутно стање рачуна</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <source>Unconfirmed:</source>
+        <translation>Непотврђено:</translation>
+    </message>
+    <message>
+        <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
+        <translation>Укупан износ трансакција који још није потврђен, и још увек није урачунат у тренутно стање рачуна</translation>
+    </message>
+    <message>
+        <source>Immature:</source>
+        <translation>Недоспело:</translation>
+    </message>
+    <message>
+        <source>Mined balance that has not yet matured</source>
+        <translation>Изрударен салдо који није сазрео</translation>
+    </message>
+    <message>
+        <source>Number of transactions:</source>
+        <translation>Број трансакција:</translation>
+    </message>
+    <message>
         <source>Total number of transactions in wallet</source>
         <translation>Укупан број трансакција у новчанику</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+113"/>
-        <location line="+1"/>
+        <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Недавне трансакције&lt;/b&gt;</translation>
+    </message>
+    <message>
         <source>out of sync</source>
         <translation>неажурирано</translation>
     </message>
@@ -1054,57 +845,46 @@ Address: %4
 <context>
     <name>QRCodeDialog</name>
     <message>
-        <location filename="../forms/qrcodedialog.ui" line="+14"/>
         <source>QR Code Dialog</source>
         <translation>QR Code Дијалог</translation>
     </message>
     <message>
-        <location line="+59"/>
         <source>Request Payment</source>
         <translation>Захтев за плаћање</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <source>Amount:</source>
-        <translation>Износ:</translation>
-    </message>
-    <message>
-        <location line="-44"/>
         <source>Label:</source>
         <translation>Назив:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Message:</source>
         <translation>Порука:</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <source>Amount:</source>
+        <translation>Износ:</translation>
+    </message>
+    <message>
         <source>&amp;Save As...</source>
         <translation>&amp;Сними као...</translation>
     </message>
     <message>
-        <location filename="../qrcodedialog.cpp" line="+64"/>
         <source>Error encoding URI into QR Code.</source>
         <translation>Грешка приликом кодирања URI у QR Code.</translation>
     </message>
     <message>
-        <location line="+40"/>
         <source>The entered amount is invalid, please check.</source>
         <translation>Унесени износ није исправан, молим за проверу.</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
         <translation>Добијена URI предугачка, покушајте смањити текст за назив / поруку</translation>
     </message>
     <message>
-        <location line="+25"/>
         <source>Save QR Code</source>
         <translation>Сачувај QR Code</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>PNG Images (*.png)</source>
         <translation>PNG Слике (*.png)</translation>
     </message>
@@ -1112,146 +892,110 @@ Address: %4
 <context>
     <name>RPCConsole</name>
     <message>
-        <location filename="../forms/rpcconsole.ui" line="+46"/>
-        <source>Client name</source>
-        <translation>Назив клијента</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location line="+23"/>
-        <location line="+26"/>
-        <location line="+23"/>
-        <location line="+23"/>
-        <location line="+36"/>
-        <location line="+53"/>
-        <location line="+23"/>
-        <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+350"/>
-        <source>N/A</source>
-        <translation>Празно</translation>
-    </message>
-    <message>
-        <location line="-217"/>
-        <source>Client version</source>
-        <translation>Верзија клијента</translation>
-    </message>
-    <message>
-        <location line="-45"/>
-        <source>&amp;Information</source>
-        <translation>&amp;Информације</translation>
-    </message>
-    <message>
-        <location line="-10"/>
         <source>LEOcoin - Debug window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+25"/>
+        <source>&amp;Information</source>
+        <translation>&amp;Информације</translation>
+    </message>
+    <message>
         <source>LEOcoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+53"/>
+        <source>Client name</source>
+        <translation>Назив клијента</translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation>Празно</translation>
+    </message>
+    <message>
+        <source>Client version</source>
+        <translation>Верзија клијента</translation>
+    </message>
+    <message>
         <source>Using OpenSSL version</source>
         <translation>Коришћење OpenSSL верзије</translation>
     </message>
     <message>
-        <location line="+49"/>
-        <source>Startup time</source>
-        <translation>Време покретања</translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>Network</source>
-        <translation>Мрежа</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Number of connections</source>
-        <translation>Број конекција</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>On testnet</source>
-        <translation>На testnet-у</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Block chain</source>
-        <translation>Ланац блокова</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Current number of blocks</source>
-        <translation>Тренутни број блокова</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Estimated total blocks</source>
-        <translation>Процењен укупан број блокова</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Last block time</source>
-        <translation>Последње време блока</translation>
-    </message>
-    <message>
-        <location line="+81"/>
-        <source>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Open</source>
-        <translation>&amp;Отвори</translation>
-    </message>
-    <message>
-        <location line="-29"/>
-        <source>Command-line options</source>
-        <translation>Опције командне линије</translation>
-    </message>
-    <message>
-        <location line="+42"/>
-        <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Show</source>
-        <translation>&amp;Прикажи</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>&amp;Console</source>
-        <translation>&amp;Конзола</translation>
-    </message>
-    <message>
-        <location line="-266"/>
         <source>Build date</source>
         <translation>Датум израде</translation>
     </message>
     <message>
-        <location line="+200"/>
+        <source>Startup time</source>
+        <translation>Време покретања</translation>
+    </message>
+    <message>
+        <source>Network</source>
+        <translation>Мрежа</translation>
+    </message>
+    <message>
+        <source>Number of connections</source>
+        <translation>Број конекција</translation>
+    </message>
+    <message>
+        <source>On testnet</source>
+        <translation>На testnet-у</translation>
+    </message>
+    <message>
+        <source>Block chain</source>
+        <translation>Ланац блокова</translation>
+    </message>
+    <message>
+        <source>Current number of blocks</source>
+        <translation>Тренутни број блокова</translation>
+    </message>
+    <message>
+        <source>Estimated total blocks</source>
+        <translation>Процењен укупан број блокова</translation>
+    </message>
+    <message>
+        <source>Last block time</source>
+        <translation>Последње време блока</translation>
+    </message>
+    <message>
         <source>Debug log file</source>
         <translation>Евиденција датотека за исправљање грешака</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <source>Command-line options</source>
+        <translation>Опције командне линије</translation>
+    </message>
+    <message>
+        <source>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Open</source>
+        <translation>&amp;Отвори</translation>
+    </message>
+    <message>
+        <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Show</source>
+        <translation>&amp;Прикажи</translation>
+    </message>
+    <message>
+        <source>&amp;Console</source>
+        <translation>&amp;Конзола</translation>
+    </message>
+    <message>
         <source>Clear console</source>
         <translation>Очисти конзолу</translation>
     </message>
     <message>
-        <location filename="../rpcconsole.cpp" line="-33"/>
         <source>Welcome to the LEOcoin RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
         <translation>Користите стрелице горе и доле за навигацију кроз историјат, и &lt;b&gt;Ctrl-L&lt;/b&gt; за брисање екрана.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Унестите &lt;b&gt;help&lt;/b&gt; за преглед доступних наредби.</translation>
     </message>
@@ -1259,110 +1003,82 @@ Address: %4
 <context>
     <name>SendCoinsDialog</name>
     <message>
-        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+128"/>
-        <location line="+5"/>
-        <location line="+5"/>
-        <location line="+5"/>
-        <location line="+6"/>
-        <location line="+5"/>
-        <location line="+5"/>
         <source>Send Coins</source>
         <translation>Слање новца</translation>
     </message>
     <message>
-        <location line="+59"/>
         <source>Send to multiple recipients at once</source>
         <translation>Пошаљи одједном на више примаоца</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Add &amp;Recipient</source>
         <translation>Додај &amp;Примаоца</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Remove all transaction fields</source>
         <translation>Уклонити сва поља од трансакција</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Clear &amp;All</source>
         <translation>Обриши &amp;Све</translation>
     </message>
     <message>
-        <location line="+22"/>
         <source>Balance:</source>
         <translation>Стање рачуна:</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>123.456 BTC</source>
         <translation>123.456 BTC</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>Confirm the send action</source>
         <translation>Потврди акцију слања</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>S&amp;end</source>
         <translation>П&amp;ошаљи</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-62"/>
-        <location line="+2"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; до %2 (%3)</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Confirm send coins</source>
         <translation>Потврди слање новчића</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Are you sure you want to send %1?</source>
         <translation>Да ли сте сигурни да желите да пошаљете %1?</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source> and </source>
         <translation>и</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>Адреса примаоца није исправна, молим за проверу.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
         <translation>Износ за плаћање мора бити већи од 0.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>The amount exceeds your balance.</source>
         <translation>Износ је већи од стања рачуна.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>The total exceeds your balance when the %1 transaction fee is included.</source>
         <translation>Укупан износ је већи од стања рачуна када се укључи провизија од %1</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Duplicate address found, can only send to each address once per send operation.</source>
         <translation>Пронађена адреса која се понавља, омогућено слање само на једну адресу по операцији.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Error: Transaction creation failed.</source>
         <translation>Грешка: Неуспешно креирање трансакције.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
         <translation>Грешка: Трансакција је одбијена. Дешава се уколико сте део новчића у Вашем новчанику већ потрошили, случај као да сте користили копију wallet.dat датотеке и потрошили новчиће у тој копији датотеке али нису обележени као потрошени овде.</translation>
     </message>
@@ -1370,63 +1086,50 @@ Address: %4
 <context>
     <name>SendCoinsEntry</name>
     <message>
-        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
         <source>Form</source>
         <translation>Форма</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>A&amp;mount:</source>
         <translation>И&amp;знос:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Pay &amp;To:</source>
         <translation>Ислати &amp;Ка:</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Унесите назив за ову адресу како би је додали у Ваш адресар</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>&amp;Label:</source>
         <translation>&amp;Назив</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>The address to send the payment to  (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Choose address from address book</source>
         <translation>Изаберите адресу из адресара</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Paste address from clipboard</source>
         <translation>Залепи адресу из clipboard-а</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Remove this recipient</source>
         <translation>Уклони овог примаоца</translation>
     </message>
     <message>
-        <location filename="../sendcoinsentry.cpp" line="+1"/>
         <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
     </message>
@@ -1434,388 +1137,296 @@ Address: %4
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
         <source>Signatures - Sign / Verify a Message</source>
         <translation>Потписи - Потпиши / Потврдите Поруку</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+130"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;Потпишите Поруку</translation>
     </message>
     <message>
-        <location line="-124"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Можете потписивати поруке са својим адресама као доказ о поседовању. Будите опрезни да не потписујете ништа сумњиво, јер у покушају преваре phishing напади Вас могу преварити да препишете идентитет трећем лицу. Једино потписујте изјаве са којима се слажете и потпуно су Вам јасне.</translation>
     </message>
     <message>
-        <location line="+34"/>
-        <location line="+209"/>
-        <source>Choose an address from the address book</source>
-        <translation>Изаберите адресу из адресара</translation>
-    </message>
-    <message>
-        <location line="-199"/>
-        <location line="+209"/>
-        <source>Alt+A</source>
-        <translation>Alt+A</translation>
-    </message>
-    <message>
-        <location line="-196"/>
-        <source>Paste address from clipboard</source>
-        <translation>Залепи адресу из clipboard-а</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Alt+P</source>
-        <translation>Alt+P</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Enter the message you want to sign here</source>
-        <translation>Овде упишите поруку коју желите потписати</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Copy the current signature to the system clipboard</source>
-        <translation>Копирај тренутни потпис у системски clipboard</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Sign the message to prove you own this LEOcoin address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+106"/>
-        <source>The address the message was signed with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <source>Verify the message to ensure it was signed with the specified LEOcoin address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-132"/>
-        <source>Reset all sign message fields</source>
-        <translation>Брисање свих поља потписане поруке</translation>
-    </message>
-    <message>
-        <location line="-120"/>
         <source>The address to sign the message with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+123"/>
-        <location line="+149"/>
+        <source>Choose an address from the address book</source>
+        <translation>Изаберите адресу из адресара</translation>
+    </message>
+    <message>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Залепи адресу из clipboard-а</translation>
+    </message>
+    <message>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <source>Enter the message you want to sign here</source>
+        <translation>Овде упишите поруку коју желите потписати</translation>
+    </message>
+    <message>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>Копирај тренутни потпис у системски clipboard</translation>
+    </message>
+    <message>
+        <source>Sign the message to prove you own this LEOcoin address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset all sign message fields</source>
+        <translation>Брисање свих поља потписане поруке</translation>
+    </message>
+    <message>
         <source>Clear &amp;All</source>
         <translation>Обриши &amp;Све</translation>
     </message>
     <message>
-        <location line="-90"/>
-        <location line="+73"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Потврди поруку</translation>
     </message>
     <message>
-        <location line="-67"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation>Унесите потписану адресу, поруку (укључујући и нове редове, размаке, табове и сл.) и испод потпис како би се потврдила порука. Како бисте избегли напад човек-у-средини, будите опрезни да не упишете више него што се налази у потписаној поруци.</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <source>The address the message was signed with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Verify the message to ensure it was signed with the specified LEOcoin address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Reset all verify message fields</source>
         <translation>Брисање свих поља за потврду поруке</translation>
     </message>
     <message>
-        <location filename="../signverifymessagedialog.cpp" line="+28"/>
-        <source>Click &quot;Sign Message&quot; to generate signature</source>
-        <translation>За креирање потписа кликните на &apos;&apos;Потпиши Поруку&apos;&apos;</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Enter LEOcoin signature</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-4"/>
-        <location line="+3"/>
         <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+83"/>
-        <location line="+81"/>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation>За креирање потписа кликните на &apos;&apos;Потпиши Поруку&apos;&apos;</translation>
+    </message>
+    <message>
+        <source>Enter LEOcoin signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The entered address is invalid.</source>
         <translation>Унесена адреса није исправна</translation>
     </message>
     <message>
-        <location line="-81"/>
-        <location line="+8"/>
-        <location line="+73"/>
-        <location line="+8"/>
         <source>Please check the address and try again.</source>
         <translation>Молим проверите адресу и покушајте поново.</translation>
     </message>
     <message>
-        <location line="-81"/>
-        <location line="+81"/>
         <source>The entered address does not refer to a key.</source>
         <translation>Унесена адреса не одговара том кључу.</translation>
     </message>
     <message>
-        <location line="-73"/>
         <source>Wallet unlock was cancelled.</source>
         <translation>Откључавање новчаника је поништено.</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Private key for the entered address is not available.</source>
         <translation>Приватни кључ за унету адресу није доступан.</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Message signing failed.</source>
         <translation>Неуспешно потписивање поруке.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Message signed.</source>
         <translation>Порука је потписана.</translation>
     </message>
     <message>
-        <location line="+59"/>
         <source>The signature could not be decoded.</source>
         <translation>Није могуће дешифровати потпис.</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+13"/>
         <source>Please check the signature and try again.</source>
         <translation>Молим проверите потпис и покушајте поново.</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>The signature did not match the message digest.</source>
         <translation>Потпис не одговара класификацији поруке.</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Message verification failed.</source>
         <translation>Потврђивање поруке није успело.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Message verified.</source>
         <translation>Порука потврђена.</translation>
     </message>
 </context>
 <context>
     <name>TransactionDesc</name>
-    <message>
-        <location filename="../transactiondesc.cpp" line="+19"/>
-        <source>Open until %1</source>
-        <translation>Otvorite do %1</translation>
-    </message>
     <message numerus="yes">
-        <location line="-2"/>
         <source>Open for %n block(s)</source>
-        <translation>
-            <numerusform>Отвори до %n блок</numerusform>
-            <numerusform>Отвори за %n блока</numerusform>
-            <numerusform>Отвори до %n блокова</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+8"/>
+        <source>Open until %1</source>
+        <translation>Otvorite do %1</translation>
+    </message>
+    <message>
         <source>%1/offline</source>
         <translation>%1/није доступан</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>%1/unconfirmed</source>
         <translation>%1/није потврђено</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>%1 confirmations</source>
         <translation>%1 потврђено</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Status</source>
         <translation>Статус</translation>
     </message>
+    <message>
+        <source>, has not been successfully broadcast yet</source>
+        <translation>, још увек није успешно емитован</translation>
+    </message>
     <message numerus="yes">
-        <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation>
-            <numerusform>, емитује се кроз %n чвор</numerusform>
-            <numerusform>, емитује се кроз %n чвора</numerusform>
-            <numerusform>, емитује се кроз %n чворова</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Date</source>
         <translation>Датум</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Source</source>
         <translation>Извор</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Generated</source>
         <translation>Креирано</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <location line="+17"/>
         <source>From</source>
         <translation>Од</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+22"/>
-        <location line="+58"/>
+        <source>unknown</source>
+        <translation>непознато</translation>
+    </message>
+    <message>
         <source>To</source>
         <translation>За</translation>
     </message>
     <message>
-        <location line="-77"/>
-        <location line="+2"/>
         <source>own address</source>
         <translation>сопствена адреса</translation>
     </message>
     <message>
-        <location line="-2"/>
         <source>label</source>
         <translation>назив</translation>
     </message>
     <message>
-        <location line="+37"/>
-        <location line="+12"/>
-        <location line="+45"/>
-        <location line="+17"/>
-        <location line="+32"/>
         <source>Credit</source>
         <translation>Кредит</translation>
     </message>
     <message numerus="yes">
-        <location line="-104"/>
         <source>matures in %n more block(s)</source>
-        <translation>
-            <numerusform>сазрева за још %n блок</numerusform>
-            <numerusform>сазрева за још %n блока</numerusform>
-            <numerusform>сазрева за још %n блокова</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>not accepted</source>
         <translation>није прихваћено</translation>
     </message>
     <message>
-        <location line="+44"/>
-        <location line="+8"/>
-        <location line="+15"/>
-        <location line="+32"/>
         <source>Debit</source>
         <translation>Задужење</translation>
     </message>
     <message>
-        <location line="-41"/>
         <source>Transaction fee</source>
         <translation>Провизија</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Net amount</source>
         <translation>Нето износ</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Message</source>
         <translation>Порука</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Comment</source>
         <translation>Коментар</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Transaction ID</source>
         <translation>Идентитет трансакције</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Debug information</source>
         <translation>Информација о отклоњеним грешкама</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Transaction</source>
         <translation>Трансакција</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Inputs</source>
         <translation>Улази</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Amount</source>
         <translation>iznos</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>true</source>
         <translation>истинит</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>false</source>
         <translation>лажан</translation>
-    </message>
-    <message>
-        <location line="-213"/>
-        <source>, has not been successfully broadcast yet</source>
-        <translation>, још увек није успешно емитован</translation>
-    </message>
-    <message>
-        <location line="+35"/>
-        <source>unknown</source>
-        <translation>непознато</translation>
     </message>
 </context>
 <context>
     <name>TransactionDescDialog</name>
     <message>
-        <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
         <translation>Детаљи трансакције</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>Овај одељак показује детаљан опис трансакције</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1823,125 +1434,102 @@ Address: %4
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+226"/>
         <source>Date</source>
         <translation>Датум</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Address</source>
         <translation>Адреса</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Amount</source>
         <translation>Износ</translation>
     </message>
     <message numerus="yes">
-        <location line="+57"/>
         <source>Open for %n block(s)</source>
-        <translation>
-            <numerusform>Отвори за %n блок</numerusform>
-            <numerusform>Отвори за %n блока</numerusform>
-            <numerusform>Отвори до %n блокова</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Open until %1</source>
         <translation>Otvoreno do %1</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Offline (%1 confirmations)</source>
         <translation>Offline * ван мреже (%1 за потврду)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Unconfirmed (%1 of %2 confirmations)</source>
         <translation>Непотврђен (%1 of %2 за потврду)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Confirmed (%1 confirmations)</source>
         <translation>Потврђен (%1 за потврду)</translation>
     </message>
     <message numerus="yes">
-        <location line="+8"/>
         <source>Mined balance will be available when it matures in %n more block(s)</source>
-        <translation>
-            <numerusform>Изрударен салдо ће бити доступан када доспе за још %n блок</numerusform>
-            <numerusform>Изрударен салдо ће бити доступан када доспе за још %n блока</numerusform>
-            <numerusform>Изрударен салдо ће бити доступан када доспе за још %n блокова</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
         <translation>Овај блок није примљен од осталих чворова и вероватно неће бити прихваћен!</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Generated but not accepted</source>
         <translation>Креиран али није прихваћен</translation>
     </message>
     <message>
-        <location line="+43"/>
         <source>Received with</source>
         <translation>Примљен са</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Received from</source>
         <translation>Примљено од</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Sent to</source>
         <translation>Поскат ка</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Payment to yourself</source>
         <translation>Исплата самом себи</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Mined</source>
         <translation>Изрударено</translation>
     </message>
     <message>
-        <location line="+38"/>
         <source>(n/a)</source>
         <translation>(n/a)</translation>
     </message>
     <message>
-        <location line="+199"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Статус трансакције. Пређите мишем преко овог поља да бисте видели број потврда.</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
         <translation>Датум и време примљене трансакције.</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Type of transaction.</source>
         <translation>Тип трансакције.</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Destination address of transaction.</source>
         <translation>Дестинација и адреса трансакције.</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
         <translation>Износ уклоњен или додат на стање рачуна.</translation>
     </message>
@@ -1949,163 +1537,130 @@ Address: %4
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+55"/>
-        <location line="+16"/>
         <source>All</source>
         <translation>Све</translation>
     </message>
     <message>
-        <location line="-15"/>
         <source>Today</source>
         <translation>Данас</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>This week</source>
         <translation>Ове недеље</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>This month</source>
         <translation>Овог месеца</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Last month</source>
         <translation>Прошлог месеца</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>This year</source>
         <translation>Ове године</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Range...</source>
         <translation>Опсег...</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Received with</source>
         <translation>Примљен са</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Sent to</source>
         <translation>Послат ка</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>To yourself</source>
         <translation>Ка самом себи</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Mined</source>
         <translation>Изрударено</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Other</source>
         <translation>Други</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Enter address or label to search</source>
         <translation>Унесите адресу или назив за претрагу</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Min amount</source>
         <translation>Минимални износ</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Copy address</source>
         <translation>Копирај адресу</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Copy label</source>
         <translation>Копирај назив</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Copy amount</source>
         <translation>Копирај износ</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Edit label</source>
         <translation>Уреди назив</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Show transaction details</source>
         <translation>Прикажи детаље трансакције</translation>
     </message>
     <message>
-        <location line="+137"/>
         <source>Export Transaction Data</source>
         <translation>Извези датотеку са трансакцијама</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
         <translation>Зарезом одвојене вредности (*.csv)</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Confirmed</source>
         <translation>Потврђен</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Date</source>
         <translation>Датум</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Label</source>
         <translation>Назив</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Address</source>
         <translation>Адреса</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Amount</source>
         <translation>Износ</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>ID</source>
         <translation>Идентитет</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Error exporting</source>
         <translation>Грешка током извоза</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Could not write to file %1.</source>
         <translation>Није могуће писати у фајл %1.</translation>
     </message>
     <message>
-        <location line="+95"/>
         <source>Range:</source>
         <translation>Опсег:</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>to</source>
         <translation>ка</translation>
     </message>
@@ -2113,7 +1668,6 @@ Address: %4
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+199"/>
         <source>Sending...</source>
         <translation>Шаљем...</translation>
     </message>
@@ -2121,107 +1675,6 @@ Address: %4
 <context>
     <name>bitcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+126"/>
-        <source>LEOcoin version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+39"/>
-        <source>Usage:</source>
-        <translation>Коришћење:</translation>
-    </message>
-    <message>
-        <location line="-26"/>
-        <source>Send command to -server or LEOcoind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-21"/>
-        <source>List commands</source>
-        <translation>Листај команде</translation>
-    </message>
-    <message>
-        <location line="-12"/>
-        <source>Get help for a command</source>
-        <translation>Затражи помоћ за команду</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Options:</source>
-        <translation>Опције</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Specify configuration file (default: LEOcoin.conf)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Specify pid file (default: LEOcoind.pid)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-50"/>
-        <source>Generate coins</source>
-        <translation>Произведи новчиће</translation>
-    </message>
-    <message>
-        <location line="-14"/>
-        <source>Don&apos;t generate coins</source>
-        <translation>Немој производити новчиће</translation>
-    </message>
-    <message>
-        <location line="+63"/>
-        <source>Specify data directory</source>
-        <translation>Наведите директоријум са подацима</translation>
-    </message>
-    <message>
-        <location line="-8"/>
-        <source>Set database cache size in megabytes (default: 25)</source>
-        <translation>Подесите величину кеш меморије за базу података у мегабајтима (предефинисано: 25)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Set database disk log size in megabytes (default: 100)</source>
-        <translation>Подесите величину дневника на диску за базу података (предефинисано: 100)</translation>
-    </message>
-    <message>
-        <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 17777)</source>
-        <translation>Ослушкуј конекције на &lt;port&gt; (предефинисано: 8333 или testnet: 18333)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Одржавај највише &lt;n&gt; конекција по прикључку (предефинисано: 125)</translation>
-    </message>
-    <message>
-        <location line="-34"/>
-        <source>Connect to a node to retrieve peer addresses, and disconnect</source>
-        <translation>Повежи се на чвориште за преузимање вршњачких адреса, и прекини везу</translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <source>Specify your own public address</source>
-        <translation>Наведите Вашу властиту јавну адресу</translation>
-    </message>
-    <message>
-        <location line="-76"/>
-        <source>Bind to given address. Use [host]:port notation for IPv6</source>
-        <translation>Повезивање на дату адресу. Користите [host]:port обележавање за IPv6</translation>
-    </message>
-    <message>
-        <location line="+78"/>
-        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
-        <translation>Праг за прекид везе чланова који имају проблеме у раду (предефинисано: 100)</translation>
-    </message>
-    <message>
-        <location line="-110"/>
-        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
-        <translation>Број секунди који спречава чланове са проблемима у раду да се поново повежу (предефинисано: 86400)</translation>
-    </message>
-    <message>
-        <location line="-39"/>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
@@ -2233,519 +1686,497 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
-        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
-        <translation>Дошло је до грешке приликом подешавања RPC порта %u за ослушкивање на IPv4: %s</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Cannot obtain a lock on data directory %s.  LEOcoin is probably already running.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
-        <translation>Одвоји датотеке блокова и адреса. Увећава време гашења (предефинисано: 0)</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Грешка: Трансакција је одбијена. Ово се може десити уколико је део новчића из Вашег новчаника већ потрошен, и то у случају када користите копију wallet.dat датотеке и новчићи су потрошени у копији али нису овде обележени као потрошени. </translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
-        <translation>Грешка: Ова трансакција захтева провизију од најмање %s због своје комплексности, износа, или употребе недавно примљених средстава</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Error: Wallet unlocked for block minting only, unable to create transaction.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Unable to bind to %s on this computer. LEOcoin is probably already running.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong LEOcoin will not work properly.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Accept command line and JSON-RPC commands</source>
-        <translation>Прихвати командну линију и JSON-RPC команде</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Error: Transaction creation failed  </source>
-        <translation>Грешка: Креирање трансакције је неуспешно</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error: Wallet locked, unable to create transaction  </source>
-        <translation>Грешка: Новчаник је закључан, немогуће је остварити трансакцију</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Importing blockchain data file.</source>
-        <translation>Увозим датотеку са ланцем блокова.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Importing bootstrap blockchain data file.</source>
-        <translation>Увозим властиту датотеку са ланцем блокова.</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Run in the background as a daemon and accept commands</source>
-        <translation>Ради у позадини као daemon сервис и прихвати команде</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>Use the test network</source>
-        <translation>Користи мрежу за тестирање</translation>
-    </message>
-    <message>
-        <location line="-95"/>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Прихвати везе које долазе споља (предефинисано: 1 уколико нема -proxy или -connect)</translation>
-    </message>
-    <message>
-        <location line="-52"/>
-        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
-        <translation>Настала је грешка приликом подешавања RPC port-а за ослушкивање на IPv6, враћам назад до IPv4: %s</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
-        <translation>Грешка приликом иницијализације окружења базе података %s! Да бисте повратили, НАПРАВИТЕ РЕЗЕРВНУ КОПИЈУ ТОГ ДИРЕКТОРИЈУМА, затим уклонити све из њега осим wallet.dat. датотеке.</translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
-        <translation>Ослушкуј JSON-RPC везу на &lt;port&gt; (предефинисано: 8344 или testnet: 18344)</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
-        <translation>Подесите максималну величину за трансакције са високим-приоритетом / ниском-накнадом у бајтовима (подразумевано: 27000)</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>Упозорење: -провизија је подешена на превелик износ! То је износ провизије који плаћате ако извршите трансакцију</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Упозорење: грешка у исчитавању wallet.dat датотеке! Сви кључеви се исчитавају исправно, али могуће да недостају или су нетачни подаци о трансакцији или уноси у адресар. </translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Упозорење: wallet.dat датотека оштећена, подаци су спасени! Оригинална датотека wallet.dat је сачувана као wallet.{timestamp}.bak за %s; уколико је нетачно стање рачуна или трансакције опоравак би требало одрадити из резервне копије.</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
-        <translation>Покушај опоравка приватних кључева из корумпиране wallet.dat датотеке</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Block creation options:</source>
-        <translation>Опције за креирање блока:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Connect only to the specified node(s)</source>
-        <translation>Повежи се само са одређеним чворо(вима)м</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
-        <translation>Пронађите сопствену IP адресу (предефинисано: 1 када ослушкује и без  -externalip)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
-        <translation>Неуспешно ослушкивање на сваком од портова. Ако то желите користити -listen=0.</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Find peers using DNS lookup (default: 0)</source>
-        <translation>Пронађите чланове користећи DNS преглед (предефинисано: 0)</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Invalid -tor address: &apos;%s&apos;</source>
-        <translation>Неважећа -tor адреса: &apos;%s&apos;</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
-        <translation>Максимална количина меморије за пријем по -connection, &lt;n&gt;*1000 бајтова (предефинисано: 5000)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
-        <translation>Максимална количина меморије за слање по -connection, &lt;n&gt;*1000 бајтова (предефинисано: 1000)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
-        <translation>Повежи се само на чворове са мреже &lt;net&gt; (IPv4, IPv6 or Tor)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Output extra debugging information. Implies all other -debug* options</source>
-        <translation>Преглед додатних информација за дешифровање. Односи се на све друге опције за -debug*</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Output extra network debugging information</source>
-        <translation>Преглед додатних информација за дешифровање мреже</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Prepend debug output with timestamp</source>
-        <translation>Преглед за отклањање грешака са временском ознаком</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL опције: (за иструкције о подешавању SSL погледајте Bitcoin Wiki)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
-        <translation>Одаберите верзију за socks proxy коју ћете користити (4-5, предефинисано: 5)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Send trace/debug info to console instead of debug.log file</source>
-        <translation>Пошаљите информације trace/debug ка конзоли уместо у debug.log датотеку</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Send trace/debug info to debugger</source>
-        <translation>Пошаљите информације trace/debug у debugger</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Set maximum block size in bytes (default: 250000)</source>
-        <translation>Подесите максималну величину блока у бајтима (предефинисано: 250000)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Set minimum block size in bytes (default: 0)</source>
-        <translation>Подесите минималну величину блока у бајтовима (предефинисано: 0)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation>Смањи debug.log датотеку приликом покретања клијента (предефинисано: 1 када је без -debug)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Specify connection timeout in milliseconds (default: 5000)</source>
-        <translation>Одредите временски период за повезивање на мрежу у милисекундама (предефинисано: 5000)</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Unable to sign checkpoint, wrong checkpointkey?
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Use UPnP to map the listening port (default: 0)</source>
-        <translation>Користите UPnP за мапирање портова за ослушкивање (предефинисано: 0)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
-        <translation>Користите UPnP за мапирање портова за ослушкивање (предефинисано: 1 када ослушкује)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
-        <translation>Користите proxy за достизање tor скривених сервиса (предефинисано: исто као -proxy)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Username for JSON-RPC connections</source>
-        <translation>Корисничко име за  JSON-RPC конекције</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Verifying database integrity...</source>
-        <translation>Провера инегритета базе података...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart LEOcoin to complete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Warning: Disk space is low!</source>
-        <translation>Упозорење: Немате довољно простора на диску!</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Warning: This version is obsolete, upgrade required!</source>
-        <translation>Упозорење: Ова верзија је застарела, потребна је надоградња!</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>wallet.dat corrupt, salvage failed</source>
-        <translation>wallet.dat датотека је оштећена, није успело спасавање</translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Password for JSON-RPC connections</source>
-        <translation>Лозинка за  JSON-RPC конекције</translation>
-    </message>
-    <message>
-        <location line="-54"/>
-        <source>Allow JSON-RPC connections from specified IP address</source>
-        <translation>Дозволи JSON-RPC конекције са посебне IP адресе</translation>
-    </message>
-    <message>
-        <location line="+62"/>
-        <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
-        <translation>Пошаљи команде ка чвору који ради &lt;ip&gt; (предефинисано: 127.0.0.1)</translation>
-    </message>
-    <message>
-        <location line="-97"/>
-        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-        <translation>Извршите команду када се најбољи блок промени  (%s у cmd је замењен са блок hash-ом)</translation>
-    </message>
-    <message>
-        <location line="+121"/>
-        <source>Upgrade wallet to latest format</source>
-        <translation>Надоградња новчаника на последњи облик</translation>
-    </message>
-    <message>
-        <location line="-16"/>
-        <source>Set key pool size to &lt;n&gt; (default: 100)</source>
-        <translation>Одреди величину кључног pool-а на &lt;n&gt; (предефинисано: 100)</translation>
-    </message>
-    <message>
-        <location line="-14"/>
-        <source>Rescan the block chain for missing wallet transactions</source>
-        <translation>Поново скенирај ланац блокова за недостајуће трансакције из новчаника</translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
-        <translation>Колико блокова проверити приликом покретања (предефинисано: 2500, 0 = сви)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>How thorough the block verification is (0-6, default: 1)</source>
-        <translation>Колико је темељна провера блокова (0-6, предрефинисано: 1)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Imports blocks from external blk000?.dat file</source>
-        <translation>Увоз блокова са спољне blk000?.dat датотеке</translation>
-    </message>
-    <message>
-        <location line="+55"/>
-        <source>Use OpenSSL (https) for JSON-RPC connections</source>
-        <translation>Користи OpenSSL (https) за  JSON-RPC конекције</translation>
-    </message>
-    <message>
-        <location line="-22"/>
-        <source>Server certificate file (default: server.cert)</source>
-        <translation>Датотека сертификата са сервера (предефинисано: server.cert)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Server private key (default: server.pem)</source>
-        <translation>Приватни кључ за сервер (предефинисано: server.pem)</translation>
-    </message>
-    <message>
-        <location line="-127"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation>Прихватљиве шифре (предефинисано: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location line="+139"/>
-        <source>This help message</source>
-        <translation>Ову поруку за помоћ</translation>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
+        <translation>Дошло је до грешке приликом подешавања RPC порта %u за ослушкивање на IPv4: %s</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
-        <translation>Немогуће повезивање на овом рачунарз у %s (веза је вратила грешку %d, %s)</translation>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation>Настала је грешка приликом подешавања RPC port-а за ослушкивање на IPv6, враћам назад до IPv4: %s</translation>
     </message>
     <message>
-        <location line="-72"/>
-        <source>Connect through socks proxy</source>
-        <translation>Повежи се преко socks proxy</translation>
+        <source>Cannot obtain a lock on data directory %s.  LEOcoin is probably already running.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-11"/>
-        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation>Дозволи DNS прегледе за -addnode, -seednode и -connect</translation>
+        <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
+        <translation>Одвоји датотеке блокова и адреса. Увећава време гашења (предефинисано: 0)</translation>
     </message>
     <message>
-        <location line="+43"/>
-        <source>Loading addresses...</source>
-        <translation>Учитавам адресе....</translation>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation>Грешка приликом иницијализације окружења базе података %s! Да бисте повратили, НАПРАВИТЕ РЕЗЕРВНУ КОПИЈУ ТОГ ДИРЕКТОРИЈУМА, затим уклонити све из њега осим wallet.dat. датотеке.</translation>
     </message>
     <message>
-        <location line="-27"/>
-        <source>Error loading blkindex.dat</source>
-        <translation>Грешка приликом учитавања blkindex.dat датотеке</translation>
+        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation>Грешка: Трансакција је одбијена. Ово се може десити уколико је део новчића из Вашег новчаника већ потрошен, и то у случају када користите копију wallet.dat датотеке и новчићи су потрошени у копији али нису овде обележени као потрошени. </translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Грешка приликом учитавања wallet.dat датотеке: Новчаник оштећен</translation>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
+        <translation>Грешка: Ова трансакција захтева провизију од најмање %s због своје комплексности, износа, или употребе недавно примљених средстава</translation>
     </message>
     <message>
-        <location line="-1"/>
-        <source>Error loading wallet.dat</source>
-        <translation>Грешка приликом учитавања wallet.dat датотеке</translation>
+        <source>Error: Wallet unlocked for block minting only, unable to create transaction.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
-        <source>Invalid -proxy address: &apos;%s&apos;</source>
-        <translation>Погрешна -proxy адреса: &apos;%s&apos;</translation>
+        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
+        <translation>Извршите команду када се најбољи блок промени  (%s у cmd је замењен са блок hash-ом)</translation>
     </message>
     <message>
-        <location line="+50"/>
-        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
-        <translation>Наведена непозната мрежа у -onlynet: &apos;%s&apos;</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
+        <translation>Ослушкуј JSON-RPC везу на &lt;port&gt; (предефинисано: 8344 или testnet: 18344)</translation>
     </message>
     <message>
-        <location line="-1"/>
-        <source>Unknown -socks proxy version requested: %i</source>
-        <translation>Затражена непозната верзија -socks proxy-ја: %i</translation>
+        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
+        <translation>Број секунди који спречава чланове са проблемима у раду да се поново повежу (предефинисано: 86400)</translation>
     </message>
     <message>
-        <location line="-78"/>
-        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
-        <translation>Не могу решити -бинд адресу: &apos;% с&apos;</translation>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
+        <translation>Подесите максималну величину за трансакције са високим-приоритетом / ниском-накнадом у бајтовима (подразумевано: 27000)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
-        <translation>Не могу решити -externalip адресу: &apos;%s&apos;</translation>
+        <source>Unable to bind to %s on this computer. LEOcoin is probably already running.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+30"/>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Погрешан износ за -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+        <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>Упозорење: -провизија је подешена на превелик износ! То је износ провизије који плаћате ако извршите трансакцију</translation>
     </message>
     <message>
-        <location line="-15"/>
-        <source>Error: could not start node</source>
-        <translation>Грешка: не могу покренути чвор</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong LEOcoin will not work properly.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+43"/>
-        <source>Sending...</source>
-        <translation>Шаљем...</translation>
+        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Упозорење: грешка у исчитавању wallet.dat датотеке! Сви кључеви се исчитавају исправно, али могуће да недостају или су нетачни подаци о трансакцији или уноси у адресар. </translation>
     </message>
     <message>
-        <location line="-26"/>
-        <source>Invalid amount</source>
-        <translation>Погрешан износ</translation>
+        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Упозорење: wallet.dat датотека оштећена, подаци су спасени! Оригинална датотека wallet.dat је сачувана као wallet.{timestamp}.bak за %s; уколико је нетачно стање рачуна или трансакције опоравак би требало одрадити из резервне копије.</translation>
     </message>
     <message>
-        <location line="-5"/>
-        <source>Insufficient funds</source>
-        <translation>Недовољно средстава</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Loading block index...</source>
-        <translation>Учитавам индекс блокова...</translation>
-    </message>
-    <message>
-        <location line="-45"/>
-        <source>Add a node to connect to and attempt to keep the connection open</source>
-        <translation>Додајте чвор за повезивање и покушати да задржи отворене везе у позадини</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Find peers using internet relay chat (default: 1)</source>
-        <translation>Пронађи чланове користећи IRC програм (предефинисано: 1)</translation>
-    </message>
-    <message>
-        <location line="-2"/>
-        <source>Fee per KB to add to transactions you send</source>
-        <translation>Провизија по KB која ће бити додата на трансакцију коју шаљете</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Loading wallet...</source>
-        <translation>Новчаник се учитава...</translation>
-    </message>
-    <message>
-        <location line="-40"/>
-        <source>Cannot downgrade wallet</source>
-        <translation>Није могуће вратити новчаник на претходну верзију</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Cannot initialize keypool</source>
-        <translation>Није могуће иницијализовати основни pool</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Cannot write default address</source>
-        <translation>Није могуће уписати предефинисану адресу</translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Rescanning...</source>
-        <translation>Скенирам поново...</translation>
-    </message>
-    <message>
-        <location line="-43"/>
-        <source>Done loading</source>
-        <translation>Учитавање је завршено</translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <source>To use the %s option</source>
-        <translation>Да бисте користили опцију %s</translation>
-    </message>
-    <message>
-        <location line="-62"/>
-        <source>Error</source>
-        <translation>Грешка</translation>
-    </message>
-    <message>
-        <location line="-28"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>
         <translation>Морате да подесите rpcpassword=&lt;password&gt; у конфигурацији датотеке:
 %s
 Уколико датотека не постоји, креирајте је на начин да само Ви имате дозволу за приступ датотеци - owner-readable-only.</translation>
+    </message>
+    <message>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation>Прихвати командну линију и JSON-RPC команде</translation>
+    </message>
+    <message>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
+        <translation>Прихвати везе које долазе споља (предефинисано: 1 уколико нема -proxy или -connect)</translation>
+    </message>
+    <message>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Додајте чвор за повезивање и покушати да задржи отворене везе у позадини</translation>
+    </message>
+    <message>
+        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
+        <translation>Дозволи DNS прегледе за -addnode, -seednode и -connect</translation>
+    </message>
+    <message>
+        <source>Allow JSON-RPC connections from specified IP address</source>
+        <translation>Дозволи JSON-RPC конекције са посебне IP адресе</translation>
+    </message>
+    <message>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Покушај опоравка приватних кључева из корумпиране wallet.dat датотеке</translation>
+    </message>
+    <message>
+        <source>Bind to given address. Use [host]:port notation for IPv6</source>
+        <translation>Повезивање на дату адресу. Користите [host]:port обележавање за IPv6</translation>
+    </message>
+    <message>
+        <source>Block creation options:</source>
+        <translation>Опције за креирање блока:</translation>
+    </message>
+    <message>
+        <source>Cannot downgrade wallet</source>
+        <translation>Није могуће вратити новчаник на претходну верзију</translation>
+    </message>
+    <message>
+        <source>Cannot initialize keypool</source>
+        <translation>Није могуће иницијализовати основни pool</translation>
+    </message>
+    <message>
+        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
+        <translation>Не могу решити -бинд адресу: &apos;% с&apos;</translation>
+    </message>
+    <message>
+        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
+        <translation>Не могу решити -externalip адресу: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <source>Cannot write default address</source>
+        <translation>Није могуће уписати предефинисану адресу</translation>
+    </message>
+    <message>
+        <source>Connect only to the specified node(s)</source>
+        <translation>Повежи се само са одређеним чворо(вима)м</translation>
+    </message>
+    <message>
+        <source>Connect through socks proxy</source>
+        <translation>Повежи се преко socks proxy</translation>
+    </message>
+    <message>
+        <source>Connect to a node to retrieve peer addresses, and disconnect</source>
+        <translation>Повежи се на чвориште за преузимање вршњачких адреса, и прекини везу</translation>
+    </message>
+    <message>
+        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
+        <translation>Пронађите сопствену IP адресу (предефинисано: 1 када ослушкује и без  -externalip)</translation>
+    </message>
+    <message>
+        <source>Don&apos;t generate coins</source>
+        <translation>Немој производити новчиће</translation>
+    </message>
+    <message>
+        <source>Done loading</source>
+        <translation>Учитавање је завршено</translation>
+    </message>
+    <message>
+        <source>Error loading blkindex.dat</source>
+        <translation>Грешка приликом учитавања blkindex.dat датотеке</translation>
+    </message>
+    <message>
+        <source>Error loading wallet.dat</source>
+        <translation>Грешка приликом учитавања wallet.dat датотеке</translation>
+    </message>
+    <message>
+        <source>Error loading wallet.dat: Wallet corrupted</source>
+        <translation>Грешка приликом учитавања wallet.dat датотеке: Новчаник оштећен</translation>
+    </message>
+    <message>
+        <source>Error loading wallet.dat: Wallet requires newer version of LEOcoin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Грешка</translation>
+    </message>
+    <message>
+        <source>Error: Transaction creation failed  </source>
+        <translation>Грешка: Креирање трансакције је неуспешно</translation>
+    </message>
+    <message>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation>Грешка: Новчаник је закључан, немогуће је остварити трансакцију</translation>
+    </message>
+    <message>
+        <source>Error: could not start node</source>
+        <translation>Грешка: не могу покренути чвор</translation>
+    </message>
+    <message>
+        <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
+        <translation>Неуспешно ослушкивање на сваком од портова. Ако то желите користити -listen=0.</translation>
+    </message>
+    <message>
+        <source>Fee per KB to add to transactions you send</source>
+        <translation>Провизија по KB која ће бити додата на трансакцију коју шаљете</translation>
+    </message>
+    <message>
+        <source>Find peers using DNS lookup (default: 0)</source>
+        <translation>Пронађите чланове користећи DNS преглед (предефинисано: 0)</translation>
+    </message>
+    <message>
+        <source>Find peers using internet relay chat (default: 1)</source>
+        <translation>Пронађи чланове користећи IRC програм (предефинисано: 1)</translation>
+    </message>
+    <message>
+        <source>Generate coins</source>
+        <translation>Произведи новчиће</translation>
+    </message>
+    <message>
+        <source>Get help for a command</source>
+        <translation>Затражи помоћ за команду</translation>
+    </message>
+    <message>
+        <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
+        <translation>Колико блокова проверити приликом покретања (предефинисано: 2500, 0 = сви)</translation>
+    </message>
+    <message>
+        <source>How thorough the block verification is (0-6, default: 1)</source>
+        <translation>Колико је темељна провера блокова (0-6, предрефинисано: 1)</translation>
+    </message>
+    <message>
+        <source>Importing blockchain data file.</source>
+        <translation>Увозим датотеку са ланцем блокова.</translation>
+    </message>
+    <message>
+        <source>Importing bootstrap blockchain data file.</source>
+        <translation>Увозим властиту датотеку са ланцем блокова.</translation>
+    </message>
+    <message>
+        <source>Imports blocks from external blk000?.dat file</source>
+        <translation>Увоз блокова са спољне blk000?.dat датотеке</translation>
+    </message>
+    <message>
+        <source>Insufficient funds</source>
+        <translation>Недовољно средстава</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation>Погрешна -proxy адреса: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <source>Invalid -tor address: &apos;%s&apos;</source>
+        <translation>Неважећа -tor адреса: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>Погрешан износ за -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid amount</source>
+        <translation>Погрешан износ</translation>
+    </message>
+    <message>
+        <source>List commands</source>
+        <translation>Листај команде</translation>
+    </message>
+    <message>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 17777)</source>
+        <translation>Ослушкуј конекције на &lt;port&gt; (предефинисано: 8333 или testnet: 18333)</translation>
+    </message>
+    <message>
+        <source>Loading addresses...</source>
+        <translation>Учитавам адресе....</translation>
+    </message>
+    <message>
+        <source>Loading block index...</source>
+        <translation>Учитавам индекс блокова...</translation>
+    </message>
+    <message>
+        <source>Loading wallet...</source>
+        <translation>Новчаник се учитава...</translation>
+    </message>
+    <message>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
+        <translation>Одржавај највише &lt;n&gt; конекција по прикључку (предефинисано: 125)</translation>
+    </message>
+    <message>
+        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
+        <translation>Максимална количина меморије за пријем по -connection, &lt;n&gt;*1000 бајтова (предефинисано: 5000)</translation>
+    </message>
+    <message>
+        <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
+        <translation>Максимална количина меморије за слање по -connection, &lt;n&gt;*1000 бајтова (предефинисано: 1000)</translation>
+    </message>
+    <message>
+        <source>LEOcoin version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LEOcoin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
+        <translation>Повежи се само на чворове са мреже &lt;net&gt; (IPv4, IPv6 or Tor)</translation>
+    </message>
+    <message>
+        <source>Options:</source>
+        <translation>Опције</translation>
+    </message>
+    <message>
+        <source>Output extra debugging information. Implies all other -debug* options</source>
+        <translation>Преглед додатних информација за дешифровање. Односи се на све друге опције за -debug*</translation>
+    </message>
+    <message>
+        <source>Output extra network debugging information</source>
+        <translation>Преглед додатних информација за дешифровање мреже</translation>
+    </message>
+    <message>
+        <source>Password for JSON-RPC connections</source>
+        <translation>Лозинка за  JSON-RPC конекције</translation>
+    </message>
+    <message>
+        <source>Prepend debug output with timestamp</source>
+        <translation>Преглед за отклањање грешака са временском ознаком</translation>
+    </message>
+    <message>
+        <source>Rescan the block chain for missing wallet transactions</source>
+        <translation>Поново скенирај ланац блокова за недостајуће трансакције из новчаника</translation>
+    </message>
+    <message>
+        <source>Rescanning...</source>
+        <translation>Скенирам поново...</translation>
+    </message>
+    <message>
+        <source>Run in the background as a daemon and accept commands</source>
+        <translation>Ради у позадини као daemon сервис и прихвати команде</translation>
+    </message>
+    <message>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL опције: (за иструкције о подешавању SSL погледајте Bitcoin Wiki)</translation>
+    </message>
+    <message>
+        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
+        <translation>Одаберите верзију за socks proxy коју ћете користити (4-5, предефинисано: 5)</translation>
+    </message>
+    <message>
+        <source>Send command to -server or LEOcoind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
+        <translation>Пошаљи команде ка чвору који ради &lt;ip&gt; (предефинисано: 127.0.0.1)</translation>
+    </message>
+    <message>
+        <source>Send trace/debug info to console instead of debug.log file</source>
+        <translation>Пошаљите информације trace/debug ка конзоли уместо у debug.log датотеку</translation>
+    </message>
+    <message>
+        <source>Send trace/debug info to debugger</source>
+        <translation>Пошаљите информације trace/debug у debugger</translation>
+    </message>
+    <message>
+        <source>Sending...</source>
+        <translation>Шаљем...</translation>
+    </message>
+    <message>
+        <source>Server certificate file (default: server.cert)</source>
+        <translation>Датотека сертификата са сервера (предефинисано: server.cert)</translation>
+    </message>
+    <message>
+        <source>Server private key (default: server.pem)</source>
+        <translation>Приватни кључ за сервер (предефинисано: server.pem)</translation>
+    </message>
+    <message>
+        <source>Set database cache size in megabytes (default: 25)</source>
+        <translation>Подесите величину кеш меморије за базу података у мегабајтима (предефинисано: 25)</translation>
+    </message>
+    <message>
+        <source>Set database disk log size in megabytes (default: 100)</source>
+        <translation>Подесите величину дневника на диску за базу података (предефинисано: 100)</translation>
+    </message>
+    <message>
+        <source>Set key pool size to &lt;n&gt; (default: 100)</source>
+        <translation>Одреди величину кључног pool-а на &lt;n&gt; (предефинисано: 100)</translation>
+    </message>
+    <message>
+        <source>Set maximum block size in bytes (default: 250000)</source>
+        <translation>Подесите максималну величину блока у бајтима (предефинисано: 250000)</translation>
+    </message>
+    <message>
+        <source>Set minimum block size in bytes (default: 0)</source>
+        <translation>Подесите минималну величину блока у бајтовима (предефинисано: 0)</translation>
+    </message>
+    <message>
+        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
+        <translation>Смањи debug.log датотеку приликом покретања клијента (предефинисано: 1 када је без -debug)</translation>
+    </message>
+    <message>
+        <source>Specify configuration file (default: LEOcoin.conf)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify connection timeout in milliseconds (default: 5000)</source>
+        <translation>Одредите временски период за повезивање на мрежу у милисекундама (предефинисано: 5000)</translation>
+    </message>
+    <message>
+        <source>Specify data directory</source>
+        <translation>Наведите директоријум са подацима</translation>
+    </message>
+    <message>
+        <source>Specify pid file (default: LEOcoind.pid)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify your own public address</source>
+        <translation>Наведите Вашу властиту јавну адресу</translation>
+    </message>
+    <message>
+        <source>This help message</source>
+        <translation>Ову поруку за помоћ</translation>
+    </message>
+    <message>
+        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
+        <translation>Праг за прекид везе чланова који имају проблеме у раду (предефинисано: 100)</translation>
+    </message>
+    <message>
+        <source>To use the %s option</source>
+        <translation>Да бисте користили опцију %s</translation>
+    </message>
+    <message>
+        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
+        <translation>Немогуће повезивање на овом рачунарз у %s (веза је вратила грешку %d, %s)</translation>
+    </message>
+    <message>
+        <source>Unable to sign checkpoint, wrong checkpointkey?
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown -socks proxy version requested: %i</source>
+        <translation>Затражена непозната верзија -socks proxy-ја: %i</translation>
+    </message>
+    <message>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation>Наведена непозната мрежа у -onlynet: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <source>Upgrade wallet to latest format</source>
+        <translation>Надоградња новчаника на последњи облик</translation>
+    </message>
+    <message>
+        <source>Usage:</source>
+        <translation>Коришћење:</translation>
+    </message>
+    <message>
+        <source>Use OpenSSL (https) for JSON-RPC connections</source>
+        <translation>Користи OpenSSL (https) за  JSON-RPC конекције</translation>
+    </message>
+    <message>
+        <source>Use UPnP to map the listening port (default: 0)</source>
+        <translation>Користите UPnP за мапирање портова за ослушкивање (предефинисано: 0)</translation>
+    </message>
+    <message>
+        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
+        <translation>Користите UPnP за мапирање портова за ослушкивање (предефинисано: 1 када ослушкује)</translation>
+    </message>
+    <message>
+        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
+        <translation>Користите proxy за достизање tor скривених сервиса (предефинисано: исто као -proxy)</translation>
+    </message>
+    <message>
+        <source>Use the test network</source>
+        <translation>Користи мрежу за тестирање</translation>
+    </message>
+    <message>
+        <source>Username for JSON-RPC connections</source>
+        <translation>Корисничко име за  JSON-RPC конекције</translation>
+    </message>
+    <message>
+        <source>Verifying database integrity...</source>
+        <translation>Провера инегритета базе података...</translation>
+    </message>
+    <message>
+        <source>Wallet needed to be rewritten: restart LEOcoin to complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Warning: Disk space is low!</source>
+        <translation>Упозорење: Немате довољно простора на диску!</translation>
+    </message>
+    <message>
+        <source>Warning: This version is obsolete, upgrade required!</source>
+        <translation>Упозорење: Ова верзија је застарела, потребна је надоградња!</translation>
+    </message>
+    <message>
+        <source>wallet.dat corrupt, salvage failed</source>
+        <translation>wallet.dat датотека је оштећена, није успело спасавање</translation>
     </message>
 </context>
 </TS>
