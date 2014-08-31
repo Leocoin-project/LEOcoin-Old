@@ -2199,11 +2199,12 @@ Address: %4
         <translation>Usage:</translation>
     </message>
     <message>
+        <location line="-26"/>
         <source>Send command to -server or LEOcoind</source>
-        <translation type="obsolete">Send command to -server or LEOcoind</translation>
+        <translation type="unfinished">Send command to -server or LEOcoind</translation>
     </message>
     <message>
-        <location line="-47"/>
+        <location line="-21"/>
         <source>List commands</source>
         <translation>List commands</translation>
     </message>
@@ -2288,7 +2289,19 @@ Address: %4
         <translation>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-39"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=bitcoinrpc
+rpcpassword=%s
+(you do not need to remember this password)
+If the file does not exist, create it with owner-readable-only file permissions.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2497,12 +2510,7 @@ Address: %4
         <translation>Select the version of socks proxy to use (4-5, default: 5)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Send command to -server or LEOcoind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Send trace/debug info to console instead of debug.log file</translation>
     </message>
@@ -2798,7 +2806,6 @@ Address: %4
         <translation>To use the %s option</translation>
     </message>
     <message>
-        <location line="-150"/>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
@@ -2807,7 +2814,7 @@ rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.
 </source>
-        <translation>%s, you must set a rpcpassword in the configuration file:
+        <translation type="obsolete">%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
 rpcuser=leocoinrpc
@@ -2817,7 +2824,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
 </translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="-62"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>

@@ -6,7 +6,7 @@ DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE SCRYPT_CHACHA SCR
 CONFIG += no_include_pwd
 CONFIG += thread
 CONFIG += static
-USER = username
+USER = mindfox
 
 #Uncomment this section to build on Windows using QtCMD/MinGW. Adjust dep locations as needed!
 #windows:LIBS += -lshlwapi

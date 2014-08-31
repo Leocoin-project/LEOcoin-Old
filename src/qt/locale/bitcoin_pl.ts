@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="en">
+<TS version="2.0" language="pl">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
-    <message>
-        <source>About UTC</source>
-        <translation type="obsolete">About UTC</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;UTC&lt;/b&gt; version</source>
-        <translation type="obsolete">&lt;b&gt;UTC&lt;/b&gt; version</translation>
-    </message>
-    <message>
-        <source>Copyright © 2009-2012 The UTC developers</source>
-        <translation type="obsolete">Copyright © 2009-2012 The UTC developers</translation>
-    </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About LEOcoin</source>
@@ -59,12 +47,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Adresy</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>Double-click to edit address or label</source>
         <translation>Kliknij dwukrotnie, aby edytować adres lub etykietę</translation>
     </message>
@@ -89,11 +72,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Nowy adres</translation>
     </message>
     <message>
-        <source>These are your UTC addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="obsolete">Tutaj znajdują się twoje adresy UTC do odbioru płatności. Możesz nadać oddzielne adresy dla każdego z wysyłających monety, żeby śledzić oddzielnie ich opłaty.</translation>
+        <location line="-46"/>
+        <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+63"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopiuj adres</translation>
     </message>
@@ -101,10 +85,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+14"/>
         <source>Show &amp;QR Code</source>
         <translation>Show &amp;Kod QR</translation>
-    </message>
-    <message>
-        <source>Sign a message to prove you own a UTC address</source>
-        <translation type="obsolete">Podpisz wiadomość aby dowieść, że ten adres jest twój</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -120,10 +100,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Verify a message to ensure it was signed with a specified UTC address</source>
-        <translation type="obsolete">Sprawdzenia wiadomości, aby zapewnić, że została podpisana z określonego adresu UTC</translation>
     </message>
     <message>
         <location line="-14"/>
@@ -285,10 +261,6 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>Portfel zaszyfrowany</translation>
     </message>
     <message>
-        <source>UTC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="obsolete">UTC zamknie się teraz, aby zakończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie może w pełni chronić monety przed kradzieżą przez malware zainfekowaniu komputera.</translation>
-    </message>
-    <message>
         <location line="-43"/>
         <location line="+7"/>
         <location line="+42"/>
@@ -343,11 +315,12 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>Synchronizacja z siecią...</translation>
     </message>
     <message>
-        <source>&amp;Overview</source>
-        <translation type="obsolete">P&amp;odsumowanie</translation>
+        <location line="-520"/>
+        <source>LEOcoin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="+178"/>
         <source>Show general overview of wallet</source>
         <translation>Pokazuje ogólny zarys portfela</translation>
     </message>
@@ -372,17 +345,9 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>Edytuj listę zapisanych adresów i i etykiet</translation>
     </message>
     <message>
-        <source>&amp;Receive coins</source>
-        <translation type="obsolete">Odbie&amp;rz monety</translation>
-    </message>
-    <message>
         <location line="-11"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Pokaż listę adresów do otrzymywania płatności</translation>
-    </message>
-    <message>
-        <source>&amp;Send coins</source>
-        <translation type="obsolete">Wy&amp;syłka monet</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -395,11 +360,12 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>Zamknij program</translation>
     </message>
     <message>
-        <source>Show information about UTC</source>
-        <translation type="obsolete">Pokaż informację o UTC</translation>
+        <location line="+4"/>
+        <source>Show information about LEOcoin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+2"/>
         <source>About &amp;Qt</source>
         <translation>O &amp;Qt</translation>
     </message>
@@ -414,7 +380,12 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>&amp;Opcje...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>Modify configuration options for LEOcoin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>&amp;Encrypt Wallet...</source>
         <translation>Zaszyfruj portf&amp;el</translation>
     </message>
@@ -445,14 +416,16 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+26"/>
         <source>~%n block(s) remaining</source>
-        <translation>
-            <numerusform>~%n block remaining</numerusform>
-            <numerusform>~%n blocks remaining</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -466,14 +439,6 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>&amp;Eksportuj...</translation>
     </message>
     <message>
-        <source>Send coins to a UTC address</source>
-        <translation type="obsolete">Wyślij monety na adres UTC</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for UTC</source>
-        <translation type="obsolete">Zmienia opcje konfiguracji UTC</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Export the data in the current tab to a file</source>
         <translation>Eksportować dane w bieżącej karcie do pliku</translation>
@@ -484,12 +449,7 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>Zaszyfruj lub odszyfruj portfel</translation>
     </message>
     <message>
-        <location line="-258"/>
-        <source>LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+177"/>
+        <location line="-81"/>
         <source>&amp;My Wallet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -509,17 +469,7 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Show information about LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Modify configuration options for LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Backup wallet to another location</source>
         <translation>Backup w innej lokalizacji portfel</translation>
     </message>
@@ -544,17 +494,9 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>&amp;Sprawdzenia wiadomości...</translation>
     </message>
     <message>
-        <source>UTC</source>
-        <translation type="obsolete">UTC</translation>
-    </message>
-    <message>
         <location line="-265"/>
         <source>Wallet</source>
         <translation>Portfel</translation>
-    </message>
-    <message>
-        <source>&amp;About UTC</source>
-        <translation type="obsolete">&amp;O UTC</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -577,10 +519,6 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>Pomo&amp;c</translation>
     </message>
     <message>
-        <source>Tabs toolbar</source>
-        <translation type="obsolete">Pasek zakładek</translation>
-    </message>
-    <message>
         <location line="+30"/>
         <source>Actions toolbar</source>
         <translation>Pasek akcji</translation>
@@ -592,17 +530,6 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
         <translation>[testnet]</translation>
     </message>
     <message>
-        <source>UTC client</source>
-        <translation type="obsolete">UTC client</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to UTC network</source>
-        <translation type="obsolete">
-            <numerusform>%n aktywne połączenie do sieci UTC</numerusform>
-            <numerusform>%n aktywne połączenie do sieci UTC</numerusform>
-        </translation>
-    </message>
-    <message>
         <location line="+169"/>
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation>Pobrano %1 bloków z historią transakcji.</translation>
@@ -610,33 +537,37 @@ Czy na pewno chcesz zaszyfrować swój portfel?</translation>
     <message numerus="yes">
         <location line="+22"/>
         <source>%n second(s) ago</source>
-        <translation>
-            <numerusform>%n sekundę temu</numerusform>
-            <numerusform>%n sekundę temu</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>%n minutę temu</numerusform>
-            <numerusform>%n minutę temu</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>%n godzinę temu</numerusform>
-            <numerusform>%n godzinę temu</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n day(s) ago</source>
-        <translation>
-            <numerusform>%n dzień temu</numerusform>
-            <numerusform>%n dzień temu</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -700,10 +631,6 @@ Adres: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI can not be parsed! This can be caused by an invalid UTC address or malformed URI parameters.</source>
-        <translation type="obsolete">URI nie może być analizowany! Może to być spowodowane nieprawidłowym adresem UTC lub zniekształconych parametrów URI.</translation>
-    </message>
-    <message>
         <location line="+16"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Portfel jest &lt;b&gt;zaszyfrowany&lt;/b&gt; i obecnie &lt;b&gt;niezablokowany&lt;/b&gt;</translation>
@@ -732,10 +659,6 @@ Adres: %4
         <location line="+0"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation>Wystąpił błąd podczas próby zapisania danych portfela do nowej lokalizacji.</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. UTC can no longer continue safely and will quit.</source>
-        <translation type="obsolete">Wystąpił błąd krytyczny. UTC nie może dłużej kontynuować bezpiecznie i wyjdzie.</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+112"/>
@@ -809,10 +732,6 @@ Adres: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid UTC address.</source>
-        <translation type="obsolete">Wprowadzony adres &quot;%1&quot; nie jest prawidłowym adresem UTC.</translation>
-    </message>
-    <message>
         <location line="+5"/>
         <source>Could not unlock wallet.</source>
         <translation>Nie można było odblokować portfela.</translation>
@@ -826,22 +745,18 @@ Adres: %4
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <source>UTC-Qt</source>
-        <translation type="obsolete">UTC-Qt</translation>
-    </message>
-    <message>
         <location filename="../guiutil.cpp" line="+436"/>
-        <source>version</source>
-        <translation>Wersja</translation>
-    </message>
-    <message>
-        <location line="+0"/>
         <location line="+12"/>
         <source>LEOcoin-Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-12"/>
+        <source>version</source>
+        <translation>Wersja</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Usage:</source>
         <translation>Użycie:</translation>
     </message>
@@ -894,15 +809,17 @@ Adres: %4
         <translation>Płać prowizję za t&amp;ransakcje</translation>
     </message>
     <message>
-        <source>Automatically start UTC after logging in to the system.</source>
-        <translation type="obsolete">Automatyczne uruchamia UTC po włączeniu komputera</translation>
+        <location line="+31"/>
+        <source>Automatically start LEOcoin after logging in to the system.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Start UTC on system login</source>
-        <translation type="obsolete">Zacznij UTC przy logowaniu systemu</translation>
+        <location line="+3"/>
+        <source>&amp;Start LEOcoin on system login</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+7"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
         <translation>Odłączyć blok i baz danych adresowych przy wyłączaniu. Oznacza to, że mogą być przeniesione do innego katalogu danych, ale to spowalnia wyłączył.Portfel jest zawsze indywidualny.</translation>
     </message>
@@ -917,20 +834,22 @@ Adres: %4
         <translation>&amp;Sieć</translation>
     </message>
     <message>
-        <source>Automatically open the UTC client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="obsolete">Automatycznie otwiera port klienta UTC na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
+        <location line="+6"/>
+        <source>Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+3"/>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapuj port używając &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the UTC network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="obsolete">Łączy się z siecią UTC przez proxy SOCKS4 (np. kiedy łączysz się przez Tor).</translation>
+        <location line="+7"/>
+        <source>Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+3"/>
         <source>&amp;Connect through SOCKS proxy:</source>
         <translation>Połącz przez proxy SO&amp;CKS</translation>
     </message>
@@ -955,36 +874,7 @@ Adres: %4
         <translation>Port proxy (np. 9050)</translation>
     </message>
     <message>
-        <source>SOCKS &amp;Version:</source>
-        <translation type="obsolete">SOCKS &amp;Wersja:</translation>
-    </message>
-    <message>
-        <location line="-107"/>
-        <source>Automatically start LEOcoin after logging in to the system.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Start LEOcoin on system login</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+37"/>
-        <source>Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+64"/>
-        <source>SOCKS &amp;V:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+32"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
         <translation>Wersja SOCKS proxy (np. 5)</translation>
     </message>
@@ -1034,22 +924,19 @@ Adres: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting UTC.</source>
-        <translation type="obsolete">Język interfejsu użytkownika można tu ustawić. Ustawienie zacznie obowiązywać po ponownym uruchomieniu UTC.</translation>
-    </message>
-    <message>
         <location line="-22"/>
         <source>&amp;Unit to show amounts in:</source>
         <translation>&amp;Jednostka pokazywana przy kwocie:</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Wybierz podział jednostki pokazywany w interfejsie  oraz podczas wysyłania monet.</translation>
+        <location line="-133"/>
+        <source>SOCKS &amp;V:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Whether to show UTC addresses in the transaction list or not.</source>
-        <translation type="obsolete">Czy pokazać adresy UTC w wykazie transakcji, czy też nie.</translation>
+        <location line="+146"/>
+        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
+        <translation>Wybierz podział jednostki pokazywany w interfejsie  oraz podczas wysyłania monet.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1089,10 +976,6 @@ Adres: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This setting will take effect after restarting UTC.</source>
-        <translation type="obsolete">Ustawienie zacznie obowiązywać po ponownym uruchomieniu UTC.</translation>
-    </message>
-    <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
         <translation>Dostarczony adres proxy jest nieprawidłowy.</translation>
@@ -1106,15 +989,13 @@ Adres: %4
         <translation>Formularz</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the UTC network after a connection is established, but this process has not completed yet.</source>
-        <translation type="obsolete">Wyświetlane informacje mogą być nieaktualne. Twój portfel automatycznie synchronizuje się z siecią UTC po nawiązaniu połączenia, ale proces ten nie został jeszcze zakończony.</translation>
+        <location line="+24"/>
+        <location line="+430"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Balance:</source>
-        <translation type="obsolete">Saldo:</translation>
-    </message>
-    <message>
-        <location line="+217"/>
+        <location line="-237"/>
         <source>Stake:</source>
         <translation>Stawka:</translation>
     </message>
@@ -1134,13 +1015,7 @@ Adres: %4
         <translation>Portfel</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <location line="+430"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-137"/>
+        <location line="+300"/>
         <source>Immature:</source>
         <translation>Niedojrzały:</translation>
     </message>
@@ -1336,21 +1211,17 @@ Adres: %4
         <translation>&amp;Otwarte</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location line="-29"/>
         <source>Command-line options</source>
         <translation>Opcje wiersza polecenia</translation>
     </message>
     <message>
-        <source>Show the UTC-Qt help message to get a list with possible UTC command-line options.</source>
-        <translation type="obsolete">Pokaż komunikat pomocy UTC-Qt, aby uzyskać listę możliwych opcji UTC z wiersza poleceń.</translation>
+        <location line="+42"/>
+        <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+3"/>
         <source>&amp;Show</source>
         <translation>&amp;Show</translation>
     </message>
@@ -1365,30 +1236,14 @@ Adres: %4
         <translation>Datę budować</translation>
     </message>
     <message>
-        <source>UTC - Debug window</source>
-        <translation type="obsolete">UTC - Okno debugowania</translation>
-    </message>
-    <message>
-        <source>UTC Core</source>
-        <translation type="obsolete">UTC Core</translation>
-    </message>
-    <message>
         <location line="+200"/>
         <source>Debug log file</source>
         <translation>Plik dziennika debugowania</translation>
     </message>
     <message>
-        <source>Open the UTC debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="obsolete">Otwórz plik dziennika UTC debug z bieżącego katalogu danych. Może to zająć kilka sekund dla dużych plików dziennika.</translation>
-    </message>
-    <message>
         <location line="+115"/>
         <source>Clear console</source>
         <translation>Jasne konsola</translation>
-    </message>
-    <message>
-        <source>Welcome to the UTC RPC console.</source>
-        <translation type="obsolete">Zapraszamy do konsoli UTC RPC.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
@@ -1404,10 +1259,6 @@ Adres: %4
         <location line="+1"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Typ &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation type="obsolete">Type &lt;b&gt;help&lt;/b&gt; na przegląd dostępnych poleceń.</translation>
     </message>
 </context>
 <context>
@@ -1580,10 +1431,6 @@ Adres: %4
         <translation>Remove this recipient</translation>
     </message>
     <message>
-        <source>Enter a UTC address (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</source>
-        <translation type="obsolete">Wprowadź adres UTC (np. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</translation>
-    </message>
-    <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
         <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
@@ -1608,16 +1455,7 @@ Adres: %4
         <translation>Możesz podpisać wiadomości z adresów udowodnić ich właścicielem. Uważaj, aby nie podpisać coś niejasne, jako ataków phishingowych może próbować nakłonić użytkownika do podpisania tożsamości do nich. Tylko znak pełni szczegółowe oświadczenia zgadzasz się na.</translation>
     </message>
     <message>
-        <source>The address to sign the message with (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</source>
-        <translation type="obsolete">Adres do podpisania wiadomość z (np. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>The address to sign the message with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+34"/>
         <location line="+209"/>
         <source>Choose an address from the address book</source>
         <translation>Wybierz adres z książki adresowej</translation>
@@ -1664,16 +1502,17 @@ Adres: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this UTC address</source>
-        <translation type="obsolete">Podpisz wiadomość aby dowieść, że ten adres jest twój</translation>
-    </message>
-    <message>
         <location line="-132"/>
         <source>Reset all sign message fields</source>
         <translation>Zresetować wszystkie pola znak wiadomość</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-120"/>
+        <source>The address to sign the message with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+123"/>
         <location line="+149"/>
         <source>Clear &amp;All</source>
         <translation>Wyczyść &amp;wszystko</translation>
@@ -1690,21 +1529,9 @@ Adres: %4
         <translation>Wpisz adres podpisu, komunikat (zapewnienia kopiowania podziały wiersza, spacje, tabulatory, itp.) oraz podpis dokładnie poniżej, aby sprawdzić wiadomość. Uważaj, aby nie więcej niż do podpisu, co jest w podpisanym samego komunikatu, aby uniknąć oszukany przez atak typu man-in-the-middle.</translation>
     </message>
     <message>
-        <source>The address the message was signed with (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</source>
-        <translation type="obsolete">Adres wiadomość została podpisana z (np. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</translation>
-    </message>
-    <message>
-        <source>Verify the message to ensure it was signed with the specified UTC address</source>
-        <translation type="obsolete">Sprawdź, czy wiadomość w celu zapewnienia, że została podpisana z określonego adresu UTC</translation>
-    </message>
-    <message>
         <location line="+81"/>
         <source>Reset all verify message fields</source>
         <translation>Zresetować wszystkie sprawdzenia pola wiadomość</translation>
-    </message>
-    <message>
-        <source>Enter a UTC address (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</source>
-        <translation type="obsolete">Wpisz adres UTC (np. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+28"/>
@@ -1712,22 +1539,18 @@ Adres: %4
         <translation>Kliknij &quot;Zarejestruj wiadomość&quot; do generowania podpisu</translation>
     </message>
     <message>
-        <source>Enter UTC signature</source>
-        <translation type="obsolete">Wprowadź UTC podpis</translation>
+        <location line="+3"/>
+        <source>Enter LEOcoin signature</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1"/>
+        <location line="-4"/>
         <location line="+3"/>
         <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Enter LEOcoin signature</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+82"/>
+        <location line="+83"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
         <translation>Wprowadzony adres jest nieprawidłowy.</translation>
@@ -1803,9 +1626,10 @@ Adres: %4
     <message numerus="yes">
         <location line="-2"/>
         <source>Open for %n block(s)</source>
-        <translation>
-            <numerusform>Otwórz dla %n bloku</numerusform>
-            <numerusform>Otwórz dla %n bloku</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1831,9 +1655,10 @@ Adres: %4
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation>
-            <numerusform>, emitowany przez %1</numerusform>
-            <numerusform>, emitowany przez %1</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1887,9 +1712,10 @@ Adres: %4
     <message numerus="yes">
         <location line="-104"/>
         <source>matures in %n more block(s)</source>
-        <translation>
-            <numerusform>dojrzewa w %n Blok</numerusform>
-            <numerusform>dojrzewa w %n Bloki</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1939,10 +1765,6 @@ Adres: %4
         <location line="+2"/>
         <source>Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to \&quot;not accepted\&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
-        <translation type="obsolete">Wpłaconych stawek monety 520 bloków musi czekać, zanim powróci do równowagi i być wydane. Gdy generowany ten proof-of-grę blok, to było transmitowane w sieci mają być dodane do łańcucha bloku. Jeśli nie dostać się do łańcucha, to się zmieni na \&quot;nie przyjął\&quot; i nie być ważny udział. To czasami może się zdarzyć, jeśli inny węzeł generuje proof-of-grę bloku w ciągu kilku sekund od Ciebie.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2028,9 +1850,10 @@ Adres: %4
     <message numerus="yes">
         <location line="+57"/>
         <source>Open for %n block(s)</source>
-        <translation>
-            <numerusform>Otwórz dla %n bloku</numerusform>
-            <numerusform>Otwórz dla %n bloków</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -2056,9 +1879,10 @@ Adres: %4
     <message numerus="yes">
         <location line="+8"/>
         <source>Mined balance will be available when it matures in %n more block(s)</source>
-        <translation>
-            <numerusform>Wydobyta kwota będzie dostępna za %n blok</numerusform>
-            <numerusform>Wydobyta kwota będzie dostępna za %n bloków</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -2261,10 +2085,6 @@ Adres: %4
         <translation type="unfinished">Adres</translation>
     </message>
     <message>
-        <source>Adres</source>
-        <translation type="obsolete">Address</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Amount</source>
         <translation>Kwota</translation>
@@ -2306,20 +2126,22 @@ Adres: %4
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>UTC version</source>
-        <translation type="obsolete">Wersja UTC</translation>
+        <location filename="../bitcoinstrings.cpp" line="+126"/>
+        <source>LEOcoin version</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+165"/>
+        <location line="+39"/>
         <source>Usage:</source>
         <translation>Użycie:</translation>
     </message>
     <message>
-        <source>Send command to -server or bitcoind</source>
-        <translation type="obsolete">Wyślij polecenie do -server lub bitcoind</translation>
+        <location line="-26"/>
+        <source>Send command to -server or LEOcoind</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-47"/>
+        <location line="-21"/>
         <source>List commands</source>
         <translation>Lista poleceń</translation>
     </message>
@@ -2334,15 +2156,17 @@ Adres: %4
         <translation>Opcje:</translation>
     </message>
     <message>
-        <source>Specify configuration file (default: UTC.conf)</source>
-        <translation type="obsolete">Wskaż plik konfiguracyjny (domyślnie: UTC.conf)</translation>
+        <location line="+23"/>
+        <source>Specify configuration file (default: LEOcoin.conf)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Specify pid file (default: UTCd.pid)</source>
-        <translation type="obsolete">Wskaż plik pid (domyślnie: UTCd.pid)</translation>
+        <location line="+3"/>
+        <source>Specify pid file (default: LEOcoind.pid)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="-50"/>
         <source>Generate coins</source>
         <translation>Generuj monety</translation>
     </message>
@@ -2402,7 +2226,19 @@ Adres: %4
         <translation>Liczba sekund, aby utrzymać rówieśników niewłaściwie z ponownym (domyślnie: 86400)</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-39"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=bitcoinrpc
+rpcpassword=%s
+(you do not need to remember this password)
+If the file does not exist, create it with owner-readable-only file permissions.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2432,12 +2268,7 @@ Adres: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+13"/>
         <source>Unable to bind to %s on this computer. LEOcoin is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2497,7 +2328,12 @@ Adres: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+15"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
         <translation>Ustaw maksymalny rozmiar transakcji o wysokim priorytecie/niskich opłat w bajtach (domyślnie: 27000)</translation>
     </message>
@@ -2505,14 +2341,6 @@ Adres: %4
         <location line="+5"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Ostrzeżenie:-paytxfee jest ustawiona bardzo wysoko! To jest opłata transakcyjna będzie zapłacić, jeśli wysyłasz transakcji.</translation>
-    </message>
-    <message>
-        <source>Warning: Displayed transactions may not be correct! You may need to upgrade, or other nodes may need to upgrade.</source>
-        <translation type="obsolete">Warning: transakcje Wyświetlane mogą być nieprawidłowe! Może trzeba uaktualnić lub inne węzły mogą wymagać aktualizacji.</translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong UTC will not work properly.</source>
-        <translation type="obsolete">Uwaga: Proszę sprawdzić, czy data i godzina komputera&apos;s są poprawne! Jeśli zegar jest źle UTC nie będzie działać poprawnie.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2580,12 +2408,7 @@ Adres: %4
         <translation>Maksymalny bufor wysyłu na połączenie, &lt;n&gt;*1000 bajtów (domyślnie: 1000)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>LEOcoin version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>LEOcoin</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2620,12 +2443,7 @@ Adres: %4
         <translation>Wybierz wersję Socks Proxy użyć (4-5, domyślnie: 5)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Send command to -server or LEOcoind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Wysłać informację śledzenia/debugowania do konsoli zamiast pliku debug.log</translation>
     </message>
@@ -2650,22 +2468,12 @@ Adres: %4
         <translation>Kurczyć plik debug.log na starcie klienta (domyślnie: 1, gdy nie-debug)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Specify configuration file (default: LEOcoin.conf)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Określić limit czasu połączenia, w milisekundach (domyślnie: 5000)</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Specify pid file (default: LEOcoind.pid)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Unable to sign checkpoint, wrong checkpointkey?
 </source>
         <translation type="unfinished"></translation>
@@ -2791,14 +2599,6 @@ Adres: %4
         <translation>Ta wiadomość pomocy</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s.  UTC is probably already running.</source>
-        <translation type="obsolete">Nie można zablokować folderu danych %s. UTC prawdopodobnie już działa.</translation>
-    </message>
-    <message>
-        <source>UTC</source>
-        <translation type="obsolete">UTC</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Nie można powiązać z %s na tym komputerze (wiążą zwróciło błąd %d,%s)</translation>
@@ -2827,14 +2627,6 @@ Adres: %4
         <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Błąd ładowania wallet.dat: Uszkodzony portfel</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of UTC</source>
-        <translation type="obsolete">Błąd ładowania wallet.dat: Portfel wymaga nowszej wersji UTC</translation>
-    </message>
-    <message>
-        <source>Wallet needed to be rewritten: restart UTC to complete</source>
-        <translation type="obsolete">Portfel wymaga przepisania: zrestartuj UTC żeby ukończyć</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2902,10 +2694,6 @@ Adres: %4
         <translation>Dodać węzeł do łączenia się i próbować utrzymać otwarte połączenie</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. UTC is probably already running.</source>
-        <translation type="obsolete">Nie można przywiązać portu %s na tym komputerze. UTC prawdopodobnie już działa.</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>Find peers using internet relay chat (default: 1)</source>
         <translation>Znajdź rówieśników za pomocą Internet Relay Chat (domyślnie: 1)</translation>
@@ -2951,26 +2739,7 @@ Adres: %4
         <translation>Aby skorzystać z opcji %s</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <source>%s, you must set a rpcpassword in the configuration file:
- %s
-It is recommended you use the following random password:
-rpcuser=bitcoinrpc
-rpcpassword=%s
-(you do not need to remember this password)
-If the file does not exist, create it with owner-readable-only file permissions.
-</source>
-        <translation>%s, należy ustawić rpcpassword w pliku konfiguracyjnym:
- %s
-Zaleca się stosować następujące losowe hasło:
-rpcuser=bitcoinrpc
-rpcpassword=%s
-(nie musisz zapamiętać to hasło)
-Jeśli plik nie istnieje, utwórz go z uprawnieniami właściciela pliku-tylko do odczytu.
-</translation>
-    </message>
-    <message>
-        <location line="+88"/>
+        <location line="-62"/>
         <source>Error</source>
         <translation>Błąd</translation>
     </message>

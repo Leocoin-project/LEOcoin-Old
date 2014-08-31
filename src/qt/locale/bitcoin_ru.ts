@@ -5,18 +5,6 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <source>About NovaCoin</source>
-        <translation type="obsolete">О NovaCoin</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;NovaCoin&lt;/b&gt; version</source>
-        <translation type="obsolete">&lt;b&gt;NovaCoin&lt;/b&gt; версия</translation>
-    </message>
-    <message>
-        <source>Copyright © 2009-2012 The NovaCoin developers</source>
-        <translation type="obsolete">Все права защищены © 2009-2012 Разработчики NovaCoin</translation>
-    </message>
-    <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About LEOcoin</source>
         <translation type="unfinished"></translation>
@@ -59,12 +47,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Адресная книга</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>Double-click to edit address or label</source>
         <translation>Для того, чтобы изменить адрес или метку давжды кликните по изменяемому объекту</translation>
     </message>
@@ -89,11 +72,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Новый адрес</translation>
     </message>
     <message>
-        <source>These are your NovaCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="obsolete">Это Ваши адреса для получения платежей. Вы можете дать разные адреса отправителям, чтобы отслеживать, кто именно вам платит.</translation>
+        <location line="-46"/>
+        <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+63"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Копировать адрес</translation>
     </message>
@@ -101,10 +85,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+14"/>
         <source>Show &amp;QR Code</source>
         <translation>Показать &amp;QR код</translation>
-    </message>
-    <message>
-        <source>Sign a message to prove you own a NovaCoin address</source>
-        <translation type="obsolete">Подписать сообщение, чтобы доказать владение адресом NovaCoin</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -120,10 +100,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Удалить выбранный адрес из списка</translation>
-    </message>
-    <message>
-        <source>Verify a message to ensure it was signed with a specified NovaCoin address</source>
-        <translation type="obsolete">Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом NovaCoin</translation>
     </message>
     <message>
         <location line="-14"/>
@@ -284,10 +260,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Бумажник зашифрован</translation>
     </message>
     <message>
-        <source>NovaCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="obsolete">Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего бумажника не может полностью защитить ваши монеты от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
-    </message>
-    <message>
         <location line="-43"/>
         <location line="+7"/>
         <location line="+42"/>
@@ -342,10 +314,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Синхронизация с сетью...</translation>
     </message>
     <message>
-        <source>&amp;Overview</source>
-        <translation type="obsolete">О&amp;бзор</translation>
-    </message>
-    <message>
         <location line="-520"/>
         <source>LEOcoin</source>
         <translation type="unfinished"></translation>
@@ -376,17 +344,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Изменить список сохранённых адресов и меток к ним</translation>
     </message>
     <message>
-        <source>&amp;Receive coins</source>
-        <translation type="obsolete">&amp;Получение монет</translation>
-    </message>
-    <message>
         <location line="-11"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Показать список адресов для получения платежей</translation>
-    </message>
-    <message>
-        <source>&amp;Send coins</source>
-        <translation type="obsolete">Отп&amp;равка монет</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -399,11 +359,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Закрыть приложение</translation>
     </message>
     <message>
-        <source>Show information about NovaCoin</source>
-        <translation type="obsolete">Показать информацию о NovaCoin&apos;е</translation>
+        <location line="+4"/>
+        <source>Show information about LEOcoin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+2"/>
         <source>About &amp;Qt</source>
         <translation>О &amp;Qt</translation>
     </message>
@@ -477,14 +438,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Экспорт...</translation>
     </message>
     <message>
-        <source>Send coins to a NovaCoin address</source>
-        <translation type="obsolete">Отправить монеты на указанный адрес NovaCoin</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for NovaCoin</source>
-        <translation type="obsolete">Изменить параметры конфигурации NovaCoin</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Export the data in the current tab to a file</source>
         <translation>Экспортировать данные из вкладки в файл</translation>
@@ -515,12 +468,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Show information about LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+18"/>
+        <location line="+19"/>
         <source>Backup wallet to another location</source>
         <translation>Сделать резервную копию бумажника в другом месте</translation>
     </message>
@@ -545,17 +493,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>NovaCoin</source>
-        <translation type="obsolete">NovaCoin</translation>
-    </message>
-    <message>
         <location line="-265"/>
         <source>Wallet</source>
         <translation>Бумажник</translation>
-    </message>
-    <message>
-        <source>&amp;About NovaCoin</source>
-        <translation type="obsolete">&amp;О NovaCoin</translation>
     </message>
     <message>
         <location line="+256"/>
@@ -578,10 +518,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <source>Tabs toolbar</source>
-        <translation type="obsolete">Панель вкладок</translation>
-    </message>
-    <message>
         <location line="+30"/>
         <source>Actions toolbar</source>
         <translation>Панель действий</translation>
@@ -591,18 +527,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[тестовая сеть]</translation>
-    </message>
-    <message>
-        <source>NovaCoin client</source>
-        <translation type="obsolete">NovaCoin клиент</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to NovaCoin network</source>
-        <translation type="obsolete">
-            <numerusform>%n активное соединение с сетью</numerusform>
-            <numerusform>%n активных соединений с сетью</numerusform>
-            <numerusform>%n активных соединений с сетью</numerusform>
-        </translation>
     </message>
     <message>
         <location line="+169"/>
@@ -706,10 +630,6 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI can not be parsed! This can be caused by an invalid NovaCoin address or malformed URI parameters.</source>
-        <translation type="obsolete">Не удалось обработать URI! Это может быть связано с неверным адресом NovaCoin или неправильными параметрами URI.</translation>
-    </message>
-    <message>
         <location line="+16"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Бумажник &lt;b&gt;зашифрован&lt;/b&gt; и в настоящее время &lt;b&gt;разблокирован&lt;/b&gt;</translation>
@@ -738,10 +658,6 @@ Address: %4
         <location line="+0"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation>При попытке сохранения данных бумажника в новое место произошла ошибка.</translation>
-    </message>
-    <message>
-        <source>A fatal error occurred. NovaCoin can no longer continue safely and will quit.</source>
-        <translation type="obsolete">Произошла неисправимая ошибка. NovaCoin не может безопасно продолжать работу и будет закрыт.</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+112"/>
@@ -815,10 +731,6 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid NovaCoin address.</source>
-        <translation type="obsolete">Введённый адрес &quot;%1&quot; не является правильным NovaCoin-адресом.</translation>
-    </message>
-    <message>
         <location line="+5"/>
         <source>Could not unlock wallet.</source>
         <translation>Не удается разблокировать бумажник.</translation>
@@ -832,22 +744,18 @@ Address: %4
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <source>NovaCoin-Qt</source>
-        <translation type="obsolete">NovaCoin-Qt</translation>
-    </message>
-    <message>
         <location filename="../guiutil.cpp" line="+436"/>
-        <source>version</source>
-        <translation>версия</translation>
-    </message>
-    <message>
-        <location line="+0"/>
         <location line="+12"/>
         <source>LEOcoin-Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-12"/>
+        <source>version</source>
+        <translation>версия</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Usage:</source>
         <translation>Использование:</translation>
     </message>
@@ -878,13 +786,6 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>MiningPage</name>
-    <message>
-        <source>Type</source>
-        <translation type="obsolete">Тип</translation>
-    </message>
-</context>
-<context>
     <name>OptionsDialog</name>
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
@@ -907,15 +808,17 @@ Address: %4
         <translation>Заплатить ко&amp;миссию</translation>
     </message>
     <message>
-        <source>Automatically start NovaCoin after logging in to the system.</source>
-        <translation type="obsolete">Автоматически запускать NovaCoin после входа в систему</translation>
+        <location line="+31"/>
+        <source>Automatically start LEOcoin after logging in to the system.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Start NovaCoin on system login</source>
-        <translation type="obsolete">&amp;Запускать NovaCoin при входе в систему</translation>
+        <location line="+3"/>
+        <source>&amp;Start LEOcoin on system login</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+7"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
         <translation>Отключить базы данных блоков и адресов при выходе. Это означает, что их можно будет переместить в другой каталог данных, но завершение работы будет медленнее. Бумажник всегда отключается.</translation>
     </message>
@@ -930,35 +833,17 @@ Address: %4
         <translation>&amp;Сеть</translation>
     </message>
     <message>
-        <source>Automatically open the NovaCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="obsolete">Автоматически открыть порт для NovaCoin-клиента на роутере. Работает только если Ваш роутер поддерживает UPnP, и данная функция включена.</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Map port using &amp;UPnP</source>
-        <translation>Пробросить порт через &amp;UPnP</translation>
-    </message>
-    <message>
-        <source>Connect to the NovaCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="obsolete">Подключаться к сети NovaCoin через прокси SOCKS (например, при подключении через Tor).</translation>
-    </message>
-    <message>
-        <location line="-43"/>
-        <source>Automatically start LEOcoin after logging in to the system.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Start LEOcoin on system login</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+37"/>
+        <location line="+6"/>
         <source>Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+3"/>
+        <source>Map port using &amp;UPnP</source>
+        <translation>Пробросить порт через &amp;UPnP</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -988,16 +873,7 @@ Address: %4
         <translation>Порт прокси-сервера (например, 9050)</translation>
     </message>
     <message>
-        <source>SOCKS &amp;Version:</source>
-        <translation type="obsolete">&amp;Версия SOCKS:</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>SOCKS &amp;V:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+32"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
         <translation>Версия SOCKS-прокси (например, 5)</translation>
     </message>
@@ -1047,22 +923,19 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting NovaCoin.</source>
-        <translation type="obsolete">Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска NovaCoin.</translation>
-    </message>
-    <message>
         <location line="-22"/>
         <source>&amp;Unit to show amounts in:</source>
         <translation>&amp;Отображать суммы в единицах: </translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Выберите единицу измерения монет при отображении и отправке.</translation>
+        <location line="-133"/>
+        <source>SOCKS &amp;V:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Whether to show NovaCoin addresses in the transaction list or not.</source>
-        <translation type="obsolete">Показывать ли адреса NovaCoin в списке транзакций.</translation>
+        <location line="+146"/>
+        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
+        <translation>Выберите единицу измерения монет при отображении и отправке.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1102,10 +975,6 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This setting will take effect after restarting NovaCoin.</source>
-        <translation type="obsolete">Эта настройка вступит в силу после перезапуска NovaCoin</translation>
-    </message>
-    <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
         <translation>Адрес прокси неверен.</translation>
@@ -1119,15 +988,13 @@ Address: %4
         <translation>Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the NovaCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="obsolete">Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью NovaCoin после подключения, но этот процесс пока не завершён.</translation>
+        <location line="+24"/>
+        <location line="+430"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Balance:</source>
-        <translation type="obsolete">Баланс:</translation>
-    </message>
-    <message>
-        <location line="+217"/>
+        <location line="-237"/>
         <source>Stake:</source>
         <translation>Доля:</translation>
     </message>
@@ -1147,13 +1014,7 @@ Address: %4
         <translation>Бумажник</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <location line="+430"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-137"/>
+        <location line="+300"/>
         <source>Immature:</source>
         <translation>Незрелые:</translation>
     </message>
@@ -1359,10 +1220,6 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show the NovaCoin-Qt help message to get a list with possible NovaCoin command-line options.</source>
-        <translation type="obsolete">Показать помощь по NovaCoin-Qt, чтобы получить список доступных параметров командной строки.</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>&amp;Show</source>
         <translation>&amp;Показать</translation>
@@ -1378,30 +1235,14 @@ Address: %4
         <translation>Дата сборки</translation>
     </message>
     <message>
-        <source>NovaCoin - Debug window</source>
-        <translation type="obsolete">NovaCoin - Окно отладки</translation>
-    </message>
-    <message>
-        <source>NovaCoin Core</source>
-        <translation type="obsolete">Ядро NovaCoin</translation>
-    </message>
-    <message>
         <location line="+200"/>
         <source>Debug log file</source>
         <translation>Отладочный лог-файл</translation>
     </message>
     <message>
-        <source>Open the NovaCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="obsolete">Открыть отладочный лог-файл NovaCoin из текущего каталога данных. Это может занять несколько секунд для больших лог-файлов.</translation>
-    </message>
-    <message>
         <location line="+115"/>
         <source>Clear console</source>
         <translation>Очистить консоль</translation>
-    </message>
-    <message>
-        <source>Welcome to the NovaCoin RPC console.</source>
-        <translation type="obsolete">Добро пожаловать в RPC-консоль NovaCoin.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
@@ -1564,10 +1405,6 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The address to send the payment to  (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
-        <translation type="obsolete">Адрес получателя платежа (например 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Choose address from address book</source>
         <translation>Выберите адрес из адресной книги</translation>
@@ -1591,10 +1428,6 @@ Address: %4
         <location line="+7"/>
         <source>Remove this recipient</source>
         <translation>Удалить этого получателя</translation>
-    </message>
-    <message>
-        <source>Enter a NovaCoin address (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
-        <translation type="obsolete">Введите NovaCoin-адрес (например 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
@@ -1621,16 +1454,7 @@ Address: %4
         <translation>Вы можете подписывать сообщения своими адресами, чтобы доказать владение ими. Будьте осторожны, не подписывайте что-то неопределённое, так как фишинговые атаки могут обманным путём заставить вас подписать нежелательные сообщения. Подписывайте только те сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
     <message>
-        <source>The address to sign the message with (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
-        <translation type="obsolete">Адрес, которым вы хотите подписать сообщение  (напр. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>The address to sign the message with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+34"/>
         <location line="+209"/>
         <source>Choose an address from the address book</source>
         <translation>Выберите адрес из адресной книги</translation>
@@ -1677,16 +1501,17 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this NovaCoin address</source>
-        <translation type="obsolete">Подписать сообщение, чтобы доказать владение адресом NovaCoin</translation>
-    </message>
-    <message>
         <location line="-132"/>
         <source>Reset all sign message fields</source>
         <translation>Сбросить значения всех полей подписывания сообщений</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-120"/>
+        <source>The address to sign the message with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+123"/>
         <location line="+149"/>
         <source>Clear &amp;All</source>
         <translation>Очистить &amp;всё</translation>
@@ -1703,21 +1528,9 @@ Address: %4
         <translation>Введите ниже адрес для подписи, сообщение (убедитесь, что переводы строк, пробелы, табы и т.п. в точности скопированы) и подпись, чтобы проверить сообщение. Убедитесь, что не скопировали лишнего в подпись, по сравнению с самим подписываемым сообщением, чтобы не стать жертвой атаки &quot;man-in-the-middle&quot;.</translation>
     </message>
     <message>
-        <source>The address the message was signed with (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
-        <translation type="obsolete">Адрес, которым было подписано сообщение (напр. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
-    </message>
-    <message>
-        <source>Verify the message to ensure it was signed with the specified NovaCoin address</source>
-        <translation type="obsolete">Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом NovaCoin</translation>
-    </message>
-    <message>
         <location line="+81"/>
         <source>Reset all verify message fields</source>
         <translation>Сбросить все поля проверки сообщения</translation>
-    </message>
-    <message>
-        <source>Enter a NovaCoin address (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
-        <translation type="obsolete">Введите адрес NovaCoin (напр. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+28"/>
@@ -1725,22 +1538,18 @@ Address: %4
         <translation>Нажмите &quot;Подписать сообщение&quot; для создания подписи</translation>
     </message>
     <message>
-        <source>Enter NovaCoin signature</source>
-        <translation type="obsolete">Введите подпись NovaCoin</translation>
+        <location line="+3"/>
+        <source>Enter LEOcoin signature</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1"/>
+        <location line="-4"/>
         <location line="+3"/>
         <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Enter LEOcoin signature</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+82"/>
+        <location line="+83"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
         <translation>Введённый адрес неверен</translation>
@@ -1949,20 +1758,12 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation type="unfinished">Сгенерированные монеты должны подождать 520 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удастся, статус изменится на «не подтверждено», и монеты будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас. {120 ?}</translation>
-    </message>
-    <message>
-        <source>Generated coins must mature 520 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation type="obsolete">Сгенерированные монеты должны подождать 520 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удастся, статус изменится на «не подтверждено», и монеты будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to \&quot;not accepted\&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
-        <translation type="obsolete">Использованные в Proof-of-Stake монеты должны подождать 520 блоков, прежде чем они вернутся на баланс и смогут быть потрачены. Когда вы сгенерировали этот proof-of-stake блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удается, статус изменится на \&quot;не подтверждени\&quot; и блок будет недействителен. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2324,20 +2125,22 @@ Address: %4
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>NovaCoin version</source>
-        <translation type="obsolete">Версия</translation>
+        <location filename="../bitcoinstrings.cpp" line="+126"/>
+        <source>LEOcoin version</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+165"/>
+        <location line="+39"/>
         <source>Usage:</source>
         <translation>Использование:</translation>
     </message>
     <message>
-        <source>Send command to -server or bitcoind</source>
-        <translation type="obsolete">Отправить команду на -server или bitcoind</translation>
+        <location line="-26"/>
+        <source>Send command to -server or LEOcoind</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-47"/>
+        <location line="-21"/>
         <source>List commands</source>
         <translation>Список команд
 </translation>
@@ -2423,17 +2226,24 @@ Address: %4
         <translation>Число секунд блокирования неправильно ведущих себя узлов (по умолчанию: 86400)</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-39"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=bitcoinrpc
+rpcpassword=%s
+(you do not need to remember this password)
+If the file does not exist, create it with owner-readable-only file permissions.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation>Произошла ошибка при открытии RPC-порта %u для прослушивания на IPv4: %s</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
-        <translation>Произошла ошибка при открытии на прослушивание IPv6 RCP-порта %u, возвращаемся к IPv4: %s</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>Cannot obtain a lock on data directory %s.  LEOcoin is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2443,18 +2253,19 @@ Address: %4
         <translation>Отключить базы данных блоков и адресов. Увеличивает время завершения работы (по умолчанию: 0)</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
-        <translation type="unfinished"></translation>
+        <location line="+5"/>
+        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation>Ошибка: В транзакции отказано.  Такое может произойти, если некоторые монеты уже были потрачены, например, если Вы используете одну копию файла wallet.dat, а монеты были потрачены из другой копии, но не были отмечены как потраченные в этой.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+4"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
+        <translation>Ошибка: эта транзакция требует комиссию в размере как минимум %s из-за её объёма, сложности или использования недавно полученных средств  </translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Error: Wallet unlocked for block minting only, unable to create transaction.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 44101 or testnet: 44201)</source>
-        <translation type="obsolete">Прослушивать подключения JSON-RPC на &lt;порту&gt; (по умолчанию: 44101 или для testnet: 44201)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -2467,37 +2278,22 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Внимание: ошибка чтения wallet.dat! Все ключи восстановлены, но записи в адресной книге и истории транзакций могут быть некорректными.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Внимание: wallet.dat был поврежден, данные восстановлены! Оригинальный wallet.dat сохранен как wallet.{timestamp}.bak в %s;, если ваши транзакции или баланс отображаются неправильно, следует восстановить его из данной копии.</translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+15"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Принимать командную строку и команды JSON-RPC</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
-        <translation>Попытка восстановления ключей из поврежденного wallet.dat</translation>
+        <location line="+24"/>
+        <source>Error: Transaction creation failed  </source>
+        <translation>Ошибка: Создание транзакции не удалось  </translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of LEOcoin</source>
-        <translation type="unfinished"></translation>
+        <location line="+1"/>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation>Ошибка: бумажник заблокирован, невозможно создать транзакцию  </translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Find peers using DNS lookup (default: 0)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+10"/>
         <source>Importing blockchain data file.</source>
         <translation>Импортируется файл цепи блоков.</translation>
     </message>
@@ -2522,19 +2318,19 @@ Address: %4
         <translation>Принимать подключения извне (по умолчанию: 1, если не используется -proxy или -connect)</translation>
     </message>
     <message>
-        <location line="-41"/>
-        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Ошибка: В транзакции отказано.  Такое может произойти, если некоторые монеты уже были потрачены, например, если Вы используете одну копию файла wallet.dat, а монеты были потрачены из другой копии, но не были отмечены как потраченные в этой.</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
-        <translation>Ошибка: эта транзакция требует комиссию в размере как минимум %s из-за её объёма, сложности или использования недавно полученных средств  </translation>
+        <location line="-52"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation>Произошла ошибка при открытии на прослушивание IPv6 RCP-порта %u, возвращаемся к IPv4: %s</translation>
     </message>
     <message>
         <location line="+8"/>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
-        <translation type="unfinished">Прослушивать подключения JSON-RPC на &lt;порту&gt; (по умолчанию: 44101 или для testnet: 44201) {8344 ?} {18344)?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2547,15 +2343,22 @@ Address: %4
         <translation>Внимание: установлено очень большое значение -paytxfee. Это комиссия, которую вы заплатите при проведении транзакции.</translation>
     </message>
     <message>
-        <source>Warning: Displayed transactions may not be correct! You may need to upgrade, or other nodes may need to upgrade.</source>
-        <translation type="obsolete">Внимание: отображаемые транзакции могут быть некорректны! Вам или другим узлам, возможно, следует обновиться.</translation>
+        <location line="+6"/>
+        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Внимание: ошибка чтения wallet.dat! Все ключи восстановлены, но записи в адресной книге и истории транзакций могут быть некорректными.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong NovaCoin will not work properly.</source>
-        <translation type="obsolete">Внимание: убедитесь, что дата и время на Вашем компьютере выставлены верно. Если Ваши часы идут неправильно, NovaCoin будет работать некорректно.</translation>
+        <location line="+3"/>
+        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Внимание: wallet.dat был поврежден, данные восстановлены! Оригинальный wallet.dat сохранен как wallet.{timestamp}.bak в %s;, если ваши транзакции или баланс отображаются неправильно, следует восстановить его из данной копии.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+14"/>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Попытка восстановления ключей из поврежденного wallet.dat</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Block creation options:</source>
         <translation>Параметры создания блоков:</translation>
     </message>
@@ -2570,26 +2373,22 @@ Address: %4
         <translation>Определить свой IP (по умолчанию: 1 при прослушивании и если не используется -externalip)</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Error: Transaction creation failed  </source>
-        <translation>Ошибка: Создание транзакции не удалось  </translation>
+        <location line="+6"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of LEOcoin</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Error: Wallet locked, unable to create transaction  </source>
-        <translation>Ошибка: бумажник заблокирован, невозможно создать транзакцию  </translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Не удалось начать прослушивание на порту. Используйте -listen=0 если вас это устраивает.</translation>
     </message>
     <message>
-        <source>Find peers using DNS lookup (default: 0 unless -connect)</source>
-        <translation type="obsolete">Искать узлы с помощью DNS (по умолчанию: 0)</translation>
+        <location line="+2"/>
+        <source>Find peers using DNS lookup (default: 0)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+11"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
         <translation>Неверный адрес -tor: &apos;%s&apos;</translation>
     </message>
@@ -2609,12 +2408,7 @@ Address: %4
         <translation>Максимальный размер буфера отправки на соединение, &lt;n&gt;*1000 байт (по умолчанию: 1000)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>LEOcoin version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>LEOcoin</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2650,12 +2444,7 @@ Address: %4
         <translation>Выберите версию SOCKS-прокси (4-5, по умолчанию: 5)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Send command to -server or LEOcoind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Выводить информацию трассировки/отладки на консоль вместо файла debug.log</translation>
     </message>
@@ -2811,14 +2600,6 @@ Address: %4
         <translation>Эта справка</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s.  NovaCoin is probably already running.</source>
-        <translation type="obsolete">Невозможно установить блокировку на рабочую директорию %s.  Возможно, бумажник уже запущен.</translation>
-    </message>
-    <message>
-        <source>NovaCoin</source>
-        <translation type="obsolete">NovaCoin</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Невозможно привязаться к %s на этом компьютере (bind вернул ошибку %d, %s)</translation>
@@ -2847,14 +2628,6 @@ Address: %4
         <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Ошибка загрузки wallet.dat: Бумажник поврежден</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of NovaCoin</source>
-        <translation type="obsolete">Ошибка загрузки wallet.dat: бумажник требует более новую версию NovaCoin</translation>
-    </message>
-    <message>
-        <source>Wallet needed to be rewritten: restart NovaCoin to complete</source>
-        <translation type="obsolete">Необходимо перезаписать бумажник, перезапустите NovaCoin для завершения операции.</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2922,10 +2695,6 @@ Address: %4
         <translation>Добавить узел для подключения и пытаться поддерживать соединение открытым</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. NovaCoin is probably already running.</source>
-        <translation type="obsolete">Невозможно привязаться к %s на этом компьютере.  Возможно, NovaCoin уже работает.</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>Find peers using internet relay chat (default: 1)</source>
         <translation>Найти участников через IRC (по умолчанию: 1)</translation>
@@ -2971,26 +2740,7 @@ Address: %4
         <translation>Чтобы использовать опцию %s</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <source>%s, you must set a rpcpassword in the configuration file:
- %s
-It is recommended you use the following random password:
-rpcuser=bitcoinrpc
-rpcpassword=%s
-(you do not need to remember this password)
-If the file does not exist, create it with owner-readable-only file permissions.
-</source>
-        <translation>%s, вы должны установить опцию rpcpassword в конфигурационном файле:
- %s
-Рекомендуется использовать следующий случайный пароль:
-rpcuser=bitcoinrpc
-rpcpassword=%s
-(вам не нужно запоминать этот пароль)
-Если файл не существует, создайте его и установите права доступа только для владельца.
-</translation>
-    </message>
-    <message>
-        <location line="+88"/>
+        <location line="-62"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>

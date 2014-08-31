@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="zh_CN">
+<TS version="2.0" language="el_GR">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About LEOcoin</source>
-        <translation>关于 LEOcoin </translation>
+        <translation>Σχετικά με το LEOcoin</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -16,11 +16,7 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;LEOcoin &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;LEOcoin &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+45"/>
@@ -35,13 +31,12 @@ This is experimental software.
 Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
-        <translation>版权归 LEOcoin 开发者所有  © 2013
+        <translation>
+Το παρόν αποτελεί πειραματικό λογισμικό.
 
-这是一个实验性软件。
+Διανέμεται υπό την άδεια λογισμικού MIT/X11, δείτε το συνοδευτικό αρχείο COPYING ή http://www.opensource.org/licenses/mit-license.php.
 
-Distributed under the MIT/X11 software license, see the accompanying file license.txt or http://www.opensource.org/licenses/mit-license.php.
-
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</translation>
+Το προϊόν αυτό περιέχει λογισμικό που δημιουργήθηκε από το OpenSSL Project για χρήση του OpenSSL Toolkit (http://www.openssl.org/) και λογισμικό κρυπτογραφίας δημιουργία του Eric Young (eay@cryptsoft.com) και λογισμικό UPnP δημιουργία του Thomas Bernard.</translation>
     </message>
 </context>
 <context>
@@ -49,32 +44,32 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
         <source>Address Book</source>
-        <translation>地址薄</translation>
+        <translation>Βιβλίο Διευθύνσεων</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>双击以编辑地址或标签</translation>
+        <translation>Διπλό-κλικ για επεξεργασία της διεύθυνσης ή της ετικέτας</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Create a new address</source>
-        <translation>创建新地址</translation>
+        <translation>Δημιουργία νέας διεύθυνσης</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>复制当前选中地址到系统剪贴板</translation>
+        <translation>Αντιγραφή επιλεγμένης διεύθυνσης στο πρόχειρο του συστήματος</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Sign a message to prove you own a LEOcoin address</source>
-        <translation>发送签名消息以证明您是该元宝币地址的拥有者</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-45"/>
         <source>&amp;New Address</source>
-        <translation>&amp;新建地址</translation>
+        <translation>&amp;Νέα διεύθυνση</translation>
     </message>
     <message>
         <location line="-46"/>
@@ -84,67 +79,67 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+63"/>
         <source>&amp;Copy Address</source>
-        <translation>&amp;复制地址</translation>
+        <translation>&amp;Αντιγραφή διεύθυνσης</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show &amp;QR Code</source>
-        <translation>显示二维码</translation>
+        <translation>Προβολή &amp;QR κωδικα</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Sign &amp;Message</source>
-        <translation>&amp;发送签名消息</translation>
+        <translation>&amp;Υπογραφή μηνύματος</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Verify a message to ensure it was signed with a specified LEOcoin address</source>
-        <translation>验证这个消息以确保它已经与一个LEOcoin地址签名</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
-        <translation>从列表中删除当前选中地址。只有发送地址可以被删除。</translation>
+        <translation>Διαγραφή της επιλεγμενης διεύθυνσης από τη λίστα</translation>
     </message>
     <message>
         <location line="-14"/>
         <source>&amp;Verify Message</source>
-        <translation>&amp;验证消息</translation>
+        <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Delete</source>
-        <translation>&amp;删除</translation>
+        <translation>&amp;Διαγραφή</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+65"/>
         <source>Copy &amp;Label</source>
-        <translation>复制 &amp;标签</translation>
+        <translation>Αντιγραφή &amp;ετικέτας</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Edit</source>
-        <translation>&amp;编辑</translation>
+        <translation>&amp;Επεξεργασία</translation>
     </message>
     <message>
         <location line="+250"/>
         <source>Export Address Book Data</source>
-        <translation>导出地址薄数据</translation>
+        <translation>Εξαγωγή Δεδομενων Βιβλίου Διευθύνσεων</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>逗号分隔文件 (*.csv)</translation>
+        <translation>Αρχείο οριοθετημένο με κόμματα (*.csv)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Error exporting</source>
-        <translation>导出错误</translation>
+        <translation>Εξαγωγή σφαλμάτων</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>无法写入文件 %1。</translation>
+        <translation>Αδυναμία εγγραφής στο αρχείο %1.</translation>
     </message>
 </context>
 <context>
@@ -152,17 +147,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addresstablemodel.cpp" line="+142"/>
         <source>Label</source>
-        <translation>标签</translation>
+        <translation>Ετικέτα</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>地址</translation>
+        <translation>Διεύθυνση</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>(no label)</source>
-        <translation>(没有标签)</translation>
+        <translation>(χωρίς ετικέτα)</translation>
     </message>
 </context>
 <context>
@@ -170,100 +165,99 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../forms/askpassphrasedialog.ui" line="+26"/>
         <source>Passphrase Dialog</source>
-        <translation>密码对话框</translation>
+        <translation>Κωδικός πρόσβασης </translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Enter passphrase</source>
-        <translation>输入口令</translation>
+        <translation>Εισαγωγή κωδικού πρόσβασης</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>New passphrase</source>
-        <translation>新口令</translation>
+        <translation>Νέος κωδικός πρόσβασης</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Repeat new passphrase</source>
-        <translation>重复新口令</translation>
+        <translation>Επανάληψη νέου κωδικού πρόσβασης</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+33"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation>输入钱包的新口令。&lt;br/&gt;使用的口令请至少包含&lt;b&gt;10个以上随机字符&lt;/&gt;，或者是&lt;b&gt;8个以上的单词&lt;/b&gt;。</translation>
+        <translation>Εισάγετε το νέο κωδικό πρόσβασης στο πορτοφόλι &lt;br/&gt; Παρακαλώ χρησιμοποιείστε ένα κωδικό με &lt;b&gt; 10 ή περισσότερους τυχαίους χαρακτήρες&lt;/b&gt; ή &lt;b&gt; οχτώ ή παραπάνω λέξεις&lt;/b&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Encrypt wallet</source>
-        <translation>加密钱包</translation>
+        <translation>Κρυπτογράφηση πορτοφολιού</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>该操作需要您首先使用口令解锁钱包。</translation>
+        <translation>Αυτη η ενεργεία χρειάζεται τον κωδικό πορτοφολιού  για  ξεκλείδωμα.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Unlock wallet</source>
-        <translation>解锁钱包</translation>
+        <translation>Ξεκλείδωμα πορτοφολιού</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>该操作需要您首先使用口令解密钱包。</translation>
+        <translation>Αυτή η ενέργεια χρειάζεται τον κωδικό πορτοφολιού  για αποκρυπτογράφηση.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Decrypt wallet</source>
-        <translation>解密钱包</translation>
+        <translation>Αποκρυπτογράφηση πορτοφολιού</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Change passphrase</source>
-        <translation>修改口令</translation>
+        <translation>Αλλαγή κωδικού πρόσβασης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>请输入钱包的旧口令与新口令。</translation>
+        <translation>Εισάγετε τον παλιό και το νεο κωδικο στο πορτοφολι.</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Confirm wallet encryption</source>
-        <translation>确认加密钱包</translation>
+        <translation>Επιβεβαίωση κρυπτογράφησης πορτοφολιού</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>警告：如果您加密了您的钱包之后忘记了口令，您将会&lt;b&gt;失去所有的元宝币&lt;/b&gt;！
-确定要加密钱包吗？</translation>
+        <translation>Προσοχή: Αν κρυπτογραφήσετε το πορτοφόλι σας και χάσετε τον κωδικό του, θα &lt;b&gt;χάσετε όλα τα νομίσματά σας&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation>你确认要加密你的钱包吗?</translation>
+        <translation>Είστε σίγουροι ότι θέλετε να κρυπτογραφήσετε το πορτοφόλι σας;</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>LEOcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>将关闭软件以完成加密过程。 请您谨记：钱包加密并不是万能的，电脑中毒，您的元宝币还是有可能丢失。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>重要：之前备份的钱包文件将会被替换为新生成的，加密的钱包文件。出于安全考虑，只要使用新的加密过的钱包，之前未加密的钱包将不再使用。</translation>
+        <translation>ΣΗΜΑΝΤΙΚΟ: Τα προηγούμενα αντίγραφα ασφαλείας που έχετε κάνει από το αρχείο του πορτοφόλιου σας θα πρέπει να αντικατασταθουν με το νέο που δημιουργείται, κρυπτογραφημένο αρχείο πορτοφόλιου. Για λόγους ασφαλείας, τα προηγούμενα αντίγραφα ασφαλείας του μη κρυπτογραφημένου αρχείου πορτοφόλιου θα καταστουν άχρηστα μόλις αρχίσετε να χρησιμοποιείτε το νέο κρυπτογραφημένο πορτοφόλι. </translation>
     </message>
     <message>
         <location line="+100"/>
         <location line="+24"/>
         <source>Warning: The Caps Lock key is on!</source>
-        <translation>警告：大写锁定键CapsLock开启！</translation>
+        <translation>Προσοχη: το πλήκτρο Caps Lock είναι ενεργο.</translation>
     </message>
     <message>
         <location line="-130"/>
         <location line="+58"/>
         <source>Wallet encrypted</source>
-        <translation>钱包已加密</translation>
+        <translation>Κρυπτογραφημένο πορτοφολι</translation>
     </message>
     <message>
         <location line="-43"/>
@@ -271,40 +265,40 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+42"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
-        <translation>钱包加密失败</translation>
+        <translation>Η κρυπτογράφηση του πορτοφολιού απέτυχε</translation>
     </message>
     <message>
         <location line="-54"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>由于一个本地错误，加密钱包操作已经失败。您的钱包没有被加密。</translation>
+        <translation>Η κρυπτογράφηση του πορτοφολιού απέτυχε λόγω εσωτερικού σφάλματος. Το πορτοφόλι δεν κρυπτογραφηθηκε.</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+48"/>
         <source>The supplied passphrases do not match.</source>
-        <translation>口令不匹配。</translation>
+        <translation>Οι εισαχθέντες κωδικοί δεν ταιριάζουν.</translation>
     </message>
     <message>
         <location line="-37"/>
         <source>Wallet unlock failed</source>
-        <translation>钱包解锁失败</translation>
+        <translation>το ξεκλείδωμα του πορτοφολιού απέτυχε</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+11"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>用于解密钱包的口令不正确。</translation>
+        <translation>Ο κωδικος που εισήχθη για την αποκρυπτογραφηση του πορτοφολιού ήταν λαθος.</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Wallet decryption failed</source>
-        <translation>钱包解密失败。</translation>
+        <translation>Η αποκρυπτογραφηση του πορτοφολιού απέτυχε</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>钱包口令修改成功</translation>
+        <translation>Ο κωδικος του πορτοφολιού άλλαξε με επιτυχία.</translation>
     </message>
 </context>
 <context>
@@ -312,97 +306,97 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../bitcoingui.cpp" line="+343"/>
         <source>Sign &amp;message...</source>
-        <translation>对消息签名...</translation>
+        <translation>Υπογραφή &amp;Μηνύματος...</translation>
     </message>
     <message>
         <location line="+256"/>
         <source>Synchronizing with network...</source>
-        <translation>网络同步中...</translation>
+        <translation>Συγχρονισμός με το δίκτυο...</translation>
     </message>
     <message>
         <location line="-520"/>
         <source>LEOcoin</source>
-        <translation>LEOcoin</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+178"/>
         <source>Show general overview of wallet</source>
-        <translation>显示钱包概况</translation>
+        <translation>Εμφάνιση γενικής εικονας πορτοφολιού</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;交易</translation>
+        <translation>&amp;Συναλλαγές</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
-        <translation>查看交易历史</translation>
+        <translation>Περιήγηση στο ιστορικό συνναλαγών</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>&amp;Address Book</source>
-        <translation>&amp;地址薄</translation>
+        <translation>&amp;Βιβλίο Διευθύνσεων</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit the list of stored addresses and labels</source>
-        <translation>修改存储的地址和标签列表</translation>
+        <translation>Εξεργασία της λίστας των αποθηκευμένων διευθύνσεων και ετικετών</translation>
     </message>
     <message>
         <location line="-11"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation>显示接收支付的地址列表</translation>
+        <translation>Εμφάνιση λίστας διευθύνσεων για παραλαβή πληρωμών</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>E&amp;xit</source>
-        <translation>退出</translation>
+        <translation>Έ&amp;ξοδος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Quit application</source>
-        <translation>退出程序</translation>
+        <translation>Έξοδος από την εφαρμογή</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Show information about LEOcoin</source>
-        <translation>显示 LEOcoin 的相关信息</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>About &amp;Qt</source>
-        <translation>关于 &amp;Qt</translation>
+        <translation>Σχετικά με το &amp;Qt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show information about Qt</source>
-        <translation>显示Qt相关信息</translation>
+        <translation>Εμφάνιση πληροφοριών σχετικά με το Qt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Options...</source>
-        <translation>&amp;选项...</translation>
+        <translation>&amp;Επιλογές...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Modify configuration options for LEOcoin</source>
-        <translation>设置选项</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;加密钱包...</translation>
+        <translation>&amp;Κρυπτογράφηση πορτοφολιού</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Backup Wallet...</source>
-        <translation>&amp;备份钱包...</translation>
+        <translation>&amp;Αντίγραφο ασφαλείας του πορτοφολιού</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Change Passphrase...</source>
-        <translation>&amp;修改密码...</translation>
+        <translation>&amp;Αλλαγή κωδικού πρόσβασης</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -413,43 +407,43 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+44"/>
         <location line="+60"/>
         <source>LEOcoin client</source>
-        <translation>LEOcoin 客户端</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location line="+69"/>
         <source>%n active connection(s) to LEOcoin network</source>
-        <translation>
-            <numerusform>
-                %n 个到 LEOcoin 网络的活动连接
-            </numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+26"/>
         <source>~%n block(s) remaining</source>
-        <translation>
-            <numerusform>~还剩 %n 个区块</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
-        <translation>已下载 %2 个交易历史区块中的 %1 个 (完成率 %3% ).</translation>
+        <translation>Μεταφορτώθηκαν %1 από %2 μπλοκς από ιστορικό συναλλαγών (%3% ολοκλήρωσης).</translation>
     </message>
     <message>
         <location line="-256"/>
         <source>&amp;Export...</source>
-        <translation>&amp;导出...</translation>
+        <translation>&amp;Εξαγωγή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Export the data in the current tab to a file</source>
-        <translation>导出当前数据到文件</translation>
+        <translation>Εξαγωγή στοιχείων του τρέχοντος tab σε αρχείο</translation>
     </message>
     <message>
         <location line="-15"/>
         <source>Encrypt or decrypt wallet</source>
-        <translation>加密或解密钱包</translation>
+        <translation>Κρυπτογράφηση ή Αποκρυπτογράφηση πορτοφολιού</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -469,62 +463,62 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+32"/>
         <source>&amp;About LEOcoin</source>
-        <translation>关于 LEOcoin</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Backup wallet to another location</source>
-        <translation>备份钱包到其它文件夹</translation>
+        <translation>Δημιουργία αντιγράφου ασφαλείας πορτοφολιού σε άλλη τοποθεσία</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>修改钱包加密口令</translation>
+        <translation>Αλλαγή του κωδικού κρυπτογράφησης του πορτοφολιού</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Debug window</source>
-        <translation>&amp;调试窗口</translation>
+        <translation>&amp;Παράθυρο αποσφαλμάτωσης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Open debugging and diagnostic console</source>
-        <translation>在诊断控制台调试</translation>
+        <translation>Άνοιγμα κονσόλας αποσφαλμάτωσης και διαγνωστικών</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>&amp;Verify message...</source>
-        <translation>&amp;验证消息...</translation>
+        <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
         <location line="-265"/>
         <source>Wallet</source>
-        <translation>钱包</translation>
+        <translation>Πορτοφόλι</translation>
     </message>
     <message>
         <location line="+256"/>
         <source>&amp;Show / Hide</source>
-        <translation>&amp;显示 / 隐藏</translation>
+        <translation>&amp;Εμφάνιση/Απόκρυψη</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>&amp;File</source>
-        <translation>&amp;文件</translation>
+        <translation>&amp;Αρχείο</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Settings</source>
-        <translation>&amp;设置</translation>
+        <translation>&amp;Ρυθμίσεις</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Help</source>
-        <translation>&amp;帮助</translation>
+        <translation>&amp;Βοήθεια</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Actions toolbar</source>
-        <translation>动作工具栏</translation>
+        <translation>Γραμμή εργαλείων Ενεργειών</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -535,70 +529,74 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+169"/>
         <source>Downloaded %1 blocks of transaction history.</source>
-        <translation>%1 个交易历史的区块已下载</translation>
+        <translation>Μεταφορτώθηκαν %1 μπλοκς του ιστορικού συναλλαγών</translation>
     </message>
     <message numerus="yes">
         <location line="+22"/>
         <source>%n second(s) ago</source>
-        <translation>
-            <numerusform>%n 秒前</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>%n 分钟前</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>%n 小时前</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n day(s) ago</source>
-        <translation>
-            <numerusform>%n 天前</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Up to date</source>
-        <translation>最新状态</translation>
+        <translation>Ενημερωμένο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Catching up...</source>
-        <translation>更新中...</translation>
+        <translation>Ενημέρωση...</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Last received block was generated %1.</source>
-        <translation>最新收到的区块产生于 %1。</translation>
+        <translation>Το τελευταίο μπλοκ που ελήφθη δημιουργήθηκε %1</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
-        <translation>该笔交易的数据量超限.您可以选择支付 %1 交易费， 交易费将支付给处理该笔交易的网络节点，有助于维持元宝币网络的运行.  您愿意支付交易费用吗？</translation>
+        <translation>Αυτή η συναλλαγή είναι πάνω από το όριο μεγέθους. Μπορείτε ακόμα να τη στείλετε με χρέωση %1, αμοιβή η οποία είναι υπέρ κόμβων που επεξεργάζονται τις συναλλαγές και βοηθάει στην υποστήριξη του δικτύου. Θέλετε να χρεωθείτε την αμοιβή;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Confirm transaction fee</source>
-        <translation>确认交易费</translation>
+        <translation>Επιβεβαίωση αμοιβής συναλλαγής</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Sent transaction</source>
-        <translation>已发送交易</translation>
+        <translation>Η συναλλαγή απεστάλη</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Incoming transaction</source>
-        <translation>流入交易</translation>
+        <translation>Εισερχόμενη συναλλαγή</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -607,58 +605,58 @@ Amount: %2
 Type: %3
 Address: %4
 </source>
-        <translation>日期: %1
-金额: %2
-类别: %3
-地址: %4
+        <translation>Ημερομηνία: %1
+Ποσό: %2
+Τύπος: %3
+Διεύθυνση: %4
 </translation>
     </message>
     <message>
         <location line="+100"/>
         <location line="+15"/>
         <source>URI handling</source>
-        <translation>URI处理</translation>
+        <translation>Χειρισμός URI</translation>
     </message>
     <message>
         <location line="-15"/>
         <location line="+15"/>
         <source>URI can not be parsed! This can be caused by an invalid LEOcoin address or malformed URI parameters.</source>
-        <translation>URI不能解析！这可能是由于一个的无效LEOcoin地址或畸形URI参数。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;解锁&lt;/b&gt;状态</translation>
+        <translation>Το πορτοφόλι είναι &lt;b&gt;κρυπτογραφημένο&lt;/b&gt; και &lt;b&gt;ξεκλείδωτο&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;锁定&lt;/b&gt;状态</translation>
+        <translation>Το πορτοφόλι είναι &lt;b&gt;κρυπτογραφημένο&lt;/b&gt; και &lt;b&gt;κλειδωμένο&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Backup Wallet</source>
-        <translation>备份钱包</translation>
+        <translation>&amp;Αντίγραφο ασφαλείας του πορτοφολιού</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wallet Data (*.dat)</source>
-        <translation>钱包文件 (*.dat)</translation>
+        <translation>Δεδομένα πορτοφολιού (*.dat)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Backup Failed</source>
-        <translation>备份失败</translation>
+        <translation>Αποτυχία δημιουργίας Αντιγράφου Ασφάλειας</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
-        <translation>备份钱包到其它文件夹失败.</translation>
+        <translation>Δημιουργήθηκε σφάλμα κατά την αποθήκευση των δεδομένων πορτοφολιού στη νέα τοποθεσία.</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+112"/>
         <source>A fatal error occurred. LEOcoin can no longer continue safely and will quit.</source>
-        <translation>发生致命错误. 元宝币客户端的安全存在问题，将退出.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -666,7 +664,7 @@ Address: %4
     <message>
         <location filename="../clientmodel.cpp" line="+87"/>
         <source>Network Alert</source>
-        <translation>网络警报</translation>
+        <translation>Ειδοποίηση Δικτύου</translation>
     </message>
 </context>
 <context>
@@ -674,67 +672,67 @@ Address: %4
     <message>
         <location filename="../forms/editaddressdialog.ui" line="+14"/>
         <source>Edit Address</source>
-        <translation>编辑地址</translation>
+        <translation>Επεξεργασία Διεύθυνσης</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Label</source>
-        <translation>&amp;标签</translation>
+        <translation>&amp;Ετικέτα</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>The label associated with this address book entry</source>
-        <translation>与此地址条目关联的标签</translation>
+        <translation>Η ετικέτα που σχετίζεται με αυτή την καταχώρηση του βιβλίου διευθύνσεων</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Address</source>
-        <translation>&amp;地址</translation>
+        <translation>&amp;Διεύθυνση</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
-        <translation>该地址与地址簿中的条目已关联，无法作为发送地址编辑。</translation>
+        <translation>Η διεύθυνση που σχετίζεται με αυτή την καταχώρηση του βιβλίου διευθύνσεων. Μπορεί να τροποποιηθεί μόνο για τις διευθύνσεις αποστολής.</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="+20"/>
         <source>New receiving address</source>
-        <translation>新接收地址</translation>
+        <translation>Νέα διεύθυνση παραλαβής</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>New sending address</source>
-        <translation>新发送地址</translation>
+        <translation>Νέα διεύθυνση αποστολής</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Edit receiving address</source>
-        <translation>编辑接收地址</translation>
+        <translation>Επεξεργασία διεύθυνσης παραλαβής</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit sending address</source>
-        <translation>编辑发送地址</translation>
+        <translation>Επεξεργασία διεύθυνσης αποστολής</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
-        <translation>输入的地址 &quot;%1&quot; 已经存在于地址薄。</translation>
+        <translation>Η διεύθυνση &quot;%1&quot; βρίσκεται ήδη στο βιβλίο διευθύνσεων.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The entered address &quot;%1&quot; is not a valid LEOcoin address.</source>
-        <translation>您输入的 &quot;%1&quot; 不是合法的元宝币地址.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Could not unlock wallet.</source>
-        <translation>无法解锁钱包</translation>
+        <translation>Δεν είναι δυνατό το ξεκλείδωμα του πορτοφολιού.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>New key generation failed.</source>
-        <translation>密钥创建失败.</translation>
+        <translation>Η δημιουργία νέου κλειδιού απέτυχε.</translation>
     </message>
 </context>
 <context>
@@ -743,42 +741,42 @@ Address: %4
         <location filename="../guiutil.cpp" line="+436"/>
         <location line="+12"/>
         <source>LEOcoin-Qt</source>
-        <translation>LEOcoin-Qt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-12"/>
         <source>version</source>
-        <translation>版本</translation>
+        <translation>έκδοση</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Usage:</source>
-        <translation>使用：</translation>
+        <translation>Χρήση:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>command-line options</source>
-        <translation>命令行选项</translation>
+        <translation>ρυθμίσεις γραμμής εντολών</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>UI options</source>
-        <translation>界面选项</translation>
+        <translation>ρυθμίσεις UI</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set language, for example &quot;de_DE&quot; (default: system locale)</source>
-        <translation>设置语言, 例如 &quot;de_DE&quot; (缺省: 系统语言)</translation>
+        <translation>Όρισε γλώσσα, για παράδειγμα &quot;de_DE&quot;(προεπιλογή:τοπικές ρυθμίσεις)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Start minimized</source>
-        <translation>启动时最小化</translation>
+        <translation>Έναρξη ελαχιστοποιημένο</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show splash screen on startup (default: 1)</source>
-        <translation>启动时显示版权页 (缺省: 1)</translation>
+        <translation>Εμφάνισε την οθόνη εκκίνησης κατά την εκκίνηση(προεπιλογή:1)</translation>
     </message>
 </context>
 <context>
@@ -786,194 +784,194 @@ Address: %4
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
         <source>Options</source>
-        <translation>选项</translation>
+        <translation>Ρυθμίσεις</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>&amp;Main</source>
-        <translation>&amp;主选项</translation>
+        <translation>&amp;Κύριο</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Προεραιτική αμοιβή συναλλαγής ανά kB, η οποία βοηθά να γίνεται η επεξεργασία των συναλλαγών σας γρήγορα. Οι περισσότερες συναλλαγές είναι 1 kB. Η προτεινόμενη αμοιβή είναι 0.01</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
-        <translation>支付交易 &amp;费</translation>
+        <translation>Αμοιβή &amp;συναλλαγής</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Automatically start LEOcoin after logging in to the system.</source>
-        <translation>系统启动后自动运行元宝币客户端软件</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Start LEOcoin on system login</source>
-        <translation>启动时&amp;运行</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
-        <translation>在关闭客户端时，分离块和地址数据库。这意味着它们可以被移动到另一个数据目录，但它会延缓关闭程序。钱包始终处于分离状态。</translation>
+        <translation>Αποσύνδεση βάσης δεδομένων μπλοκς και βιβλίου διευθύνσεων. Αυτό σημαίνει ότι μπορούν να μεταφερθούν σε άλλο φάκελο αλλά καθυστερεί τη διαδικασία εξόδου από το πρόγραμμα. Το αρχείου του πορτοφολιού αποσυνδέεται πάντα.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Detach databases at shutdown</source>
-        <translation>&amp;关闭客户端时分离数据库</translation>
+        <translation>&amp;Αποσύνδεση βάσεων δεδομένων κατά το κλείσμο</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Network</source>
-        <translation>&amp;网络</translation>
+        <translation>&amp;Δίκτυο</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自动打开LEOcoin的客户端使用的端口。这只有当你的路由器支持UPnP并启用。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Map port using &amp;UPnP</source>
-        <translation>启用UPnP端口映射</translation>
+        <translation>Απόδοση θυρών με χρήστη &amp;UPnP</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>通过 SOCKS proxy 连接网络(例如：通过 Tor 连接网络).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Connect through SOCKS proxy:</source>
-        <translation>&amp;通过SOCKS代理连接:</translation>
+        <translation>&amp;Σύνδεση μέσω διαμεσολαβητή SOCKS</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Proxy &amp;IP:</source>
-        <translation>代理服务器 &amp;IP:</translation>
+        <translation>&amp;IP διαμεσολαβητή:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>IP address of the proxy (e.g. 127.0.0.1)</source>
-        <translation>代理服务器的IP地址 (e.g. 127.0.0.1)</translation>
+        <translation>Διεύθυνση IP του διαμεσολαβητή (π.χ. 127.0.0.1)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Port:</source>
-        <translation>&amp;端口:</translation>
+        <translation>&amp;Θύρα:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Port of the proxy (e.g. 9050)</source>
-        <translation>代理服务器端口 (e.g. 9050)</translation>
+        <translation>Θύρα διαμεσολαβητή (π.χ. 9050)</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
-        <translation>代理服务器的SOCKS版本 (e.g. 5)</translation>
+        <translation>Έκδοση SOCKS του διαμεσολαβητή (π.χ. 5)</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Window</source>
-        <translation>&amp;窗口</translation>
+        <translation>&amp;Παράθυρο</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show only a tray icon after minimizing the window.</source>
-        <translation>最小化窗口后只显示一个托盘标志</translation>
+        <translation>Εμφάνιση  μόνο εικονιδίου στην περιοχή ειδοποιήσεων κατά την ελαχιστοποίηση</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;最小化到托盘</translation>
+        <translation>&amp;Ελαχιστοποίηση στην περιοχή ειδοποιήσεων αντί της γραμμής εργασιών</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>当窗口关闭时程序最小化而不是退出。当使用该选项时，程序只能通过在菜单中选择退出来关闭</translation>
+        <translation>Ελαχιστοποίηση αντί για έξοδο κατά το κλείσιμο του παραθύρου</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>M&amp;inimize on close</source>
-        <translation>单击关闭按钮时&amp;最小化</translation>
+        <translation>Ε&amp;λαχιστοποίηση κατά το κλείσιμο</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Display</source>
-        <translation>&amp;显示</translation>
+        <translation>%Απεικόνιση</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>User Interface &amp;language:</source>
-        <translation>&amp;语言：</translation>
+        <translation>Γλώσσα περιβάλλοντος εργασίας: </translation>
     </message>
     <message>
         <location line="+13"/>
         <source>The user interface language can be set here. This setting will take effect after restarting LEOcoin.</source>
-        <translation>置语言选项。需重启客户端软件才能生效。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Whether to show LEOcoin addresses in the transaction list or not.</source>
-        <translation>是否在交易清单中显示 LEOcoin 地址</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-22"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>&amp; LEOcoin 金额单位:</translation>
+        <translation>&amp;Μονάδα μέτρησης:</translation>
     </message>
     <message>
         <location line="-133"/>
         <source>SOCKS &amp;V:</source>
-        <translation>SOCKS &amp;V:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+146"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>选择显示及发送元宝币时使用的最小单位</translation>
+        <translation>Διαλέξτε την προεπιλεγμένη υποδιαίρεση που θα εμφανίζεται όταν στέλνετε νομίσματα.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;Display addresses in transaction list</source>
-        <translation>在交易清单中&amp;显示元宝币地址</translation>
+        <translation>Εμφάνιση &amp;διευθύνσεων στη λίστα συναλλαγών</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>&amp;OK</source>
-        <translation>&amp;确定</translation>
+        <translation>&amp;ΟΚ</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;取消</translation>
+        <translation>&amp;Ακύρωση</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Apply</source>
-        <translation>&amp;应用</translation>
+        <translation>&amp;Εφαρμογή</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="+55"/>
         <source>default</source>
-        <translation>默认</translation>
+        <translation>προεπιλογή</translation>
     </message>
     <message>
         <location line="+147"/>
         <location line="+9"/>
         <source>Warning</source>
-        <translation>警告</translation>
+        <translation>Προειδοποίηση</translation>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
         <source>This setting will take effect after restarting LEOcoin.</source>
-        <translation>重启客户端软件以使设置生效。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
-        <translation>所提供的代理服务器地址是无效的。</translation>
+        <translation>Δεν είναι έγκυρη η διεύθυνση διαμεσολαβητή</translation>
     </message>
 </context>
 <context>
@@ -981,74 +979,74 @@ Address: %4
     <message>
         <location filename="../forms/overviewpage.ui" line="+19"/>
         <source>Form</source>
-        <translation>表单</translation>
+        <translation>Φόρμα</translation>
     </message>
     <message>
         <location line="+24"/>
         <location line="+430"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>现在显示的消息可能是过期的. 在连接上元宝币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-237"/>
         <source>Stake:</source>
-        <translation>股份:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+147"/>
         <source>Number of transactions:</source>
-        <translation>交易笔数：</translation>
+        <translation>Αριθμός Συναλλαγών:</translation>
     </message>
     <message>
         <location line="-97"/>
         <source>Unconfirmed:</source>
-        <translation>未确认的：</translation>
+        <translation>Ανεπιβεβαίωτες:</translation>
     </message>
     <message>
         <location line="-250"/>
         <source>Wallet</source>
-        <translation>钱包</translation>
+        <translation>Πορτοφόλι</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Immature:</source>
-        <translation>未成熟的:</translation>
+        <translation>Ανώριμα:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Mined balance that has not yet matured</source>
-        <translation>Mined balance that has not yet matured</translation>
+        <translation>Εξορυγμένο υπόλοιπο που δεν έχει ακόμα ωριμάσει </translation>
     </message>
     <message>
         <location line="+114"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;当前交易&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Πρόσφατες συναλλαγές&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="-274"/>
         <source>Your current balance</source>
-        <translation>您的当前余额</translation>
+        <translation>Το τρέχον υπόλοιπο</translation>
     </message>
     <message>
         <location line="+113"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>尚未确认的交易总额, 未计入当前余额</translation>
+        <translation>Το άθροισμα των συναλλαγών που δεν έχουν ακόμα επιβεβαιωθεί και δεν προσμετρώνται στο τρέχον υπόλοιπό σας</translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
-        <translation>尚未确认的股份交易，尚未计入当前余额</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+138"/>
         <source>Total number of transactions in wallet</source>
-        <translation>钱包总交易数量</translation>
+        <translation>Σύνολο συναλλαγών στο πορτοφόλι</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
         <source>out of sync</source>
-        <translation>不同步</translation>
+        <translation>εκτός συγχρονισμού</translation>
     </message>
 </context>
 <context>
@@ -1056,57 +1054,57 @@ Address: %4
     <message>
         <location filename="../forms/qrcodedialog.ui" line="+14"/>
         <source>QR Code Dialog</source>
-        <translation>二维码对话框</translation>
+        <translation>Διάλογος Κώδικα QR</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>Request Payment</source>
-        <translation>请求付款</translation>
+        <translation>Αίτηση πληρωμής</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>Amount:</source>
-        <translation>金额：</translation>
+        <translation>Ποσό:</translation>
     </message>
     <message>
         <location line="-44"/>
         <source>Label:</source>
-        <translation>标签：</translation>
+        <translation>Ετικέτα:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Message:</source>
-        <translation>消息：</translation>
+        <translation>Μήνυμα:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>&amp;Save As...</source>
-        <translation>&amp;另存为</translation>
+        <translation>&amp;Αποθήκευση ως...</translation>
     </message>
     <message>
         <location filename="../qrcodedialog.cpp" line="+64"/>
         <source>Error encoding URI into QR Code.</source>
-        <translation>将 URI 转换成二维码失败.</translation>
+        <translation>Σφάλμα κατά την κωδικοποίηση του URI σε κώδικα QR</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>The entered amount is invalid, please check.</source>
-        <translation>输入的金额是无效的，请检查。</translation>
+        <translation>Το αναγραφόμενο ποσό δεν είναι έγκυρο, παρακαλούμε να το ελέγξετε.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI 太长, 请试着精简标签/消息的内容.</translation>
+        <translation>Το αποτέλεσμα της διεύθυνσης είναι πολύ μεγάλο. Μειώστε το μέγεθος για το κείμενο της ετικέτας/ μηνύματος.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Save QR Code</source>
-        <translation>保存二维码</translation>
+        <translation>Αποθήκευση κώδικα QR</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>PNG Images (*.png)</source>
-        <translation>PNG图像文件 (*.png)</translation>
+        <translation>Εικόνες PNG (*.png)</translation>
     </message>
 </context>
 <context>
@@ -1114,7 +1112,7 @@ Address: %4
     <message>
         <location filename="../forms/rpcconsole.ui" line="+46"/>
         <source>Client name</source>
-        <translation>客户端名称</translation>
+        <translation>Όνομα Πελάτη</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1128,132 +1126,132 @@ Address: %4
         <location line="+23"/>
         <location filename="../rpcconsole.cpp" line="+350"/>
         <source>N/A</source>
-        <translation>不可用</translation>
+        <translation>Μη διαθέσιμο</translation>
     </message>
     <message>
         <location line="-217"/>
         <source>Client version</source>
-        <translation>客户端版本</translation>
+        <translation>Έκδοση Πελάτη</translation>
     </message>
     <message>
         <location line="-45"/>
         <source>&amp;Information</source>
-        <translation>&amp;信息</translation>
+        <translation>&amp;Πληροφορία</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>LEOcoin - Debug window</source>
-        <translation>LEOcoin - 调试窗口</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
         <source>LEOcoin Core</source>
-        <translation>LEOcoin 内核</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Using OpenSSL version</source>
-        <translation>使用OpenSSL的版本</translation>
+        <translation>Χρήση OpenSSL εκδοσης</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Startup time</source>
-        <translation>启动时间</translation>
+        <translation>Χρόνος εκκίνησης</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Network</source>
-        <translation>网络</translation>
+        <translation>Δίκτυο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of connections</source>
-        <translation>连接数</translation>
+        <translation>Αριθμός συνδέσεων</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>On testnet</source>
-        <translation>当前为 LEOcoin 测试网络</translation>
+        <translation>Στο testnet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Block chain</source>
-        <translation>区块链</translation>
+        <translation>αλυσίδα μπλοκ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Current number of blocks</source>
-        <translation>当前区块数</translation>
+        <translation>Τρέχον αριθμός μπλοκ</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Estimated total blocks</source>
-        <translation>预计区块数</translation>
+        <translation>Κατ&apos; εκτίμηση συνολικά μπλοκς</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Last block time</source>
-        <translation>上一区块时间</translation>
+        <translation>Χρόνος τελευταίου μπλοκ</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>从当前文件夹打开LEOcoin调试日志文件，对于大日志文件，这可能会花费几秒钟。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Open</source>
-        <translation>&amp;打开</translation>
+        <translation>&amp;Άνοιγμα</translation>
     </message>
     <message>
         <location line="-29"/>
         <source>Command-line options</source>
-        <translation>命令行设置</translation>
+        <translation>Ρυθμίσεις γραμμής εντολών</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
-        <translation>LEOcoin-Qt 帮助信息中包含 LEOcoin 支持的命令行选项</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Show</source>
-        <translation>&amp;显示</translation>
+        <translation>&amp;Εμφάνιση</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Console</source>
-        <translation>&amp;控制台</translation>
+        <translation>&amp;Κονσόλα</translation>
     </message>
     <message>
         <location line="-266"/>
         <source>Build date</source>
-        <translation>创建时间</translation>
+        <translation>Ημερομηνία κατασκευής</translation>
     </message>
     <message>
         <location line="+200"/>
         <source>Debug log file</source>
-        <translation>调试日志文件</translation>
+        <translation>Αρχείο καταγραφής εντοπισμού σφαλμάτων </translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Clear console</source>
-        <translation>清空控制台</translation>
+        <translation>Καθαρισμός κονσόλας</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
         <source>Welcome to the LEOcoin RPC console.</source>
-        <translation>欢迎来到 RPC 控制台.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>使用上下方向键浏览历史,  &lt;b&gt;Ctrl-L&lt;/b&gt;清除屏幕.</translation>
+        <translation>Χρησιμοποιήστε το πάνω και κάτω βέλος για να περιηγηθείτε στο ιστορικο, και &lt;b&gt;Ctrl-L&lt;/b&gt; για εκκαθαριση οθονης.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation>使用 &lt;b&gt;help&lt;/b&gt; 命令显示帮助信息.</translation>
+        <translation>Γράψτε &lt;b&gt;βοήθεια&lt;/b&gt; για μια επισκόπηση των διαθέσιμων εντολών</translation>
     </message>
 </context>
 <context>
@@ -1268,103 +1266,103 @@ Address: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>发送货币</translation>
+        <translation>Αποστολή νομισμάτων</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>Send to multiple recipients at once</source>
-        <translation>一次发送给多个接收者</translation>
+        <translation>Αποστολή σε πολλούς αποδέκτες ταυτόχρονα</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add &amp;Recipient</source>
-        <translation>&amp;添加接收人</translation>
+        <translation>&amp;Προσθήκη αποδέκτη</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Remove all transaction fields</source>
-        <translation>移除所有交易项</translation>
+        <translation>Διαγραφή όλων των πεδίων συναλλαγής</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Clear &amp;All</source>
-        <translation>清除 &amp;所有</translation>
+        <translation>Καθαρισμός &amp;Όλων</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Balance:</source>
-        <translation>余额：</translation>
+        <translation>Υπόλοιπο:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <translation>123,456 XBC</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Confirm the send action</source>
-        <translation>确认并发送货币</translation>
+        <translation>Επιβεβαίωση αποστολής</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>S&amp;end</source>
-        <translation>&amp;发送</translation>
+        <translation>Αποστολή</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-62"/>
         <location line="+2"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; 到 %2 (%3)</translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; σε %2 (%3)</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Confirm send coins</source>
-        <translation>确认发送货币</translation>
+        <translation>Επιβεβαίωση αποστολής νομισμάτων</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure you want to send %1?</source>
-        <translation>确定您要发送 %1?</translation>
+        <translation>Είστε βέβαιοι για την αποστολή %1;</translation>
     </message>
     <message>
         <location line="+0"/>
         <source> and </source>
-        <translation> 和 </translation>
+        <translation>και</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>The recipient address is not valid, please recheck.</source>
-        <translation>接收者地址不合法，请检查。</translation>
+        <translation>Η διεύθυνση του παραλήπτη δεν είναι σωστή. Παρακαλώ ελέγξτε ξανά.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>支付金额必须大于0。</translation>
+        <translation>Το ποσό πληρωμής πρέπει να είναι μεγαλύτερο από 0.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount exceeds your balance.</source>
-        <translation>金额超出您的账上余额。</translation>
+        <translation>Το ποσό ξεπερνάει το διαθέσιμο υπόλοιπο</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The total exceeds your balance when the %1 transaction fee is included.</source>
-        <translation>计入 %1 交易费后的金额超出您的账上余额.</translation>
+        <translation>Το σύνολο υπερβαίνει το υπόλοιπό σας όταν συμπεριληφθεί και η αμοιβή συναλλαγής %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>发现重复的地址, 每次只能对同一地址发送一次.</translation>
+        <translation>Βρέθηκε η ίδια διεύθυνση δύο φορές. Επιτρέπεται μία μόνο εγγραφή για κάθε διεύθυνση, σε κάθε διαδικασία αποστολής.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Error: Transaction creation failed.</source>
-        <translation>错误: 创建交易失败.</translation>
+        <translation>Σφάλμα: Η δημιουργία της συναλλαγής απέτυχε.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>错误: 交易被拒绝. 如果您使用的是备份钱包，可能存在两个钱包不同步的情况，另一个钱包中的元宝币已经被使用，但本地的这个钱包尚没有记录。</translation>
+        <translation>Σφάλμα: Η συναλλαγή απερρίφθη. Αυτό ενδέχεται να συμβαίνει αν κάποια από τα νομίσματα έχουν ήδη ξοδευθεί, όπως αν χρησιμοποιήσατε αντίγραφο του wallet.dat και τα νομίσματα ξοδεύθηκαν εκεί αλλά δεν έχουν σημανθεί αντίστοιχα εδώ.</translation>
     </message>
 </context>
 <context>
@@ -1372,28 +1370,28 @@ Address: %4
     <message>
         <location filename="../forms/sendcoinsentry.ui" line="+14"/>
         <source>Form</source>
-        <translation>表单</translation>
+        <translation>Φόρμα</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>金额</translation>
+        <translation>&amp;Ποσό:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>支付 &amp;到：</translation>
+        <translation>Πληρωμή &amp;προς:</translation>
     </message>
     <message>
         <location line="+24"/>
         <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation>为这个地址输入一个标签，以便将它添加到您的地址簿</translation>
+        <translation>Εισάγετε μια επιγραφή για αυτή τη διεύθυνση ώστε να καταχωρηθεί στο βιβλίο διευθύνσεων</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Label:</source>
-        <translation>&amp;标签：</translation>
+        <translation>&amp;Ετικέτα</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -1403,7 +1401,7 @@ Address: %4
     <message>
         <location line="+10"/>
         <source>Choose address from address book</source>
-        <translation>从地址薄选择地址</translation>
+        <translation>Επιλογή διεύθυνσης από το βιβλίο διευθύνσεων</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1413,7 +1411,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation>从剪贴板粘贴地址</translation>
+        <translation>Επικόλληση διεύθυνσης από το πρόχειρο</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1423,7 +1421,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Remove this recipient</source>
-        <translation>移除此接收者</translation>
+        <translation>Αφαίρεση του παραλήπτη</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
@@ -1436,24 +1434,24 @@ Address: %4
     <message>
         <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
         <source>Signatures - Sign / Verify a Message</source>
-        <translation>签名 - 签名/验证消息</translation>
+        <translation>Υπογραφές - Είσοδος / Επαλήθευση μήνυματος </translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+130"/>
         <source>&amp;Sign Message</source>
-        <translation>&amp;对消息签名</translation>
+        <translation>&amp;Υπογραφή Μηνύματος</translation>
     </message>
     <message>
         <location line="-124"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>您可以用你的地址对消息进行签名，以证明您是该地址的所有人。注意不要对模棱两可的消息签名，以免遭受钓鱼式攻击。请确保消息真实明确的表达了您的意愿。</translation>
+        <translation>Μπορείτε να υπογράφετε μηνύματα με τις διευθύνσεις σας, ώστε ν&apos; αποδεικνύετε πως αυτές σας ανήκουν. Αποφεύγετε να υπογράφετε κάτι αόριστο καθώς ενδέχεται να εξαπατηθείτε. Υπογράφετε μόνο πλήρης δηλώσεις με τις οποίες συμφωνείτε.</translation>
     </message>
     <message>
         <location line="+34"/>
         <location line="+209"/>
         <source>Choose an address from the address book</source>
-        <translation>从地址簿选择地址</translation>
+        <translation>Επιλογή διεύθυνσης από το βιβλίο διευθύνσεων</translation>
     </message>
     <message>
         <location line="-199"/>
@@ -1464,7 +1462,7 @@ Address: %4
     <message>
         <location line="-196"/>
         <source>Paste address from clipboard</source>
-        <translation>从剪贴板粘贴地址</translation>
+        <translation>Επικόλληση διεύθυνσης από το πρόχειρο</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1474,17 +1472,17 @@ Address: %4
     <message>
         <location line="+9"/>
         <source>Enter the message you want to sign here</source>
-        <translation>请输入您要发送的签名消息</translation>
+        <translation>Εισάγετε εδώ το μήνυμα που θέλετε να υπογράψετε</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>复制当前签名至剪切板</translation>
+        <translation>Αντιγραφή της επιλεγμενης διεύθυνσης στο πρόχειρο του συστηματος</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Sign the message to prove you own this LEOcoin address</source>
-        <translation>注册信息证明你拥有这个LEOcoin地址</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>
@@ -1494,12 +1492,12 @@ Address: %4
     <message>
         <location line="+43"/>
         <source>Verify the message to ensure it was signed with the specified LEOcoin address</source>
-        <translation>核实这个消息以确保它在LEOcoin的地址中签名验证过</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-132"/>
         <source>Reset all sign message fields</source>
-        <translation>清空所有签名消息栏</translation>
+        <translation>Επαναφορά όλων των πεδίων μήνυματος</translation>
     </message>
     <message>
         <location line="-120"/>
@@ -1510,33 +1508,33 @@ Address: %4
         <location line="+123"/>
         <location line="+149"/>
         <source>Clear &amp;All</source>
-        <translation>清除 &amp;所有</translation>
+        <translation>Καθαρισμός &amp;Όλων</translation>
     </message>
     <message>
         <location line="-90"/>
         <location line="+73"/>
         <source>&amp;Verify Message</source>
-        <translation>&amp;验证消息</translation>
+        <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
         <location line="-67"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
-        <translation>在下方输入签名地址、消息（确保换行、空格、Tab也被正确拷贝）和签名来验证这个消息，为避免man-in-the-middle诈骗，注意不要在签名中读入比验证消息中读入更多的签名信息，</translation>
+        <translation>Πληκτρολογήστε την υπογραφή διεύθυνσης, μήνυμα (βεβαιωθείτε ότι έχετε αντιγράψει τις αλλαγές γραμμής, κενά, tabs, κ.λπ. ακριβώς) και την υπογραφή παρακάτω, για να ελέγξει το μήνυμα. Να είστε προσεκτικοί για να μην διαβάσετε περισσότερα στην υπογραφή ό, τι είναι στην υπογραφή ίδιο το μήνυμα , για να μην εξαπατηθούν από έναν άνθρωπο -in - the-middle επίθεση.</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Reset all verify message fields</source>
-        <translation>R清空所有验证消息栏</translation>
+        <translation>Επαναφορά όλων επαλήθευμενων πεδίων μήνυματος </translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+28"/>
         <source>Click &quot;Sign Message&quot; to generate signature</source>
-        <translation>单击“发送签名消息&quot;生成签名</translation>
+        <translation>Κάντε κλικ στο &quot;Υπογραφή Μηνύματος&quot; για να λάβετε την υπογραφή</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Enter LEOcoin signature</source>
-        <translation>输入 LEOcoin 签名</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-4"/>
@@ -1548,7 +1546,7 @@ Address: %4
         <location line="+83"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
-        <translation>输入的地址是无效的。</translation>
+        <translation>Η διεύθυνση που εισήχθη είναι λάθος.</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -1556,59 +1554,59 @@ Address: %4
         <location line="+73"/>
         <location line="+8"/>
         <source>Please check the address and try again.</source>
-        <translation>请检查地址，然后重试。</translation>
+        <translation>Παρακαλούμε ελέγξτε την διεύθυνση και δοκιμάστε ξανά.</translation>
     </message>
     <message>
         <location line="-81"/>
         <location line="+81"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>输入的地址没有指向一个秘钥</translation>
+        <translation>Η διεύθυνση που έχει εισαχθεί δεν αναφέρεται σε ένα πλήκτρο.</translation>
     </message>
     <message>
         <location line="-73"/>
         <source>Wallet unlock was cancelled.</source>
-        <translation>钱包解锁被取消。</translation>
+        <translation>το ξεκλείδωμα του πορτοφολιού απέτυχε</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Private key for the entered address is not available.</source>
-        <translation>私人密钥输入的地址不可用。</translation>
+        <translation>Το προσωπικό κλειδί εισαγμενης διευθυνσης δεν είναι διαθέσιμο.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Message signing failed.</source>
-        <translation>消息签名失败。</translation>
+        <translation>Η υπογραφή του μηνύματος απέτυχε.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation>签名的消息。</translation>
+        <translation>Μήνυμα υπεγράφη.</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>The signature could not be decoded.</source>
-        <translation>签名不能被解码。</translation>
+        <translation>Η υπογραφή δεν μπόρεσε να αποκρυπτογραφηθεί.</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+13"/>
         <source>Please check the signature and try again.</source>
-        <translation>请检查签名并重试。</translation>
+        <translation>Παρακαλούμε ελέγξτε την υπογραφή και δοκιμάστε ξανά.</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>The signature did not match the message digest.</source>
-        <translation>签名与消息摘要不匹配</translation>
+        <translation>Η υπογραφή δεν ταιριάζει με το μήνυμα. </translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Message verification failed.</source>
-        <translation>消息验证失败。</translation>
+        <translation>Η επιβεβαίωση του μηνύματος απέτυχε</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Message verified.</source>
-        <translation>消息验证。</translation>
+        <translation>Μήνυμα επιβεβαιώθηκε.</translation>
     </message>
 </context>
 <context>
@@ -1616,80 +1614,82 @@ Address: %4
     <message>
         <location filename="../transactiondesc.cpp" line="+19"/>
         <source>Open until %1</source>
-        <translation>至 %1 个数据块时开启</translation>
+        <translation>Ανοιχτό μέχρι %1</translation>
     </message>
     <message numerus="yes">
         <location line="-2"/>
         <source>Open for %n block(s)</source>
-        <translation>
-            <numerusform>开启 %n 个数据块</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+8"/>
         <source>%1/offline</source>
-        <translation>%1/离线?</translation>
+        <translation>%1/χωρίς σύνδεση;</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1/unconfirmed</source>
-        <translation>%1/未确认</translation>
+        <translation>%1/χωρίς επιβεβαίωση</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 confirmations</source>
-        <translation>%1 确认项</translation>
+        <translation>%1 επιβεβαιώσεις</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Status</source>
-        <translation>Status</translation>
+        <translation>Κατάσταση</translation>
     </message>
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation>
-            <numerusform>通过 %n 节点组广播</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Date</source>
-        <translation>日期</translation>
+        <translation>Ημερομηνία</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Source</source>
-        <translation>源</translation>
+        <translation>Πηγή</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Generated</source>
-        <translation>生成</translation>
+        <translation>Δημιουργία </translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+17"/>
         <source>From</source>
-        <translation>从</translation>
+        <translation>Από</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+22"/>
         <location line="+58"/>
         <source>To</source>
-        <translation>到</translation>
+        <translation>Προς</translation>
     </message>
     <message>
         <location line="-77"/>
         <location line="+2"/>
         <source>own address</source>
-        <translation>自己的地址</translation>
+        <translation> δική σας διεύθυνση </translation>
     </message>
     <message>
         <location line="-2"/>
         <source>label</source>
-        <translation>标签</translation>
+        <translation>eπιγραφή</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -1698,19 +1698,20 @@ Address: %4
         <location line="+17"/>
         <location line="+32"/>
         <source>Credit</source>
-        <translation>到帐</translation>
+        <translation>Πίστωση </translation>
     </message>
     <message numerus="yes">
         <location line="-104"/>
         <source>matures in %n more block(s)</source>
-        <translation>
-            <numerusform>成熟于 %n 以上数据块</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>not accepted</source>
-        <translation>未接受</translation>
+        <translation>μη αποδεκτό</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -1718,32 +1719,32 @@ Address: %4
         <location line="+15"/>
         <location line="+32"/>
         <source>Debit</source>
-        <translation>支出</translation>
+        <translation>Debit</translation>
     </message>
     <message>
         <location line="-41"/>
         <source>Transaction fee</source>
-        <translation>交易费</translation>
+        <translation>Τέλος συναλλαγής </translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Net amount</source>
-        <translation>网络金额</translation>
+        <translation>Καθαρό ποσό</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Message</source>
-        <translation>消息</translation>
+        <translation>Μήνυμα</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Comment</source>
-        <translation>备注</translation>
+        <translation>Σχόλιο:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Transaction ID</source>
-        <translation>交易ID</translation>
+        <translation>ID Συναλλαγής:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1753,47 +1754,47 @@ Address: %4
     <message>
         <location line="+2"/>
         <source>Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
-        <translation>新产生的元宝币必须等待520个数据块之后才能被使用. 当您生产出此数据块,它将被广播至元宝币网络并添加至数据链. 如果添加到数据链失败, 它的状态将变成&quot;不被接受&quot;，生产的元宝币将不能使用. 在您生产新数据块的几秒钟内, 如果其它节点也生产出同样的数据块，有可能会发生这种情况.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Debug information</source>
-        <translation>调试信息</translation>
+        <translation>Πληροφορίες αποσφαλμάτωσης</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Transaction</source>
-        <translation>交易</translation>
+        <translation>Συναλλαγή</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Inputs</source>
-        <translation>输入</translation>
+        <translation>εισροές </translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Amount</source>
-        <translation>数量</translation>
+        <translation>Ποσό</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>true</source>
-        <translation>true</translation>
+        <translation>αληθής</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>false</source>
-        <translation>false</translation>
+        <translation>αναληθής </translation>
     </message>
     <message>
         <location line="-213"/>
         <source>, has not been successfully broadcast yet</source>
-        <translation>, 未被成功广播</translation>
+        <translation>, δεν έχει ακόμα μεταδοθεί μ&apos; επιτυχία</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>unknown</source>
-        <translation>未知的</translation>
+        <translation>άγνωστο</translation>
     </message>
 </context>
 <context>
@@ -1801,12 +1802,12 @@ Address: %4
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
-        <translation>交易细节</translation>
+        <translation>Λεπτομέρειες συναλλαγής</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
-        <translation>当前面板显示了交易的详细描述</translation>
+        <translation>Αυτό το παράθυρο δείχνει μια λεπτομερή περιγραφή της συναλλαγής</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -1819,121 +1820,123 @@ Address: %4
     <message>
         <location filename="../transactiontablemodel.cpp" line="+226"/>
         <source>Date</source>
-        <translation>日期</translation>
+        <translation>Ημερομηνία</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Type</source>
-        <translation>类型</translation>
+        <translation>Τύπος</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>地址</translation>
+        <translation>Διεύθυνση</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Amount</source>
-        <translation>数量</translation>
+        <translation>Ποσό</translation>
     </message>
     <message numerus="yes">
         <location line="+57"/>
         <source>Open for %n block(s)</source>
-        <translation>
-            <numerusform>开启 %n 个数据块</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Open until %1</source>
-        <translation>至 %1 个数据块时开启</translation>
+        <translation>Ανοιχτό μέχρι %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Offline (%1 confirmations)</source>
-        <translation>离线 (%1 个确认项)</translation>
+        <translation>Χωρίς σύνδεση (%1 επικυρώσεις)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unconfirmed (%1 of %2 confirmations)</source>
-        <translation>未确认 (%1 / %2 条确认信息)</translation>
+        <translation>Χωρίς επιβεβαίωση (%1 από %2 επικυρώσεις)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Confirmed (%1 confirmations)</source>
-        <translation>已确认 (%1 条确认信息)</translation>
+        <translation>Επικυρωμένη (%1 επικυρώσεις)</translation>
     </message>
     <message numerus="yes">
         <location line="+8"/>
         <source>Mined balance will be available when it matures in %n more block(s)</source>
-        <translation>
-            <numerusform>挖矿所得将在  %n 个数据块之后可用</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+5"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>此区块未被其他节点接收，并可能不被接受！</translation>
+        <translation>Αυτό το μπλοκ δεν έχει παραληφθεί από κανέναν άλλο κόμβο και κατά πάσα πιθανότητα θα απορριφθεί!</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Generated but not accepted</source>
-        <translation>已生成但未被接受</translation>
+        <translation>Δημιουργήθηκε αλλά απορρίφθηκε</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Received with</source>
-        <translation>接收于</translation>
+        <translation>Ελήφθη με</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Received from</source>
-        <translation>收款来自</translation>
+        <translation>Ελήφθη από</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Sent to</source>
-        <translation>发送到</translation>
+        <translation>Απεστάλη προς</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Payment to yourself</source>
-        <translation>付款给自己</translation>
+        <translation>Πληρωμή προς εσάς</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Mined</source>
-        <translation>挖矿所得</translation>
+        <translation>Εξόρυξη</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>(n/a)</source>
-        <translation>(n/a)</translation>
+        <translation>(δ/α)</translation>
     </message>
     <message>
         <location line="+199"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
-        <translation>交易状态。 鼠标移到此区域上可显示确认消息项的数目。</translation>
+        <translation>Κατάσταση συναλλαγής. Πηγαίνετε το ποντίκι πάνω από αυτό το πεδίο για να δείτε τον αριθμό των επικυρώσεων</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation>接收交易的时间</translation>
+        <translation>Ημερομηνία κι ώρα λήψης της συναλλαγής.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Type of transaction.</source>
-        <translation>交易类别。</translation>
+        <translation>Είδος συναλλαγής.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>交易目的地址。</translation>
+        <translation>Διεύθυνση αποστολής της συναλλαγής.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
-        <translation>从余额添加或移除的金额</translation>
+        <translation>Ποσό που αφαιρέθηκε ή προστέθηκε στο υπόλοιπο.</translation>
     </message>
 </context>
 <context>
@@ -1942,137 +1945,137 @@ Address: %4
         <location filename="../transactionview.cpp" line="+55"/>
         <location line="+16"/>
         <source>All</source>
-        <translation>全部</translation>
+        <translation>Όλα</translation>
     </message>
     <message>
         <location line="-15"/>
         <source>Today</source>
-        <translation>今天</translation>
+        <translation>Σήμερα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This week</source>
-        <translation>本周</translation>
+        <translation>Αυτή την εβδομάδα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This month</source>
-        <translation>本月</translation>
+        <translation>Αυτόν τον μήνα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Last month</source>
-        <translation>上月</translation>
+        <translation>Τον προηγούμενο μήνα</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This year</source>
-        <translation>今年</translation>
+        <translation>Αυτό το έτος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Range...</source>
-        <translation>范围...</translation>
+        <translation>Έκταση...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Received with</source>
-        <translation>接收于</translation>
+        <translation>Ελήφθη με</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Sent to</source>
-        <translation>发送到</translation>
+        <translation>Απεστάλη προς</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>To yourself</source>
-        <translation>到自己</translation>
+        <translation>Προς εσάς</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mined</source>
-        <translation>挖矿所得</translation>
+        <translation>Εξόρυξη</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Other</source>
-        <translation>其他</translation>
+        <translation>Άλλο</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Enter address or label to search</source>
-        <translation>输入地址或标签进行搜索</translation>
+        <translation>Αναζήτηση με βάση τη διεύθυνση ή την επιγραφή</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Min amount</source>
-        <translation>最小金额</translation>
+        <translation>Ελάχιστο ποσό</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Copy address</source>
-        <translation>复制地址</translation>
+        <translation>Αντιγραφή διεύθυνσης</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>复制标签</translation>
+        <translation>Αντιγραφή επιγραφής</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>复制金额</translation>
+        <translation>Αντιγραφή ποσού</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit label</source>
-        <translation>编辑标签</translation>
+        <translation>Επεξεργασία επιγραφής</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show transaction details</source>
-        <translation>显示交易详情</translation>
+        <translation>Εμφάνιση λεπτομερειών συναλλαγής</translation>
     </message>
     <message>
         <location line="+137"/>
         <source>Export Transaction Data</source>
-        <translation>导出交易数据</translation>
+        <translation>Εξαγωγή Στοιχείων Συναλλαγών</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>逗号分隔文件(*.csv)</translation>
+        <translation>Αρχείο οριοθετημένο με κόμματα (*.csv)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Confirmed</source>
-        <translation>已确认</translation>
+        <translation>Επικυρωμένες</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Date</source>
-        <translation>日期</translation>
+        <translation>Ημερομηνία</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation>类别</translation>
+        <translation>Τύπος</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>标签</translation>
+        <translation>Επιγραφή</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Address</source>
-        <translation>地址</translation>
+        <translation>Διεύθυνση</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Amount</source>
-        <translation>数量</translation>
+        <translation>Ποσό</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2082,22 +2085,22 @@ Address: %4
     <message>
         <location line="+4"/>
         <source>Error exporting</source>
-        <translation>导出错误</translation>
+        <translation>Εξαγωγή σφαλμάτων</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>无法写入文件 %1。</translation>
+        <translation>Αδυναμία εγγραφής στο αρχείο %1.</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Range:</source>
-        <translation>范围：</translation>
+        <translation>Έκταση:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>to</source>
-        <translation>到</translation>
+        <translation>έως</translation>
     </message>
 </context>
 <context>
@@ -2105,7 +2108,7 @@ Address: %4
     <message>
         <location filename="../walletmodel.cpp" line="+199"/>
         <source>Sending...</source>
-        <translation>发送中...</translation>
+        <translation>Αποστολή...</translation>
     </message>
 </context>
 <context>
@@ -2113,102 +2116,102 @@ Address: %4
     <message>
         <location filename="../bitcoinstrings.cpp" line="+126"/>
         <source>LEOcoin version</source>
-        <translation>LEOcoin 版本</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Usage:</source>
-        <translation>使用：</translation>
+        <translation>Χρήση:</translation>
     </message>
     <message>
         <location line="-26"/>
         <source>Send command to -server or LEOcoind</source>
-        <translation>向 -server 或 LEOcoind发送指令</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-21"/>
         <source>List commands</source>
-        <translation>列出命令</translation>
+        <translation>Λίστα εντολών</translation>
     </message>
     <message>
         <location line="-12"/>
         <source>Get help for a command</source>
-        <translation>获得某条命令的帮助</translation>
+        <translation>Επεξήγηση εντολής</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Options:</source>
-        <translation>选项：</translation>
+        <translation>Επιλογές:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Specify configuration file (default: LEOcoin.conf)</source>
-        <translation>指定配置文件 (默认：LEOcoin.conf)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Specify pid file (default: LEOcoind.pid)</source>
-        <translation>指定 pid 文件 (默认: LEOcoind.pid)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Generate coins</source>
-        <translation>生成货币</translation>
+        <translation>Δημιουργία νομισμάτων</translation>
     </message>
     <message>
         <location line="-14"/>
         <source>Don&apos;t generate coins</source>
-        <translation>不要生成货币</translation>
+        <translation>Μη δημιουργία νομιστάτων</translation>
     </message>
     <message>
         <location line="+63"/>
         <source>Specify data directory</source>
-        <translation>指定数据目录</translation>
+        <translation>Ορισμός φακέλου δεδομένων</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Set database cache size in megabytes (default: 25)</source>
-        <translation>设置数据库缓冲区大小 (缺省: 25MB)</translation>
+        <translation>Όρισε το μέγεθος της βάσης προσωρινής αποθήκευσης σε megabytes(προεπιλογή:25)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set database disk log size in megabytes (default: 100)</source>
-        <translation>设置数据库磁盘日志大小 (缺省: 100MB)</translation>
+        <translation>Ρύθμιση μεγέθους αρχείου καταγραφής βάσης δεδομένων στο δίσκο σε megabytes (προεπιλογή: 100)</translation>
     </message>
     <message>
         <location line="-28"/>
         <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 17777)</source>
-        <translation>监听端口连接 &lt;port&gt; (缺省: 8333 or testnet: 18333)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>最大连接数 &lt;n&gt;  (缺省: 125)</translation>
+        <translation>Μέγιστες αριθμός συνδέσεων με τους peers &lt;n&gt; (προεπιλογή: 125)</translation>
     </message>
     <message>
         <location line="-34"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
-        <translation>连接一个节点并获取对端地址, 然后断开连接</translation>
+        <translation>Σύνδεση σε έναν κόμβο για την ανάκτηση διευθύνσεων από ομοτίμους, και αποσυνδέσh</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Specify your own public address</source>
-        <translation>指定您的公共地址</translation>
+        <translation>Διευκρινίστε τη δικιά σας δημόσια διεύθυνση.</translation>
     </message>
     <message>
         <location line="-76"/>
         <source>Bind to given address. Use [host]:port notation for IPv6</source>
-        <translation>绑定指定地址. IPv6 使用 [host]:port </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+78"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
-        <translation>拒绝行为不当的节点连接的最大数 (默认: 100)</translation>
+        <translation>Όριο αποσύνδεσης προβληματικών peers (προεπιλογή: 100)</translation>
     </message>
     <message>
         <location line="-110"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
-        <translation>拒绝行为不当的节点重新连接的秒数 (默认: 86400)</translation>
+        <translation>Δευτερόλεπτα πριν επιτραπεί ξανά η σύνδεση των προβληματικών peers (προεπιλογή: 86400)</translation>
     </message>
     <message>
         <location line="-39"/>
@@ -2225,92 +2228,92 @@ If the file does not exist, create it with owner-readable-only file permissions.
     <message>
         <location line="+12"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
-        <translation>RPC端口 %u 监听错误</translation>
+        <translation>Ένα σφάλμα συνέβη καθώς προετοιμαζόταν η πόρτα RPC %u για αναμονή IPv4: %s</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Cannot obtain a lock on data directory %s.  LEOcoin is probably already running.</source>
-        <translation>获取锁文件失败 %s。LEOcoin可能正在运行</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
-        <translation>分离区块数据库和地址数据库. 会延升关闭时间 (缺省: 0)</translation>
+        <translation>Αποσύνδεση βάσης δεδομένων μπλοκς και βιβλίου διευθύνσεων. Καθυστερεί την έξοδο από το πρόγραμμα (προεπιλογή: 0)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>错误: 交易被拒绝. 如果您使用的是备份钱包，可能存在两个钱包不同步的情况，另一个钱包中的元宝币已经被使用，但本地的这个钱包尚没有记录。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
-        <translation>错误: 该交易需支付到少 %s 的交易费，原因可能是该交易数量太小、构成太复杂或者使用了新近接收到的元宝币</translation>
+        <translation>Σφάλμα: Αυτή η συναλλαγή απαιτεί αμοιβή τουλάχιστον  %s λόγω του ποσού, της πολυπλοκότητας ή της χρήσης πρόσφατα αποκτηθέντων νομισμάτων.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Error: Wallet unlocked for block minting only, unable to create transaction.</source>
-        <translation>错误：未加锁的钱包只能挖矿，不能创建交易。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Unable to bind to %s on this computer. LEOcoin is probably already running.</source>
-        <translation>绑定到 %s 失败。 LEOcoin可能已经在运行。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong LEOcoin will not work properly.</source>
-        <translation>警告：请检查你的电脑日期和时间是否正确！如果不正确，LEOcoin将不能正常工作。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Accept command line and JSON-RPC commands</source>
-        <translation>接受命令行和 JSON-RPC 命令</translation>
+        <translation>Αποδοχή εντολών κονσόλας και JSON-RPC</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Error: Transaction creation failed  </source>
-        <translation>错误: 创建交易失败</translation>
+        <translation>Σφάλμα: Η δημιουργία της συναλλαγής απέτυχε</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Error: Wallet locked, unable to create transaction  </source>
-        <translation>错误: 钱包被锁，无法创建新的交易</translation>
+        <translation>Σφάλμα: Το πορτοφόλι είναι κλειδωμένο και είναι αδύνατη η δημιουργία της συναλλαγής</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Importing blockchain data file.</source>
-        <translation>正在导入数据链文件</translation>
+        <translation>Εισαγωγή αρχείου δεδομένων blockchain</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Importing bootstrap blockchain data file.</source>
-        <translation>正在导入引导数据链文件</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Run in the background as a daemon and accept commands</source>
-        <translation>在后台运行并接受命令</translation>
+        <translation>Εκτέλεση στο παρασκήνιο κι αποδοχή εντολών</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Use the test network</source>
-        <translation>使用测试网络</translation>
+        <translation>Χρήση του δοκιμαστικού δικτύου</translation>
     </message>
     <message>
         <location line="-95"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>A接受来自外部的连接 (缺省: 1 if no -proxy or -connect)</translation>
+        <translation>Να δέχεσαι συνδέσεις από έξω(προεπιλογή:1)</translation>
     </message>
     <message>
         <location line="-52"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
-        <translation>IPV6上RPC端口 %u 监听错误，尝试使用IPV4：%s</translation>
+        <translation>Ένα σφάλμα συνέβη καθώς προετοιμαζόταν η υποδοχη RPC %u για αναμονη του IPv6, επεσε πισω στο IPv4:%s</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
-        <translation>初始化数据库错误 %s！备份那个文件夹，然后移除除钱包文件之外的其他文件来恢复。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2320,422 +2323,421 @@ If the file does not exist, create it with owner-readable-only file permissions.
     <message>
         <location line="+5"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
-        <translation>设置 high-priority/low-fee 交易的最大字节数(默认: 27000)</translation>
+        <translation>Ορίστε το μέγιστο μέγεθος των high-priority/low-fee συναλλαγων σε bytes (προεπιλογή: 27000)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>警告: -paytxfee 交易费用设得有点高. 每当您发送一笔交易，将会向网络支付这么多的交易费.</translation>
+        <translation>Προειδοποίηση: Η παράμετρος -paytxfee είναι πολύ υψηλή. Πρόκειται για την αμοιβή που θα πληρώνετε για κάθε συναλλαγή που θα στέλνετε.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>警告: 读取wallet.dat错误！虽然秘钥读取正确，但是交易数据和地址信息有可能已经丢失或者不正确。</translation>
+        <translation>Προειδοποίηση : Σφάλμα wallet.dat κατα την ανάγνωση ! Όλα τα κλειδιά αναγνωρισθηκαν σωστά, αλλά τα δεδομένα των συναλλαγών ή καταχωρήσεις στο βιβλίο διευθύνσεων μπορεί να είναι ελλιπείς ή λανθασμένα. </translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>警告: wallet.dat 崩溃，数据已被抢救！原 wallet.dat 被备份为 wallet.{timestamp}.bak 在 %s 下；如果你的余额或者交易信息不正确，你应该从备份中恢复。</translation>
+        <translation>Προειδοποίηση : το αρχειο wallet.dat ειναι διεφθαρμένο, τα δεδομένα σώζονται ! Original wallet.dat αποθηκεύονται ως πορτοφόλι { timestamp } bak στο % s ? . . Αν το υπόλοιπο του ή τις συναλλαγές σας, είναι λάθος θα πρέπει να επαναφέρετε από ένα αντίγραφο ασφαλείας</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
-        <translation>尝试从崩溃的 wallet.dat 中恢复私钥</translation>
+        <translation>Προσπάθεια για ανακτησει ιδιωτικων κλειδιων από ενα διεφθαρμένο αρχειο wallet.dat </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block creation options:</source>
-        <translation>Block 生成选项:</translation>
+        <translation>Αποκλεισμός επιλογων δημιουργίας: </translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Connect only to the specified node(s)</source>
-        <translation>只连接到指定节点</translation>
+        <translation>Σύνδεση μόνο με ορισμένους κόμβους</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
-        <translation>探测自己的IP地址 (默认: 1 正在监听并且没有配置 -externalip 时)</translation>
+        <translation>Ανακαλύψτε την δικη σας IP διεύθυνση (προεπιλογή: 1 όταν ακούει και δεν - externalip) </translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error loading wallet.dat: Wallet requires newer version of LEOcoin</source>
-        <translation>加载 wallet.dat 端口失败：钱包需要更新LEOcoin版本</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
-        <translation>监听任一端口失败。 如果这是你想要的，请使用 -listen=0 参数</translation>
+        <translation>ταλαιπωρηθειτε για να ακούσετε σε οποιαδήποτε θύρα. Χρήση - ακούστε = 0 , αν θέλετε αυτό.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Find peers using DNS lookup (default: 0)</source>
-        <translation>通过DNS查找网络上的元宝币节点 (缺省: 0)</translation>
+        <translation>Αναζήτηση κόμβων με χρήση DNS lookup (προεπιλογή: 0)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
-        <translation>-tor 地址不正确: &apos;%s&apos;</translation>
+        <translation>Δεν είναι έγκυρη η διεύθυνση διαμεσολαβητή: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation> -reservebalance=&lt;amount&gt; 数值不正确</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
-        <translation>每个连接的最大接收缓冲区大小, &lt;n&gt;*1000 字节 (默认: 5000)</translation>
+        <translation>Μέγιστος buffer λήψης ανά σύνδεση, &lt;n&gt;*1000 bytes (προεπιλογή: 5000)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
-        <translation>每个连接的最大发送缓冲区大小, &lt;n&gt;*1000 字节 (默认: 1000)</translation>
+        <translation>Μέγιστος buffer αποστολής ανά σύνδεση, &lt;n&gt;*1000 bytes (προεπιλογή: 1000)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>LEOcoin</source>
-        <translation>LEOcoin</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
-        <translation>仅连接在这些网络中的节点 &lt;net&gt; (IPv4, IPv6 or Tor)</translation>
+        <translation> Συνδέση μόνο σε κόμβους του δικτύου &lt;net&gt; (IPv4, IPv6 ή Tor) </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Output extra debugging information. Implies all other -debug* options</source>
-        <translation>输入额外的调试信息。因为着打开所有的 -debug* 选项</translation>
+        <translation>Έξοδος επιπλέον πληροφοριών εντοπισμού σφαλμάτων</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Output extra network debugging information</source>
-        <translation>输出额外的网络调试信息</translation>
+        <translation>Έξοδος επιπλέον πληροφοριών εντοπισμού σφαλμάτων</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Prepend debug output with timestamp</source>
-        <translation>为调试输出信息添加时间戳</translation>
+        <translation>Χρονοσφραγίδα πληροφοριών εντοπισμού σφαλμάτων</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL 选项: </translation>
+        <translation>Επιλογές SSL: (δείτε το BitcoinPlus Wiki για οδηγίες εγκατάστασης SSL)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Select the version of socks proxy to use (4-5, default: 5)</source>
-        <translation>选择 socks 代理版本 (socks4 或 socks5, 缺省为socks5)</translation>
+        <translation>Επιλέξτε την έκδοση του διαμεσολαβητη για να χρησιμοποιήσετε (4-5 , προεπιλογή: 5)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
-        <translation>跟踪/调试信息输出到控制台，不输出到debug.log文件</translation>
+        <translation>Αποστολή πληροφοριών εντοπισμού σφαλμάτων στην κονσόλα αντί του αρχείου debug.log</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Send trace/debug info to debugger</source>
-        <translation>跟踪/调试信息输出到 调试器debugger</translation>
+        <translation>Αποστολή πληροφοριών εντοπισμού σφαλμάτων στον debugger</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
-        <translation>设置每个block最大字节数 (默认: 250000)</translation>
+        <translation>Ορίσμος του μέγιστου μέγεθος block σε bytes (προεπιλογή: 250000)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set minimum block size in bytes (default: 0)</source>
-        <translation>设置每个block的最小字节数 (default: 0)</translation>
+        <translation>Ορίστε το μέγιστο μέγεθος block σε bytes (προεπιλογή: 0)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation>客户端启动时压缩 debug.log 文件(默认: 1 when no -debug)</translation>
+        <translation>Συρρίκνωση του αρχείο debug.log κατα την εκκίνηση του πελάτη (προεπιλογή: 1 όταν δεν-debug)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
-        <translation>指定连接超时时间 (毫秒：5000)</translation>
+        <translation>Ορισμός λήξης χρονικού ορίου σε χιλιοστά του δευτερολέπτου(προεπιλογή:5000)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Unable to sign checkpoint, wrong checkpointkey?
 </source>
-        <translation>无法验证检查点，检查点秘钥错误？</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
-        <translation>使用 UPnp 映射监听端口(默认: 0)</translation>
+        <translation>Χρησιμοποίηση του  UPnP για την χρήση της πόρτας αναμονής (προεπιλογή:0)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
-        <translation>使用 UPnp 映射监听端口 (默认: 1 when listening)</translation>
+        <translation>Χρησιμοποίηση του  UPnP για την χρήση της πόρτας αναμονής (προεπιλογή:1)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
-        <translation>使用代理 (默认: 与 -proxy 相同)</translation>
+        <translation>Χρήση διακομιστή μεσολάβησης για την επίτευξη των Tor κρυμμένων υπηρεσιων (προεπιλογή: ίδιο με το-proxy) </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Username for JSON-RPC connections</source>
-        <translation>JSON-RPC连接用户名</translation>
+        <translation>Όνομα χρήστη για τις συνδέσεις JSON-RPC</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Verifying database integrity...</source>
-        <translation>验证数据库完整性...</translation>
+        <translation>Επιβεβαίωση συνοχής βάσης δεδομένων...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Wallet needed to be rewritten: restart LEOcoin to complete</source>
-        <translation>钱包需要重新被写入：重启LEOcoin以完成操作</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Warning: Disk space is low!</source>
-        <translation>警告：磁盘空间不足！</translation>
+        <translation>Προειδοποίηση: Ο χώρος στο δίσκο είναι λίγος!</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
-        <translation>注意：此版本已经过时，必须升级！</translation>
+        <translation>Προειδοποίηση: Αυτή η έκδοση είναι ξεπερασμένη, απαιτείται αναβάθμιση </translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wallet.dat corrupt, salvage failed</source>
-        <translation>wallet.dat 崩溃，抢救失败</translation>
+        <translation>Το αρχειο wallet.dat ειναι διεφθαρμένο, η διάσωση απέτυχε</translation>
     </message>
     <message>
         <location line="-44"/>
         <source>Password for JSON-RPC connections</source>
-        <translation>JSON-RPC连接密码</translation>
+        <translation>Κωδικός για τις συνδέσεις JSON-RPC</translation>
     </message>
     <message>
         <location line="-54"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
-        <translation>允许从指定IP接受到的JSON-RPC连接</translation>
+        <translation>Αποδοχή συνδέσεων JSON-RPC από συγκεκριμένη διεύθυνση IP</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
-        <translation>向IP地址为 &lt;ip&gt; 的节点发送指令 (缺省: 127.0.0.1)</translation>
+        <translation>Αποστολή εντολών στον κόμβο &lt;ip&gt; (προεπιλογή: 127.0.0.1)</translation>
     </message>
     <message>
         <location line="-97"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-        <translation>当最佳区块变化时执行命令 (命令行中的 %s 会被替换成区块哈希值)</translation>
+        <translation>Εκτέλεσε την εντολή όταν το καλύτερο μπλοκ αλλάξει(%s στην εντολή αντικαθίσταται από το hash του μπλοκ)</translation>
     </message>
     <message>
         <location line="+121"/>
         <source>Upgrade wallet to latest format</source>
-        <translation>将钱包升级到最新的格式</translation>
+        <translation>Αναβάθμισε το πορτοφόλι στην τελευταία έκδοση</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
-        <translation>设置密钥池大小为 &lt;n&gt; (缺省: 100)</translation>
+        <translation>Όριο πλήθους κλειδιών pool &lt;n&gt; (προεπιλογή: 100)</translation>
     </message>
     <message>
         <location line="-14"/>
         <source>Rescan the block chain for missing wallet transactions</source>
-        <translation>重新扫描数据链以查找遗漏的交易</translation>
+        <translation>Επανέλεγχος της αλυσίδας μπλοκ για απούσες συναλλαγές</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
-        <translation>启动时需检查的区块数量 (缺省: 2500, 设置0为检查所有区块)</translation>
+        <translation>Πόσα μπλοκς να ελέγχονται κατά την εκίννηση (προεπιλογή: 2500, 0 = όλα)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>How thorough the block verification is (0-6, default: 1)</source>
-        <translation>需要几个确认 (0-6个, 缺省: 1个)</translation>
+        <translation>Πόσο λεπτομερής είναι η επιβεβαίωση των μπλοκς (0-6, προεπιλογή: 1)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Imports blocks from external blk000?.dat file</source>
-        <translation>从外来文件 blk000?.dat 导入区块数据</translation>
+        <translation>Εισαγωγή μπλοκς από εξωτερικό αρχείο blk000?.dat</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
-        <translation>为 JSON-RPC 连接使用 OpenSSL (https)连接</translation>
+        <translation>Χρήση του OpenSSL (https) για συνδέσεις JSON-RPC</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>Server certificate file (default: server.cert)</source>
-        <translation>服务器证书 (默认为 server.cert)</translation>
+        <translation>Αρχείο πιστοποιητικού του διακομιστή  (προεπιλογή: server.cert)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Server private key (default: server.pem)</source>
-        <translation>服务器私钥 (默认为 server.pem)</translation>
+        <translation>Προσωπικό κλειδί του διακομιστή (προεπιλογή: server.pem)</translation>
     </message>
     <message>
         <location line="-127"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
-        <translation>可接受的加密器 (默认为 TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
+        <translation>Αποδεκτά κρυπτογραφήματα (προεπιλογή: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
         <location line="+139"/>
         <source>This help message</source>
-        <translation>该帮助信息</translation>
+        <translation>Αυτό το κείμενο βοήθειας</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
-        <translation>无法绑定本机端口 %s  (返回错误消息 %d, %s)</translation>
+        <translation>Αδύνατη η σύνδεση με τη θύρα %s αυτού του υπολογιστή (bind returned error %d, %s) </translation>
     </message>
     <message>
         <location line="-72"/>
         <source>Connect through socks proxy</source>
-        <translation>通过 socks 代理连接</translation>
+        <translation>Σύνδεση μέσω διαμεσολαβητή socks</translation>
     </message>
     <message>
         <location line="-11"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation>使用 -addnode, -seednode 和 -connect选项时允许DNS查找</translation>
+        <translation>Να επιτρέπονται οι έλεγχοι DNS για προσθήκη και σύνδεση κόμβων</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Loading addresses...</source>
-        <translation>正在加载地址...</translation>
+        <translation>Φόρτωση διευθύνσεων...</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>Error loading blkindex.dat</source>
-        <translation>blkindex.dat文件加载错误</translation>
+        <translation>Σφάλμα φόρτωσης blkindex.dat</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>wallet.dat钱包文件加载错误：钱包损坏</translation>
+        <translation>Σφάλμα φόρτωσης wallet.dat: Κατεστραμμένο Πορτοφόλι</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Error loading wallet.dat</source>
-        <translation>wallet.dat钱包文件加载错误</translation>
+        <translation>Σφάλμα φόρτωσης αρχείου wallet.dat</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
-        <translation>非法的代理地址: &apos;%s&apos;</translation>
+        <translation>Δεν είναι έγκυρη η διεύθυνση διαμεσολαβητή: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
-        <translation>被指定的是未知网络 -onlynet: &apos;%s&apos;</translation>
+        <translation>Άγνωστo δίκτυο ορίζεται σε onlynet: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Unknown -socks proxy version requested: %i</source>
-        <translation>被指定的是未知socks代理版本: %i</translation>
+        <translation>Άγνωστo δίκτυο ορίζεται: %i</translation>
     </message>
     <message>
         <location line="-78"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
-        <translation>无法解析 -bind 端口地址: &apos;%s&apos;</translation>
+        <translation>Δεν μπορώ να γράψω την προεπιλεγμένη διεύθυνση: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
-        <translation>无法解析 -externalip 地址: &apos;%s&apos;</translation>
+        <translation>Δεν μπορώ να γράψω την προεπιλεγμένη διεύθυνση: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>非法金额 -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+        <translation>Μη έγκυρο ποσό για την παράμετρο -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="-15"/>
         <source>Error: could not start node</source>
-        <translation>错误: 无法启动节点</translation>
+        <translation>Σφάλμα: Ο κόμβος δεν μπόρεσε να ξεκινήσει</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Sending...</source>
-        <translation>发送中</translation>
+        <translation>Αποστολή...</translation>
     </message>
     <message>
         <location line="-26"/>
         <source>Invalid amount</source>
-        <translation>金额不对</translation>
+        <translation>Λάθος ποσότητα</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Insufficient funds</source>
-        <translation>金额不足</translation>
+        <translation>Ανεπαρκές κεφάλαιο</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Loading block index...</source>
-        <translation>加载区块索引...</translation>
+        <translation>Φόρτωση ευρετηρίου μπλοκ...</translation>
     </message>
     <message>
         <location line="-45"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
-        <translation>添加节点并与其保持连接</translation>
+        <translation>Προσέθεσε ένα κόμβο για σύνδεση και προσπάθησε να κρατήσεις την σύνδεση ανοιχτή</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Find peers using internet relay chat (default: 1)</source>
-        <translation>通过IRC聊天室查找网络上的元宝币节点 (缺省: 1)</translation>
+        <translation>Αναζήτηση κόμβων με χρήση IRC (προεπιλογή: 1)</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Fee per KB to add to transactions you send</source>
-        <translation>每发送1KB交易所需的费用</translation>
+        <translation>Αμοιβή ανά KB που θα προστίθεται στις συναλλαγές που στέλνεις</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Loading wallet...</source>
-        <translation>正在加载钱包...</translation>
+        <translation>Φόρτωση πορτοφολιού...</translation>
     </message>
     <message>
         <location line="-40"/>
         <source>Cannot downgrade wallet</source>
-        <translation>无法降级钱包格式</translation>
+        <translation>Δεν μπορώ να υποβαθμίσω το πορτοφόλι</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cannot initialize keypool</source>
-        <translation>无法初始化 keypool</translation>
+        <translation>Δεν μπόρεσε να αρχικοποιηθεί το keypool</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cannot write default address</source>
-        <translation>无法写入缺省地址</translation>
+        <translation>Δεν μπορώ να γράψω την προεπιλεγμένη διεύθυνση</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Rescanning...</source>
-        <translation>正在重新扫描...</translation>
+        <translation>Ανίχνευση...</translation>
     </message>
     <message>
         <location line="-43"/>
         <source>Done loading</source>
-        <translation>加载完成</translation>
+        <translation>Η φόρτωση ολοκληρώθηκε</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>To use the %s option</source>
-        <translation>使用 %s 选项</translation>
+        <translation>Χρήση της %s επιλογής</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation>Σφάλμα</translation>
     </message>
     <message>
         <location line="-28"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>
-        <translation>您必须在配置文件中加入选项 rpcpassword :
- %s
-如果配置文件不存在，请新建，并将文件权限设置为仅允许文件所有者读取.</translation>
+        <translation>Πρέπει να βάλεις ένα κωδικό  στο αρχείο παραμέτρων: %s
+Εάν το αρχείο δεν υπάρχει, δημιούργησε το με δικαιώματα μόνο για ανάγνωση από τον δημιουργό</translation>
     </message>
 </context>
 </TS>
