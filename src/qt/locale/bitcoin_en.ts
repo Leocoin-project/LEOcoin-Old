@@ -5,8 +5,23 @@
 <context>
     <name>AboutDialog</name>
     <message>
+        <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About LEOcoin</source>
-        <translation type="obsolete">About LEOcoin</translation>
+        <translation type="unfinished">About LEOcoin</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;LEOcoin &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>LEOcoin: Copyright © 2014 </source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;LEOcoin&lt;/b&gt; version</source>
@@ -15,21 +30,6 @@
     <message>
         <source>Copyright © 2009-2012 The LEOcoin developers</source>
         <translation type="obsolete">Copyright © 2009-2012 The LEOcoin developers</translation>
-    </message>
-    <message>
-        <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+39"/>
-        <source>&lt;b&gt;LEOcoin&lt;/b&gt; version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+41"/>
-        <source>Copyright ? 2013 The LEOcoin developers</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -55,13 +55,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Address Book</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep 
-track of who is paying you.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>Double-click to edit address or label</source>
         <translation>Double-click to edit address or label</translation>
     </message>
@@ -71,64 +65,57 @@ track of who is paying you.</source>
         <translation>Create a new address</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Copy the currently selected address to the system clipboard</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Sign a message to prove you own a LEOcoin address</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sign a message to prove you own a LEOcoin address</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-45"/>
         <source>&amp;New Address</source>
         <translation>&amp;New Address</translation>
     </message>
     <message>
+        <location line="-46"/>
         <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="obsolete">These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
+        <translation type="unfinished">These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+63"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Copy Address</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+14"/>
         <source>Show &amp;QR Code</source>
         <translation>Show &amp;QR Code</translation>
     </message>
     <message>
-        <source>Sign a message to prove you own a LEOcoin address</source>
-        <translation type="obsolete">Sign a message to prove you own a LEOcoin address</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Sign &amp;Message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+14"/>
         <source>Verify a message to ensure it was signed with a specified LEOcoin address</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verify a message to ensure it was signed with a specified LEOcoin address</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Verify a message to ensure it was signed with a specified LEOcoin address</source>
-        <translation type="obsolete">Verify a message to ensure it was signed with a specified LEOcoin address</translation>
-    </message>
-    <message>
-        <location line="-11"/>
+        <location line="-14"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Verify Message</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>&amp;Delete</source>
         <translation>&amp;Delete</translation>
     </message>
@@ -261,7 +248,7 @@ track of who is paying you.</source>
     <message>
         <location line="+11"/>
         <source>LEOcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LEOcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -279,10 +266,6 @@ track of who is paying you.</source>
         <location line="+58"/>
         <source>Wallet encrypted</source>
         <translation>Wallet encrypted</translation>
-    </message>
-    <message>
-        <source>LEOcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="obsolete">LEOcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="-43"/>
@@ -329,47 +312,35 @@ track of who is paying you.</source>
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+265"/>
+        <location filename="../bitcoingui.cpp" line="+343"/>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
     </message>
     <message>
-        <location line="+241"/>
+        <location line="+256"/>
         <source>Synchronizing with network...</source>
         <translation>Synchronizing with network...</translation>
     </message>
     <message>
-        <location line="-310"/>
         <source>&amp;Overview</source>
-        <translation>&amp;Overview</translation>
+        <translation type="obsolete">&amp;Overview</translation>
     </message>
     <message>
-        <location line="-123"/>
+        <location line="-520"/>
         <source>LEOcoin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LEOcoin</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+178"/>
         <source>Show general overview of wallet</source>
         <translation>Show general overview of wallet</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>&amp;Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Configure mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
         <source>Send coins to a LEOcoin address</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Send coins to a LEOcoin address</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Transactions</translation>
     </message>
@@ -379,7 +350,7 @@ track of who is paying you.</source>
         <translation>Browse transaction history</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+32"/>
         <source>&amp;Address Book</source>
         <translation>&amp;Address Book</translation>
     </message>
@@ -389,22 +360,20 @@ track of who is paying you.</source>
         <translation>Edit the list of stored addresses and labels</translation>
     </message>
     <message>
-        <location line="-13"/>
         <source>&amp;Receive coins</source>
-        <translation>&amp;Receive coins</translation>
+        <translation type="obsolete">&amp;Receive coins</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-11"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Show the list of addresses for receiving payments</translation>
     </message>
     <message>
-        <location line="-7"/>
         <source>&amp;Send coins</source>
-        <translation>&amp;Send coins</translation>
+        <translation type="obsolete">&amp;Send coins</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+27"/>
         <source>E&amp;xit</source>
         <translation>E&amp;xit</translation>
     </message>
@@ -414,11 +383,12 @@ track of who is paying you.</source>
         <translation>Quit application</translation>
     </message>
     <message>
+        <location line="+4"/>
         <source>Show information about LEOcoin</source>
-        <translation type="obsolete">Show information about LEOcoin</translation>
+        <translation type="unfinished">Show information about LEOcoin</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+2"/>
         <source>About &amp;Qt</source>
         <translation>About &amp;Qt</translation>
     </message>
@@ -428,14 +398,14 @@ track of who is paying you.</source>
         <translation>Show information about Qt</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+7"/>
         <source>&amp;Options...</source>
         <translation>&amp;Options...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Modify configuration options for LEOcoin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modify configuration options for LEOcoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -443,7 +413,7 @@ track of who is paying you.</source>
         <translation>&amp;Encrypt Wallet...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Backup Wallet...</source>
         <translation>&amp;Backup Wallet...</translation>
     </message>
@@ -453,17 +423,22 @@ track of who is paying you.</source>
         <translation>&amp;Change Passphrase...</translation>
     </message>
     <message>
-        <location line="+87"/>
-        <location line="+63"/>
-        <source>LEOcoin client</source>
+        <location line="+61"/>
+        <source>Screens toolbar</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+60"/>
+        <source>LEOcoin client</source>
+        <translation type="unfinished">LEOcoin client</translation>
     </message>
     <message numerus="yes">
         <location line="+69"/>
         <source>%n active connection(s) to LEOcoin network</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n active connection to LEOcoin network</numerusform>
+            <numerusform>%n active connections to LEOcoin network</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -480,27 +455,9 @@ track of who is paying you.</source>
         <translation>Downloaded %1 of %2 blocks of transaction history (%3% done).</translation>
     </message>
     <message>
-        <location line="+81"/>
-        <source>Mining LEOcoins at %1 hashes per second</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Not mining LEOcoins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-332"/>
+        <location line="-256"/>
         <source>&amp;Export...</source>
         <translation>&amp;Export...</translation>
-    </message>
-    <message>
-        <source>Send coins to a LEOcoin address</source>
-        <translation type="obsolete">Send coins to a LEOcoin address</translation>
-    </message>
-    <message>
-        <source>Modify configuration options for LEOcoin</source>
-        <translation type="obsolete">Modify configuration options for LEOcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -508,22 +465,32 @@ track of who is paying you.</source>
         <translation>Export the data in the current tab to a file</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-15"/>
         <source>Encrypt or decrypt wallet</source>
         <translation>Encrypt or decrypt wallet</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-81"/>
+        <source>&amp;My Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>&amp;Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Receive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>&amp;About LEOcoin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;About LEOcoin</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Show information about LEOcoin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+19"/>
         <source>Backup wallet to another location</source>
         <translation>Backup wallet to another location</translation>
     </message>
@@ -533,7 +500,7 @@ track of who is paying you.</source>
         <translation>Change the passphrase used for wallet encryption</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+11"/>
         <source>&amp;Debug window</source>
         <translation>&amp;Debug window</translation>
     </message>
@@ -543,30 +510,22 @@ track of who is paying you.</source>
         <translation>Open debugging and diagnostic console</translation>
     </message>
     <message>
-        <location line="-5"/>
+        <location line="-10"/>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verify message...</translation>
     </message>
     <message>
-        <source>LEOcoin</source>
-        <translation type="obsolete">LEOcoin</translation>
-    </message>
-    <message>
-        <location line="-193"/>
+        <location line="-265"/>
         <source>Wallet</source>
         <translation>Wallet</translation>
     </message>
     <message>
-        <source>&amp;About LEOcoin</source>
-        <translation type="obsolete">&amp;About LEOcoin</translation>
-    </message>
-    <message>
-        <location line="+183"/>
+        <location line="+256"/>
         <source>&amp;Show / Hide</source>
         <translation>&amp;Show / Hide</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+44"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
@@ -581,34 +540,22 @@ track of who is paying you.</source>
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Tabs toolbar</source>
-        <translation>Tabs toolbar</translation>
+        <translation type="obsolete">Tabs toolbar</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+30"/>
         <source>Actions toolbar</source>
         <translation>Actions toolbar</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
-        <source>LEOcoin client</source>
-        <translation type="obsolete">LEOcoin client</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to LEOcoin network</source>
-        <translation type="obsolete">
-            <numerusform>%n active connection to LEOcoin network</numerusform>
-            <numerusform>%n active connections to LEOcoin network</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location line="+172"/>
+        <location line="+169"/>
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation>Downloaded %1 blocks of transaction history.</translation>
     </message>
@@ -660,7 +607,7 @@ track of who is paying you.</source>
         <translation>Last received block was generated %1.</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+59"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -693,7 +640,7 @@ Address: %4
 </translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+100"/>
         <location line="+15"/>
         <source>URI handling</source>
         <translation>URI handling</translation>
@@ -702,11 +649,7 @@ Address: %4
         <location line="-15"/>
         <location line="+15"/>
         <source>URI can not be parsed! This can be caused by an invalid LEOcoin address or malformed URI parameters.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>URI can not be parsed! This can be caused by an invalid LEOcoin address or malformed URI parameters.</source>
-        <translation type="obsolete">URI can not be parsed! This can be caused by an invalid LEOcoin address or malformed URI parameters.</translation>
+        <translation type="unfinished">URI can not be parsed! This can be caused by an invalid LEOcoin address or malformed URI parameters.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -719,17 +662,11 @@ Address: %4
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Confirm wallet encryption</source>
-        <translation type="unfinished">Confirm wallet encryption</translation>
+        <translation type="obsolete">Confirm wallet encryption</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Error: If want to encrypt your wallet, &lt;b&gt;you must stop mining first&lt;/b&gt;!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
+        <location line="+27"/>
         <source>Backup Wallet</source>
         <translation>Backup Wallet</translation>
     </message>
@@ -749,19 +686,15 @@ Address: %4
         <translation>There was an error trying to save the wallet data to the new location.</translation>
     </message>
     <message>
+        <location filename="../bitcoin.cpp" line="+112"/>
         <source>A fatal error occurred. LEOcoin can no longer continue safely and will quit.</source>
-        <translation type="obsolete">A fatal error occurred. LEOcoin can no longer continue safely and will quit.</translation>
-    </message>
-    <message>
-        <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. LEOcoin can no longer continue safely and will quit.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">A fatal error occurred. LEOcoin can no longer continue safely and will quit.</translation>
     </message>
 </context>
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+220"/>
+        <location filename="../clientmodel.cpp" line="+87"/>
         <source>Network Alert</source>
         <translation>Network Alert</translation>
     </message>
@@ -821,11 +754,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>The entered address &quot;%1&quot; is not a valid LEOcoin address.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The entered address &quot;%1&quot; is not a valid LEOcoin address.</source>
-        <translation type="obsolete">The entered address &quot;%1&quot; is not a valid LEOcoin address.</translation>
+        <translation type="unfinished">The entered address &quot;%1&quot; is not a valid LEOcoin address.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -841,22 +770,18 @@ Address: %4
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
+        <location filename="../guiutil.cpp" line="+436"/>
+        <location line="+12"/>
         <source>LEOcoin-Qt</source>
-        <translation type="obsolete">LEOcoin-Qt</translation>
+        <translation type="unfinished">LEOcoin-Qt</translation>
     </message>
     <message>
-        <location filename="../guiutil.cpp" line="+419"/>
+        <location line="-12"/>
         <source>version</source>
         <translation>version</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+12"/>
-        <source>LEOcoin-Qt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
+        <location line="+2"/>
         <source>Usage:</source>
         <translation>Usage:</translation>
     </message>
@@ -889,150 +814,8 @@ Address: %4
 <context>
     <name>MiningPage</name>
     <message>
-        <location filename="../forms/miningpage.ui" line="+14"/>
-        <source>Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+237"/>
-        <source>Username</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
-        <source>Server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-103"/>
-        <source>pool.LEOcoin.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+57"/>
-        <source>Password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Port</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <location filename="../miningpage.cpp" line="+414"/>
-        <source>Start Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-169"/>
-        <source>Scantime</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+116"/>
-        <source>Threads</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-129"/>
-        <source>Debug Logging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+136"/>
         <source>Type</source>
-        <translation type="unfinished">Type</translation>
-    </message>
-    <message>
-        <location line="+80"/>
-        <source>Solo Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Pool Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-244"/>
-        <source>9332</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../miningpage.cpp" line="-324"/>
-        <source>please input the sever address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>use name should not be empty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+101"/>
-        <source>Share accepted</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Share rejected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>LONGPOLL detected a new block</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Miner didn&apos;t start properly. Try checking your settings.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Couldn&apos;t connect. Please check your username and password.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Couldn&apos;t connect. Please check pool server and port.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Couldn&apos;t communicate with server. Retrying in 30 seconds.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Miner failed to start. Make sure you have the minerd executable and libraries in the same directory as LEOcoin-Qt.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Solo mining stopped.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Miner exited.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Solo mining started.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Miner started. You might not see any output for a few minutes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+157"/>
-        <source>Stop Mining</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Type</translation>
     </message>
 </context>
 <context>
@@ -1048,24 +831,27 @@ Address: %4
         <translation>&amp;Main</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
-        <translation type="obsolete">Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</translation>
+        <translation type="unfinished">Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
         <translation>Pay transaction &amp;fee</translation>
     </message>
     <message>
+        <location line="+31"/>
         <source>Automatically start LEOcoin after logging in to the system.</source>
-        <translation type="obsolete">Automatically start LEOcoin after logging in to the system.</translation>
+        <translation type="unfinished">Automatically start LEOcoin after logging in to the system.</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>&amp;Start LEOcoin on system login</source>
-        <translation type="obsolete">&amp;Start LEOcoin on system login</translation>
+        <translation type="unfinished">&amp;Start LEOcoin on system login</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+7"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
         <translation>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</translation>
     </message>
@@ -1080,42 +866,23 @@ Address: %4
         <translation>&amp;Network</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="obsolete">Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <translation type="unfinished">Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+3"/>
         <source>Map port using &amp;UPnP</source>
         <translation>Map port using &amp;UPnP</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="obsolete">Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</translation>
+        <translation type="unfinished">Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</translation>
     </message>
     <message>
-        <location line="-89"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.0001 recommended.</source>
-        <translation type="unfinished">Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended. {1 ?} {0.0001 ?}</translation>
-    </message>
-    <message>
-        <location line="+46"/>
-        <source>Automatically start LEOcoin after logging in to the system.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Start LEOcoin on system login</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+37"/>
-        <source>Automatically open the LEOcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Connect to the LEOcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended. {1 ?} {0.0001 ?}</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1143,12 +910,11 @@ Address: %4
         <translation>Port of the proxy (e.g. 9050)</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>SOCKS &amp;Version:</source>
-        <translation>SOCKS &amp;Version:</translation>
+        <translation type="obsolete">SOCKS &amp;Version:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+32"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
         <translation>SOCKS version of the proxy (e.g. 5)</translation>
     </message>
@@ -1190,16 +956,12 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>The user interface language can be set here. This setting will take effect after restarting LEOcoin.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">The user interface language can be set here. This setting will take effect after restarting LEOcoin.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Whether to show LEOcoin addresses in the transaction list or not.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting LEOcoin.</source>
-        <translation type="obsolete">The user interface language can be set here. This setting will take effect after restarting LEOcoin.</translation>
+        <translation type="unfinished">Whether to show LEOcoin addresses in the transaction list or not.</translation>
     </message>
     <message>
         <location line="-22"/>
@@ -1207,13 +969,14 @@ Address: %4
         <translation>&amp;Unit to show amounts in:</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Choose the default subdivision unit to show in the interface and when sending coins.</translation>
+        <location line="-133"/>
+        <source>SOCKS &amp;V:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Whether to show LEOcoin addresses in the transaction list or not.</source>
-        <translation type="obsolete">Whether to show LEOcoin addresses in the transaction list or not.</translation>
+        <location line="+146"/>
+        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
+        <translation>Choose the default subdivision unit to show in the interface and when sending coins.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1221,17 +984,17 @@ Address: %4
         <translation>&amp;Display addresses in transaction list</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+77"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancel</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Apply</source>
         <translation>&amp;Apply</translation>
     </message>
@@ -1250,11 +1013,7 @@ Address: %4
         <location line="-9"/>
         <location line="+9"/>
         <source>This setting will take effect after restarting LEOcoin.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This setting will take effect after restarting LEOcoin.</source>
-        <translation type="obsolete">This setting will take effect after restarting LEOcoin.</translation>
+        <translation type="unfinished">This setting will take effect after restarting LEOcoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1265,90 +1024,80 @@ Address: %4
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+19"/>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     <message>
+        <location line="+24"/>
+        <location line="+430"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="obsolete">The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</translation>
+        <translation type="unfinished">The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Balance:</source>
-        <translation>Balance:</translation>
+        <translation type="obsolete">Balance:</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="-237"/>
         <source>Stake:</source>
         <translation>Stake:</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+147"/>
         <source>Number of transactions:</source>
         <translation>Number of transactions:</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-97"/>
         <source>Unconfirmed:</source>
         <translation>Unconfirmed:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-250"/>
         <source>Wallet</source>
         <translation>Wallet</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <location line="+212"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-83"/>
+        <location line="+300"/>
         <source>Immature:</source>
         <translation>Immature:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Mined balance that has not yet matured</source>
         <translation>Mined balance that has not yet matured</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+114"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Recent transactions&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="-274"/>
         <source>Your current balance</source>
         <translation>Your current balance</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+113"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
         <translation>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-50"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation>Total of coins that was staked, and do not yet count toward the current balance</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+138"/>
         <source>Total number of transactions in wallet</source>
         <translation>Total number of transactions in wallet</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+122"/>
+        <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
         <source>out of sync</source>
         <translation>out of sync</translation>
-    </message>
-    <message>
-        <location line="+192"/>
-        <source>More Apps...</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1384,7 +1133,7 @@ Address: %4
         <translation>&amp;Save As...</translation>
     </message>
     <message>
-        <location filename="../qrcodedialog.cpp" line="+62"/>
+        <location filename="../qrcodedialog.cpp" line="+64"/>
         <source>Error encoding URI into QR Code.</source>
         <translation>Error encoding URI into QR Code.</translation>
     </message>
@@ -1426,7 +1175,7 @@ Address: %4
         <location line="+53"/>
         <location line="+23"/>
         <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+348"/>
+        <location filename="../rpcconsole.cpp" line="+350"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
@@ -1443,12 +1192,12 @@ Address: %4
     <message>
         <location line="-10"/>
         <source>LEOcoin - Debug window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LEOcoin - Debug window</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>LEOcoin Core</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LEOcoin Core</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -1496,9 +1245,9 @@ Address: %4
         <translation>Last block time</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+81"/>
         <source>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1506,18 +1255,14 @@ Address: %4
         <translation>&amp;Open</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-29"/>
         <source>Command-line options</source>
         <translation>Command-line options</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+42"/>
         <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
-        <translation type="obsolete">Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</translation>
+        <translation type="unfinished">Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1525,22 +1270,14 @@ Address: %4
         <translation>&amp;Show</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+8"/>
         <source>&amp;Console</source>
         <translation>&amp;Console</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Build date</source>
         <translation>Build date</translation>
-    </message>
-    <message>
-        <source>LEOcoin - Debug window</source>
-        <translation type="obsolete">LEOcoin - Debug window</translation>
-    </message>
-    <message>
-        <source>LEOcoin Core</source>
-        <translation type="obsolete">LEOcoin Core</translation>
     </message>
     <message>
         <location line="+200"/>
@@ -1548,22 +1285,14 @@ Address: %4
         <translation>Debug log file</translation>
     </message>
     <message>
-        <source>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="obsolete">Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</translation>
-    </message>
-    <message>
-        <location line="+109"/>
+        <location line="+115"/>
         <source>Clear console</source>
         <translation>Clear console</translation>
     </message>
     <message>
-        <source>Welcome to the LEOcoin RPC console.</source>
-        <translation type="obsolete">Welcome to the LEOcoin RPC console.</translation>
-    </message>
-    <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
         <source>Welcome to the LEOcoin RPC console.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Welcome to the LEOcoin RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1580,7 +1309,7 @@ Address: %4
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+124"/>
+        <location filename="../sendcoinsdialog.cpp" line="+128"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1591,7 +1320,7 @@ Address: %4
         <translation>Send Coins</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+59"/>
         <source>Send to multiple recipients at once</source>
         <translation>Send to multiple recipients at once</translation>
     </message>
@@ -1631,12 +1360,13 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-59"/>
+        <location filename="../sendcoinsdialog.cpp" line="-62"/>
+        <location line="+2"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Confirm send coins</source>
         <translation>Confirm send coins</translation>
     </message>
@@ -1716,7 +1446,7 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to send the payment to  (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
+        <source>The address to send the payment to  (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1750,7 +1480,7 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a LEOcoin address (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
+        <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1763,12 +1493,12 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <location line="+124"/>
+        <location line="+130"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;Sign Message</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-124"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
@@ -1777,24 +1507,19 @@ Address: %4
         <translation type="obsolete">The address to sign the message with (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>The address to sign the message with (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location line="+203"/>
+        <location line="+34"/>
+        <location line="+209"/>
         <source>Choose an address from the address book</source>
         <translation>Choose an address from the address book</translation>
     </message>
     <message>
-        <location line="-193"/>
-        <location line="+203"/>
+        <location line="-199"/>
+        <location line="+209"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="-193"/>
+        <location line="-196"/>
         <source>Paste address from clipboard</source>
         <translation>Paste address from clipboard</translation>
     </message>
@@ -1804,7 +1529,7 @@ Address: %4
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+9"/>
         <source>Enter the message you want to sign here</source>
         <translation>Enter the message you want to sign here</translation>
     </message>
@@ -1816,41 +1541,42 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Sign the message to prove you own this LEOcoin address</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sign the message to prove you own this LEOcoin address</translation>
     </message>
     <message>
         <location line="+106"/>
-        <source>The address the message was signed with (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
+        <source>The address the message was signed with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+43"/>
         <source>Verify the message to ensure it was signed with the specified LEOcoin address</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verify the message to ensure it was signed with the specified LEOcoin address</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LEOcoin address</source>
-        <translation type="obsolete">Sign the message to prove you own this LEOcoin address</translation>
-    </message>
-    <message>
-        <location line="-129"/>
+        <location line="-132"/>
         <source>Reset all sign message fields</source>
         <translation>Reset all sign message fields</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+146"/>
+        <location line="-120"/>
+        <source>The address to sign the message with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+123"/>
+        <location line="+149"/>
         <source>Clear &amp;All</source>
         <translation>Clear &amp;All</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
+        <location line="-90"/>
+        <location line="+73"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Verify Message</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-67"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</translation>
     </message>
@@ -1859,11 +1585,7 @@ Address: %4
         <translation type="obsolete">The address the message was signed with (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified LEOcoin address</source>
-        <translation type="obsolete">Verify the message to ensure it was signed with the specified LEOcoin address</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Reset all verify message fields</source>
         <translation>Reset all verify message fields</translation>
     </message>
@@ -1877,22 +1599,18 @@ Address: %4
         <translation>Click &quot;Sign Message&quot; to generate signature</translation>
     </message>
     <message>
-        <source>Enter LEOcoin signature</source>
-        <translation type="obsolete">Enter LEOcoin signature</translation>
-    </message>
-    <message>
-        <location line="-1"/>
         <location line="+3"/>
-        <source>Enter a LEOcoin address (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
         <source>Enter LEOcoin signature</source>
+        <translation type="unfinished">Enter LEOcoin signature</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location line="+3"/>
+        <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+83"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
         <translation>The entered address is invalid.</translation>
@@ -2045,12 +1763,12 @@ Address: %4
         <location line="+12"/>
         <location line="+45"/>
         <location line="+17"/>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Credit</source>
         <translation>Credit</translation>
     </message>
     <message numerus="yes">
-        <location line="-103"/>
+        <location line="-104"/>
         <source>matures in %n more block(s)</source>
         <translation>
             <numerusform>matures in %n more block</numerusform>
@@ -2066,12 +1784,12 @@ Address: %4
         <location line="+44"/>
         <location line="+8"/>
         <location line="+15"/>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Debit</source>
         <translation>Debit</translation>
     </message>
     <message>
-        <location line="-40"/>
+        <location line="-41"/>
         <source>Transaction fee</source>
         <translation>Transaction fee</translation>
     </message>
@@ -2097,8 +1815,12 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
+        <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation type="unfinished">Generated coins must mature 520 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours. {120 ?}</translation>
+    </message>
+    <message>
         <source>Generated coins must mature 520 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Generated coins must mature 520 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</translation>
+        <translation type="obsolete">Generated coins must mature 520 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2110,7 +1832,7 @@ Address: %4
         <translation type="obsolete">Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to \&quot;not accepted\&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Debug information</source>
         <translation>Debug information</translation>
     </message>
@@ -2140,7 +1862,7 @@ Address: %4
         <translation>false</translation>
     </message>
     <message>
-        <location line="-212"/>
+        <location line="-213"/>
         <source>, has not been successfully broadcast yet</source>
         <translation>, has not been successfully broadcast yet</translation>
     </message>
@@ -2161,6 +1883,11 @@ Address: %4
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>This pane shows a detailed description of the transaction</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2252,7 +1979,7 @@ Address: %4
         <translation>Payment to yourself</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Mined</source>
         <translation>Mined</translation>
     </message>
@@ -2341,7 +2068,7 @@ Address: %4
         <translation>To yourself</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>Mined</source>
         <translation>Mined</translation>
     </message>
@@ -2386,7 +2113,7 @@ Address: %4
         <translation>Show transaction details</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+137"/>
         <source>Export Transaction Data</source>
         <translation>Export Transaction Data</translation>
     </message>
@@ -2462,17 +2189,18 @@ Address: %4
 <context>
     <name>bitcoin-core</name>
     <message>
+        <location filename="../bitcoinstrings.cpp" line="+126"/>
         <source>LEOcoin version</source>
-        <translation type="obsolete">LEOcoin version</translation>
+        <translation type="unfinished">LEOcoin version</translation>
     </message>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+166"/>
+        <location line="+39"/>
         <source>Usage:</source>
         <translation>Usage:</translation>
     </message>
     <message>
-        <source>Send command to -server or bitcoind</source>
-        <translation type="obsolete">Send command to -server or bitcoind</translation>
+        <source>Send command to -server or LEOcoind</source>
+        <translation type="obsolete">Send command to -server or LEOcoind</translation>
     </message>
     <message>
         <location line="-47"/>
@@ -2480,25 +2208,27 @@ Address: %4
         <translation>List commands</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-12"/>
         <source>Get help for a command</source>
         <translation>Get help for a command</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+23"/>
         <source>Options:</source>
         <translation>Options:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Specify configuration file (default: LEOcoin.conf)</source>
-        <translation type="obsolete">Specify configuration file (default: LEOcoin.conf)</translation>
+        <translation type="unfinished">Specify configuration file (default: LEOcoin.conf)</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Specify pid file (default: LEOcoind.pid)</source>
-        <translation type="obsolete">Specify pid file (default: LEOcoind.pid)</translation>
+        <translation type="unfinished">Specify pid file (default: LEOcoind.pid)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-50"/>
         <source>Generate coins</source>
         <translation>Generate coins</translation>
     </message>
@@ -2508,7 +2238,7 @@ Address: %4
         <translation>Don&apos;t generate coins</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+63"/>
         <source>Specify data directory</source>
         <translation>Specify data directory</translation>
     </message>
@@ -2533,27 +2263,27 @@ Address: %4
         <translation>Maintain at most &lt;n&gt; connections to peers (default: 125)</translation>
     </message>
     <message>
-        <location line="-35"/>
+        <location line="-34"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
         <translation>Connect to a node to retrieve peer addresses, and disconnect</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+67"/>
         <source>Specify your own public address</source>
         <translation>Specify your own public address</translation>
     </message>
     <message>
-        <location line="-77"/>
+        <location line="-76"/>
         <source>Bind to given address. Use [host]:port notation for IPv6</source>
         <translation>Bind to given address. Use [host]:port notation for IPv6</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>Threshold for disconnecting misbehaving peers (default: 100)</translation>
     </message>
     <message>
-        <location line="-111"/>
+        <location line="-110"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
         <translation>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</translation>
     </message>
@@ -2565,7 +2295,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Cannot obtain a lock on data directory %s.  LEOcoin is probably already running.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cannot obtain a lock on data directory %s.  LEOcoin is probably already running.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2588,19 +2318,14 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 44101 or testnet: 44201)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+13"/>
         <source>Unable to bind to %s on this computer. LEOcoin is probably already running.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Unable to bind to %s on this computer. LEOcoin is probably already running.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong LEOcoin will not work properly.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong LEOcoin will not work properly.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2623,7 +2348,7 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>Importing bootstrap blockchain data file.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2638,7 +2363,7 @@ Address: %4
         <translation>Use the test network</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="-95"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
         <translation>Accept connections from outside (default: 1 if no -proxy or -connect)</translation>
     </message>
@@ -2653,7 +2378,12 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+15"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
         <translation>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</translation>
     </message>
@@ -2665,10 +2395,6 @@ Address: %4
     <message>
         <source>Warning: Displayed transactions may not be correct! You may need to upgrade, or other nodes may need to upgrade.</source>
         <translation type="obsolete">Warning: Displayed transactions may not be correct! You may need to upgrade, or other nodes may need to upgrade.</translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong LEOcoin will not work properly.</source>
-        <translation type="obsolete">Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong LEOcoin will not work properly.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2703,7 +2429,7 @@ Address: %4
     <message>
         <location line="+6"/>
         <source>Error loading wallet.dat: Wallet requires newer version of LEOcoin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Error loading wallet.dat: Wallet requires newer version of LEOcoin</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2716,12 +2442,7 @@ Address: %4
         <translation>Find peers using DNS lookup (default: 0)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Updating blockchain data file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
         <translation>Invalid -tor address: &apos;%s&apos;</translation>
     </message>
@@ -2741,14 +2462,9 @@ Address: %4
         <translation>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>LEOcoin version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>LEOcoin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LEOcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2811,22 +2527,12 @@ Address: %4
         <translation>Shrink debug.log file on client startup (default: 1 when no -debug)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Specify configuration file (default: LEOcoin.conf)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Specify connection timeout in milliseconds (default: 5000)</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Specify pid file (default: LEOcoind.pid)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Unable to sign checkpoint, wrong checkpointkey?
 </source>
         <translation type="unfinished"></translation>
@@ -2859,7 +2565,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Wallet needed to be rewritten: restart LEOcoin to complete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wallet needed to be rewritten: restart LEOcoin to complete</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2882,22 +2588,22 @@ Address: %4
         <translation>Password for JSON-RPC connections</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Allow JSON-RPC connections from specified IP address</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="-98"/>
+        <location line="-97"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Execute command when the best block changes (%s in cmd is replaced by block hash)</translation>
     </message>
     <message>
-        <location line="+122"/>
+        <location line="+121"/>
         <source>Upgrade wallet to latest format</source>
         <translation>Upgrade wallet to latest format</translation>
     </message>
@@ -2912,7 +2618,7 @@ Address: %4
         <translation>Rescan the block chain for missing wallet transactions</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="-27"/>
         <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
         <translation>How many blocks to check at startup (default: 2500, 0 = all)</translation>
     </message>
@@ -2922,7 +2628,7 @@ Address: %4
         <translation>How thorough the block verification is (0-6, default: 1)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Imports blocks from external blk000?.dat file</source>
         <translation>Imports blocks from external blk000?.dat file</translation>
     </message>
@@ -2942,22 +2648,14 @@ Address: %4
         <translation>Server private key (default: server.pem)</translation>
     </message>
     <message>
-        <location line="-128"/>
+        <location line="-127"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+139"/>
         <source>This help message</source>
         <translation>This help message</translation>
-    </message>
-    <message>
-        <source>Cannot obtain a lock on data directory %s.  LEOcoin is probably already running.</source>
-        <translation type="obsolete">Cannot obtain a lock on data directory %s.  LEOcoin is probably already running.</translation>
-    </message>
-    <message>
-        <source>LEOcoin</source>
-        <translation type="obsolete">LEOcoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2965,7 +2663,7 @@ Address: %4
         <translation>Unable to bind to %s on this computer (bind returned error %d, %s)</translation>
     </message>
     <message>
-        <location line="-73"/>
+        <location line="-72"/>
         <source>Connect through socks proxy</source>
         <translation>Connect through socks proxy</translation>
     </message>
@@ -2975,12 +2673,12 @@ Address: %4
         <translation>Allow DNS lookups for -addnode, -seednode and -connect</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Loading addresses...</source>
         <translation>Loading addresses...</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="-27"/>
         <source>Error loading blkindex.dat</source>
         <translation>Error loading blkindex.dat</translation>
     </message>
@@ -2990,20 +2688,12 @@ Address: %4
         <translation>Error loading wallet.dat: Wallet corrupted</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of LEOcoin</source>
-        <translation type="obsolete">Error loading wallet.dat: Wallet requires newer version of LEOcoin</translation>
-    </message>
-    <message>
-        <source>Wallet needed to be rewritten: restart LEOcoin to complete</source>
-        <translation type="obsolete">Wallet needed to be rewritten: restart LEOcoin to complete</translation>
-    </message>
-    <message>
         <location line="-1"/>
         <source>Error loading wallet.dat</source>
         <translation>Error loading wallet.dat</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+19"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
         <translation>Invalid -proxy address: &apos;%s&apos;</translation>
     </message>
@@ -3018,7 +2708,7 @@ Address: %4
         <translation>Unknown -socks proxy version requested: %i</translation>
     </message>
     <message>
-        <location line="-79"/>
+        <location line="-78"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
         <translation>Cannot resolve -bind address: &apos;%s&apos;</translation>
     </message>
@@ -3028,17 +2718,17 @@ Address: %4
         <translation>Cannot resolve -externalip address: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+30"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-15"/>
         <source>Error: could not start node</source>
         <translation>Error: could not start node</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Sending...</source>
         <translation>Sending...</translation>
     </message>
@@ -3058,13 +2748,9 @@ Address: %4
         <translation>Loading block index...</translation>
     </message>
     <message>
-        <location line="-46"/>
+        <location line="-45"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Add a node to connect to and attempt to keep the connection open</translation>
-    </message>
-    <message>
-        <source>Unable to bind to %s on this computer. LEOcoin is probably already running.</source>
-        <translation type="obsolete">Unable to bind to %s on this computer. LEOcoin is probably already running.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3077,12 +2763,12 @@ Address: %4
         <translation>Fee per KB to add to transactions you send</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+20"/>
         <source>Loading wallet...</source>
         <translation>Loading wallet...</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="-40"/>
         <source>Cannot downgrade wallet</source>
         <translation>Cannot downgrade wallet</translation>
     </message>
@@ -3097,26 +2783,26 @@ Address: %4
         <translation>Cannot write default address</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+49"/>
         <source>Rescanning...</source>
         <translation>Rescanning...</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-43"/>
         <source>Done loading</source>
         <translation>Done loading</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+67"/>
         <source>To use the %s option</source>
         <translation>To use the %s option</translation>
     </message>
     <message>
-        <location line="-151"/>
+        <location line="-150"/>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=leocoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.
@@ -3124,7 +2810,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=leocoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.

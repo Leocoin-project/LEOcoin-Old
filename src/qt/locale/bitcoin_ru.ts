@@ -23,12 +23,16 @@
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;LEOcoin&lt;/b&gt; version</source>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;LEOcoin &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Copyright ? 2013 The LEOcoin developers</source>
+        <location line="+45"/>
+        <source>LEOcoin: Copyright © 2014 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -56,12 +60,11 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep 
-track of who is paying you.</source>
+        <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+16"/>
         <source>Double-click to edit address or label</source>
         <translation>Для того, чтобы изменить адрес или метку давжды кликните по изменяемому объекту</translation>
     </message>
@@ -71,17 +74,17 @@ track of who is paying you.</source>
         <translation>Создать новый адрес</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Копировать текущий выделенный адрес в буфер обмена</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Sign a message to prove you own a LEOcoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-45"/>
         <source>&amp;New Address</source>
         <translation>&amp;Новый адрес</translation>
     </message>
@@ -90,12 +93,12 @@ track of who is paying you.</source>
         <translation type="obsolete">Это Ваши адреса для получения платежей. Вы можете дать разные адреса отправителям, чтобы отслеживать, кто именно вам платит.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Копировать адрес</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+14"/>
         <source>Show &amp;QR Code</source>
         <translation>Показать &amp;QR код</translation>
     </message>
@@ -104,17 +107,17 @@ track of who is paying you.</source>
         <translation type="obsolete">Подписать сообщение, чтобы доказать владение адресом NovaCoin</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Sign &amp;Message</source>
         <translation>&amp;Подписать сообщение</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+14"/>
         <source>Verify a message to ensure it was signed with a specified LEOcoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Удалить выбранный адрес из списка</translation>
     </message>
@@ -123,12 +126,12 @@ track of who is paying you.</source>
         <translation type="obsolete">Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом NovaCoin</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-14"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Проверить сообщение</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>&amp;Delete</source>
         <translation>&amp;Удалить</translation>
     </message>
@@ -329,47 +332,31 @@ track of who is paying you.</source>
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+269"/>
+        <location filename="../bitcoingui.cpp" line="+343"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Подписать сообщение</translation>
     </message>
     <message>
-        <location line="+241"/>
+        <location line="+256"/>
         <source>Synchronizing with network...</source>
         <translation>Синхронизация с сетью...</translation>
     </message>
     <message>
-        <location line="-309"/>
         <source>&amp;Overview</source>
-        <translation>О&amp;бзор</translation>
+        <translation type="obsolete">О&amp;бзор</translation>
     </message>
     <message>
-        <location line="-128"/>
+        <location line="-520"/>
         <source>LEOcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+178"/>
         <source>Show general overview of wallet</source>
         <translation>Показать общий обзор действий с бумажником</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>&amp;Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Configure mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Send coins to a LEOcoin address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакции</translation>
     </message>
@@ -379,7 +366,7 @@ track of who is paying you.</source>
         <translation>Показать историю транзакций</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+32"/>
         <source>&amp;Address Book</source>
         <translation>&amp;Адресная книга</translation>
     </message>
@@ -389,22 +376,20 @@ track of who is paying you.</source>
         <translation>Изменить список сохранённых адресов и меток к ним</translation>
     </message>
     <message>
-        <location line="-13"/>
         <source>&amp;Receive coins</source>
-        <translation>&amp;Получение монет</translation>
+        <translation type="obsolete">&amp;Получение монет</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-11"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Показать список адресов для получения платежей</translation>
     </message>
     <message>
-        <location line="-7"/>
         <source>&amp;Send coins</source>
-        <translation>Отп&amp;равка монет</translation>
+        <translation type="obsolete">Отп&amp;равка монет</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+27"/>
         <source>E&amp;xit</source>
         <translation>В&amp;ыход</translation>
     </message>
@@ -428,7 +413,7 @@ track of who is paying you.</source>
         <translation>Показать информацию о Qt</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+7"/>
         <source>&amp;Options...</source>
         <translation>Оп&amp;ции...</translation>
     </message>
@@ -453,8 +438,13 @@ track of who is paying you.</source>
         <translation>&amp;Изменить пароль</translation>
     </message>
     <message>
-        <location line="+87"/>
-        <location line="+63"/>
+        <location line="+61"/>
+        <source>Screens toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+60"/>
         <source>LEOcoin client</source>
         <translation type="unfinished"></translation>
     </message>
@@ -482,17 +472,7 @@ track of who is paying you.</source>
         <translation>Загружено %1 из %2 блоков истории операций (%3% завершено).</translation>
     </message>
     <message>
-        <location line="+81"/>
-        <source>Mining LEOcoins at %1 hashes per second</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Not mining LEOcoins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-332"/>
+        <location line="-256"/>
         <source>&amp;Export...</source>
         <translation>&amp;Экспорт...</translation>
     </message>
@@ -510,12 +490,27 @@ track of who is paying you.</source>
         <translation>Экспортировать данные из вкладки в файл</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-15"/>
         <source>Encrypt or decrypt wallet</source>
         <translation>Зашифровать или расшифровать бумажник</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-81"/>
+        <source>&amp;My Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>&amp;Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Receive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>&amp;About LEOcoin</source>
         <translation type="unfinished"></translation>
     </message>
@@ -525,7 +520,7 @@ track of who is paying you.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+18"/>
         <source>Backup wallet to another location</source>
         <translation>Сделать резервную копию бумажника в другом месте</translation>
     </message>
@@ -535,7 +530,7 @@ track of who is paying you.</source>
         <translation>Изменить пароль шифрования бумажника</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+11"/>
         <source>&amp;Debug window</source>
         <translation>&amp;Окно отладки</translation>
     </message>
@@ -545,7 +540,7 @@ track of who is paying you.</source>
         <translation>Открыть консоль отладки и диагностики</translation>
     </message>
     <message>
-        <location line="-5"/>
+        <location line="-10"/>
         <source>&amp;Verify message...</source>
         <translation>&amp;Проверить сообщение...</translation>
     </message>
@@ -554,7 +549,7 @@ track of who is paying you.</source>
         <translation type="obsolete">NovaCoin</translation>
     </message>
     <message>
-        <location line="-197"/>
+        <location line="-265"/>
         <source>Wallet</source>
         <translation>Бумажник</translation>
     </message>
@@ -563,12 +558,12 @@ track of who is paying you.</source>
         <translation type="obsolete">&amp;О NovaCoin</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+256"/>
         <source>&amp;Show / Hide</source>
         <translation>&amp;Показать / Скрыть</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
@@ -583,17 +578,16 @@ track of who is paying you.</source>
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Tabs toolbar</source>
-        <translation>Панель вкладок</translation>
+        <translation type="obsolete">Панель вкладок</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+30"/>
         <source>Actions toolbar</source>
         <translation>Панель действий</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[тестовая сеть]</translation>
@@ -611,7 +605,7 @@ track of who is paying you.</source>
         </translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+169"/>
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation>Загружено %1 блоков истории транзакций.</translation>
     </message>
@@ -667,7 +661,7 @@ track of who is paying you.</source>
         <translation>Последний полученный блок был сгенерирован %1.</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+59"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
         <translation>Данная транзакция превышает предельно допустимый размер.  Но Вы можете всё равно совершить её, добавив комиссию в %1, которая отправится тем узлам, которые обработают Вашу транзакцию, и поможет поддержать сеть.  Вы хотите добавить комиссию?</translation>
     </message>
@@ -700,7 +694,7 @@ Address: %4
 </translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+100"/>
         <location line="+15"/>
         <source>URI handling</source>
         <translation>Обработка URI</translation>
@@ -726,7 +720,7 @@ Address: %4
         <translation>Бумажник &lt;b&gt;зашифрован&lt;/b&gt; и в настоящее время &lt;b&gt;заблокирован&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+27"/>
         <source>Backup Wallet</source>
         <translation>Сделать резервную копию бумажника</translation>
     </message>
@@ -750,7 +744,7 @@ Address: %4
         <translation type="obsolete">Произошла неисправимая ошибка. NovaCoin не может безопасно продолжать работу и будет закрыт.</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+109"/>
+        <location filename="../bitcoin.cpp" line="+112"/>
         <source>A fatal error occurred. LEOcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -758,7 +752,7 @@ Address: %4
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+212"/>
+        <location filename="../clientmodel.cpp" line="+87"/>
         <source>Network Alert</source>
         <translation>Сетевая Тревога</translation>
     </message>
@@ -842,7 +836,7 @@ Address: %4
         <translation type="obsolete">NovaCoin-Qt</translation>
     </message>
     <message>
-        <location filename="../guiutil.cpp" line="+419"/>
+        <location filename="../guiutil.cpp" line="+436"/>
         <source>version</source>
         <translation>версия</translation>
     </message>
@@ -886,75 +880,8 @@ Address: %4
 <context>
     <name>MiningPage</name>
     <message>
-        <location filename="../forms/miningpage.ui" line="+14"/>
-        <source>Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Username</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Port</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <location filename="../miningpage.cpp" line="+384"/>
-        <source>Start Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+65"/>
-        <source>Scantime</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Threads</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Debug Logging</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
         <source>Type</source>
-        <translation type="unfinished">Тип</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>Solo Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Pool Mining</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>9332</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../miningpage.cpp" line="+0"/>
-        <source>Stop Mining</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Тип</translation>
     </message>
 </context>
 <context>
@@ -1061,12 +988,16 @@ Address: %4
         <translation>Порт прокси-сервера (например, 9050)</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>SOCKS &amp;Version:</source>
-        <translation>&amp;Версия SOCKS:</translation>
+        <translation type="obsolete">&amp;Версия SOCKS:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+7"/>
+        <source>SOCKS &amp;V:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
         <translation>Версия SOCKS-прокси (например, 5)</translation>
     </message>
@@ -1139,17 +1070,17 @@ Address: %4
         <translation>&amp;Показывать адреса в списке транзакций</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+77"/>
         <source>&amp;OK</source>
         <translation>О&amp;К</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Отмена</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Apply</source>
         <translation>&amp;Применить</translation>
     </message>
@@ -1183,7 +1114,7 @@ Address: %4
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+19"/>
         <source>Form</source>
         <translation>Форма</translation>
     </message>
@@ -1192,68 +1123,67 @@ Address: %4
         <translation type="obsolete">Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью NovaCoin после подключения, но этот процесс пока не завершён.</translation>
     </message>
     <message>
-        <location line="+75"/>
         <source>Balance:</source>
-        <translation>Баланс:</translation>
+        <translation type="obsolete">Баланс:</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+217"/>
         <source>Stake:</source>
         <translation>Доля:</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+147"/>
         <source>Number of transactions:</source>
         <translation>Количество транзакций:</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-97"/>
         <source>Unconfirmed:</source>
         <translation>Не подтверждено:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-250"/>
         <source>Wallet</source>
         <translation>Бумажник</translation>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+212"/>
+        <location line="+430"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-83"/>
+        <location line="-137"/>
         <source>Immature:</source>
         <translation>Незрелые:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Mined balance that has not yet matured</source>
         <translation>Баланс добытых монет, который ещё не созрел</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+114"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Последние транзакции&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="-274"/>
         <source>Your current balance</source>
         <translation>Ваш текущий баланс</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+113"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
         <translation>Общая сумма всех транзакций, которые до сих пор не подтверждены, и до сих пор не учитываются в текущем балансе</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-50"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation>Общая сумма всех монет, используемых для Proof-of-Stake, и не учитывающихся на балансе</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+138"/>
         <source>Total number of transactions in wallet</source>
         <translation>Общее количество транзакций в Вашем бумажнике</translation>
     </message>
@@ -1297,7 +1227,7 @@ Address: %4
         <translation>&amp;Сохранить как...</translation>
     </message>
     <message>
-        <location filename="../qrcodedialog.cpp" line="+62"/>
+        <location filename="../qrcodedialog.cpp" line="+64"/>
         <source>Error encoding URI into QR Code.</source>
         <translation>Ошибка кодирования URI в QR-код</translation>
     </message>
@@ -1339,7 +1269,7 @@ Address: %4
         <location line="+53"/>
         <location line="+23"/>
         <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+348"/>
+        <location filename="../rpcconsole.cpp" line="+350"/>
         <source>N/A</source>
         <translation>Н/Д</translation>
     </message>
@@ -1409,7 +1339,7 @@ Address: %4
         <translation>Время последнего блока</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+81"/>
         <source>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1419,12 +1349,12 @@ Address: %4
         <translation>&amp;Открыть</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-29"/>
         <source>Command-line options</source>
         <translation>Параметры командной строки</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+42"/>
         <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1438,12 +1368,12 @@ Address: %4
         <translation>&amp;Показать</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+8"/>
         <source>&amp;Console</source>
         <translation>Консоль</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Build date</source>
         <translation>Дата сборки</translation>
     </message>
@@ -1465,7 +1395,7 @@ Address: %4
         <translation type="obsolete">Открыть отладочный лог-файл NovaCoin из текущего каталога данных. Это может занять несколько секунд для больших лог-файлов.</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+115"/>
         <source>Clear console</source>
         <translation>Очистить консоль</translation>
     </message>
@@ -1493,7 +1423,7 @@ Address: %4
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+124"/>
+        <location filename="../sendcoinsdialog.cpp" line="+128"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1504,7 +1434,7 @@ Address: %4
         <translation>Отправка</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+59"/>
         <source>Send to multiple recipients at once</source>
         <translation>Отправить нескольким получателям одновременно</translation>
     </message>
@@ -1544,12 +1474,13 @@ Address: %4
         <translation>&amp;Отправить</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-59"/>
+        <location filename="../sendcoinsdialog.cpp" line="-62"/>
+        <location line="+2"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; адресату %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Confirm send coins</source>
         <translation>Подтвердите отправку монет</translation>
     </message>
@@ -1629,7 +1560,7 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to send the payment to  (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
+        <source>The address to send the payment to  (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1667,7 +1598,7 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a LEOcoin address (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
+        <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1680,12 +1611,12 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <location line="+124"/>
+        <location line="+130"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;Подписать сообщение</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-124"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Вы можете подписывать сообщения своими адресами, чтобы доказать владение ими. Будьте осторожны, не подписывайте что-то неопределённое, так как фишинговые атаки могут обманным путём заставить вас подписать нежелательные сообщения. Подписывайте только те сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
@@ -1695,23 +1626,23 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
+        <source>The address to sign the message with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
-        <location line="+203"/>
+        <location line="+16"/>
+        <location line="+209"/>
         <source>Choose an address from the address book</source>
         <translation>Выберите адрес из адресной книги</translation>
     </message>
     <message>
-        <location line="-193"/>
-        <location line="+203"/>
+        <location line="-199"/>
+        <location line="+209"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="-193"/>
+        <location line="-196"/>
         <source>Paste address from clipboard</source>
         <translation>Вставить адрес из буфера обмена</translation>
     </message>
@@ -1721,7 +1652,7 @@ Address: %4
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+9"/>
         <source>Enter the message you want to sign here</source>
         <translation>Введите сообщение для подписи</translation>
     </message>
@@ -1737,11 +1668,11 @@ Address: %4
     </message>
     <message>
         <location line="+106"/>
-        <source>The address the message was signed with (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
+        <source>The address the message was signed with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+43"/>
         <source>Verify the message to ensure it was signed with the specified LEOcoin address</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1750,24 +1681,24 @@ Address: %4
         <translation type="obsolete">Подписать сообщение, чтобы доказать владение адресом NovaCoin</translation>
     </message>
     <message>
-        <location line="-129"/>
+        <location line="-132"/>
         <source>Reset all sign message fields</source>
         <translation>Сбросить значения всех полей подписывания сообщений</translation>
     </message>
     <message>
         <location line="+3"/>
-        <location line="+146"/>
+        <location line="+149"/>
         <source>Clear &amp;All</source>
         <translation>Очистить &amp;всё</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
+        <location line="-90"/>
+        <location line="+73"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Проверить сообщение</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-67"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation>Введите ниже адрес для подписи, сообщение (убедитесь, что переводы строк, пробелы, табы и т.п. в точности скопированы) и подпись, чтобы проверить сообщение. Убедитесь, что не скопировали лишнего в подпись, по сравнению с самим подписываемым сообщением, чтобы не стать жертвой атаки &quot;man-in-the-middle&quot;.</translation>
     </message>
@@ -1780,7 +1711,7 @@ Address: %4
         <translation type="obsolete">Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом NovaCoin</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Reset all verify message fields</source>
         <translation>Сбросить все поля проверки сообщения</translation>
     </message>
@@ -1800,7 +1731,7 @@ Address: %4
     <message>
         <location line="-1"/>
         <location line="+3"/>
-        <source>Enter a LEOcoin address (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</source>
+        <source>Enter a LEOcoin address </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1964,12 +1895,12 @@ Address: %4
         <location line="+12"/>
         <location line="+45"/>
         <location line="+17"/>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Credit</source>
         <translation>Кредит</translation>
     </message>
     <message numerus="yes">
-        <location line="-103"/>
+        <location line="-104"/>
         <source>matures in %n more block(s)</source>
         <translation>
             <numerusform>будет доступно через %n блок</numerusform>
@@ -1986,12 +1917,12 @@ Address: %4
         <location line="+44"/>
         <location line="+8"/>
         <location line="+15"/>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Debit</source>
         <translation>Дебет</translation>
     </message>
     <message>
-        <location line="-40"/>
+        <location line="-41"/>
         <source>Transaction fee</source>
         <translation>Комиссия</translation>
     </message>
@@ -2017,8 +1948,12 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
+        <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation type="unfinished">Сгенерированные монеты должны подождать 520 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удастся, статус изменится на «не подтверждено», и монеты будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас. {120 ?}</translation>
+    </message>
+    <message>
         <source>Generated coins must mature 520 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Сгенерированные монеты должны подождать 520 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удастся, статус изменится на «не подтверждено», и монеты будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
+        <translation type="obsolete">Сгенерированные монеты должны подождать 520 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удастся, статус изменится на «не подтверждено», и монеты будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2030,7 +1965,7 @@ Address: %4
         <translation type="obsolete">Использованные в Proof-of-Stake монеты должны подождать 520 блоков, прежде чем они вернутся на баланс и смогут быть потрачены. Когда вы сгенерировали этот proof-of-stake блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удается, статус изменится на \&quot;не подтверждени\&quot; и блок будет недействителен. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Debug information</source>
         <translation>Отладочная информация</translation>
     </message>
@@ -2060,7 +1995,7 @@ Address: %4
         <translation>ложь</translation>
     </message>
     <message>
-        <location line="-212"/>
+        <location line="-213"/>
         <source>, has not been successfully broadcast yet</source>
         <translation>, ещё не было успешно разослано</translation>
     </message>
@@ -2081,6 +2016,11 @@ Address: %4
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>Данный диалог показывает детализированную статистику по выбранной транзакции</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2174,7 +2114,7 @@ Address: %4
         <translation>Отправлено себе</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Mined</source>
         <translation>Добыто</translation>
     </message>
@@ -2263,7 +2203,7 @@ Address: %4
         <translation>Отправленные себе</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>Mined</source>
         <translation>Добытые</translation>
     </message>
@@ -2308,7 +2248,7 @@ Address: %4
         <translation>Показать подробности транзакции</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+137"/>
         <source>Export Transaction Data</source>
         <translation>Экспортировать данные транзакций</translation>
     </message>
@@ -2513,12 +2453,11 @@ Address: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 44101 or testnet: 44201)</source>
-        <translation>Прослушивать подключения JSON-RPC на &lt;порту&gt; (по умолчанию: 44101 или для testnet: 44201)</translation>
+        <translation type="obsolete">Прослушивать подключения JSON-RPC на &lt;порту&gt; (по умолчанию: 44101 или для testnet: 44201)</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+13"/>
         <source>Unable to bind to %s on this computer. LEOcoin is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2593,7 +2532,12 @@ Address: %4
         <translation>Ошибка: эта транзакция требует комиссию в размере как минимум %s из-за её объёма, сложности или использования недавно полученных средств  </translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+8"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
+        <translation type="unfinished">Прослушивать подключения JSON-RPC на &lt;порту&gt; (по умолчанию: 44101 или для testnet: 44201) {8344 ?} {18344)?}</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
         <translation>Максимальный размер высокоприоритетных/низкокомиссионных транзакций в байтах (по умолчанию: 27000)</translation>
     </message>

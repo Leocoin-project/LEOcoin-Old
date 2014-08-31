@@ -11,13 +11,21 @@
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;LEOcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt; LEOcoin &lt;/b&gt; 版本</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;LEOcoin &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Copyright ? 2013 The LEOcoin developers</source>
-        <translation></translation>
+        <location line="+45"/>
+        <source>LEOcoin: Copyright © 2014 </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;LEOcoin&lt;/b&gt; version</source>
+        <translation type="obsolete">&lt;b&gt; LEOcoin &lt;/b&gt; 版本</translation>
     </message>
     <message>
         <source>Copyright © 2013 The LEOcoin developers</source>
@@ -48,13 +56,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>地址薄</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep 
 track of who is paying you.</source>
-        <translation>这些是你接收支付的 LEOcoin 地址。当支付时你可以给出不同的地址，以便追踪不同的支付者。</translation>
+        <translation type="obsolete">这些是你接收支付的 LEOcoin 地址。当支付时你可以给出不同的地址，以便追踪不同的支付者。</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>Double-click to edit address or label</source>
         <translation>双击以编辑地址或标签</translation>
     </message>
@@ -64,56 +71,57 @@ track of who is paying you.</source>
         <translation>创建新地址</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>复制当前选中地址到系统剪贴板</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Sign a message to prove you own a LEOcoin address</source>
         <translation>发送签名消息以证明您是该元宝币地址的拥有者</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-45"/>
         <source>&amp;New Address</source>
         <translation>&amp;新建地址</translation>
     </message>
     <message>
+        <location line="-46"/>
         <source>These are your LEOcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="obsolete">这些是你接收支付的 LEOcoin 地址。当支付时你可以给出不同的地址，以便追踪不同的支付者。</translation>
+        <translation type="unfinished">这些是你接收支付的 LEOcoin 地址。当支付时你可以给出不同的地址，以便追踪不同的支付者。</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+63"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;复制地址</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+14"/>
         <source>Show &amp;QR Code</source>
         <translation>显示二维码</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Sign &amp;Message</source>
         <translation>&amp;发送签名消息</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+14"/>
         <source>Verify a message to ensure it was signed with a specified LEOcoin address</source>
         <translation>验证这个消息以确保它已经与一个LEOcoin地址签名</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
         <translation>从列表中删除当前选中地址。只有发送地址可以被删除。</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-14"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;验证消息</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>&amp;Delete</source>
         <translation>&amp;删除</translation>
     </message>
@@ -311,47 +319,43 @@ track of who is paying you.</source>
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+265"/>
+        <location filename="../bitcoingui.cpp" line="+343"/>
         <source>Sign &amp;message...</source>
         <translation>对消息签名...</translation>
     </message>
     <message>
-        <location line="+241"/>
+        <location line="+256"/>
         <source>Synchronizing with network...</source>
         <translation>网络同步中...</translation>
     </message>
     <message>
-        <location line="-310"/>
         <source>&amp;Overview</source>
-        <translation>&amp;概况</translation>
+        <translation type="obsolete">&amp;概况</translation>
     </message>
     <message>
-        <location line="-123"/>
+        <location line="-520"/>
         <source>LEOcoin</source>
         <translation>LEOcoin</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+178"/>
         <source>Show general overview of wallet</source>
         <translation>显示钱包概况</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>&amp;Mining</source>
-        <translation>&amp;挖矿</translation>
+        <translation type="obsolete">&amp;挖矿</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Configure mining</source>
-        <translation>配置挖矿参数</translation>
+        <translation type="obsolete">配置挖矿参数</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Send coins to a LEOcoin address</source>
-        <translation>向一个 LEOcoin 地址发送 LEOcoin</translation>
+        <translation type="obsolete">向一个 LEOcoin 地址发送 LEOcoin</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>&amp;Transactions</source>
         <translation>&amp;交易</translation>
     </message>
@@ -361,7 +365,7 @@ track of who is paying you.</source>
         <translation>查看交易历史</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+32"/>
         <source>&amp;Address Book</source>
         <translation>&amp;地址薄</translation>
     </message>
@@ -371,22 +375,20 @@ track of who is paying you.</source>
         <translation>修改存储的地址和标签列表</translation>
     </message>
     <message>
-        <location line="-13"/>
         <source>&amp;Receive coins</source>
-        <translation>&amp;接收货币</translation>
+        <translation type="obsolete">&amp;接收货币</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-11"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>显示接收支付的地址列表</translation>
     </message>
     <message>
-        <location line="-7"/>
         <source>&amp;Send coins</source>
-        <translation>&amp;发送货币</translation>
+        <translation type="obsolete">&amp;发送货币</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+27"/>
         <source>E&amp;xit</source>
         <translation>退出</translation>
     </message>
@@ -411,7 +413,7 @@ track of who is paying you.</source>
         <translation>显示Qt相关信息</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+7"/>
         <source>&amp;Options...</source>
         <translation>&amp;选项...</translation>
     </message>
@@ -426,7 +428,7 @@ track of who is paying you.</source>
         <translation>&amp;加密钱包...</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Backup Wallet...</source>
         <translation>&amp;备份钱包...</translation>
     </message>
@@ -436,8 +438,13 @@ track of who is paying you.</source>
         <translation>&amp;修改密码...</translation>
     </message>
     <message>
-        <location line="+87"/>
-        <location line="+63"/>
+        <location line="+61"/>
+        <source>Screens toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+60"/>
         <source>LEOcoin client</source>
         <translation>LEOcoin 客户端</translation>
     </message>
@@ -463,7 +470,7 @@ track of who is paying you.</source>
         <translation>已下载 %2 个交易历史区块中的 %1 个 (完成率 %3% ).</translation>
     </message>
     <message>
-        <location line="-246"/>
+        <location line="-256"/>
         <source>&amp;Export...</source>
         <translation>&amp;导出...</translation>
     </message>
@@ -473,17 +480,32 @@ track of who is paying you.</source>
         <translation>导出当前数据到文件</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-15"/>
         <source>Encrypt or decrypt wallet</source>
         <translation>加密或解密钱包</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-81"/>
+        <source>&amp;My Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>&amp;Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Receive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>&amp;About LEOcoin</source>
         <translation>关于 LEOcoin</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>Backup wallet to another location</source>
         <translation>备份钱包到其它文件夹</translation>
     </message>
@@ -493,7 +515,7 @@ track of who is paying you.</source>
         <translation>修改钱包加密口令</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+11"/>
         <source>&amp;Debug window</source>
         <translation>&amp;调试窗口</translation>
     </message>
@@ -503,22 +525,22 @@ track of who is paying you.</source>
         <translation>在诊断控制台调试</translation>
     </message>
     <message>
-        <location line="-5"/>
+        <location line="-10"/>
         <source>&amp;Verify message...</source>
         <translation>&amp;验证消息...</translation>
     </message>
     <message>
-        <location line="-193"/>
+        <location line="-265"/>
         <source>Wallet</source>
         <translation>钱包</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+256"/>
         <source>&amp;Show / Hide</source>
         <translation>&amp;显示 / 隐藏</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+44"/>
         <source>&amp;File</source>
         <translation>&amp;文件</translation>
     </message>
@@ -533,23 +555,22 @@ track of who is paying you.</source>
         <translation>&amp;帮助</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Tabs toolbar</source>
-        <translation>分页工具栏</translation>
+        <translation type="obsolete">分页工具栏</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+30"/>
         <source>Actions toolbar</source>
         <translation>动作工具栏</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
-        <location line="+172"/>
+        <location line="+169"/>
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation>%1 个交易历史的区块已下载</translation>
     </message>
@@ -597,17 +618,15 @@ track of who is paying you.</source>
         <translation>最新收到的区块产生于 %1。</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Mining LEOcoins at %1 hashes per second</source>
-        <translation>正在以 %1 hashes/s 挖矿</translation>
+        <translation type="obsolete">正在以 %1 hashes/s 挖矿</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Not mining LEOcoins</source>
-        <translation>没在挖矿</translation>
+        <translation type="obsolete">没在挖矿</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+59"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
         <translation>该笔交易的数据量超限.您可以选择支付 %1 交易费， 交易费将支付给处理该笔交易的网络节点，有助于维持元宝币网络的运行.  您愿意支付交易费用吗？</translation>
     </message>
@@ -640,7 +659,7 @@ Address: %4
 </translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+100"/>
         <location line="+15"/>
         <source>URI handling</source>
         <translation>URI处理</translation>
@@ -662,17 +681,15 @@ Address: %4
         <translation>钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;锁定&lt;/b&gt;状态</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Confirm wallet encryption</source>
-        <translation>确认加密钱包</translation>
+        <translation type="obsolete">确认加密钱包</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Error: If want to encrypt your wallet, &lt;b&gt;you must stop mining first&lt;/b&gt;!</source>
-        <translation>错误: 如果想要加密钱包, &lt;b&gt;请先停止挖矿&lt;/b&gt;!</translation>
+        <translation type="obsolete">错误: 如果想要加密钱包, &lt;b&gt;请先停止挖矿&lt;/b&gt;!</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+27"/>
         <source>Backup Wallet</source>
         <translation>备份钱包</translation>
     </message>
@@ -692,7 +709,7 @@ Address: %4
         <translation>备份钱包到其它文件夹失败.</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+109"/>
+        <location filename="../bitcoin.cpp" line="+112"/>
         <source>A fatal error occurred. LEOcoin can no longer continue safely and will quit.</source>
         <translation>发生致命错误. 元宝币客户端的安全存在问题，将退出.</translation>
     </message>
@@ -700,7 +717,7 @@ Address: %4
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+220"/>
+        <location filename="../clientmodel.cpp" line="+87"/>
         <source>Network Alert</source>
         <translation>网络警报</translation>
     </message>
@@ -776,7 +793,7 @@ Address: %4
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+419"/>
+        <location filename="../guiutil.cpp" line="+436"/>
         <location line="+12"/>
         <source>LEOcoin-Qt</source>
         <translation>LEOcoin-Qt</translation>
@@ -820,150 +837,120 @@ Address: %4
 <context>
     <name>MiningPage</name>
     <message>
-        <location filename="../forms/miningpage.ui" line="+14"/>
         <source>Mining</source>
-        <translation>挖矿</translation>
+        <translation type="obsolete">挖矿</translation>
     </message>
     <message>
-        <location line="+237"/>
         <source>Username</source>
-        <translation>用户名</translation>
+        <translation type="obsolete">用户名</translation>
     </message>
     <message>
-        <location line="-10"/>
         <source>Server</source>
-        <translation>服务器</translation>
+        <translation type="obsolete">服务器</translation>
     </message>
     <message>
-        <location line="-103"/>
         <source>pool.LEOcoin.com</source>
-        <translation>pool.LEOcoin.com</translation>
+        <translation type="obsolete">pool.LEOcoin.com</translation>
     </message>
     <message>
-        <location line="+57"/>
         <source>Password</source>
-        <translation>密码</translation>
+        <translation type="obsolete">密码</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Port</source>
-        <translation>端口</translation>
+        <translation type="obsolete">端口</translation>
     </message>
     <message>
-        <location line="+26"/>
-        <location filename="../miningpage.cpp" line="+414"/>
         <source>Start Mining</source>
-        <translation>开始挖矿</translation>
+        <translation type="obsolete">开始挖矿</translation>
     </message>
     <message>
-        <location line="-169"/>
         <source>Scantime</source>
-        <translation>扫描时间</translation>
+        <translation type="obsolete">扫描时间</translation>
     </message>
     <message>
-        <location line="+116"/>
         <source>Threads</source>
-        <translation>线程数</translation>
+        <translation type="obsolete">线程数</translation>
     </message>
     <message>
-        <location line="-129"/>
         <source>Debug Logging</source>
-        <translation>调试日志输出</translation>
+        <translation type="obsolete">调试日志输出</translation>
     </message>
     <message>
-        <location line="+136"/>
         <source>Type</source>
-        <translation>类型</translation>
+        <translation type="obsolete">类型</translation>
     </message>
     <message>
-        <location line="+80"/>
         <source>Solo Mining</source>
-        <translation>单独挖矿</translation>
+        <translation type="obsolete">单独挖矿</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Pool Mining</source>
-        <translation>矿池</translation>
+        <translation type="obsolete">矿池</translation>
     </message>
     <message>
-        <location line="-244"/>
         <source>9332</source>
-        <translation>9332</translation>
+        <translation type="obsolete">9332</translation>
     </message>
     <message>
-        <location filename="../miningpage.cpp" line="-324"/>
         <source>please input the sever address</source>
-        <translation>请输入矿池地址</translation>
+        <translation type="obsolete">请输入矿池地址</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>use name should not be empty</source>
-        <translation>用户名不能为空</translation>
+        <translation type="obsolete">用户名不能为空</translation>
     </message>
     <message>
-        <location line="+101"/>
         <source>Share accepted</source>
-        <translation>共享被接受</translation>
+        <translation type="obsolete">共享被接受</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Share rejected</source>
-        <translation>共享被拒绝</translation>
+        <translation type="obsolete">共享被拒绝</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>LONGPOLL detected a new block</source>
-        <translation>LONGPOLL 发现一个新的区块</translation>
+        <translation type="obsolete">LONGPOLL 发现一个新的区块</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Miner didn&apos;t start properly. Try checking your settings.</source>
-        <translation>挖矿进程启动异常，正在尝试检查你的设置。</translation>
+        <translation type="obsolete">挖矿进程启动异常，正在尝试检查你的设置。</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Couldn&apos;t connect. Please check your username and password.</source>
-        <translation>连接矿池失败，请检查你的用户名和密码。</translation>
+        <translation type="obsolete">连接矿池失败，请检查你的用户名和密码。</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Couldn&apos;t connect. Please check pool server and port.</source>
-        <translation>连接矿池失败，请检查矿池地址和端口号。</translation>
+        <translation type="obsolete">连接矿池失败，请检查矿池地址和端口号。</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Couldn&apos;t communicate with server. Retrying in 30 seconds.</source>
-        <translation>与矿池服务器交互失败，30秒后重试。</translation>
+        <translation type="obsolete">与矿池服务器交互失败，30秒后重试。</translation>
     </message>
     <message>
-        <location line="+27"/>
         <source>Miner failed to start. Make sure you have the minerd executable and libraries in the same directory as LEOcoin-Qt.</source>
-        <translation>挖矿进程启动失败。</translation>
+        <translation type="obsolete">挖矿进程启动失败。</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Solo mining stopped.</source>
-        <translation>单独挖矿已停止</translation>
+        <translation type="obsolete">单独挖矿已停止</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Miner exited.</source>
-        <translation>挖矿进程已退出</translation>
+        <translation type="obsolete">挖矿进程已退出</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Solo mining started.</source>
-        <translation>单独挖矿已启动</translation>
+        <translation type="obsolete">单独挖矿已启动</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Miner started. You might not see any output for a few minutes.</source>
-        <translation>挖矿进程已启动，可能需要一些时间才能有产出</translation>
+        <translation type="obsolete">挖矿进程已启动，可能需要一些时间才能有产出</translation>
     </message>
     <message>
-        <location line="+157"/>
         <source>Stop Mining</source>
-        <translation>停止挖矿</translation>
+        <translation type="obsolete">停止挖矿</translation>
     </message>
 </context>
 <context>
@@ -979,9 +966,13 @@ Address: %4
         <translation>&amp;主选项</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.0001 recommended.</source>
-        <translation>建议支付交易费用，有助于您的交易得到尽快处理.  绝大多数交易的字节数为 1 kB. 建议支付0.0001个元宝币.</translation>
+        <translation type="obsolete">建议支付交易费用，有助于您的交易得到尽快处理.  绝大多数交易的字节数为 1 kB. 建议支付0.0001个元宝币.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
+        <translation type="unfinished">建议支付交易费用，有助于您的交易得到尽快处理.  绝大多数交易的字节数为 1 kB. 建议支付0.0001个元宝币. {1 ?} {0.01 ?}</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1055,11 +1046,15 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>SOCKS &amp;Version:</source>
-        <translation>SOCKS &amp;版本:</translation>
+        <source>SOCKS &amp;V:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <source>SOCKS &amp;Version:</source>
+        <translation type="obsolete">SOCKS &amp;版本:</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
         <translation>代理服务器的SOCKS版本 (e.g. 5)</translation>
     </message>
@@ -1128,17 +1123,17 @@ Address: %4
         <translation>在交易清单中&amp;显示元宝币地址</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+77"/>
         <source>&amp;OK</source>
         <translation>&amp;确定</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>&amp;Cancel</source>
         <translation>&amp;取消</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Apply</source>
         <translation>&amp;应用</translation>
     </message>
@@ -1168,86 +1163,84 @@ Address: %4
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+19"/>
         <source>Form</source>
         <translation>表单</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <location line="+212"/>
+        <location line="+24"/>
+        <location line="+430"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LEOcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>现在显示的消息可能是过期的. 在连接上元宝币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成.</translation>
     </message>
     <message>
-        <location line="-170"/>
         <source>Balance:</source>
-        <translation>余额：</translation>
+        <translation type="obsolete">余额：</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="-237"/>
         <source>Stake:</source>
         <translation>股份:</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+147"/>
         <source>Number of transactions:</source>
         <translation>交易笔数：</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-97"/>
         <source>Unconfirmed:</source>
         <translation>未确认的：</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-250"/>
         <source>Wallet</source>
         <translation>钱包</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+300"/>
         <source>Immature:</source>
         <translation>未成熟的:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Mined balance that has not yet matured</source>
         <translation>Mined balance that has not yet matured</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+114"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;当前交易&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="-274"/>
         <source>Your current balance</source>
         <translation>您的当前余额</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+113"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
         <translation>尚未确认的交易总额, 未计入当前余额</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-50"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation>尚未确认的股份交易，尚未计入当前余额</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+138"/>
         <source>Total number of transactions in wallet</source>
         <translation>钱包总交易数量</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+122"/>
+        <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
         <source>out of sync</source>
         <translation>不同步</translation>
     </message>
     <message>
-        <location line="+192"/>
         <source>More Apps...</source>
-        <translation>更多应用...</translation>
+        <translation type="obsolete">更多应用...</translation>
     </message>
 </context>
 <context>
@@ -1283,7 +1276,7 @@ Address: %4
         <translation>&amp;另存为</translation>
     </message>
     <message>
-        <location filename="../qrcodedialog.cpp" line="+62"/>
+        <location filename="../qrcodedialog.cpp" line="+64"/>
         <source>Error encoding URI into QR Code.</source>
         <translation>将 URI 转换成二维码失败.</translation>
     </message>
@@ -1325,7 +1318,7 @@ Address: %4
         <location line="+53"/>
         <location line="+23"/>
         <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+348"/>
+        <location filename="../rpcconsole.cpp" line="+350"/>
         <source>N/A</source>
         <translation>不可用</translation>
     </message>
@@ -1395,7 +1388,7 @@ Address: %4
         <translation>上一区块时间</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+81"/>
         <source>Open the LEOcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>从当前文件夹打开LEOcoin调试日志文件，对于大日志文件，这可能会花费几秒钟。</translation>
     </message>
@@ -1405,12 +1398,12 @@ Address: %4
         <translation>&amp;打开</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-29"/>
         <source>Command-line options</source>
         <translation>命令行设置</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+42"/>
         <source>Show the LEOcoin-Qt help message to get a list with possible LEOcoin command-line options.</source>
         <translation>LEOcoin-Qt 帮助信息中包含 LEOcoin 支持的命令行选项</translation>
     </message>
@@ -1420,12 +1413,12 @@ Address: %4
         <translation>&amp;显示</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+8"/>
         <source>&amp;Console</source>
         <translation>&amp;控制台</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-266"/>
         <source>Build date</source>
         <translation>创建时间</translation>
     </message>
@@ -1435,7 +1428,7 @@ Address: %4
         <translation>调试日志文件</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+115"/>
         <source>Clear console</source>
         <translation>清空控制台</translation>
     </message>
@@ -1459,7 +1452,7 @@ Address: %4
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+124"/>
+        <location filename="../sendcoinsdialog.cpp" line="+128"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1470,7 +1463,7 @@ Address: %4
         <translation>发送货币</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+59"/>
         <source>Send to multiple recipients at once</source>
         <translation>一次发送给多个接收者</translation>
     </message>
@@ -1514,12 +1507,13 @@ Address: %4
         <translation>&amp;发送</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-59"/>
+        <location filename="../sendcoinsdialog.cpp" line="-62"/>
+        <location line="+2"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; 到 %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Confirm send coins</source>
         <translation>确认发送货币</translation>
     </message>
@@ -1599,8 +1593,12 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
+        <source>The address to send the payment to  (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The address to send the payment to  (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
-        <translation>付款地址  (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</translation>
+        <translation type="obsolete">付款地址  (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1632,9 +1630,13 @@ Address: %4
         <translation type="obsolete">请输入LEOcoin地址 (例如: 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
-        <location filename="../sendcoinsentry.cpp" line="+1"/>
         <source>Enter a LEOcoin address (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
-        <translation>请输入LEOcoin地址 (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</translation>
+        <translation type="obsolete">请输入LEOcoin地址 (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <source>Enter a LEOcoin address </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1646,12 +1648,12 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <location line="+124"/>
+        <location line="+130"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;对消息签名</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-124"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>您可以用你的地址对消息进行签名，以证明您是该地址的所有人。注意不要对模棱两可的消息签名，以免遭受钓鱼式攻击。请确保消息真实明确的表达了您的意愿。</translation>
     </message>
@@ -1660,24 +1662,23 @@ Address: %4
         <translation type="obsolete">用来签名的元宝币地址  (例如 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>The address to sign the message with (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
-        <translation>用来签名的元宝币地址 (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</translation>
+        <translation type="obsolete">用来签名的元宝币地址 (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <location line="+203"/>
+        <location line="+34"/>
+        <location line="+209"/>
         <source>Choose an address from the address book</source>
         <translation>从地址簿选择地址</translation>
     </message>
     <message>
-        <location line="-193"/>
-        <location line="+203"/>
+        <location line="-199"/>
+        <location line="+209"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="-193"/>
+        <location line="-196"/>
         <source>Paste address from clipboard</source>
         <translation>从剪贴板粘贴地址</translation>
     </message>
@@ -1687,7 +1688,7 @@ Address: %4
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+9"/>
         <source>Enter the message you want to sign here</source>
         <translation>请输入您要发送的签名消息</translation>
     </message>
@@ -1703,33 +1704,42 @@ Address: %4
     </message>
     <message>
         <location line="+106"/>
-        <source>The address the message was signed with (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
-        <translation>要确认的这个消息的地址 (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</translation>
+        <source>The address the message was signed with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+40"/>
+        <source>The address the message was signed with (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</source>
+        <translation type="obsolete">要确认的这个消息的地址 (e.g. UakV64wuam9Hrd1ec9UVjs3D5dhAec9rYcigJMT42fPWQ4MG5q4fYCsRttKGCoFB1)</translation>
+    </message>
+    <message>
+        <location line="+43"/>
         <source>Verify the message to ensure it was signed with the specified LEOcoin address</source>
         <translation>核实这个消息以确保它在LEOcoin的地址中签名验证过</translation>
     </message>
     <message>
-        <location line="-129"/>
+        <location line="-132"/>
         <source>Reset all sign message fields</source>
         <translation>清空所有签名消息栏</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+146"/>
+        <location line="-120"/>
+        <source>The address to sign the message with (e.g. LNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+123"/>
+        <location line="+149"/>
         <source>Clear &amp;All</source>
         <translation>清除 &amp;所有</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
+        <location line="-90"/>
+        <location line="+73"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;验证消息</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-67"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation>在下方输入签名地址、消息（确保换行、空格、Tab也被正确拷贝）和签名来验证这个消息，为避免man-in-the-middle诈骗，注意不要在签名中读入比验证消息中读入更多的签名信息，</translation>
     </message>
@@ -1738,7 +1748,7 @@ Address: %4
         <translation type="obsolete">要确认的这个消息的地址 (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Reset all verify message fields</source>
         <translation>R清空所有验证消息栏</translation>
     </message>
@@ -1757,10 +1767,14 @@ Address: %4
         <translation>输入 LEOcoin 签名</translation>
     </message>
     <message>
+        <source>Enter a LEOcoin address (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</source>
+        <translation type="obsolete">输入一个 LEOcoin 地址 (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</translation>
+    </message>
+    <message>
         <location line="-4"/>
         <location line="+3"/>
-        <source>Enter a LEOcoin address (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</source>
-        <translation>输入一个 LEOcoin 地址 (e.g. Y9H3tANhMroxU4rCre4bkoeDRhHKRSGwsi)</translation>
+        <source>Enter a LEOcoin address </source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+83"/>
@@ -1914,12 +1928,12 @@ Address: %4
         <location line="+12"/>
         <location line="+45"/>
         <location line="+17"/>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Credit</source>
         <translation>到帐</translation>
     </message>
     <message numerus="yes">
-        <location line="-103"/>
+        <location line="-104"/>
         <source>matures in %n more block(s)</source>
         <translation>
             <numerusform>成熟于 %n 以上数据块</numerusform>
@@ -1934,12 +1948,12 @@ Address: %4
         <location line="+44"/>
         <location line="+8"/>
         <location line="+15"/>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Debit</source>
         <translation>支出</translation>
     </message>
     <message>
-        <location line="-40"/>
+        <location line="-41"/>
         <source>Transaction fee</source>
         <translation>交易费</translation>
     </message>
@@ -1965,8 +1979,12 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
+        <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation type="unfinished">新产生的元宝币必须等待520个数据块之后才能被使用. 当您生产出此数据块,它将被广播至元宝币网络并添加至数据链. 如果添加到数据链失败, 它的状态将变成&quot;不被接受&quot;，产生的元宝币将不能使用. 在您生产新数据块的几秒钟内, 如果其它节点也生产出同样的数据块，有可能会发生这种情况. {120 ?}</translation>
+    </message>
+    <message>
         <source>Generated coins must mature 520 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>新产生的元宝币必须等待520个数据块之后才能被使用. 当您生产出此数据块,它将被广播至元宝币网络并添加至数据链. 如果添加到数据链失败, 它的状态将变成&quot;不被接受&quot;，产生的元宝币将不能使用. 在您生产新数据块的几秒钟内, 如果其它节点也生产出同样的数据块，有可能会发生这种情况.</translation>
+        <translation type="obsolete">新产生的元宝币必须等待520个数据块之后才能被使用. 当您生产出此数据块,它将被广播至元宝币网络并添加至数据链. 如果添加到数据链失败, 它的状态将变成&quot;不被接受&quot;，产生的元宝币将不能使用. 在您生产新数据块的几秒钟内, 如果其它节点也生产出同样的数据块，有可能会发生这种情况.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1978,7 +1996,7 @@ Address: %4
         <translation type="obsolete">股份币必须等待520个block产生后才能计算入余额和花费。生成这个股份证明机制的block时候，它会被广播到网络并被添加到block链中。如果失败，会成为\&quot;未被接受的\&quot;而且是不可用的股份。 如果另一个节点产生的股份证明机制的block比你提前几秒，这种情况就会偶然发生。</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Debug information</source>
         <translation>调试信息</translation>
     </message>
@@ -2008,7 +2026,7 @@ Address: %4
         <translation>false</translation>
     </message>
     <message>
-        <location line="-212"/>
+        <location line="-213"/>
         <source>, has not been successfully broadcast yet</source>
         <translation>, 未被成功广播</translation>
     </message>
@@ -2029,6 +2047,11 @@ Address: %4
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>当前面板显示了交易的详细描述</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2118,7 +2141,7 @@ Address: %4
         <translation>付款给自己</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Mined</source>
         <translation>挖矿所得</translation>
     </message>
@@ -2207,7 +2230,7 @@ Address: %4
         <translation>到自己</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>Mined</source>
         <translation>挖矿所得</translation>
     </message>
@@ -2252,7 +2275,7 @@ Address: %4
         <translation>显示交易详情</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+137"/>
         <source>Export Transaction Data</source>
         <translation>导出交易数据</translation>
     </message>
@@ -2328,7 +2351,7 @@ Address: %4
 <context>
     <name>bitcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+127"/>
+        <location filename="../bitcoinstrings.cpp" line="+126"/>
         <source>LEOcoin version</source>
         <translation>LEOcoin 版本</translation>
     </message>
@@ -2347,25 +2370,27 @@ Address: %4
         <translation>列出命令</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-12"/>
         <source>Get help for a command</source>
         <translation>获得某条命令的帮助</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+23"/>
         <source>Options:</source>
         <translation>选项：</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Specify configuration file (default: LEOcoin.conf)</source>
-        <translation type="obsolete">指定配置文件 (默认: LEOcoin.conf)</translation>
+        <translation type="unfinished">指定配置文件 (默认: LEOcoin.conf)</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Specify pid file (default: LEOcoind.pid)</source>
-        <translation type="obsolete">指定配置文件 (默认为 LEOcoind.pid) </translation>
+        <translation type="unfinished">指定配置文件 (默认为 LEOcoind.pid) </translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-50"/>
         <source>Generate coins</source>
         <translation>生成货币</translation>
     </message>
@@ -2375,7 +2400,7 @@ Address: %4
         <translation>不要生成货币</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+63"/>
         <source>Specify data directory</source>
         <translation>指定数据目录</translation>
     </message>
@@ -2400,27 +2425,27 @@ Address: %4
         <translation>最大连接数 &lt;n&gt;  (缺省: 125)</translation>
     </message>
     <message>
-        <location line="-35"/>
+        <location line="-34"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
         <translation>连接一个节点并获取对端地址, 然后断开连接</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+67"/>
         <source>Specify your own public address</source>
         <translation>指定您的公共地址</translation>
     </message>
     <message>
-        <location line="-77"/>
+        <location line="-76"/>
         <source>Bind to given address. Use [host]:port notation for IPv6</source>
         <translation>绑定指定地址. IPv6 使用 [host]:port </translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>拒绝行为不当的节点连接的最大数 (默认: 100)</translation>
     </message>
     <message>
-        <location line="-111"/>
+        <location line="-110"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
         <translation>拒绝行为不当的节点重新连接的秒数 (默认: 86400)</translation>
     </message>
@@ -2455,12 +2480,11 @@ Address: %4
         <translation>错误：未加锁的钱包只能挖矿，不能创建交易。</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 44101 or testnet: 44201)</source>
-        <translation>JSON-RPC连接监听&lt;端口&gt; (默认为 8332)</translation>
+        <translation type="obsolete">JSON-RPC连接监听&lt;端口&gt; (默认为 8332)</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+13"/>
         <source>Unable to bind to %s on this computer. LEOcoin is probably already running.</source>
         <translation>绑定到 %s 失败。 LEOcoin可能已经在运行。</translation>
     </message>
@@ -2490,7 +2514,7 @@ Address: %4
         <translation>正在导入数据链文件</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>Importing bootstrap blockchain data file.</source>
         <translation>正在导入引导数据链文件</translation>
     </message>
@@ -2505,7 +2529,7 @@ Address: %4
         <translation>使用测试网络</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="-95"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
         <translation>A接受来自外部的连接 (缺省: 1 if no -proxy or -connect)</translation>
     </message>
@@ -2520,7 +2544,12 @@ Address: %4
         <translation>初始化数据库错误 %s！备份那个文件夹，然后移除除钱包文件之外的其他文件来恢复。</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+15"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
+        <translation type="unfinished">JSON-RPC连接监听&lt;端口&gt; (默认为 8332) {8344 ?} {18344)?}</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
         <translation>设置 high-priority/low-fee 交易的最大字节数(默认: 27000)</translation>
     </message>
@@ -2579,12 +2608,11 @@ Address: %4
         <translation>通过DNS查找网络上的元宝币节点 (缺省: 0)</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Updating blockchain data file.</source>
-        <translation>正在更新数据链文件</translation>
+        <translation type="obsolete">正在更新数据链文件</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
         <translation>-tor 地址不正确: &apos;%s&apos;</translation>
     </message>
@@ -2669,22 +2697,12 @@ Address: %4
         <translation>客户端启动时压缩 debug.log 文件(默认: 1 when no -debug)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Specify configuration file (default: LEOcoin.conf)</source>
-        <translation>指定配置文件 (默认：LEOcoin.conf)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>指定连接超时时间 (毫秒：5000)</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Specify pid file (default: LEOcoind.pid)</source>
-        <translation>指定 pid 文件 (默认: LEOcoind.pid)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Unable to sign checkpoint, wrong checkpointkey?
 </source>
         <translation>无法验证检查点，检查点秘钥错误？</translation>
@@ -2740,22 +2758,22 @@ Address: %4
         <translation>JSON-RPC连接密码</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>允许从指定IP接受到的JSON-RPC连接</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>向IP地址为 &lt;ip&gt; 的节点发送指令 (缺省: 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="-98"/>
+        <location line="-97"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>当最佳区块变化时执行命令 (命令行中的 %s 会被替换成区块哈希值)</translation>
     </message>
     <message>
-        <location line="+122"/>
+        <location line="+121"/>
         <source>Upgrade wallet to latest format</source>
         <translation>将钱包升级到最新的格式</translation>
     </message>
@@ -2770,7 +2788,7 @@ Address: %4
         <translation>重新扫描数据链以查找遗漏的交易</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="-27"/>
         <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
         <translation>启动时需检查的区块数量 (缺省: 2500, 设置0为检查所有区块)</translation>
     </message>
@@ -2780,7 +2798,7 @@ Address: %4
         <translation>需要几个确认 (0-6个, 缺省: 1个)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Imports blocks from external blk000?.dat file</source>
         <translation>从外来文件 blk000?.dat 导入区块数据</translation>
     </message>
@@ -2800,12 +2818,12 @@ Address: %4
         <translation>服务器私钥 (默认为 server.pem)</translation>
     </message>
     <message>
-        <location line="-128"/>
+        <location line="-127"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation>可接受的加密器 (默认为 TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+139"/>
         <source>This help message</source>
         <translation>该帮助信息</translation>
     </message>
@@ -2815,7 +2833,7 @@ Address: %4
         <translation>无法绑定本机端口 %s  (返回错误消息 %d, %s)</translation>
     </message>
     <message>
-        <location line="-73"/>
+        <location line="-72"/>
         <source>Connect through socks proxy</source>
         <translation>通过 socks 代理连接</translation>
     </message>
@@ -2825,12 +2843,12 @@ Address: %4
         <translation>使用 -addnode, -seednode 和 -connect选项时允许DNS查找</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Loading addresses...</source>
         <translation>正在加载地址...</translation>
     </message>
     <message>
-        <location line="-28"/>
+        <location line="-27"/>
         <source>Error loading blkindex.dat</source>
         <translation>blkindex.dat文件加载错误</translation>
     </message>
@@ -2845,7 +2863,7 @@ Address: %4
         <translation>wallet.dat钱包文件加载错误</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+19"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
         <translation>非法的代理地址: &apos;%s&apos;</translation>
     </message>
@@ -2860,7 +2878,7 @@ Address: %4
         <translation>被指定的是未知socks代理版本: %i</translation>
     </message>
     <message>
-        <location line="-79"/>
+        <location line="-78"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
         <translation>无法解析 -bind 端口地址: &apos;%s&apos;</translation>
     </message>
@@ -2870,17 +2888,17 @@ Address: %4
         <translation>无法解析 -externalip 地址: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+30"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>非法金额 -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-15"/>
         <source>Error: could not start node</source>
         <translation>错误: 无法启动节点</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Sending...</source>
         <translation>发送中</translation>
     </message>
@@ -2900,7 +2918,7 @@ Address: %4
         <translation>加载区块索引...</translation>
     </message>
     <message>
-        <location line="-46"/>
+        <location line="-45"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>添加节点并与其保持连接</translation>
     </message>
@@ -2915,12 +2933,12 @@ Address: %4
         <translation>每发送1KB交易所需的费用</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+20"/>
         <source>Loading wallet...</source>
         <translation>正在加载钱包...</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="-40"/>
         <source>Cannot downgrade wallet</source>
         <translation>无法降级钱包格式</translation>
     </message>
@@ -2935,22 +2953,22 @@ Address: %4
         <translation>无法写入缺省地址</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+49"/>
         <source>Rescanning...</source>
         <translation>正在重新扫描...</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-43"/>
         <source>Done loading</source>
         <translation>加载完成</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+67"/>
         <source>To use the %s option</source>
         <translation>使用 %s 选项</translation>
     </message>
     <message>
-        <location line="-151"/>
+        <location line="-150"/>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
