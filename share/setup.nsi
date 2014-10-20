@@ -5,25 +5,28 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 0.3.0
-!define COMPANY "Yet Another Coin (LEOcoin) project"
-!define URL http://www.TODO: .ru/
+!define VERSION 1.1.0
+!define COMPANY "LEO Ltd"
+!define URL "http://www.leocoin.org"
+!define PROJECTURL "http://www.leocoin.org"
+!define ProductName "LEOcoin Wallet"
 
 # MUI Symbol Definitions
-!define MUI_ICON "../share/pixmaps/LEOcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "..\share\pixmaps\LEOcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "..\share\pixmaps\nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "../share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "..\share\pixmaps\nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER LEOcoin
-#!define MUI_FINISHPAGE_RUN $INSTDIR\LEOcoin-qt.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\LEOcoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "..\share\pixmaps\nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
+
 
 # Included files
 !include Sections.nsh
@@ -45,14 +48,14 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile LEOcoin-0.3.0-win32-setup.exe
-InstallDir $PROGRAMFILES\LEOcoin
+OutFile LEOcoin-1.1.0-win32-setup.exe
+InstallDir $PROGRAMFILES\LEO\LEOcoin
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
-VIProductVersion 0.3.0.0
-VIAddVersionKey ProductName LEOcoin
+VIProductVersion 1.1.0.0
+VIAddVersionKey ProductName "LEOcoin Wallet"
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -66,18 +69,18 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    #File ../release/LEOcoin-qt.exe
-    File /oname=license.txt ../COPYING
-    File /oname=readme.txt ../doc/README_windows.txt
-    SetOutPath $INSTDIR\daemon
-    File ../src/LEOcoind.exe
+    File ..\release\LEOcoin-qt.exe
+    File /oname=license.txt ..\COPYING
+#    File /oname=readme.txt ..\doc\README_windows.txt
+#    SetOutPath $INSTDIR\daemon
+#    File ..\src\LEOcoind.exe
     SetOutPath $INSTDIR\src
-    File /r /x *.exe /x *.o ../src\*.*
+    File /r /x *.exe /x *.o ..\src\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
-
-    # Remove old wxwidgets-based-bitcoin executable and locales:
-    #Delete /REBOOTOK $INSTDIR\LEOcoin.exe
+  
+    # Remove old wxwidgets-based-lwocoin executable and locales:
+    #Delete /REBOOTOK $INSTDIR\LEOcoin-qt.exe
     #RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -86,23 +89,35 @@ Section -post SEC0001
     SetOutPath $INSTDIR
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
-    CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall LEOcoin.lnk" $INSTDIR\uninstall.exe
+	CreateDirectory $SMPROGRAMS\$StartMenuGroup
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\${ProductName}.lnk" $INSTDIR\LEOcoin-qt.exe
+	CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall ${ProductName}.lnk" $INSTDIR\uninstall.exe
+	
+	;remove old shortcuts
+	Delete "$DESKTOP\LEOcoin.lnk"
+	Delete "$SMPROGRAMS\$StartMenuGroup\Uninstall LEOcoin.lnk"
+	
+	;remove old wallet
+	
+
+	;create desktop shortcut
+    CreateShortCut "$DESKTOP\${ProductName}.lnk" "$INSTDIR\LEOcoin-qt.exe" ""
+
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" Publisher "${COMPANY}"
-    WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" URLInfoAbout "${URL}"
+    WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" URLInfoAbout "${PROJECTURL}"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayIcon $INSTDIR\uninstall.exe
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
 
     # bitcoin: URI handling disabled for 0.6.0
-    #    WriteRegStr HKCR "bitcoin" "URL Protocol" ""
-    #    WriteRegStr HKCR "bitcoin" "" "URL:Bitcoin"
-    #    WriteRegStr HKCR "bitcoin\DefaultIcon" "" $INSTDIR\bitcoin-qt.exe
-    #    WriteRegStr HKCR "bitcoin\shell\open\command" "" '"$INSTDIR\bitcoin-qt.exe" "$$1"'
+        WriteRegStr HKCR "LEOcoin" "URL Protocol" ""
+        WriteRegStr HKCR "LEOcoin" "" "URL:LEOcoin"
+        WriteRegStr HKCR "LEOcoin\DefaultIcon" "" $INSTDIR\LEOcoin-qt.exe
+        WriteRegStr HKCR "LEOcoin\shell\open\command" "" '"$INSTDIR\LEOcoin-qt.exe" "$$1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -120,9 +135,10 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    #Delete /REBOOTOK $INSTDIR\LEOcoin-qt.exe
+    Delete /REBOOTOK $INSTDIR\LEOcoin-qt.exe
     Delete /REBOOTOK $INSTDIR\license.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
+	Delete /REBOOTOK "$DESKTOP\${ProductName}.lnk"
     RMDir /r /REBOOTOK $INSTDIR\daemon
     RMDir /r /REBOOTOK $INSTDIR\src
     DeleteRegValue HKCU "${REGKEY}\Components" Main
@@ -131,8 +147,8 @@ SectionEnd
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall LEOcoin.lnk"
-    #Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Bitcoin.lnk"
-    #Delete /REBOOTOK "$SMSTARTUP\Bitcoin.lnk"
+    #Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\LEOcoin.lnk"
+    #Delete /REBOOTOK "$SMSTARTUP\LEOcoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log

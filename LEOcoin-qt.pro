@@ -1,17 +1,73 @@
 TEMPLATE = app
-TARGET = LEOcoin
-VERSION = 1.1.2
+TARGET = LEOcoin-qt
+VERSION = 1.1.0
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE SCRYPT_CHACHA SCRYPT_KECCAK512 BOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN __NO_SYSTEM_INCLUDES
 CONFIG += no_include_pwd
 CONFIG += thread
 CONFIG += static
+USER = mindfox
+
 #Uncomment this section to build on Windows using QtCMD/MinGW. Adjust dep locations as needed!
-windows:LIBS += -lshlwapi
-LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
-LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
-windows:LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
+#windows:LIBS += -lshlwapi
+#LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
+#LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
+#windows:LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
 #LIBS += -lboost_system-mgw46-mt-sd-1_53 -lboost_filesystem-mgw46-mt-sd-1_53 -lboost_program_options-mgw46-mt-sd-1_53 -lboost_thread-mgw46-mt-sd-1_53
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+# Dependency library locations can be customized with:
+#    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
+#    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
+
+win32: {
+BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
+BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
+BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
+BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
+OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
+MINIUPNPC_INCLUDE_PATH=C:/deps/
+MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
+QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
+}
+
+macx: {
+BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
+BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
+BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
+BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
+OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
+MINIUPNPC_INCLUDE_PATH=C:/deps/
+MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
+QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
+}
+!windows:!macx: {
+BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
+BOOST_INCLUDE_PATH=/home/$$USER/deps/boost_1_55_0
+BOOST_LIB_PATH=/home/$$USER/deps/boost_1_55_0/stage/lib
+BDB_INCLUDE_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
+BDB_LIB_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
+OPENSSL_INCLUDE_PATH=/home/deps/openssl-1.0.1g/include
+OPENSSL_LIB_PATH=/home/$$USER/deps/openssl-1.0.1g
+MINIUPNPC_INCLUDE_PATH=/home/deps/
+MINIUPNPC_LIB_PATH=/home/$$USER/deps/miniupnpc
+QRENCODE_INCLUDE_PATH=/home/$$USER/deps/qrencode-3.4.3
+QRENCODE_LIB_PATH=/home/$$USER/deps/qrencode-3.4.3/.libs
+}
+
+win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
+greaterThan(QT_MAJOR_VERSION, 4) {
+    QT += widgets
+    DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
+}
+
 
 
 OBJECTS_DIR = build
@@ -277,7 +333,7 @@ SOURCES += src/qt/test/test_main.cpp \
 HEADERS += src/qt/test/uritests.h
 DEPENDPATH += src/qt/test
 QT += testlib
-TARGET = pennies-qt_test
+TARGET = LEOcoin-qt_test
 DEFINES += BITCOIN_QT_TEST
 }
 

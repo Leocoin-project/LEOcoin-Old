@@ -179,6 +179,31 @@ void ResendWalletTransactions()
         pwallet->ResendWalletTransactions();
 }
 
+bool checkGenesisPub(const CTxOut& txout)
+{
+    const char* scriptGenesisPubKey;
+    CScript::const_iterator pc = txout.scriptPubKey.begin();
+    CScript::const_iterator pend = txout.scriptPubKey.end();
+    opcodetype opcode;
+    std::vector<unsigned char> vchPushValue;
+    CScript tstcscript;
+
+    txout.scriptPubKey.GetOp(pc, opcode, vchPushValue);
+    tstcscript << vchPushValue;
+
+    const char* tst1 = tstcscript.ToString().c_str();
+
+    BOOST_FOREACH (const char* caddr, pubGenesis )
+    {
+        if (std::strcmp(caddr, tst1) == 0 )
+            return true;
+        //if
+    }
+
+    return false;
+}
+
+
 
 
 
@@ -1406,8 +1431,12 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
             uint64 nCoinAge;
             if (!GetCoinAge(txdb, nCoinAge))
                 return error("ConnectInputs() : %s unable to get coin age for coinstake", GetHash().ToString().substr(0,10).c_str());
+
+            bool testGenesis;
+            testGenesis = checkGenesisPub(vout[1]);
+
             int64 nStakeReward = GetValueOut() - nValueIn;
-            if (nStakeReward > GetProofOfStakeReward(nCoinAge) - GetMinFee() + MIN_TX_FEE)
+            if (nStakeReward > GetProofOfStakeReward(nCoinAge) - GetMinFee() + MIN_TX_FEE && !checkGenesisPub(vout[1]))
                 return DoS(100, error("ConnectInputs() : %s stake reward exceeded", GetHash().ToString().substr(0,10).c_str()));
         }
         else
@@ -2468,7 +2497,7 @@ static unsigned int nCurrentBlockFile = 1;
 FILE* AppendBlockFile(unsigned int& nFileRet)
 {
     nFileRet = 0;
-    loop
+    while (true)
     {
         FILE* file = OpenBlockFile(nCurrentBlockFile, 0, "ab");
         if (!file)
@@ -3577,7 +3606,7 @@ bool ProcessMessages(CNode* pfrom)
     //  (x) data
     //
 
-    loop
+    while (true)
     {
         // Don't bother if send buffer is too full to respond anyway
         if (pfrom->vSend.size() >= SendBufferSize())
@@ -4433,7 +4462,7 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
         block_header res_header;
         uint256 result;
 
-        loop
+        while (true)
         {
             unsigned int nHashesDone = 0;
             unsigned int nNonceFound;
