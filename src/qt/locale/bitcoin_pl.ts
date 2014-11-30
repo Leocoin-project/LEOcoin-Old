@@ -1393,7 +1393,7 @@ Adres: %4
         <translation>Wygenerowane monety muszą dojrzewać 120 bloków, zanim zostaną wydane. Po wygenerowaniu ten blok, została transmitowane w sieci być dodawane do łańcucha bloku. Jeśli nie dostać się do łańcucha, jego stan zmieni się na &quot;nie przyjął&quot; i nie będzie spendable. To czasami może się zdarzyć, jeśli inny węzeł generuje blok w ciągu kilku sekund od Ciebie.</translation>
     </message>
     <message>
-        <source>Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
+        <source>Staked coins must wait 120 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
