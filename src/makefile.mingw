@@ -2,7 +2,9 @@
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-USE_UPNP:=0
+CXX ?= g++
+
+USE_UPNP:=-
 USE_IPV6:=1
 
 INCLUDEPATHS= \
@@ -25,10 +27,32 @@ LIBS= \
  -l ssl \
  -l crypto
 
-DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
+DEFS= \
+	-DWIN32 \
+	-D_WINDOWS \
+	-DBOOST_THREAD_USE_LIB \
+	-DBOOST_SPIRIT_THREADSAFE \
+	-DSCRYPT_CHACHA \
+	-DSCRYPT_KECCAK512 \
+	-DSCRYPT_CHOOSE_COMPILETIME \
+	-DO2
+
 DEBUGFLAGS=-g
-CFLAGS=-mthreads -O2 -msse2 -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
-LDFLAGS=-Wl,--dynamicbase -Wl,--nxcompat
+
+CFLAGS= \
+	-mthreads \
+	-O2 \
+	-msse2 \
+	-w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter \
+	$(DEBUGFLAGS) \
+	$(DEFS) \
+	$(INCLUDEPATHS)
+
+LDFLAGS= \
+	-Wl,--dynamicbase \
+	-Wl,--nxcompat \
+	-Wl,--large-address-aware \
+	-static
 
 TESTDEFS = -DTEST_DATA_DIR=$(abspath test/data)
 
@@ -36,8 +60,8 @@ ifndef USE_UPNP
 	override USE_UPNP = -
 endif
 ifneq (${USE_UPNP}, -)
- INCLUDEPATHS += -I"C:\miniupnpc-1.6-mgw"
- LIBPATHS += -L"C:\miniupnpc-1.6-mgw"
+ INCLUDEPATHS += -I"c:/deps/miniupnpc-1.8"
+ LIBPATHS += -L"c:/deps/miniupnpc-1.8"
  LIBS += -l miniupnpc -l iphlpapi
  DEFS += -DSTATICLIB -DUSE_UPNP=$(USE_UPNP)
 endif
@@ -46,36 +70,58 @@ ifneq (${USE_IPV6}, -)
 	DEFS += -DUSE_IPV6=$(USE_IPV6)
 endif
 
-LIBS += -l kernel32 -l user32 -l gdi32 -l comdlg32 -l winspool -l winmm -l shell32 -l comctl32 -l ole32 -l oleaut32 -l uuid -l rpcrt4 -l advapi32 -l ws2_32 -l mswsock -l shlwapi
+LIBS += \
+	-l kernel32 \
+	-l user32 \
+	-l gdi32 \
+	-l comdlg32 \
+	-l winspool \
+	-l winmm \
+	-l shell32 \
+	-l comctl32 \
+	-l ole32 \
+	-l oleaut32 \
+	-l uuid \
+	-l rpcrt4 \
+	-l advapi32 \
+	-l ws2_32 \
+	-l mswsock \
+	-l shlwapi
 
 # TODO: make the mingw builds smarter about dependencies, like the linux/osx builds are
 HEADERS = $(wildcard *.h)
 
 OBJS= \
-    obj/alert.o \
-    obj/version.o \
-    obj/checkpoints.o \
-    obj/netbase.o \
     obj/addrman.o \
+    obj/alert.o \
+    obj/bitcoinrpc.o \
+    obj/checkpoints.o \
     obj/crypter.o \
-    obj/key.o \
     obj/db.o \
     obj/init.o \
-    obj/irc.o \
+  obj/irc.o \
+  obj/kernel.o \
+    obj/key.o \
     obj/keystore.o \
     obj/main.o \
     obj/net.o \
+    obj/netbase.o \
+    obj/noui.o \
+  obj/pbkdf2.o \
     obj/protocol.o \
-    obj/bitcoinrpc.o \
-    obj/rpcdump.o \
-    obj/rpcnet.o \
-    obj/rpcmining.o \
-    obj/rpcwallet.o \
     obj/rpcblockchain.o \
+    obj/rpcdump.o \
+    obj/rpcmining.o \
+    obj/rpcnet.o \
     obj/rpcrawtransaction.o \
+    obj/rpcwallet.o \
     obj/script.o \
+  obj/scrypt-jane.o \
+  obj/scrypt_mine.o \
+  obj/scrypt-x86.o \
     obj/sync.o \
     obj/util.o \
+    obj/version.o \
     obj/wallet.o \
     obj/walletdb.o \
     obj/noui.o \
@@ -91,10 +137,10 @@ test check: test_LEOcoin.exe FORCE
 	test_LEOcoin.exe
 
 obj/%.o: %.cpp $(HEADERS)
-	g++ -c $(CFLAGS) -o $@ $<
+	g++ -c -frandom-seed=$@ $(CFLAGS) -o $@ $<
 
 obj/scrypt-x86.o: scrypt-x86.S
-	$(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<
+	$(CXX) -c -frandom-seed=$@ $(xCXXFLAGS) -MMD -o $@ $<
 
 obj/scrypt-x86_64.o: scrypt-x86_64.S
 	$(CXX) -c $(xCXXFLAGS) -MMD -o $@ $<

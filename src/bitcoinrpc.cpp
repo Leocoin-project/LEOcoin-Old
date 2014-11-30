@@ -3,6 +3,12 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+#ifdef _MSC_VER
+    #include <stdint.h>
+
+    #include "msvc_warnings.push.h"
+#endif
+
 #include "init.h"
 #include "util.h"
 #include "sync.h"
@@ -112,11 +118,20 @@ Value ValueFromAmount(int64 amount)
 
 std::string HexBits(unsigned int nBits)
 {
+#if defined( _MSC_VER )
+    union 
+    {
+        ::int32_t nBits;
+        char cBits[4];
+    } uBits;
+    uBits.nBits = htonl(::int32_t(nBits));
+#else
     union {
         int32_t nBits;
         char cBits[4];
     } uBits;
     uBits.nBits = htonl((int32_t)nBits);
+#endif
     return HexStr(BEGIN(uBits.cBits), END(uBits.cBits));
 }
 
@@ -204,6 +219,9 @@ static const CRPCCommand vRPCCommands[] =
     { "help",                   &help,                   true,   true },
     { "stop",                   &stop,                   true,   true },
     { "getblockcount",          &getblockcount,          true,   false },
+#ifdef WIN32
+    { "getblockcountt",         &getcurrentblockandtime, true,   false },
+#endif
     { "getconnectioncount",     &getconnectioncount,     true,   false },
     { "getpeerinfo",            &getpeerinfo,            true,   false },
     { "getdifficulty",          &getdifficulty,          true,   false },
@@ -212,6 +230,7 @@ static const CRPCCommand vRPCCommands[] =
     { "gethashespersec",        &gethashespersec,        true,   false },
     { "getinfo",                &getinfo,                true,   false },
     { "getmininginfo",          &getmininginfo,          true,   false },
+    { "getnetworkhashps",       &getnetworkhashps,       true,   false },
     { "getnewaddress",          &getnewaddress,          true,   false },
     { "getnewpubkey",           &getnewpubkey,           true,   false },
     { "getaccountaddress",      &getaccountaddress,      true,   false },
@@ -456,7 +475,7 @@ bool HTTPAuthorized(map<string, string>& mapHeaders)
 }
 
 //
-// JSON-RPC protocol.  Bitcoin speaks version 1.0 for maximum compatibility,
+// JSON-RPC protocol.  LEOcoin speaks version 1.0 for maximum compatibility,
 // but uses JSON-RPC 1.1/2.0 standards for parts of the 1.0 standard that were
 // unspecified (HTTP errors and contents of 'error').
 //
@@ -732,7 +751,7 @@ void ThreadRPCServer2(void* parg)
     {
         unsigned char rand_pwd[32];
         RAND_bytes(rand_pwd, 32);
-        string strWhatAmI = "To use bitcoind";
+        string strWhatAmI = "To use LEOcoind";
         if (mapArgs.count("-server"))
             strWhatAmI = strprintf(_("To use the %s option"), "\"-server\"");
         else if (mapArgs.count("-daemon"))
@@ -740,7 +759,7 @@ void ThreadRPCServer2(void* parg)
         uiInterface.ThreadSafeMessageBox(strprintf(
             _("%s, you must set a rpcpassword in the configuration file:\n %s\n"
               "It is recommended you use the following random password:\n"
-              "rpcuser=bitcoinrpc\n"
+              "rpcuser=LEOcoinrpc\n"
               "rpcpassword=%s\n"
               "(you do not need to remember this password)\n"
               "If the file does not exist, create it with owner-readable-only file permissions.\n"),
@@ -929,7 +948,7 @@ static CCriticalSection cs_THREAD_RPCHANDLER;
 void ThreadRPCServer3(void* parg)
 {
     // Make this thread recognisable as the RPC handler
-    RenameThread("bitcoin-rpchand");
+    RenameThread("LEOcoin-rpchand");
 
     {
         LOCK(cs_THREAD_RPCHANDLER);

@@ -3,6 +3,12 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+#ifdef _MSC_VER
+    #include <stdint.h>
+
+    #include "msvc_warnings.push.h"
+#endif
+
 #include "wallet.h"
 #include "walletdb.h"
 #include "bitcoinrpc.h"
@@ -75,7 +81,7 @@ Value getinfo(const Array& params, bool fHelp)
     obj.push_back(Pair("walletversion", pwalletMain->GetVersion()));
     obj.push_back(Pair("balance",       ValueFromAmount(pwalletMain->GetBalance())));
     obj.push_back(Pair("newmint",       ValueFromAmount(pwalletMain->GetNewMint())));
-    obj.push_back(Pair("stake",         ValueFromAmount(pwalletMain->GetStake())));
+    obj.push_back(Pair("stake",         ValueFromAmount(pwalletMain->GetStakedCoin())));
     obj.push_back(Pair("blocks",        (int)nBestHeight));
     obj.push_back(Pair("moneysupply",   ValueFromAmount(pindexBest->nMoneySupply)));
     obj.push_back(Pair("connections",   (int)vNodes.size()));
@@ -980,7 +986,7 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
         }
         else
         {
-            entry.push_back(Pair("category", "generate"));
+            entry.push_back(Pair("category", wtx.IsCoinStake() ? "interest" : "generate"));
             entry.push_back(Pair("amount", ValueFromAmount(nGeneratedMature)));
         }
         if (fLong)
@@ -1300,8 +1306,17 @@ Value backupwallet(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
+#ifdef WIN32
+            strprintf(
+                      "backupwallet <destination>\n"
+                      "Safely copies %s to destination, "
+                      "which can be a directory or a path with filename.", walletPath
+                     ).c_str()
+#else
             "backupwallet <destination>\n"
-            "Safely copies wallet.dat to destination, which can be a directory or a path with filename.");
+            "Safely copies wallet.dat to destination, which can be a directory or a path with filename."
+#endif
+                           );
 
     string strDest = params[0].get_str();
     if (!BackupWallet(*pwalletMain, strDest))
@@ -1333,7 +1348,7 @@ Value keypoolrefill(const Array& params, bool fHelp)
 void ThreadTopUpKeyPool(void* parg)
 {
     // Make this thread recognisable as the key-topping-up thread
-    RenameThread("bitcoin-key-top");
+    RenameThread("LEOcoin-key-top");
 
     pwalletMain->TopUpKeyPool();
 }
@@ -1341,7 +1356,7 @@ void ThreadTopUpKeyPool(void* parg)
 void ThreadCleanWalletPassphrase(void* parg)
 {
     // Make this thread recognisable as the wallet relocking thread
-    RenameThread("bitcoin-lock-wa");
+    RenameThread("LEOcoin-lock-wa");
 
     int64 nMyWakeTime = GetTimeMillis() + *((int64*)parg) * 1000;
 
@@ -1739,3 +1754,6 @@ Value makekeypair(const Array& params, bool fHelp)
     result.push_back(Pair("PublicKey", HexStr(key.GetPubKey().Raw())));
     return result;
 }
+#ifdef _MSC_VER
+    #include "msvc_warnings.pop.h"
+#endif

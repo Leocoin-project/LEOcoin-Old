@@ -2,7 +2,13 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#include "time.h" 
+
+#ifdef _MSC_VER
+    #include <stdint.h>
+
+    #include "msvc_warnings.push.h"        
+#endif
+
 #include "alert.h"
 #include "checkpoints.h"
 #include "db.h"
@@ -14,9 +20,6 @@
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
-#include <boost/random/mersenne_twister.hpp>
-#include <boost/random/uniform_int_distribution.hpp>
-
 
 using namespace std;
 using namespace boost;
@@ -47,7 +50,8 @@ int64 nChainStartTime = 1402845776;
 int nCoinbaseMaturity = 100; // for more security against 51 attack.
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
-int64 nBestHeightTime = 0;   
+int nScanned = -1;
+int64 nBestHeightTime = 0;   // Keep track of timestamp of block at best height.
 CBigNum bnBestChainTrust = 0;
 CBigNum bnBestInvalidTrust = 0;
 uint256 hashBestChain = 0;
@@ -224,6 +228,14 @@ bool AddOrphanTx(const CDataStream& vMsg)
         return false;
 
     CDataStream* pvMsg = new CDataStream(vMsg);
+
+    // Ignore big transactions, to avoid a
+    // send-big-orphans memory exhaustion attack. If a peer has a legitimate
+    // large transaction with a missing parent then we assume
+    // it will rebroadcast it later, after the parent transaction(s)
+    // have been mined or received.
+    // 10,000 orphans, each of which is at most 5,000 bytes big is
+    // at most 500 megabytes of orphans:
     if (pvMsg->size() > 5000)
     {
         printf("ignoring large orphan tx (size: %"PRIszu", hash: %s)\n", pvMsg->size(), hash.ToString().substr(0,10).c_str());
@@ -336,6 +348,17 @@ bool CTransaction::IsStandard() const
     return true;
 }
 
+//
+// Check transaction inputs, and make sure any
+// pay-to-script-hash transactions are evaluating IsStandard scripts
+//
+// Why bother? To avoid denial-of-service attacks; an attacker
+// can submit a standard HASH... OP_EQUAL transaction,
+// which will get accepted into blocks. The redemption
+// script can be anything; an attacker could use a very
+// expensive-to-check-upon-redemption script like:
+//   DUP CHECKSIG DROP ... repeated 100 times... OP_1
+//
 bool CTransaction::AreInputsStandard(const MapPrevTx& mapInputs) const
 {
     if (IsCoinBase())
@@ -516,12 +539,11 @@ bool CTransaction::CheckTransaction() const
 }
 
 int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
-                              enum GetMinFee_mode mode) const
+                              enum GetMinFee_mode mode, unsigned int nBytes) const
 {
     // Base fee is either MIN_TX_FEE or MIN_RELAY_TX_FEE
     int64 nBaseFee = (mode == GMF_RELAY) ? MIN_RELAY_TX_FEE : MIN_TX_FEE;
 
-    unsigned int nBytes = ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION);
     unsigned int nNewBlockSize = nBlockSize + nBytes;
     int64 nMinFee = (1 + (int64)nBytes / 1000) * nBaseFee;
 
@@ -654,7 +676,7 @@ bool CTxMemPool::accept(CTxDB& txdb, CTransaction &tx, bool fCheckInputs,
         unsigned int nSize = ::GetSerializeSize(tx, SER_NETWORK, PROTOCOL_VERSION);
 
         // Don't accept it if it can't get into a block
-        int64 txMinFee = tx.GetMinFee(1000, false, GMF_RELAY);
+        int64 txMinFee = tx.GetMinFee(1000, false, GMF_RELAY, nSize);
         if (nFees < txMinFee)
             return error("CTxMemPool::accept() : not enough fees %s, %"PRI64d" < %"PRI64d,
                          hash.ToString().c_str(),
@@ -897,12 +919,6 @@ bool GetTransaction(const uint256 &hash, CTransaction &tx, uint256 &hashBlock)
 }
 
 
-
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////
 //
 // CBlock and CBlockIndex
@@ -935,7 +951,10 @@ bool CBlock::ReadFromDisk(const CBlockIndex* pindex, bool fReadTransactions)
     }
     if (!ReadFromDisk(pindex->nFile, pindex->nBlockPos, fReadTransactions))
         return false;
-    if (GetHash() != pindex->GetBlockHash())
+
+    uint256 cachedHash = GetHash();
+    uint256 computedHash = pindex->GetBlockHash();
+    if (cachedHash != computedHash)
         return error("CBlock::ReadFromDisk() : GetHash() doesn't match index");
     return true;
 }
@@ -957,12 +976,12 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
     return pblockOrphan->hashPrevBlock;
 }
 
-int static generateMTRandom(unsigned int s, int range)
-{
-	random::mt19937 gen(s);
-    random::uniform_int_distribution<> dist(1, range);
-    return dist(gen);
-}
+//int static generateMTRandom(unsigned int s, int range)
+//{
+//	random::mt19937 gen(s);
+//    random::uniform_int_distribution<> dist(1, range);
+//    return dist(gen);
+//}
 
 void sleep( time_t delay )
 {
@@ -998,9 +1017,10 @@ unsigned char GetNfactor(int64 nTimestamp) {
     if (n < 0) n = 0;
 	
     if (n > 255)
-        printf("GetNfactor(%d) - something wrong(n == %d)\n", nTimestamp, n);
+        printf( "GetNfactor(%lld) - something wrong(n == %d)\n", nTimestamp, n );
 
-    unsigned char N = (unsigned char)n;
+    unsigned char N = (unsigned char) n;
+    //printf("GetNfactor: %d -> %d %d : %d / %d\n", nTimestamp - nChainStartTime, l, s, n, min(max(N, minNfactor), maxNfactor));
 
     return min(max(N, minNfactor), maxNfactor);
 }
@@ -1037,7 +1057,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge)
 }
 
 static const int64 nTargetTimespan = 1 * 24 * 60 * 60;  // one day
-static const int64 nTargetSpacingWorkMax = 12 * STAKE_TARGET_SPACING; // 12-Mintes
+static const int64 nTargetSpacingWorkMax = 12 * STAKE_TARGET_SPACING; // 12-Minutes
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1052,7 +1072,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
     bnResult *= 2;
     while (nTime > 0 && bnResult < bnTargetLimit)
     {
-     
+        // Maximum 200% adjustment per day...
         bnResult *= 2;
         nTime -= 24 * 60 * 60;
     }
@@ -1183,14 +1203,6 @@ void CBlock::UpdateTime(const CBlockIndex* pindexPrev)
 
 
 
-
-
-
-
-
-
-
-
 bool CTransaction::DisconnectInputs(CTxDB& txdb)
 {
     // Relinquish previous transactions' spent pointers
@@ -1287,7 +1299,19 @@ bool CTransaction::FetchInputs(CTxDB& txdb, const map<uint256, CTxIndex>& mapTes
     for (unsigned int i = 0; i < vin.size(); i++)
     {
         const COutPoint prevout = vin[i].prevout;
+#ifdef _MSC_VER
+    #ifdef NDEBUG
+        bool
+            fTest = (0 != inputsRet.count(prevout.hash));
+
+        if( !fTest )
+            releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #else
         assert(inputsRet.count(prevout.hash) != 0);
+    #endif
+#else
+        assert(inputsRet.count(prevout.hash) != 0);
+#endif
         const CTxIndex& txindex = inputsRet[prevout.hash].first;
         const CTransaction& txPrev = inputsRet[prevout.hash].second;
         if (prevout.n >= txPrev.vout.size() || prevout.n >= txindex.vSpent.size())
@@ -1350,7 +1374,7 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
 {
     // Take over previous transactions' spent pointers
     // fBlock is true when this is called from AcceptBlock when a new best-block is added to the blockchain
-    // fMiner is true when called from the internal bitcoin miner
+    // fMiner is true when called from the internal LEOcoin miner
     // ... both are false when called from CTransaction::AcceptToMemoryPool
     if (!IsCoinBase())
     {
@@ -1359,7 +1383,17 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
         for (unsigned int i = 0; i < vin.size(); i++)
         {
             COutPoint prevout = vin[i].prevout;
+#ifdef _MSC_VER
+    #ifdef NDEBUG
+            bool
+                fTest = (inputs.count(prevout.hash) > 0);
+            assert(fTest);
+    #else
             assert(inputs.count(prevout.hash) > 0);
+    #endif
+#else
+            assert(inputs.count(prevout.hash) > 0);
+#endif
             CTxIndex& txindex = inputs[prevout.hash].first;
             CTransaction& txPrev = inputs[prevout.hash].second;
 
@@ -1388,7 +1422,18 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
         for (unsigned int i = 0; i < vin.size(); i++)
         {
             COutPoint prevout = vin[i].prevout;
+#ifdef _MSC_VER
+            bool
+                fTest = (inputs.count(prevout.hash) > 0);
+    #ifdef _DEBUG
+            assert(fTest);
+    #else
+            if( !fTest )
+                releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #endif
+#else
             assert(inputs.count(prevout.hash) > 0);
+#endif
             CTxIndex& txindex = inputs[prevout.hash].first;
             CTransaction& txPrev = inputs[prevout.hash].second;
 
@@ -1431,9 +1476,6 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
             uint64 nCoinAge;
             if (!GetCoinAge(txdb, nCoinAge))
                 return error("ConnectInputs() : %s unable to get coin age for coinstake", GetHash().ToString().substr(0,10).c_str());
-
-            bool testGenesis;
-            testGenesis = checkGenesisPub(vout[1]);
 
             int64 nStakeReward = GetValueOut() - nValueIn;
             if (nStakeReward > GetProofOfStakeReward(nCoinAge) - GetMinFee() + MIN_TX_FEE && !checkGenesisPub(vout[1]))
@@ -1872,6 +1914,7 @@ bool CBlock::SetBestChain(CTxDB& txdb, CBlockIndex* pindexNew)
     pindexBest = pindexNew;
     pblockindexFBBHLast = NULL;
     nBestHeight = pindexBest->nHeight;
+    nBestHeightTime = pindexBest->GetBlockTime();   // Record timestamp of new best block.
     bnBestChainTrust = pindexNew->bnChainTrust;
     nTimeBestReceived = GetTime();
     nTransactionsUpdated++;
@@ -1987,7 +2030,6 @@ bool CBlock::AddToBlockIndex(unsigned int nFile, unsigned int nBlockPos)
     CBlockIndex* pindexNew = new CBlockIndex(nFile, nBlockPos, *this);
     if (!pindexNew)
         return error("AddToBlockIndex() : new CBlockIndex failed");
-    pindexNew->phashBlock = &hash;
     map<uint256, CBlockIndex*>::iterator miPrev = mapBlockIndex.find(hashPrevBlock);
     if (miPrev != mapBlockIndex.end())
     {
@@ -2024,7 +2066,6 @@ bool CBlock::AddToBlockIndex(unsigned int nFile, unsigned int nBlockPos)
     map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.insert(make_pair(hash, pindexNew)).first;
     if (pindexNew->IsProofOfStake())
         setStakeSeen.insert(make_pair(pindexNew->prevoutStake, pindexNew->nStakeTime));
-    pindexNew->phashBlock = &((*mi).first);
 
     // Write to disk block index
     CTxDB txdb;
@@ -2210,6 +2251,51 @@ bool CBlock::AcceptBlock()
     return true;
 }
 
+CBigNum CBlockIndex::GetBlockTrust() const
+{
+    CBigNum bnTarget;
+    bnTarget.SetCompact(nBits);
+    if (bnTarget <= 0)
+        return 0;
+
+    // new trust rules (since specific block on mainnet and always on testnet)
+    if (nHeight >= nConsecutiveStakeSwitchHeight || fTestNet) {
+        // first block trust - for future compatibility (i.e., forks)
+        if (pprev == NULL)
+            return 1;
+
+        // PoS after PoS? no trust for ya!
+        // (no need to explicitly disallow consecutive PoS
+        // blocks now as they won't get any trust anyway)
+        if (IsProofOfStake() && pprev->IsProofOfStake())
+            return 0;
+
+        // PoS after PoW? trust = prev_trust + 1!
+        if (IsProofOfStake() && pprev->IsProofOfWork())
+            return pprev->GetBlockTrust() + 1;
+
+        // PoW trust calculation
+        if (IsProofOfWork()) {
+            // set trust to the amount of work done in this block
+            CBigNum bnTrust = bnProofOfWorkLimit / bnTarget;
+
+            // double the trust if previous block was PoS
+            // (to prevent orphaning of PoS)
+            if (pprev->IsProofOfStake())
+                bnTrust *= 2;
+
+            return bnTrust;
+        }
+
+        // what the hell?!
+        return 0;
+    }
+
+    // old rules
+    return (IsProofOfStake()? (CBigNum(1)<<256) / (bnTarget+1) : 1);
+}
+
+
 bool CBlockIndex::IsSuperMajority(int minVersion, const CBlockIndex* pstart, unsigned int nRequired, unsigned int nToCheck)
 {
     unsigned int nFound = 0;
@@ -2329,7 +2415,7 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
         mapOrphanBlocksByPrev.erase(hashPrev);
     }
 
-    printf("ProcessBlock: ACCEPTED\n");
+    printf("ProcessBlock: ACCEPTED %s BLOCK\n", pblock->IsProofOfStake()?"POS":"POW");
 
     // ppcoin: if responsible for sync-checkpoint send it
     if (pfrom && !CSyncCheckpoint::strMasterPrivKey.empty())
@@ -2599,40 +2685,30 @@ bool LoadBlockIndex(bool fAllowNew)
 		}
         
         block.print();
+
+#ifdef _MSC_VER
+        fTest = (block.GetHash() == hashGenesisBlock);
+    #ifdef _DEBUG
+        assert(fTest);
+    #else
+        if( !fTest )
+            releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #endif
+#else
         assert(block.GetHash() == hashGenesisBlock);
+#endif
+
+#ifdef _MSC_VER
+        fTest = (block.CheckBlock());
+    #ifdef _DEBUG
+        assert(fTest);
+    #else
+        if( !fTest )
+            releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #endif
+#else
         assert(block.CheckBlock());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#endif
 
         // Start new block file
         unsigned int nFile;
@@ -2715,7 +2791,7 @@ void PrintBlockTree()
         // print item
         CBlock block;
         block.ReadFromDisk(pindex);
-        printf("%d (%u,%u) %s  %08x  %s  mint %7s  tx %"PRIszu"",
+        printf("%d (%u,%u) %s  %08x  %s  mint %7s  tx %"PRIszu" \n",
             pindex->nHeight,
             pindex->nFile,
             pindex->nBlockPos,
@@ -2882,7 +2958,18 @@ string GetWarnings(string strFor)
         return strStatusBar;
     else if (strFor == "rpc")
         return strRPC;
+#ifdef _MSC_VER
+    bool
+        fTest = (!"GetWarnings() : invalid parameter");
+    #ifdef _DEBUG
+    assert(fTest);
+    #else
+    if( !fTest )
+        releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #endif
+#else
     assert(!"GetWarnings() : invalid parameter");
+#endif
     return "error";
 }
 
@@ -3350,7 +3437,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
                 pindex = pindex->pnext;
         }
 
-        vector<CBlock> vHeaders;
+        vector<CBlockHeader> vHeaders;
         int nLimit = 2000;
         printf("getheaders %d to %s\n", (pindex ? pindex->nHeight : -1), hashStop.ToString().substr(0,20).c_str());
         for (; pindex; pindex = pindex->pnext)
@@ -3914,6 +4001,16 @@ void SHA256Transform(void* pstate, void* pinput, const void* pinit)
 
     SHA256_Init(&ctx);
 
+#ifdef _MSC_VER
+    for (int i = 0; i < 16; i++)
+        ((::uint32_t*)data)[i] = ByteReverse(((::uint32_t*)pinput)[i]);
+
+    for (int i = 0; i < 8; i++)
+        ctx.h[i] = ((::uint32_t*)pinit)[i];
+    SHA256_Update(&ctx, data, sizeof(data));
+    for (int i = 0; i < 8; i++)
+        ((::uint32_t*)pstate)[i] = ctx.h[i];        
+#else
     for (int i = 0; i < 16; i++)
         ((uint32_t*)data)[i] = ByteReverse(((uint32_t*)pinput)[i]);
 
@@ -3923,6 +4020,7 @@ void SHA256Transform(void* pstate, void* pinput, const void* pinit)
     SHA256_Update(&ctx, data, sizeof(data));
     for (int i = 0; i < 8; i++)
         ((uint32_t*)pstate)[i] = ctx.h[i];
+#endif
 }
 
 // Some explaining would be appreciated
@@ -4090,7 +4188,26 @@ CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake)
                     if (!mempool.mapTx.count(txin.prevout.hash))
                     {
                         printf("ERROR: mempool transaction missing input\n");
-                        if (fDebug) assert("mempool transaction missing input" == 0);
+                        if (fDebug) 
+#ifdef _MSC_VER
+                        {
+                            bool
+                                fTest = (0 == "mempool transaction missing input");
+    #ifdef _DEBUG
+                            assert(fTest);
+    #else
+                            if( !fTest )
+                                releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #endif
+                        }
+#else
+                        {
+                            assert("mempool transaction missing input" == 0);
+                        }
+                        // does the if() above execute the next statement in release mode???
+                        // gcc or MS.  Is this wrong?? Intended??  Should it?? Is the assert()
+                        // always a NOP in NDEBUG (release) mode?  Better to enclose in braces.
+#endif
                         fMissingInputs = true;
                         if (porphan)
                             vOrphan.pop_back();
@@ -4275,7 +4392,19 @@ void IncrementExtraNonce(CBlock* pblock, CBlockIndex* pindexPrev, unsigned int& 
     ++nExtraNonce;
     unsigned int nHeight = pindexPrev->nHeight+1; // Height first in coinbase required for block.version=2
     pblock->vtx[0].vin[0].scriptSig = (CScript() << nHeight << CBigNum(nExtraNonce)) + COINBASE_FLAGS;
+#ifdef _MSC_VER
+    #ifdef NDEBUG
+    bool
+        fTest = (pblock->vtx[0].vin[0].scriptSig.size() <= 100);
+
+    if( !fTest )
+        releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #else
     assert(pblock->vtx[0].vin[0].scriptSig.size() <= 100);
+    #endif
+#else
+    assert(pblock->vtx[0].vin[0].scriptSig.size() <= 100);
+#endif
 
     pblock->hashMerkleRoot = pblock->BuildMerkleTree();
 }
@@ -4333,10 +4462,10 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
 
     if (hash > hashTarget && pblock->IsProofOfWork())
-        return error("BitcoinMiner : proof-of-work not meeting target");
+        return error("LEOcoinMiner : proof-of-work not meeting target");
 
     //// debug print
-    printf("BitcoinMiner:\n");
+    printf("LEOcoinMiner:\n");
     printf("new block found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -4345,7 +4474,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("BitcoinMiner : generated block is stale");
+            return error("LEOcoinMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4358,10 +4487,74 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
         // Process this block the same as if we had received it from another node
         if (!ProcessBlock(NULL, pblock))
-            return error("BitcoinMiner : ProcessBlock, block not accepted");
+            return error("LEOcoinMiner : ProcessBlock, block not accepted");
     }
 
     return true;
+}
+
+void TransactionScanner(CWallet *pwallet)
+{
+    printf("TransactionScanner scaning for transactions\n");
+
+    CReserveKey reservekey(pwallet);
+    CBlockIndex *pindexRescan = pindexBest;
+    if (GetBoolArg("-rescan")) 
+    {
+        // Start the scan from the beginning
+        pindexRescan = pindexGenesisBlock;
+    }
+    else
+    {
+#ifdef WIN32
+        CWalletDB walletdb( walletPath );
+#else
+        CWalletDB walletdb("wallet.dat");
+#endif
+        CBlockLocator locator;
+        if (walletdb.ReadBestBlock(locator))
+            pindexRescan = locator.GetBlockIndex();
+    }
+    if (pindexBest != pindexRescan && pindexBest && pindexRescan && pindexBest->nHeight > pindexRescan->nHeight)
+    {
+        printf("Rescanning last %i blocks (from block %i)...\n", pindexBest->nHeight - pindexRescan->nHeight, pindexRescan->nHeight);
+#ifdef WIN32
+        pwallet->ScanForWalletTransactions(pindexRescan, true, pindexBest->nHeight - pindexRescan->nHeight);
+#else
+        pwallet->ScanForWalletTransactions(pindexRescan, true);
+#endif
+        if (!fShutdown)
+        {
+            pwallet->ReacceptWalletTransactions();
+        }
+    }
+    // Stop showing the progress bar
+    nScanned = -1;
+
+    printf("TransactionScanner scan complete\n");
+}
+
+// Thread to scan for transactions
+void ThreadTxnScanner(void* parg)
+{
+    if (vnThreadsRunning[THREAD_TXNSCANNER] == 0) {
+        try
+        {
+            vnThreadsRunning[THREAD_TXNSCANNER]++;
+            printf("ThreadTxnScanner started\n");
+            CWallet* pwallet = (CWallet*)parg;
+            TransactionScanner(pwallet);
+            vnThreadsRunning[THREAD_TXNSCANNER]--;
+        }
+        catch (std::exception& e) {
+            vnThreadsRunning[THREAD_TXNSCANNER]--;
+            PrintException(&e, "ThreadTxnScanner()");
+        } catch (...) {
+            vnThreadsRunning[THREAD_TXNSCANNER]--;
+            PrintException(NULL, "ThreadTxnScanner()");
+        }
+        printf("ThreadTxnScanner exiting, %d threads remaining\n", vnThreadsRunning[THREAD_TXNSCANNER]);
+    }
 }
 
 void static ThreadBitcoinMiner(void* parg);
@@ -4378,7 +4571,7 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("bitcoin-miner");
+    RenameThread(fProofOfStake ? "pos-miner" : "pow-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
@@ -4411,6 +4604,12 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
         unsigned int nTransactionsUpdatedLast = nTransactionsUpdated;
         CBlockIndex* pindexPrev = pindexBest;
 
+        if (fProofOfStake && pindexPrev->IsProofOfStake()) {
+            bool fFastPOS = GetArg("-fastpos", 0);
+            if (!fFastPOS) Sleep(500);
+            continue;
+        }
+
         auto_ptr<CBlock> pblock(CreateNewBlock(pwallet, fProofOfStake));
         if (!pblock.get())
             return;
@@ -4432,11 +4631,13 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
                 CheckWork(pblock.get(), *pwalletMain, reservekey);
                 SetThreadPriority(THREAD_PRIORITY_LOWEST);
             }
-            Sleep(500);
+            // sairon: Fast and Furious Proof of Stake Miner
+            bool fFastPOS = GetArg("-fastpos", 0);
+            if (!fFastPOS) Sleep(500);
             continue;
         }
 
-        printf("Running BitcoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running LEOcoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -4483,7 +4684,19 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
                 {
                     // Found a solution
                     pblock->nNonce = nNonceFound;
+#ifdef _MSC_VER
+    #ifdef NDEBUG
+                    bool
+                        fTest = (result == pblock->GetHash());
+
+                    if( !fTest )
+                        releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #else
                     assert(result == pblock->GetHash());
+    #endif
+#else
+                    assert(result == pblock->GetHash());
+#endif
                     if (!pblock->SignBlock(*pwalletMain))
                     {
 //                        strMintWarning = strMintMessage;
@@ -4500,6 +4713,7 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
 
             // Meter hashes/sec
             static int64 nHashCounter;
+
             if (nHPSTimerStart == 0)
             {
                 nHPSTimerStart = GetTimeMillis();
@@ -4507,12 +4721,13 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
             }
             else
                 nHashCounter += nHashesDone;
-            if (GetTimeMillis() - nHPSTimerStart > 4000)
+                
+            if (GetTimeMillis() - nHPSTimerStart > 30000)
             {
                 static CCriticalSection cs;
                 {
                     LOCK(cs);
-                    if (GetTimeMillis() - nHPSTimerStart > 4000)
+                    if (GetTimeMillis() - nHPSTimerStart > 30000)
                     {
                         dHashesPerSec = 1000.0 * nHashCounter / (GetTimeMillis() - nHPSTimerStart);
                         nHPSTimerStart = GetTimeMillis();
@@ -4521,7 +4736,7 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
                         if (GetTime() - nLogTime > 30 * 60)
                         {
                             nLogTime = GetTime();
-                            printf("hashmeter %3d CPUs %6.0f khash/s\n", vnThreadsRunning[THREAD_MINER], dHashesPerSec/1000.0);
+                            printf("hashmeter %3d CPUs %.0f hash/s\n", vnThreadsRunning[THREAD_MINER], dHashesPerSec );
                         }
                     }
                 }
@@ -4606,3 +4821,23 @@ void GenerateBitcoins(bool fGenerate, CWallet* pwallet)
         }
     }
 }
+#ifdef _MSC_VER
+void releaseModeAssertionfailure( const char* pFileName, const int nL, const std::string strFunctionName )
+{
+    (void)printf( 
+                 "\n"
+                 "file:%s, line#%d, function %s()"
+                 "\n"
+                 "release mode assertion failure!?"
+                 "\n"
+                 "\n"
+                 ""
+                 , pFileName                //__FILE__
+                 , nL                       //__LINE__
+                 , strFunctionName.c_str()  // __PRETTY_FUNCTION__
+                );
+    StartShutdown();    // maybe there are other ways??
+}
+
+    #include "msvc_warnings.pop.h"        
+#endif

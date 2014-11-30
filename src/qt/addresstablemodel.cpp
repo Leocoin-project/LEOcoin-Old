@@ -295,7 +295,7 @@ QModelIndex AddressTableModel::index(int row, int column, const QModelIndex & pa
 
 void AddressTableModel::updateEntry(const QString &address, const QString &label, bool isMine, int status)
 {
-    // Update address book model from Bitcoin core
+    // Update address book model from LEOcoin core
     priv->updateEntry(address, label, isMine, status);
 }
 

@@ -47,8 +47,9 @@ void OptionsModel::Init()
     fMinimizeOnClose = settings.value("fMinimizeOnClose", false).toBool();
     nTransactionFee = settings.value("nTransactionFee").toLongLong();
     language = settings.value("language", "").toString();
+    fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();
 
-    // These are shared with core Bitcoin; we want
+    // These are shared with core LEOcoin; we want
     // command-line options to override the GUI settings:
     if (settings.contains("fUseUPnP"))
         SoftSetBoolArg("-upnp", settings.value("fUseUPnP").toBool());
@@ -72,7 +73,11 @@ bool OptionsModel::Upgrade()
     settings.setValue("bImportFinished", true);
 
     // Move settings from old wallet.dat (if any):
+#ifdef WIN32
+    CWalletDB walletdb( walletPath );
+#else
     CWalletDB walletdb("wallet.dat");
+#endif
 
     QList<QString> intOptions;
     intOptions << "nDisplayUnit" << "nTransactionFee";
@@ -168,8 +173,12 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return QVariant(bDisplayAddresses);
         case DetachDatabases:
             return QVariant(bitdb.GetDetach());
+        case CPUMining:
+            return QVariant(GetBoolArg("-gen"));
         case Language:
             return settings.value("language", "");
+        case CoinControlFeatures:
+            return QVariant(fCoinControlFeatures);
         default:
             return QVariant();
         }
@@ -239,6 +248,7 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
         case Fee:
             nTransactionFee = value.toLongLong();
             settings.setValue("nTransactionFee", nTransactionFee);
+            emit transactionFeeChanged(nTransactionFee);
             break;
         case DisplayUnit:
             nDisplayUnit = value.toInt();
@@ -255,9 +265,21 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             settings.setValue("detachDB", fDetachDB);
             }
             break;
+        case CPUMining: {
+            bool fCPUMining = value.toBool();
+            GenerateBitcoins(fCPUMining, pwalletMain);
+            mapArgs["-gen"] = (fCPUMining ? "1" : "0");
+            }
+            break;
         case Language:
             settings.setValue("language", value);
             break;
+        case CoinControlFeatures: {
+            fCoinControlFeatures = value.toBool();
+            settings.setValue("fCoinControlFeatures", fCoinControlFeatures);
+            emit coinControlFeaturesChanged(fCoinControlFeatures);
+            }
+            break; 
         default:
             break;
         }
@@ -271,6 +293,11 @@ qint64 OptionsModel::getTransactionFee()
 {
     return nTransactionFee;
 }
+
+bool OptionsModel::getCoinControlFeatures()
+{
+    return fCoinControlFeatures;
+} 
 
 bool OptionsModel::getMinimizeToTray()
 {

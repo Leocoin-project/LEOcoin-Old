@@ -85,8 +85,11 @@ static void InitMessage(const std::string &message)
 {
     if(splashref)
     {
-
-        splashref->showMessage(QString::fromStdString(message + "\n\n\n"), Qt::AlignBottom|Qt::AlignHCenter, Qt::black);
+#ifdef WIN32
+        splashref->showMessage(QString::fromStdString(message), Qt::AlignBottom|Qt::AlignHCenter, Qt::black);
+#else
+        splashref->showMessage(QString::fromStdString(message), Qt::AlignBottom|Qt::AlignHCenter, QColor(255,255,200));
+#endif
         QApplication::instance()->processEvents();
     }
 }
@@ -138,7 +141,7 @@ int main(int argc, char *argv[])
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
         // This message can not be translated, as translation is not initialized yet
-        // (which not yet possible because lang=XX can be overridden in bitcoin.conf in the data directory)
+        // (which not yet possible because lang=XX can be overridden in LEOcoin.conf in the data directory)
         QMessageBox::critical(0, "LEOcoin",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
@@ -194,14 +197,18 @@ int main(int argc, char *argv[])
 
     // Show help message immediately after parsing command-line options (for "-lang") and setting locale,
     // but before showing splash screen.
-    if (mapArgs.count("-?") || mapArgs.count("--help"))
+    if (mapArgs.count("-?") || mapArgs.count("--h") || mapArgs.count("--help"))
     {
         GUIUtil::HelpMessageBox help;
         help.showOrPrint();
         return 1;
     }
 
+#if defined(WIN32)
+    QSplashScreen splash(QPixmap(":/images/splash"), Qt::WindowStaysOnTopHint);
+#else
     QSplashScreen splash(QPixmap(":/images/splash"), 0);
+#endif
     if (GetBoolArg("-splash", true) && !GetBoolArg("-min"))
     {
         splash.show();
@@ -258,7 +265,7 @@ int main(int argc, char *argv[])
                 window.setWalletModel(0);
                 guiref = 0;
             }
-            // Shutdown the core and its threads, but don't exit Bitcoin-Qt here
+            // Shutdown the core and its threads, but don't exit LEOcoin-qt here
             Shutdown(NULL);
         }
         else
