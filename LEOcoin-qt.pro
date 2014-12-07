@@ -6,7 +6,7 @@ DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE SCRYPT_CHACHA SCR
 CONFIG += no_include_pwd
 CONFIG += thread
 CONFIG += static
-USER = mindfox
+USER = yourusername
 
 #Uncomment this section to build on Windows using QtCMD/MinGW. Adjust dep locations as needed!
 #windows:LIBS += -lshlwapi
@@ -21,46 +21,46 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
-win32: {
-BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-MINIUPNPC_INCLUDE_PATH=C:/deps/
-MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
-QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
-}
+#win32: {
+#BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
+#BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
+#BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
+#BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+#BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
+#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
+#MINIUPNPC_INCLUDE_PATH=C:/deps/
+#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+#QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
+#QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
+#}
 
-macx: {
-BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
-BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-MINIUPNPC_INCLUDE_PATH=C:/deps/
-MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
-QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
-}
-!windows:!macx: {
-BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
-BOOST_INCLUDE_PATH=/home/$$USER/deps/boost_1_55_0
-BOOST_LIB_PATH=/home/$$USER/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=/home/deps/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=/home/$$USER/deps/openssl-1.0.1g
-MINIUPNPC_INCLUDE_PATH=/home/deps/
-MINIUPNPC_LIB_PATH=/home/$$USER/deps/miniupnpc
-QRENCODE_INCLUDE_PATH=/home/$$USER/deps/qrencode-3.4.3
-QRENCODE_LIB_PATH=/home/$$USER/deps/qrencode-3.4.3/.libs
-}
+#macx: {
+#BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
+#BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
+#BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
+#BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+#BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
+#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
+#MINIUPNPC_INCLUDE_PATH=C:/deps/
+#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+#QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
+#QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
+#}
+#!windows:!macx: {
+#BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
+#BOOST_INCLUDE_PATH=/home/$$USER/deps/boost_1_55_0
+#BOOST_LIB_PATH=/home/$$USER/deps/boost_1_55_0/stage/lib
+#BDB_INCLUDE_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
+#BDB_LIB_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
+#OPENSSL_INCLUDE_PATH=/home/$$USER/deps/openssl-1.0.1h/include
+#OPENSSL_LIB_PATH=/home/$$USER/deps/openssl-1.0.1h
+#MINIUPNPC_INCLUDE_PATH=/home/$$USER/deps/
+#MINIUPNPC_LIB_PATH=/home/$$USER/deps/miniupnpc
+#QRENCODE_INCLUDE_PATH=/home/$$USER/deps/qrencode-3.4.3
+#QRENCODE_LIB_PATH=/home/$$USER/deps/qrencode-3.4.3/.libs
+#}
 
 win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 greaterThan(QT_MAJOR_VERSION, 4) {
