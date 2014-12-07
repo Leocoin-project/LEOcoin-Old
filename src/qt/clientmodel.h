@@ -13,7 +13,7 @@ class QDateTime;
 class QTimer;
 QT_END_NAMESPACE
 
-/** Model for Bitcoin network client. */
+/** Model for LEOcoin network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT
@@ -26,6 +26,7 @@ public:
     int getNumConnections() const;
     int getNumBlocks() const;
     int getNumBlocksAtStartup();
+    int getNumScanned() const;
 
     QDateTime getLastBlockDate() const;
 
@@ -48,6 +49,7 @@ private:
 
     int cachedNumBlocks;
     int cachedNumBlocksOfPeers;
+    int cachedNumScanned;
 
     int numBlocksAtStartup;
 
@@ -57,7 +59,7 @@ private:
     void unsubscribeFromCoreSignals();
 signals:
     void numConnectionsChanged(int count);
-    void numBlocksChanged(int count, int countOfPeers);
+    void numBlocksChanged(int count, int countOfPeers, int countOfScanned);
 
     //! Asynchronous error notification
     void error(const QString &title, const QString &message, bool modal);

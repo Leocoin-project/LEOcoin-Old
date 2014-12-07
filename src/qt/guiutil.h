@@ -15,7 +15,7 @@ class QAbstractItemView;
 QT_END_NAMESPACE
 class SendCoinsRecipient;
 
-/** Utility functions used by the Bitcoin Qt UI.
+/** Utility functions used by the LEOcoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -30,8 +30,8 @@ namespace GUIUtil
     void setupAddressWidget(QLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "bitcoin:" URI into recipient object, return true on successful parsing
-    // See Bitcoin URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
+    // Parse "leocoin:" URI into recipient object, return true on successful parsing
+    // See LEOcoin URI definition discussion here: https://???
     bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
 
@@ -95,7 +95,7 @@ namespace GUIUtil
     bool GetStartOnSystemStartup();
     bool SetStartOnSystemStartup(bool fAutoStart);
 
-    /** Help message for Bitcoin-Qt, shown with --help. */
+    /** Help message for LEOcoin-qt, shown with --help. */
     class HelpMessageBox : public QMessageBox
     {
         Q_OBJECT

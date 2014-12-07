@@ -16,7 +16,7 @@
  #include <QScrollBar>
 
 #include <openssl/crypto.h>
- 
+
 // TODO: make it possible to filter out categories (esp debug messages when implemented)
 // TODO: receive errors and debug messages through ClientModel
 
@@ -262,7 +262,7 @@ void RPCConsole::setClientModel(ClientModel *model)
     {
         // Subscribe to information, replies, messages, errors
         connect(model, SIGNAL(numConnectionsChanged(int)), this, SLOT(setNumConnections(int)));
-        connect(model, SIGNAL(numBlocksChanged(int,int)), this, SLOT(setNumBlocks(int,int)));
+        connect(model, SIGNAL(numBlocksChanged(int,int,int)), this, SLOT(setNumBlocks(int,int,int)));
 
         // Provide initial values
         ui->clientVersion->setText(model->formatFullVersion());
@@ -273,7 +273,7 @@ void RPCConsole::setClientModel(ClientModel *model)
         setNumConnections(model->getNumConnections());
         ui->isTestNet->setChecked(model->isTestNet());
 
-        setNumBlocks(model->getNumBlocks(), model->getNumBlocksOfPeers());
+        setNumBlocks(model->getNumBlocks(), model->getNumBlocksOfPeers(), model->getNumScanned());
     }
 }
 
@@ -340,7 +340,7 @@ void RPCConsole::setNumConnections(int count)
     ui->numberOfConnections->setText(QString::number(count));
 }
 
-void RPCConsole::setNumBlocks(int count, int countOfPeers)
+void RPCConsole::setNumBlocks(int count, int countOfPeers, int nScanned)
 {
     ui->numberOfBlocks->setText(QString::number(count));
     ui->totalBlocks->setText(QString::number(countOfPeers));

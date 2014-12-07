@@ -1380,11 +1380,11 @@ Address: %4
     </message>
     <message>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>必须产生520个成熟区块才可以使用。当你产生这个区块，它被广播到网络添加到区块链。如果它未能成功进入区块链，其状态将更改为“不能接受的”，也代表不能使用。这可能偶尔会发生如果另一个节点在几秒钟内从你的区块产生。{ 120？}</translation>
+        <translation>必须产生120个成熟区块才可以使用。当你产生这个区块，它被广播到网络添加到区块链。如果它未能成功进入区块链，其状态将更改为“不能接受的”，也代表不能使用。这可能偶尔会发生如果另一个节点在几秒钟内从你的区块产生。{ 120？}</translation>
     </message>
     <message>
-        <source>Staked coins must wait 520 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
-        <translation>新产生的元宝币必须等待520个数据块之后才能被使用. 当您生产出此数据块,它将被广播至元宝币网络并添加至数据链. 如果添加到数据链失败, 它的状态将变成&quot;不被接受&quot;，生产的元宝币将不能使用. 在您生产新数据块的几秒钟内, 如果其它节点也生产出同样的数据块，有可能会发生这种情况.</translation>
+        <source>Staked coins must wait 120 blocks before they can return to balance and be spent.  When you generated this proof-of-stake block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be a valid stake.  This may occasionally happen if another node generates a proof-of-stake block within a few seconds of yours.</source>
+        <translation>新产生的元宝币必须等待120个数据块之后才能被使用. 当您生产出此数据块,它将被广播至元宝币网络并添加至数据链. 如果添加到数据链失败, 它的状态将变成&quot;不被接受&quot;，生产的元宝币将不能使用. 在您生产新数据块的几秒钟内, 如果其它节点也生产出同样的数据块，有可能会发生这种情况.</translation>
     </message>
     <message>
         <source>Debug information</source>

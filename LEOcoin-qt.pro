@@ -1,12 +1,12 @@
 TEMPLATE = app
 TARGET = LEOcoin-qt
-VERSION = 1.1.0
+VERSION = 1.3.0
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE SCRYPT_CHACHA SCRYPT_KECCAK512 BOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN __NO_SYSTEM_INCLUDES
 CONFIG += no_include_pwd
 CONFIG += thread
 CONFIG += static
-USER = mindfox
+USER = yourusername
 
 #Uncomment this section to build on Windows using QtCMD/MinGW. Adjust dep locations as needed!
 #windows:LIBS += -lshlwapi
@@ -21,46 +21,46 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
-win32: {
-BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-MINIUPNPC_INCLUDE_PATH=C:/deps/
-MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
-QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
-}
+#win32: {
+#BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
+#BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
+#BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
+#BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+#BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
+#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
+#MINIUPNPC_INCLUDE_PATH=C:/deps/
+#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+#QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
+#QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
+#}
 
-macx: {
-BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
-BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-MINIUPNPC_INCLUDE_PATH=C:/deps/
-MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
-QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
-}
-!windows:!macx: {
-BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
-BOOST_INCLUDE_PATH=/home/$$USER/deps/boost_1_55_0
-BOOST_LIB_PATH=/home/$$USER/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=/home/deps/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=/home/$$USER/deps/openssl-1.0.1g
-MINIUPNPC_INCLUDE_PATH=/home/deps/
-MINIUPNPC_LIB_PATH=/home/$$USER/deps/miniupnpc
-QRENCODE_INCLUDE_PATH=/home/$$USER/deps/qrencode-3.4.3
-QRENCODE_LIB_PATH=/home/$$USER/deps/qrencode-3.4.3/.libs
-}
+#macx: {
+#BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
+#BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
+#BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
+#BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+#BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
+#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
+#MINIUPNPC_INCLUDE_PATH=C:/deps/
+#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+#QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
+#QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
+#}
+#!windows:!macx: {
+#BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
+#BOOST_INCLUDE_PATH=/home/$$USER/deps/boost_1_55_0
+#BOOST_LIB_PATH=/home/$$USER/deps/boost_1_55_0/stage/lib
+#BDB_INCLUDE_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
+#BDB_LIB_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
+#OPENSSL_INCLUDE_PATH=/home/$$USER/deps/openssl-1.0.1h/include
+#OPENSSL_LIB_PATH=/home/$$USER/deps/openssl-1.0.1h
+#MINIUPNPC_INCLUDE_PATH=/home/$$USER/deps/
+#MINIUPNPC_LIB_PATH=/home/$$USER/deps/miniupnpc
+#QRENCODE_INCLUDE_PATH=/home/$$USER/deps/qrencode-3.4.3
+#QRENCODE_LIB_PATH=/home/$$USER/deps/qrencode-3.4.3/.libs
+#}
 
 win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 greaterThan(QT_MAJOR_VERSION, 4) {
@@ -97,6 +97,7 @@ QMAKE_LFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
 }
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
 win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
+win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
@@ -169,6 +170,8 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/addresstablemodel.h \
     src/qt/optionsdialog.h \
     src/qt/sendcoinsdialog.h \
+    src/qt/coincontroldialog.h \
+    src/qt/coincontroltreewidget.h \
     src/qt/addressbookpage.h \
     src/qt/signverifymessagedialog.h \
     src/qt/aboutdialog.h \
@@ -179,6 +182,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/base58.h \
     src/bignum.h \
     src/checkpoints.h \
+    src/coincontrol.h \
     src/compat.h \
     src/sync.h \
     src/util.h \
@@ -237,13 +241,49 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/rpcconsole.h \
     src/version.h \
     src/netbase.h \
-    src/clientversion.h
+    src/clientversion.h \
+    src/scrypt-jane/scrypt-jane.h \
+    src/scrypt-jane/code/scrypt-jane-test-vectors.h \
+    src/scrypt-jane/code/scrypt-jane-salsa64.h \
+    src/scrypt-jane/code/scrypt-jane-salsa.h \
+    src/scrypt-jane/code/scrypt-jane-romix-template.h \
+    src/scrypt-jane/code/scrypt-jane-romix-basic.h \
+    src/scrypt-jane/code/scrypt-jane-romix.h \
+    src/scrypt-jane/code/scrypt-jane-portable-x86.h \
+    src/scrypt-jane/code/scrypt-jane-portable.h \
+    src/scrypt-jane/code/scrypt-jane-pbkdf2.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa-xop.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa-sse2.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa-avx.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa64-xop.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa64-ssse3.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa64-sse2.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa64-avx2.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa64-avx.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa64.h \
+    src/scrypt-jane/code/scrypt-jane-mix_salsa.h \
+    src/scrypt-jane/code/scrypt-jane-mix_chacha-xop.h \
+    src/scrypt-jane/code/scrypt-jane-mix_chacha-ssse3.h \
+    src/scrypt-jane/code/scrypt-jane-mix_chacha-sse2.h \
+    src/scrypt-jane/code/scrypt-jane-mix_chacha-avx.h \
+    src/scrypt-jane/code/scrypt-jane-mix_chacha.h \
+    src/scrypt-jane/code/scrypt-jane-hash_skein512.h \
+    src/scrypt-jane/code/scrypt-jane-hash_sha512.h \
+    src/scrypt-jane/code/scrypt-jane-hash_sha256.h \
+    src/scrypt-jane/code/scrypt-jane-hash_keccak.h \
+    src/scrypt-jane/code/scrypt-jane-hash_blake512.h \
+    src/scrypt-jane/code/scrypt-jane-hash_blake256.h \
+    src/scrypt-jane/code/scrypt-jane-hash.h \
+    src/scrypt-jane/code/scrypt-jane-chacha.h \
+    src/scrypt-jane/code/scrypt-conf.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
     src/qt/sendcoinsdialog.cpp \
+    src/qt/coincontroldialog.cpp \
+    src/qt/coincontroltreewidget.cpp \
     src/qt/addressbookpage.cpp \
     src/qt/signverifymessagedialog.cpp \
     src/qt/aboutdialog.cpp \
@@ -310,6 +350,7 @@ RESOURCES += \
 
 FORMS += \
     src/qt/forms/sendcoinsdialog.ui \
+    src/qt/forms/coincontroldialog.ui \
     src/qt/forms/addressbookpage.ui \
     src/qt/forms/signverifymessagedialog.ui \
     src/qt/forms/aboutdialog.ui \
@@ -363,7 +404,7 @@ OTHER_FILES += \
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
     macx:BOOST_LIB_SUFFIX = -mt
-    windows:BOOST_LIB_SUFFIX = -mgw44-mt-s-1_50
+    windows:BOOST_LIB_SUFFIX = -mgw48-mt-s-1_55
 }
 
 isEmpty(BOOST_THREAD_LIB_SUFFIX) {

@@ -3,6 +3,10 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+#ifdef _MSC_VER
+    #include "msvc_warnings.push.h"
+#endif
+
 #include "irc.h"
 #include "db.h"
 #include "net.h"
@@ -25,7 +29,16 @@
 using namespace std;
 using namespace boost;
 
-static const int MAX_OUTBOUND_CONNECTIONS = 12;
+
+// static const int MAX_OUTBOUND_CONNECTIONS = 8;
+#define DEFAULT_MAX_CONNECTIONS         125    // Default value for -maxconnections= parameter.
+#define MIN_CONNECTIONS                 8      // Lowest value we allow for -maxconnections= (never ever set less than 2!).
+#define MAX_CONNECTIONS                 1000   // Max allowed value for -maxconnections= parameter.  Getting kinda excessive, eh?
+
+#define DEFAULT_OUTBOUND_CONNECTIONS    8      // Reasonable default of 8 outbound connections for -maxoutbound= parameter.
+#define MIN_OUTBOUND_CONNECTIONS        4      // Lowest we allow for -maxoutbound= parameter shall be 4 connections (never ever set below 2).
+#define MAX_OUTBOUND_CONNECTIONS        100    // This no longer means what it used to.  Outbound conn count now runtime configurable.
+
 
 void ThreadMessageHandler2(void* parg);
 void ThreadSocketHandler2(void* parg);
@@ -58,7 +71,7 @@ static bool vfLimited[NET_MAX] = {};
 static CNode* pnodeLocalHost = NULL;
 CAddress addrSeenByPeer(CService("0.0.0.0", 0), nLocalServices);
 uint64 nLocalHostNonce = 0;
-array<int, THREAD_MAX> vnThreadsRunning;
+boost::array<int, THREAD_MAX> vnThreadsRunning;
 static std::vector<SOCKET> vhListenSocket;
 CAddrMan addrman;
 
@@ -87,6 +100,63 @@ unsigned short GetListenPort()
 {
     return (unsigned short)(GetArg("-port", GetDefaultPort()));
 }
+
+
+
+//
+// int GetMaxConnections( void )
+//
+//    WM - Function to determine maximum allowed in+out connections.
+//
+//    Parameters: None
+//    Returns: Maximum connections allowed (int)
+//
+
+int GetMaxConnections()
+{
+    int count;
+
+    // Config'eth away..
+    count = GetArg( "-maxconnections", DEFAULT_MAX_CONNECTIONS );
+    
+    // Ensure some level of sanity amount the max connection count.
+    count = max( count, MIN_CONNECTIONS );
+    count = min( count, MAX_CONNECTIONS );
+    
+    //printf( "GetMaxConnections() = %d\n", count );
+
+    return count;
+}
+
+
+
+//
+// int GetMaxOutboundConnections( void )
+//
+//    WM - Function to determine maximum allowed outbound connections.
+//
+//    Parameters: None
+//    Returns: Maximum outbound connections allowed (int)
+//
+
+int GetMaxOutboundConnections()
+{
+    int count;
+
+    // What sayeth the config parameters?
+    count = GetArg( "-maxoutbound", DEFAULT_OUTBOUND_CONNECTIONS );
+    
+    // Did someone set it too low or too high?  Shame, shame..
+    count = max( count, MIN_OUTBOUND_CONNECTIONS );
+    count = min( count, MAX_OUTBOUND_CONNECTIONS );
+    count = min( count, GetMaxConnections() );
+
+    //printf( "GetMaxOutboundConnections() = %d\n", count );
+    
+    return count;
+}
+
+
 
 void CNode::PushGetBlocks(CBlockIndex* pindexBegin, uint256 hashEnd)
 {
@@ -410,7 +480,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
 void ThreadGetMyExternalIP(void* parg)
 {
     // Make this thread recognisable as the external IP detection thread
-    RenameThread("bitcoin-ext-ip");
+    RenameThread("LEOcoin-ext-ip");
 
     CNetAddr addrLocalHost;
     if (GetMyExternalIP(addrLocalHost))
@@ -560,9 +630,6 @@ void CNode::PushVersion()
 }
 
 
-
-
-
 std::map<CNetAddr, int64> CNode::setBanned;
 CCriticalSection CNode::cs_setBanned;
 
@@ -631,18 +698,10 @@ void CNode::copyStats(CNodeStats &stats)
 #undef X
 
 
-
-
-
-
-
-
-
-
 void ThreadSocketHandler(void* parg)
 {
     // Make this thread recognisable as the networking thread
-    RenameThread("bitcoin-net");
+    RenameThread("LEOcoin-net");
 
     try
     {
@@ -990,18 +1049,11 @@ void ThreadSocketHandler2(void* parg)
 }
 
 
-
-
-
-
-
-
-
 #ifdef USE_UPNP
 void ThreadMapPort(void* parg)
 {
     // Make this thread recognisable as the UPnP thread
-    RenameThread("bitcoin-UPnP");
+    RenameThread("LEOcoin-UPnP");
 
     try
     {
@@ -1139,12 +1191,6 @@ void MapPort()
 
 
 
-
-
-
-
-
-
 // DNS seeds
 // Each pair gives a source name and a seed name.
 // The first name is used as information source for addrman.
@@ -1249,17 +1295,6 @@ void ThreadDNSAddressSeed2(void* parg)
     printf("%d addresses found from DNS seeds\n", found);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 unsigned int pnSeed[] =
 {
 };
@@ -1291,7 +1326,7 @@ void ThreadDumpAddress2(void* parg)
 void ThreadDumpAddress(void* parg)
 {
     // Make this thread recognisable as the address dumping thread
-    RenameThread("bitcoin-adrdump");
+    RenameThread("LEOcoin-adrdump");
 
     try
     {
@@ -1306,7 +1341,7 @@ void ThreadDumpAddress(void* parg)
 void ThreadOpenConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("bitcoin-opencon");
+    RenameThread("LEOcoin-opencon");
 
     try
     {
@@ -1370,14 +1405,14 @@ void ThreadOpenConnections2(void* parg)
     // Connect to specific addresses
     if (mapArgs.count("-connect") && mapMultiArgs["-connect"].size() > 0)
     {
-        for (int64 nloop = 0;; nloop++)
+        for (int64 nLoop = 0;; nLoop++)
         {
             ProcessOneShot();
             BOOST_FOREACH(string strAddr, mapMultiArgs["-connect"])
             {
                 CAddress addr;
                 OpenNetworkConnection(addr, NULL, strAddr.c_str());
-                for (int i = 0; i < 10 && i < nloop; i++)
+                for (int i = 0; i < 10 && i < nLoop; i++)
                 {
                     Sleep(500);
                     if (fShutdown)
@@ -1488,7 +1523,7 @@ void ThreadOpenConnections2(void* parg)
 void ThreadOpenAddedConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("bitcoin-opencon");
+    RenameThread("LEOcoin-opencon");
 
     try
     {
@@ -1550,14 +1585,43 @@ void ThreadOpenAddedConnections2(void* parg)
         {
             LOCK(cs_vNodes);
             BOOST_FOREACH(CNode* pnode, vNodes)
+            {
                 for (vector<vector<CService> >::iterator it = vservConnectAddresses.begin(); it != vservConnectAddresses.end(); it++)
+                {
                     BOOST_FOREACH(CService& addrNode, *(it))
+#ifndef _MSC_VER
+                    {
                         if (pnode->addr == addrNode)
                         {
                             it = vservConnectAddresses.erase(it);
                             it--;
                             break;
                         }
+                    }
+#else
+                    {
+                        if (pnode->addr == addrNode)
+                        {
+                            it = vservConnectAddresses.erase(it);
+
+                            // now it get tricky!
+                            if( vservConnectAddresses.empty() )
+                                break;          // can't legally --it, nor ++it
+                            // else it's not empty, so
+                            if (it == vservConnectAddresses.begin()) // can't --it
+                                break;
+                            --it;               // finally, a legal place!!    
+                            break;
+                        }
+                        // else we stay in the inner BOOST_FOREACH() loop
+                    }
+                    if( vservConnectAddresses.empty() )
+                        break;      // can't do a ++it
+                    if (it == vservConnectAddresses.end())
+                        break;      // can't do a ++it
+#endif
+                }
+            }
         }
         BOOST_FOREACH(vector<CService>& vserv, vservConnectAddresses)
         {
@@ -1619,7 +1683,7 @@ bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOu
 void ThreadMessageHandler(void* parg)
 {
     // Make this thread recognisable as the message handling thread
-    RenameThread("bitcoin-msghand");
+    RenameThread("LEOcoin-msghand");
 
     try
     {
@@ -1870,7 +1934,7 @@ void static Discover()
 void StartNode(void* parg)
 {
     // Make this thread recognisable as the startup thread
-    RenameThread("bitcoin-start");
+    RenameThread("LEOcoin-start");
 
     if (semOutbound == NULL) {
         // initialize semaphore
@@ -1944,7 +2008,7 @@ bool StopNode()
     nTransactionsUpdated++;
     int64 nStart = GetTime();
     if (semOutbound)
-        for (int i=0; i<MAX_OUTBOUND_CONNECTIONS; i++)
+        for( int i = 0; i < GetMaxOutboundConnections(); i++ )
             semOutbound->post();
     do
     {
@@ -1960,7 +2024,7 @@ bool StopNode()
     if (vnThreadsRunning[THREAD_SOCKETHANDLER] > 0) printf("ThreadSocketHandler still running\n");
     if (vnThreadsRunning[THREAD_OPENCONNECTIONS] > 0) printf("ThreadOpenConnections still running\n");
     if (vnThreadsRunning[THREAD_MESSAGEHANDLER] > 0) printf("ThreadMessageHandler still running\n");
-    if (vnThreadsRunning[THREAD_MINER] > 0) printf("ThreadBitcoinMiner still running\n");
+    if (vnThreadsRunning[THREAD_MINER] > 0) printf("ThreadLEOcoinMiner still running\n");
     if (vnThreadsRunning[THREAD_RPCLISTENER] > 0) printf("ThreadRPCListener still running\n");
     if (vnThreadsRunning[THREAD_RPCHANDLER] > 0) printf("ThreadsRPCServer still running\n");
 #ifdef USE_UPNP
@@ -1985,6 +2049,17 @@ public:
     }
     ~CNetCleanup()
     {
+#ifdef _MSC_VER
+        bool
+            fDidThisAlready = false;
+
+        if( !fDidThisAlready )
+        {
+            fDidThisAlready = true;
+            (void)printf(
+                        "~CNetCleanup() destructor called..."
+                        );
+#endif
         // Close sockets
         BOOST_FOREACH(CNode* pnode, vNodes)
             if (pnode->hSocket != INVALID_SOCKET)
@@ -1998,6 +2073,14 @@ public:
         // Shutdown Windows Sockets
         WSACleanup();
 #endif
+#ifdef _MSC_VER
+            (void)printf( " done\n" );
+        }
+#endif
     }
 }
 instance_of_cnetcleanup;
+
+#ifdef _MSC_VER
+    #include "msvc_warnings.pop.h"
+#endif

@@ -3,15 +3,28 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+#ifdef _MSC_VER
+    #include <stdint.h>
+
+    #include "msvc_warnings.push.h"
+#endif
+
 #include "wallet.h"
 #include "walletdb.h"
 #include "crypter.h"
 #include "ui_interface.h"
 #include "base58.h"
+#include "coincontrol.h" 
 #include "kernel.h"
 
+#ifdef WIN32
+#include "init.h"   // for walletPath
+#endif
 using namespace std;
+#ifdef _MSC_VER
+#else
 extern int nStakeMaxAge;
+#endif
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -349,7 +362,7 @@ void CWallet::WalletUpdateSpent(const CTransaction &tx)
                     printf("WalletUpdateSpent: bad wtx %s\n", wtx.GetHash().ToString().c_str());
                 else if (!wtx.IsSpent(txin.prevout.n) && IsMine(wtx.vout[txin.prevout.n]))
                 {
-                    printf("WalletUpdateSpent found spent coin %syac %s\n", FormatMoney(wtx.GetCredit()).c_str(), wtx.GetHash().ToString().c_str());
+                    printf("WalletUpdateSpent found spent coin %sLEO %s\n", FormatMoney(wtx.GetCredit()).c_str(), wtx.GetHash().ToString().c_str());
                     wtx.MarkSpent(txin.prevout.n);
                     wtx.WriteToDisk();
                     NotifyTransactionChanged(this, txin.prevout.hash, CT_UPDATED);
@@ -628,12 +641,24 @@ void CWalletTx::GetAmounts(int64& nGeneratedImmature, int64& nGeneratedMature, l
     listSent.clear();
     strSentAccount = strFromAccount;
 
-    if (IsCoinBase() || IsCoinStake())
+    if (IsCoinBase())
     {
         if (GetBlocksToMaturity() > 0)
             nGeneratedImmature = pwallet->GetCredit(*this);
         else
             nGeneratedMature = GetCredit();
+        return;
+    }
+
+    if (IsCoinStake())
+    {
+        if (GetBlocksToMaturity() > 0) 
+        {
+            nGeneratedImmature = pwallet->GetCredit(*this) - pwallet->GetDebit(*this);
+            nGeneratedMature = - pwallet->GetDebit(*this);
+        }
+        else 
+            nGeneratedMature = GetCredit() - GetDebit();
         return;
     }
 
@@ -771,27 +796,244 @@ bool CWalletTx::WriteToDisk()
     return CWalletDB(pwallet->strWalletFile).WriteTx(GetHash(), *this);
 }
 
+#ifdef WIN32
+//_____________________________________________________________________________
+static inline void
+    DoRescanProgress( int nCount, int nTotalToScan, int64 n64MsStartTime )
+{
+    int64
+        n64SecondsEstimatedTotalTime,
+        n64MsEstimatedTotalTime,
+        n64MsDeltaTime;
+    #ifdef QT_GUI
+    std::string
+        sTextString;
+    #endif
+    if(
+        (0 == (nCount % 10) )   // every 10th time
+      )
+    {
+        if( 0 == nCount )       // first time
+        {
+            (void)printf(
+                    "%6d "
+                    ""
+                    , nCount
+                        );
+    #ifdef QT_GUI
+            uiInterface.InitMessage(
+                                    strprintf(
+                                               _( "%6d " ), 
+                                               nCount
+                                             ).c_str() 
+                                   );
+    #endif
+        }
+        else                    // all the next times
+        {
+            n64SecondsEstimatedTotalTime = 0;
+    #ifndef QT_GUI
+            if( 
+                (0 == (nCount % 100) )   // every 100th time (every 10th next time)
+              )
+    #endif
+            {   // let's estimate the time remaining too!
+                n64MsDeltaTime = GetTimeMillis() - n64MsStartTime;
+                // we have done nCount / nTotalToScan th of them in n64MsDeltaTime
+                // so total time in ms ~ n64MsDeltaTime * nTotalToScan / nCount
+                n64MsEstimatedTotalTime = n64MsDeltaTime * nTotalToScan / nCount;
+                // time (seconds) remaining is
+                n64SecondsEstimatedTotalTime =
+                    ( n64MsEstimatedTotalTime + n64MsStartTime - GetTimeMillis() ) / 1000;
+            }
+            if (fPrintToConsole)
+                (void)printf(
+                            "%6d "
+                            "%2.2f%% "
+                            ""
+                            , nCount
+                            , floorf( float(nCount * 10000.0 / nTotalToScan) ) / 100
+                            );
+    #ifdef QT_GUI
+            uiInterface.InitMessage(
+                                    strprintf(
+                                              _("%6d "
+                                                "%2.2f%% "
+                                                ""
+                                               )
+                                                , nCount
+                                                , floorf( float(nCount * 10000.0 / nTotalToScan) ) / 100
+                                             ).c_str() 
+                                   );
+    #endif
+            if( 0 != n64SecondsEstimatedTotalTime )
+            {
+                const int64
+                    nSecondsPerMinute = 60,
+                    nMinutesPerHour = 60;
+                int64
+                    nSeconds = 0,
+                    nMinutes = 0,
+                    nHours = 0;
+
+                if( n64SecondsEstimatedTotalTime >= nSecondsPerMinute )
+                {                   // there are minutes to go
+                    nSeconds = n64SecondsEstimatedTotalTime % nSecondsPerMinute;
+                    nMinutes = n64SecondsEstimatedTotalTime / nSecondsPerMinute;
+                    if( nMinutes >= nMinutesPerHour ) // there are hours to go
+                    {
+                        nHours = nMinutes / nMinutesPerHour;
+                        nMinutes %= nMinutesPerHour;
+                        if (fPrintToConsole)
+                            (void)printf(
+                                        "~%d:%02d:%02d hrs:min:sec"
+                                        ""
+                                        ,
+                                        (int)nHours,
+                                        (int)nMinutes,
+                                        (int)nSeconds
+                                        );
+    #ifdef QT_GUI
+                        uiInterface.InitMessage( 
+                                                strprintf(
+                                                          _("%6d "
+                                                            "%2.2f%% "
+                                                            ""
+                                                            "~%d:%02d:%02d hrs:min:sec"
+                                                            ""
+                                                           )
+                                                            , nCount
+                                                            , floorf( float(nCount * 10000.0 / nTotalToScan) ) / 100
+                                                            ,
+                                                            (int)nHours,
+                                                            (int)nMinutes,
+                                                            (int)nSeconds
+                                                         ).c_str() 
+                                               );
+    #endif
+                    }
+                    else    // there are only minutes
+                    {
+                        if (fPrintToConsole)
+                            (void)printf(
+                                        "~%2d:%02d min:sec    "
+                                        "\r"
+                                        ""
+                                        ,
+                                        (int)nMinutes,
+                                        (int)nSeconds
+                                        );
+    #ifdef QT_GUI
+                        uiInterface.InitMessage( 
+                                                strprintf(
+                                                          _("%6d "
+                                                            "%2.2f%% "
+                                                            ""
+                                                            "~%2d:%02d min:sec    "
+                                                            ""
+                                                           )
+                                                           , nCount
+                                                           , floorf( float(nCount * 10000.0 / nTotalToScan) ) / 100
+                                                           ,
+                                                         (int)nMinutes,
+                                                         (int)nSeconds
+                                                         ).c_str() 
+                                               );
+    #endif
+                    }
+                }
+                else    // there are only seconds
+                {
+                    nSeconds = n64SecondsEstimatedTotalTime;
+                    if (fPrintToConsole)
+                        (void)printf(
+                                    "~%2d sec       "
+                                    ""
+                                    ,
+                                    (int)nSeconds
+                                    );
+    #ifdef QT_GUI
+                    uiInterface.InitMessage(
+                                            strprintf(
+                                                      _("%6d "
+                                                        "%2.2f%% "
+                                                        ""
+                                                        "~%2d sec       "
+                                                        ""
+                                                       )
+                                                       , nCount
+                                                       , floorf( float(nCount * 10000.0 / nTotalToScan) ) / 100
+                                                       ,
+                                                      (int)nSeconds
+                                                     ).c_str() 
+                                           );
+    #endif
+                }
+            }
+        }
+        (void)printf( "\r" );
+    }
+}
+//_____________________________________________________________________________
+#endif
+
 // Scan the block chain (starting in pindexStart) for transactions
 // from or to us. If fUpdate is true, found transactions that already
 // exist in the wallet will be updated.
+#ifdef WIN32
+int CWallet::ScanForWalletTransactions(CBlockIndex* pindexStart, bool fUpdate, int nTotalToScan)
+#else
 int CWallet::ScanForWalletTransactions(CBlockIndex* pindexStart, bool fUpdate)
+#endif
 {
     int ret = 0;
+    int64 nLast, nNow;
+
+    nLast = GetTimeMillis();
 
     CBlockIndex* pindex = pindexStart;
     {
-        LOCK(cs_wallet);
+#ifdef WIN32
+        int
+            nCount = 0;
+        int64
+            n64MsStartTime = GetTimeMillis();
+#endif        
         while (pindex)
         {
-            CBlock block;
-            block.ReadFromDisk(pindex, true);
-            BOOST_FOREACH(CTransaction& tx, block.vtx)
             {
-                if (AddToWalletIfInvolvingMe(tx, &block, fUpdate))
-                    ret++;
+                CBlock block;
+                block.ReadFromDisk(pindex, true);
+                BOOST_FOREACH(CTransaction& tx, block.vtx)
+                {
+                    if (AddToWalletIfInvolvingMe(tx, &block, fUpdate))
+                        ret++;
+                }
             }
             pindex = pindex->pnext;
+            // Update the progress bar
+            ++nScanned;
+            // Log progress every 5 seconds
+            nNow = GetTimeMillis();
+            if (nNow - nLast > 5000) {
+                printf("ScanForWalletTransactions: scanned %d blocks\n", nScanned);
+                nLast = nNow;
+            }
+            // Stop the scan if shutting down
+            if (fShutdown)
+            {
+                return ret;
+            }
+#ifdef WIN32
+            ++nCount;
+            DoRescanProgress( nCount, nTotalToScan, n64MsStartTime );
         }
+        if (fPrintToConsole)     // this could be a progress bar, % meter etc.
+            (void)printf( "\n" );// but we would need another parameter of the total
+                                 // # of blocks to scan
+#else
+        }
+#endif        
     }
     return ret;
 }
@@ -843,7 +1085,7 @@ void CWallet::ReacceptWalletTransactions()
                 }
                 if (fUpdated)
                 {
-                    printf("ReacceptWalletTransactions found spent coin %syac %s\n", FormatMoney(wtx.GetCredit()).c_str(), wtx.GetHash().ToString().c_str());
+                    printf("ReacceptWalletTransactions found spent coin %sLEO %s\n", FormatMoney(wtx.GetCredit()).c_str(), wtx.GetHash().ToString().c_str());
                     wtx.MarkDirty();
                     wtx.WriteToDisk();
                 }
@@ -857,9 +1099,11 @@ void CWallet::ReacceptWalletTransactions()
         }
         if (!vMissingTx.empty())
         {
-            // TODO: optimize this to scan just part of the block chain?
-            if (ScanForWalletTransactions(pindexGenesisBlock))
-                fRepeat = true;  // Found missing transactions: re-do re-accept.
+            // Groko - This is a pain in the butt. User can request -rescan on his own. 
+            //if (ScanForWalletTransactions(pindexGenesisBlock))
+            //    fRepeat = true;  // Found missing transactions: re-do re-accept.
+            printf("ReacceptWalletTransactions found missing transactions. Please use -rescan.\n");
+            strMiscWarning = _("Error: Found missing transactions. Please use -rescan.");
         }
     }
 }
@@ -955,7 +1199,7 @@ int64 CWallet::GetBalance() const
         for (map<uint256, CWalletTx>::const_iterator it = mapWallet.begin(); it != mapWallet.end(); ++it)
         {
             const CWalletTx* pcoin = &(*it).second;
-            if (pcoin->IsFinal() && pcoin->IsConfirmed())
+            if (pcoin->IsMature() && pcoin->IsFinal() && pcoin->IsConfirmed())
                 nTotal += pcoin->GetAvailableCredit();
         }
     }
@@ -971,7 +1215,7 @@ int64 CWallet::GetUnconfirmedBalance() const
         for (map<uint256, CWalletTx>::const_iterator it = mapWallet.begin(); it != mapWallet.end(); ++it)
         {
             const CWalletTx* pcoin = &(*it).second;
-            if (!pcoin->IsFinal() || !pcoin->IsConfirmed())
+            if ((!pcoin->IsFinal() || !pcoin->IsConfirmed()) && !pcoin->IsCoinBase() && !pcoin->IsCoinStake())
                 nTotal += pcoin->GetAvailableCredit();
         }
     }
@@ -986,15 +1230,19 @@ int64 CWallet::GetImmatureBalance() const
         for (map<uint256, CWalletTx>::const_iterator it = mapWallet.begin(); it != mapWallet.end(); ++it)
         {
             const CWalletTx& pcoin = (*it).second;
-            if (pcoin.IsCoinBase() && pcoin.GetBlocksToMaturity() > 0 && pcoin.IsInMainChain())
-                nTotal += GetCredit(pcoin);
+            if (!pcoin.IsMature() && pcoin.IsInMainChain()) {
+                if (pcoin.IsCoinBase())
+                    nTotal += GetCredit(pcoin);
+                if (pcoin.IsCoinStake())
+                    nTotal += GetCredit(pcoin) - GetDebit(pcoin);
+            }
         }
     }
     return nTotal;
 }
 
 // populate vCoins with vector of spendable COutputs
-void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed) const
+void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const CCoinControl *coinControl) const
 {
     vCoins.clear();
 
@@ -1014,7 +1262,8 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed) const
                 continue;
 
             for (unsigned int i = 0; i < pcoin->vout.size(); i++)
-                if (!(pcoin->IsSpent(i)) && IsMine(pcoin->vout[i]) && pcoin->vout[i].nValue > 0)
+                if (!(pcoin->IsSpent(i)) && IsMine(pcoin->vout[i]) && pcoin->vout[i].nValue > 0 &&
+                (!coinControl || !coinControl->HasSelected() || coinControl->IsSelected((*it).first, i)))
                     vCoins.push_back(COutput(pcoin, i, pcoin->GetDepthInMainChain()));
         }
     }
@@ -1059,7 +1308,7 @@ static void ApproximateBestSubset(vector<pair<int64, pair<const CWalletTx*,unsig
 }
 
 // ppcoin: total coins staked (non-spendable until maturity)
-int64 CWallet::GetStake() const
+int64 CWallet::GetStakedCoin() const
 {
     int64 nTotal = 0;
     LOCK(cs_wallet);
@@ -1067,7 +1316,7 @@ int64 CWallet::GetStake() const
     {
         const CWalletTx* pcoin = &(*it).second;
         if (pcoin->IsCoinStake() && pcoin->GetBlocksToMaturity() > 0 && pcoin->GetDepthInMainChain() > 0)
-            nTotal += CWallet::GetCredit(*pcoin);
+            nTotal += CWallet::GetDebit(*pcoin);
     }
     return nTotal;
 }
@@ -1079,8 +1328,10 @@ int64 CWallet::GetNewMint() const
     for (map<uint256, CWalletTx>::const_iterator it = mapWallet.begin(); it != mapWallet.end(); ++it)
     {
         const CWalletTx* pcoin = &(*it).second;
-        if (pcoin->IsCoinBase() && pcoin->GetBlocksToMaturity() > 0 && pcoin->GetDepthInMainChain() > 0)
+        if (pcoin->IsCoinBase() && !pcoin->IsMature() && pcoin->GetDepthInMainChain() > 0)
             nTotal += CWallet::GetCredit(*pcoin);
+        if (pcoin->IsCoinStake() && !pcoin->IsMature() && pcoin->GetDepthInMainChain() > 0)
+            nTotal += CWallet::GetCredit(*pcoin) - CWallet::GetDebit(*pcoin);
     }
     return nTotal;
 }
@@ -1190,10 +1441,21 @@ bool CWallet::SelectCoinsMinConf(int64 nTargetValue, unsigned int nSpendTime, in
     return true;
 }
 
-bool CWallet::SelectCoins(int64 nTargetValue, unsigned int nSpendTime, set<pair<const CWalletTx*,unsigned int> >& setCoinsRet, int64& nValueRet) const
+bool CWallet::SelectCoins(int64 nTargetValue, unsigned int nSpendTime, set<pair<const CWalletTx*,unsigned int> >& setCoinsRet, int64& nValueRet, const CCoinControl* coinControl) const
 {
     vector<COutput> vCoins;
-    AvailableCoins(vCoins);
+    AvailableCoins(vCoins, true, coinControl);
+
+    // coin control -> return all selected outputs (we want all selected to go into the transaction for sure)
+    if (coinControl && coinControl->HasSelected())
+    {
+        BOOST_FOREACH(const COutput& out, vCoins)
+        {
+            nValueRet += out.tx->vout[out.i].nValue;
+            setCoinsRet.insert(make_pair(out.tx, out.i));
+        }
+        return (nValueRet >= nTargetValue);
+    } 
 
     return (SelectCoinsMinConf(nTargetValue, nSpendTime, 1, 6, vCoins, setCoinsRet, nValueRet) ||
             SelectCoinsMinConf(nTargetValue, nSpendTime, 1, 1, vCoins, setCoinsRet, nValueRet) ||
@@ -1203,7 +1465,7 @@ bool CWallet::SelectCoins(int64 nTargetValue, unsigned int nSpendTime, set<pair<
 
 
 
-bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, int64& nFeeRet)
+bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, int64& nFeeRet, const CCoinControl* coinControl)
 {
     int64 nValue = 0;
     BOOST_FOREACH (const PAIRTYPE(CScript, int64)& s, vecSend)
@@ -1238,7 +1500,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CW
                 // Choose coins to use
                 set<pair<const CWalletTx*,unsigned int> > setCoins;
                 int64 nValueIn = 0;
-                if (!SelectCoins(nTotalValue, wtxNew.nTime, setCoins, nValueIn))
+                if (!SelectCoins(nTotalValue, wtxNew.nTime, setCoins, nValueIn, coinControl))
                     return false;
                 BOOST_FOREACH(PAIRTYPE(const CWalletTx*, unsigned int) pcoin, setCoins)
                 {
@@ -1266,22 +1528,30 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CW
 
                 if (nChange > 0)
                 {
-                    // Note: We use a new key here to keep it from being obvious which side is the change.
-                    //  The drawback is that by not reusing a previous key, the change may be lost if a
-                    //  backup is restored, if the backup doesn't have the new private key for the change.
-                    //  If we reused the old key, it would be possible to add code to look for and
-                    //  rediscover unknown transactions that were written with keys of ours to recover
-                    //  post-backup change.
-
-                    // Reserve a new key pair from key pool
-                    CPubKey vchPubKey = reservekey.GetReservedKey();
-                    // assert(mapKeys.count(vchPubKey));
-
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
                     // change transaction isn't always pay-to-bitcoin-address
                     CScript scriptChange;
-                    scriptChange.SetDestination(vchPubKey.GetID());
+
+                    // coin control: send change to custom address
+                    if (coinControl && !boost::get<CNoDestination>(&coinControl->destChange))
+                        scriptChange.SetDestination(coinControl->destChange);
+                        
+                    // no coin control: send change to newly generated address
+                    else
+                    {
+                        // Note: We use a new key here to keep it from being obvious which side is the change.
+                        //  The drawback is that by not reusing a previous key, the change may be lost if a
+                        //  backup is restored, if the backup doesn't have the new private key for the change.
+                        //  If we reused the old key, it would be possible to add code to look for and
+                        //  rediscover unknown transactions that were written with keys of ours to recover
+                        //  post-backup change.
+
+                        // Reserve a new key pair from key pool
+                        CPubKey vchPubKey = reservekey.GetReservedKey();
+
+                        scriptChange.SetDestination(vchPubKey.GetID());
+                    }
 
                     // Insert change txn at random position:
                     vector<CTxOut>::iterator position = wtxNew.vout.begin()+GetRandInt(wtxNew.vout.size());
@@ -1308,7 +1578,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CW
 
                 // Check that enough fee is included
                 int64 nPayFee = nTransactionFee * (1 + (int64)nBytes / 1000);
-                int64 nMinFee = wtxNew.GetMinFee(1, false, GMF_SEND);
+                int64 nMinFee = wtxNew.GetMinFee(1, false, GMF_SEND, nBytes);
 
                 if (nFeeRet < max(nPayFee, nMinFee))
                 {
@@ -1327,11 +1597,11 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CW
     return true;
 }
 
-bool CWallet::CreateTransaction(CScript scriptPubKey, int64 nValue, CWalletTx& wtxNew, CReserveKey& reservekey, int64& nFeeRet)
+bool CWallet::CreateTransaction(CScript scriptPubKey, int64 nValue, CWalletTx& wtxNew, CReserveKey& reservekey, int64& nFeeRet, const CCoinControl* coinControl)
 {
     vector< pair<CScript, int64> > vecSend;
     vecSend.push_back(make_pair(scriptPubKey, nValue));
-    return CreateTransaction(vecSend, wtxNew, reservekey, nFeeRet);
+    return CreateTransaction(vecSend, wtxNew, reservekey, nFeeRet, coinControl);
 }
 
 // ppcoin: create coin stake transaction
@@ -1339,12 +1609,20 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
 {
     // The following split & combine thresholds are important to security
     // Should not be adjusted if you don't understand the consequences
-    static unsigned int nStakeSplitAge = (60 * 60 * 24 * 90);
+    static unsigned int nStakeSplitAge = (60 * 60 * 24 * 1);
     const CBlockIndex* pIndex0 = GetLastBlockIndex(pindexBest, false);
 	int64 nCombineThreshold = 0;
         if(pIndex0->pprev)
                 nCombineThreshold = GetProofOfWorkReward(pIndex0->nHeight, pIndex0->pprev->GetBlockHash()) / 3;
-				
+
+    // Keep combining coins until 10 times POW reward is reached.
+//    int64 nCombineThreshold = GetProofOfWorkReward(GetLastBlockIndex(pindexBest, false)->nBits) * 10;
+    // Minimum age for coins that will be combined.
+    unsigned int nStakeCombineAge = 60 * 60 * 24 * 31;
+
+    // Keep a table of stuff to speed up POS mining
+    static map<uint256, PosMiningStuff *> mapMiningStuff;
+
     CBigNum bnTargetPerCoinDay;
     bnTargetPerCoinDay.SetCompact(nBits);
 
@@ -1375,7 +1653,8 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     {
         CTxDB txdb("r");
         CTxIndex txindex;
-        if (!txdb.ReadTxIndex(pcoin.first->GetHash(), txindex))
+        uint256 txHash = pcoin.first->GetHash();
+        if (!txdb.ReadTxIndex(txHash, txindex))
             continue;
 
         // Read block header
@@ -1386,6 +1665,35 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
         if (block.GetBlockTime() + nStakeMinAge > txNew.nTime - nMaxStakeSearchInterval)
             continue; // only count coins meeting min age requirement
 
+        // Groko's POS miner performance fix:
+        PosMiningStuff *miningStuff = NULL;
+        if (mapMiningStuff.count(txHash)) {
+            // re-use the block header hash and the kernel stake modifiers
+            miningStuff = mapMiningStuff[txHash];
+            block.SetHash(miningStuff->hashBlockFrom);
+        }
+        else {
+            // All this takes quite a long time, and only needs to be done once for each input.
+            uint64 nStakeModifier = 0;
+            int nStakeModifierHeight = 0;
+            int64 nStakeModifierTime = 0;
+            uint256 hashBlockFrom;
+            // Calculate the block header hash
+            hashBlockFrom = block.GetHash();
+            // Calculate the kernel stake modifiers
+            if (GetKernelStakeModifier(hashBlockFrom, nStakeModifier, nStakeModifierHeight, nStakeModifierTime)) {
+                miningStuff = (PosMiningStuff *)malloc(sizeof(PosMiningStuff));
+    
+                miningStuff->hashBlockFrom = hashBlockFrom;
+                miningStuff->nStakeModifier = nStakeModifier;
+                miningStuff->nStakeModifierHeight = nStakeModifierHeight;
+                miningStuff->nStakeModifierTime = nStakeModifierTime;
+    
+                // Save it all for faster POS mining.
+                mapMiningStuff.insert(make_pair(txHash, miningStuff));
+            }
+        }
+
         bool fKernelFound = false;
         for (unsigned int n=0; n<min(nSearchInterval,(int64)nMaxStakeSearchInterval) && !fKernelFound && !fShutdown; n++)
         {
@@ -1393,7 +1701,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
             // Search nSearchInterval seconds back up to nMaxStakeSearchInterval
             uint256 hashProofOfStake = 0;
             COutPoint prevoutStake = COutPoint(pcoin.first->GetHash(), pcoin.second);
-            if (CheckStakeKernelHash(nBits, block, txindex.pos.nTxPos - txindex.pos.nBlockPos, *pcoin.first, prevoutStake, txNew.nTime - n, hashProofOfStake))
+            if (CheckStakeKernelHash(nBits, block, txindex.pos.nTxPos - txindex.pos.nBlockPos, *pcoin.first, prevoutStake, txNew.nTime - n, hashProofOfStake, false, miningStuff))
             {
                 // Found a kernel
                 if (fDebug && GetBoolArg("-printcoinstake"))
@@ -1469,7 +1777,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
             if (pcoin.first->vout[pcoin.second].nValue > nCombineThreshold)
                 continue;
             // Do not add input that is still too young
-            if (pcoin.first->nTime + nStakeMaxAge > txNew.nTime)
+            if (pcoin.first->nTime + nStakeCombineAge > txNew.nTime)
                 continue;
             txNew.vin.push_back(CTxIn(pcoin.first->GetHash(), pcoin.second));
             nCredit += pcoin.first->vout[pcoin.second].nValue;
@@ -1613,7 +1921,17 @@ string CWallet::SendMoney(CScript scriptPubKey, int64 nValue, CWalletTx& wtxNew,
         return "ABORTED";
 
     if (!CommitTransaction(wtxNew, reservekey))
+#ifdef WIN32
+        return strprintf(
+                _("Error: The transaction was rejected.  "
+                 "This might happen if some of the coins in your wallet "
+                 "were already spent, such as if you used a copy of "
+                 "%s and coins were spent in the copy but not marked as spent here."
+                ), walletPath
+                        ).c_str();
+#else
         return _("Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.");
+#endif
 
     return "";
 }
@@ -1628,7 +1946,7 @@ string CWallet::SendMoneyToDestination(const CTxDestination& address, int64 nVal
     if (nValue + nTransactionFee > GetBalance())
         return _("Insufficient funds");
 
-    // Parse Bitcoin address
+    // Parse LEOcoin address
     CScript scriptPubKey;
     scriptPubKey.SetDestination(address);
 
@@ -1812,7 +2130,18 @@ void CWallet::ReserveKeyFromKeyPool(int64& nIndex, CKeyPool& keypool)
             throw runtime_error("ReserveKeyFromKeyPool() : read failed");
         if (!HaveKey(keypool.vchPubKey.GetID()))
             throw runtime_error("ReserveKeyFromKeyPool() : unknown key in key pool");
+#ifdef _MSC_VER
+        bool
+            fTest = (keypool.vchPubKey.IsValid());
+    #ifdef _DEBUG
+        assert(fTest);
+    #else
+        if( !fTest )
+            releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #endif
+#else
         assert(keypool.vchPubKey.IsValid());
+#endif
         if (fDebug && GetBoolArg("-printkeypool"))
             printf("keypool reserve %"PRI64d"\n", nIndex);
     }
@@ -2098,7 +2427,18 @@ CPubKey CReserveKey::GetReservedKey()
             vchPubKey = pwallet->vchDefaultKey;
         }
     }
+#ifdef _MSC_VER
+    bool
+        fTest = (vchPubKey.IsValid());
+    #ifdef _DEBUG
+    assert(fTest);
+    #else
+    if( !fTest )
+        releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #endif
+#else
     assert(vchPubKey.IsValid());
+#endif
     return vchPubKey;
 }
 
@@ -2130,7 +2470,18 @@ void CWallet::GetAllReserveKeys(set<CKeyID>& setAddress)
         CKeyPool keypool;
         if (!walletdb.ReadPool(id, keypool))
             throw runtime_error("GetAllReserveKeyHashes() : read failed");
+#ifdef _MSC_VER
+        bool
+            fTest = (keypool.vchPubKey.IsValid());
+    #ifdef _DEBUG
+        assert(fTest);
+    #else
+        if( !fTest )
+            releaseModeAssertionfailure( __FILE__, __LINE__, __PRETTY_FUNCTION__ );
+    #endif
+#else
         assert(keypool.vchPubKey.IsValid());
+#endif
         CKeyID keyID = keypool.vchPubKey.GetID();
         if (!HaveKey(keyID))
             throw runtime_error("GetAllReserveKeyHashes() : unknown key in key pool");
@@ -2148,3 +2499,6 @@ void CWallet::UpdatedTransaction(const uint256 &hashTx)
             NotifyTransactionChanged(this, hashTx, CT_UPDATED);
     }
 }
+#ifdef _MSC_VER
+    #include "msvc_warnings.pop.h"
+#endif

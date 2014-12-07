@@ -1,5 +1,5 @@
 /*
- * Qt4 bitcoin GUI.
+ * Qt4/5 LEOcoin GUI.
  *
  * W.J. van der Laan 2011-2012
  * The Bitcoin Developers 2011-2012
@@ -25,6 +25,8 @@
 #include "notificator.h"
 #include "guiutil.h"
 #include "rpcconsole.h"
+#include "version.h"
+#include "wallet.h"
 
 #ifdef Q_OS_MAC
 #include "macdockiconhandler.h"
@@ -50,14 +52,14 @@
 #include <QMovie>
 #include <QFileDialog>
 #if QT_VERSION < 0x050000
-#include <QDesktopServices>
+  #include <QDesktopServices>
 #else
-#include <QStandardPaths>
+  #include <QStandardPaths>
 #endif
 #include <QTimer>
 #include <QDragEnterEvent>
 #if QT_VERSION < 0x050000
- #include <QUrl>
+  #include <QUrl>
 #endif
 #include <QMimeData>
 #include <QStyle>
@@ -75,7 +77,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     notificator(0),
     rpcConsole(0)
 {
-    resize(850, 550);
+    resize(650, 550);
+//    resize(530, 550);
     setWindowTitle(tr("LEOcoin") + " - " + tr("Wallet"));
 
     qApp->setStyleSheet(
@@ -455,8 +458,8 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
         setNumConnections(clientModel->getNumConnections());
         connect(clientModel, SIGNAL(numConnectionsChanged(int)), this, SLOT(setNumConnections(int)));
 
-        setNumBlocks(clientModel->getNumBlocks(), clientModel->getNumBlocksOfPeers());
-        connect(clientModel, SIGNAL(numBlocksChanged(int,int)), this, SLOT(setNumBlocks(int,int)));
+        setNumBlocks(clientModel->getNumBlocks(), clientModel->getNumBlocksOfPeers(), clientModel->getNumScanned());
+        connect(clientModel, SIGNAL(numBlocksChanged(int,int,int)), this, SLOT(setNumBlocks(int,int,int)));
 
         // Report errors from network/worker thread
         connect(clientModel, SIGNAL(error(QString,QString,bool)), this, SLOT(error(QString,QString,bool)));
@@ -575,7 +578,7 @@ void BitcoinGUI::setNumConnections(int count)
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to LEOcoin network", "", count));
 }
 
-void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
+void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks, int nScanned)
 {
     // don't show / hide progress bar and its label if we have no connection to the network
     if (!clientModel || clientModel->getNumConnections() == 0)
@@ -608,11 +611,29 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     }
     else
     {
-        if (strStatusBarWarnings.isEmpty())
-            progressBarLabel->setVisible(false);
+        if (nScanned > 0) 
+        {
+            int nRemainingBlocks = nTotalBlocks - nScanned;
+            float nPercentageDone = nScanned / (nTotalBlocks * 0.01f);
+            if (strStatusBarWarnings.isEmpty())
+            {
+                progressBarLabel->setText(tr("Scanning for transactions..."));
+                progressBarLabel->setVisible(true);
+                progressBar->setFormat(tr("%n more blocks to scan", "", nRemainingBlocks));
+                progressBar->setMaximum(nTotalBlocks);
+                progressBar->setValue(nScanned);
+                progressBar->setVisible(true);
+            }
+            tooltip = tr("Scanned %1 of %2 blocks of transaction history (%3% done).").arg(nScanned).arg(nTotalBlocks).arg(nPercentageDone, 0, 'f', 2);
+        }
+        else
+        {
+            if (strStatusBarWarnings.isEmpty())
+                progressBarLabel->setVisible(false);
 
-        progressBar->setVisible(false);
-        tooltip = tr("Downloaded %1 blocks of transaction history.").arg(count);
+            progressBar->setVisible(false);
+            tooltip = tr("Downloaded %1 blocks of transaction history.").arg(count);
+        }
     }
 
     // Override progressBarLabel text and hide progress bar, when we have warnings to display
