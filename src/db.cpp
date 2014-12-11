@@ -809,8 +809,8 @@ bool CTxDB::LoadBlockIndex()
                       "Read best chain\n" 
                     );        
     #ifdef QT_GUI
-    uiInterface.InitMessage( strprintf( "%s <br><br>", _("...done").c_str() );
-    uiInterface.InitMessage( strprintf( "%s <br><br>", _("Read best chain").c_str() );
+    uiInterface.InitMessage( strprintf( "%s <br><br>", _("...done").c_str() ) );
+    uiInterface.InitMessage( strprintf( "%s <br><br>", _("Read best chain").c_str() ) );
     #endif
 #endif        
     // Load hashBestChain pointer to end of best chain
