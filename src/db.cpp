@@ -763,7 +763,7 @@ bool CTxDB::LoadBlockIndex()
     // Calculate bnChainTrust
     vector<pair<int, CBlockIndex*> > vSortedByHeight;
     vSortedByHeight.reserve(mapBlockIndex.size());
-#ifdef WIN32
+//#ifdef WIN32
     if (fPrintToConsole) 
         (void)printf( "Sorting by height..." );        
     #ifdef QT_GUI
@@ -771,23 +771,22 @@ bool CTxDB::LoadBlockIndex()
                             _("Sorting by height...")
                            );
     #endif
-#endif        
+//#endif
     BOOST_FOREACH(const PAIRTYPE(uint256, CBlockIndex*)& item, mapBlockIndex)
     {
         CBlockIndex* pindex = item.second;
         vSortedByHeight.push_back(make_pair(pindex->nHeight, pindex));
     }
     sort(vSortedByHeight.begin(), vSortedByHeight.end());
-#ifdef WIN32
+//#ifdef WIN32
     if (fPrintToConsole) 
         (void)printf( "done\nChecking stake checksums..." );        
     #ifdef QT_GUI
-    uiInterface.InitMessage( _("done") );
-    uiInterface.InitMessage( _("Checking stake checksums...") );
+    uiInterface.InitMessage( strprintf( "%s <br><br>", _("done").c_str() ) );
+    uiInterface.InitMessage( strprintf( "%s <br><br>", _("Checking stake checksums...").c_str() ) );
     #endif
-    int
-        nCount = 0;
-#endif
+    int nCount = 0;
+//#endif
     BOOST_FOREACH(const PAIRTYPE(int, CBlockIndex*)& item, vSortedByHeight)
     {
         CBlockIndex* pindex = item.second;
@@ -796,13 +795,13 @@ bool CTxDB::LoadBlockIndex()
         pindex->nStakeModifierChecksum = GetStakeModifierChecksum(pindex);
         if (!CheckStakeModifierCheckpoints(pindex->nHeight, pindex->nStakeModifierChecksum))
             return error("CTxDB::LoadBlockIndex() : Failed stake modifier checkpoint height=%d, modifier=0x%016"PRI64x, pindex->nHeight, pindex->nStakeModifier);
-#ifdef WIN32
+//#ifdef WIN32
     #ifdef QT_GUI
         ++nCount;
         if( 0 == (nCount % 10000) )
-            uiInterface.InitMessage( strprintf( _("%7d"), nCount ) );
+            uiInterface.InitMessage( strprintf( "%s <br><br>", strprintf( _("%7d"), nCount ).c_str() ) );
     #endif
-#endif        
+//#endif
     }
 #ifdef WIN32
     if (fPrintToConsole) 
@@ -810,8 +809,8 @@ bool CTxDB::LoadBlockIndex()
                       "Read best chain\n" 
                     );        
     #ifdef QT_GUI
-    uiInterface.InitMessage( _("...done") );
-    uiInterface.InitMessage( _("Read best chain") );
+    uiInterface.InitMessage( strprintf( "%s <br><br>", _("...done").c_str() );
+    uiInterface.InitMessage( strprintf( "%s <br><br>", _("Read best chain").c_str() );
     #endif
 #endif        
     // Load hashBestChain pointer to end of best chain
@@ -846,7 +845,7 @@ bool CTxDB::LoadBlockIndex()
         nCheckDepth = 1000000000; // suffices until the year 19000
     if (nCheckDepth > nBestHeight)
         nCheckDepth = nBestHeight;
-#ifdef WIN32
+//#ifdef WIN32
     nCount = 0;
     #ifdef _MSC_VER
         #ifdef _DEBUG
@@ -864,12 +863,12 @@ bool CTxDB::LoadBlockIndex()
     std::string
         sX;
     uiInterface.InitMessage(
-                            strprintf( _("Verifying the last %i blocks at level %i"), 
-                                        nCheckDepth, nCheckLevel
+                            strprintf( "%s <br><br>", strprintf( _("Verifying the last %i blocks at level %i"),
+                                        nCheckDepth, nCheckLevel ).c_str()
                                      ).c_str()
                            );
     #endif
-#endif        
+//#endif
     printf("Verifying last %i blocks at level %i\n", nCheckDepth, nCheckLevel);
     CBlockIndex* pindexFork = NULL;
     map<pair<unsigned int, unsigned int>, CBlockIndex*> mapBlockPos;
@@ -878,7 +877,7 @@ bool CTxDB::LoadBlockIndex()
         if (fRequestShutdown || pindex->nHeight < nBestHeight-nCheckDepth)
             break;
         CBlock block;
-#ifdef WIN32
+//#ifdef WIN32
     #ifdef _MSC_VER
         if (fPrintToConsole) 
             (void)printf( "Verifying %7d at 0",
@@ -886,10 +885,10 @@ bool CTxDB::LoadBlockIndex()
                         );        
     #endif        
     #ifdef QT_GUI
-        sX = strprintf( _("Verifying the last %4d blocks"), nCheckDepth - nCount );
+        sX = strprintf( "%s <br><br>", strprintf( _("Verifying the last %4d blocks"), nCheckDepth - nCount ).c_str() );
         uiInterface.InitMessage( sX.c_str() );
     #endif
-#endif
+//#endif
         if (!block.ReadFromDisk(pindex))
             return error("LoadBlockIndex() : block.ReadFromDisk failed");
 #ifdef WIN32
@@ -1147,11 +1146,11 @@ bool CTxDB::LoadBlockIndex()
         CTxDB txdb;
         block.SetBestChain(txdb, pindexFork);
     }
-#ifdef WIN32
+//#ifdef WIN32
     #ifdef QT_GUI
     uiInterface.InitMessage( _( "Verifying done" ) );
     #endif
-#endif
+//#endif
 
     return true;
 }
@@ -1222,12 +1221,12 @@ bool CTxDB::LoadBlockIndexGuts()
                 if (
                     (NULL == pindexGenesisBlock) && 
                     (0 == diskindex.nHeight)      // ought to be faster than a hash check!?
-                   )
-                    if( diskindex.GetBlockHash() == hashGenesisBlock )  // check anyway, but only if block 0
+                )
+                if( diskindex.GetBlockHash() == hashGenesisBlock )  // check anyway, but only if block 0
 #else
                 if (pindexGenesisBlock == NULL && diskindex.GetBlockHash() == hashGenesisBlock)
 #endif
-                if (pindexGenesisBlock == NULL && diskindex.GetBlockHash() == hashGenesisBlock)
+//                if (pindexGenesisBlock == NULL && diskindex.GetBlockHash() == hashGenesisBlock)
                 {
                     pindexGenesisBlock = pindexNew;
 #ifdef WIN32
@@ -1291,19 +1290,16 @@ bool CTxDB::LoadBlockIndexGuts()
         }
     }
     pcursor->close();
-#ifdef WIN32
+//#ifdef WIN32
     if (fPrintToConsole)
         (void)printf( "\n" );
 
     #ifdef QT_GUI
     uiInterface.InitMessage(_("<b>...done.</b>"));
     #endif
-#endif
+//#endif
     return true;
 }
-
-
-
 
 
 //
