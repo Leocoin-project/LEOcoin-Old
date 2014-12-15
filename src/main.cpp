@@ -2869,6 +2869,10 @@ bool LoadExternalBlockFile(FILE* fileIn)
                         nPos += 4 + nSize;
                     }
                 }
+            #ifdef QT_GUI
+            if (nLoaded % 100 == 0)
+            uiInterface.InitMessage( strprintf ( "%s..<br>Current Block(%6d )", _("<b>Importing bootstrap blockchain data file.</b>").c_str(), nLoaded ).c_str() );
+            #endif
             }
         }
         catch (std::exception &e) {

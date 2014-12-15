@@ -40,13 +40,7 @@ const std::string CLIENT_NAME("LEOcoin ");
 #ifdef HAVE_BUILD_INFO
 #    include "build.h"
 #endif
-/*
-#define GIT_ARCHIVE 1
-#ifdef GIT_ARCHIVE
-#    define GIT_COMMIT_ID "unit"
-#    define GIT_COMMIT_DATE "187"
-#endif
-*/
+
 // git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
