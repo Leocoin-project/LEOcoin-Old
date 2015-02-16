@@ -66,6 +66,7 @@
         <file alias="sent_coins">res/icons/sent_coins.png</file>
         <file alias="grey_addressbook">res/icons/grey_addressbook.png</file>
         <file alias="orange_addressbook">res/icons/orange_addressbook.png</file>
+        <file alias="qt">res/icons/Qt.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
