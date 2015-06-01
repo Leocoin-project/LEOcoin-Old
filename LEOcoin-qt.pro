@@ -1,4 +1,5 @@
 TEMPLATE = app
+QT += core gui network
 TARGET = LEOcoin-qt
 VERSION = 1.3.0
 INCLUDEPATH += src src/json src/qt
