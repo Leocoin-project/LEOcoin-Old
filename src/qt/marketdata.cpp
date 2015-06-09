@@ -13,32 +13,24 @@ MarketData::MarketData(QWidget *parent) :
     ui(new Ui::MarketData)
 {
     ui->setupUi(this);
-    QObject::connect(&networkAccessManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(parseNetworkResponse(QNetworkReply*)));
-    connect(ui->refreshButton, SIGNAL(pressed()), this, SLOT(updatePrices()));
-    this->getRequest(APIURL);
+    connect(&networkAccessManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(parseNetworkResponse(QNetworkReply*)));
+    connect(ui->refreshButton, SIGNAL(pressed()), this, SLOT(refreshClicked()));
+}
+
+void MarketData::refreshClicked()
+{
+    this->updatePrices();
 }
 
 void MarketData::updatePrices()
 {
-    this->setBalance(model->getBalance(), model->getStake(), model->getUnconfirmedBalance(), model->getImmatureBalance());
-}
-
-void MarketData::setModel(WalletModel *model)
-{
-    this->model = model;
-    if(model && model->getOptionsModel())
-    {
-        setBalance(model->getBalance(), model->getStake(), model->getUnconfirmedBalance(), model->getImmatureBalance());
-        connect(model, SIGNAL(balanceChanged(qint64, qint64, qint64, qint64)), this, SLOT(setBalance(qint64, qint64, qint64, qint64)));
-    }
+    this->getRequest(APIURL);
 }
 
 void MarketData::getRequest(const QString &urlString)
 {
     QUrl url(urlString);
     QNetworkRequest req(url);
-    req.setRawHeader("User-Agent", "LEO");
-    //req.setHeader(QNetworkRequest::ContentTypeHeader, "application/json; charset=utf-8");
     networkAccessManager.get(req);
 }
 
@@ -55,13 +47,13 @@ void MarketData::parseNetworkResponse(QNetworkReply *finished )
 
     if (requestUrl == APIURL)
     {
-        this->parseSummary(finished);
+        this->parseCoinPairRates(finished);
     }
 
     finished->deleteLater();
 }
 
-void MarketData::parseSummary(QNetworkReply *reply)
+void MarketData::parseCoinPairRates(QNetworkReply *reply)
 {
     QString data = reply->readAll();
     QJsonParseError jsonParseError;
@@ -106,12 +98,22 @@ void MarketData::parseSummary(QNetworkReply *reply)
     }
 }
 
+void MarketData::setModel(WalletModel *model)
+{
+    this->model = model;
+    if(model && model->getOptionsModel())
+    {
+        setBalance(model->getBalance(), model->getStake(), model->getUnconfirmedBalance(), model->getImmatureBalance());
+        connect(model, SIGNAL(balanceChanged(qint64, qint64, qint64, qint64)), this, SLOT(setBalance(qint64, qint64, qint64, qint64)));
+    }
+}
+
 void MarketData::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance)
 {
     int unit = model->getOptionsModel()->getDisplayUnit();
-    currentBalance = this->model->getBalance();
+    currentBalance = balance;
     ui->labelBalance->setText(BitcoinUnits::formatWithUnit(unit, currentBalance));
-    this->getRequest(APIURL);
+    this->updatePrices();
 }
 
 MarketData::~MarketData()
