@@ -13,14 +13,14 @@ MarketData::MarketData(QWidget *parent) :
     ui(new Ui::MarketData)
 {
     ui->setupUi(this);
-    QObject::connect(&m_nam, SIGNAL(finished(QNetworkReply*)), this, SLOT(parseNetworkResponse(QNetworkReply*)));
+    QObject::connect(&networkAccessManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(parseNetworkResponse(QNetworkReply*)));
     connect(ui->refreshButton, SIGNAL(pressed()), this, SLOT(updatePrices()));
-    this->updatePrices();
+    this->getRequest(APIURL);
 }
 
 void MarketData::updatePrices()
 {
-    this->getRequest(APIURL);
+    this->setBalance(model->getBalance(), model->getStake(), model->getUnconfirmedBalance(), model->getImmatureBalance());
 }
 
 void MarketData::setModel(WalletModel *model)
@@ -28,18 +28,18 @@ void MarketData::setModel(WalletModel *model)
     this->model = model;
     if(model && model->getOptionsModel())
     {
-        this->setBalance();
+        setBalance(model->getBalance(), model->getStake(), model->getUnconfirmedBalance(), model->getImmatureBalance());
+        connect(model, SIGNAL(balanceChanged(qint64, qint64, qint64, qint64)), this, SLOT(setBalance(qint64, qint64, qint64, qint64)));
     }
 }
 
 void MarketData::getRequest(const QString &urlString)
 {
-    QUrl url (urlString);
-    QNetworkRequest req (url);
-    QSslConfiguration config = QSslConfiguration::defaultConfiguration();
-    req.setSslConfiguration(config);
-    req.setHeader(QNetworkRequest::ContentTypeHeader, "application/json; charset=utf-8");
-    m_nam.get(req);
+    QUrl url(urlString);
+    QNetworkRequest req(url);
+    req.setRawHeader("User-Agent", "LEO");
+    //req.setHeader(QNetworkRequest::ContentTypeHeader, "application/json; charset=utf-8");
+    networkAccessManager.get(req);
 }
 
 void MarketData::parseNetworkResponse(QNetworkReply *finished )
@@ -64,47 +64,54 @@ void MarketData::parseNetworkResponse(QNetworkReply *finished )
 void MarketData::parseSummary(QNetworkReply *reply)
 {
     QString data = reply->readAll();
-    qDebug() << "Summary response:" << data;
-
     QJsonParseError jsonParseError;
     QJsonDocument jsonResponse = QJsonDocument::fromJson(data.toUtf8(), &jsonParseError);
-    if (jsonResponse.isObject())
-    {
-        QJsonObject mainObject = jsonResponse.object();
-        if (!mainObject.contains("success") && !mainObject["success"].toBool())
+    QJsonArray mainArray = jsonResponse.array();
+    foreach (const QJsonValue &value, mainArray) {
+        QJsonObject marketPair = value.toObject();
+        if (marketPair.contains("Symbol") && marketPair["Symbol"].toString() == "LEO/GBP")
         {
-            return;
-        }
-
-        if (mainObject.contains("result"))
-        {
-            QJsonArray resultArray = mainObject["result"].toArray();
-            foreach (const QJsonValue &value, resultArray)
+            if (marketPair.contains("Rate"))
             {
-                QJsonObject marketObject = value.toObject();
-                if (marketObject.contains("MarketName") && marketObject["MarketName"].toString() == "BTC-XWC")
-                {
-                    if (marketObject.contains("Last"))
-                    {
-                        currentGBPPrice = marketObject["Last"].toDouble();
-                    }
-
-                    // Updating summary labels
-                    this->ui->labelBTC->setText(QSTRING_DOUBLE(currentGBPPrice));
-               }
-           }
-       }
-
-    } else {
-        qWarning() << "Parsing summary failed with error: " << jsonParseError.errorString();
+                currentGBPPrice = marketPair["Rate"].toDouble();
+                currentGBPBalancePrice = currentBalance * currentGBPPrice / 1000000;
+            }
+            this->ui->labelGBP1->setText(QSTRING_DOUBLE(currentGBPPrice));
+            this->ui->labelGBP->setText(QSTRING_DOUBLE(currentGBPBalancePrice));
+        }else if (marketPair.contains("Symbol") && marketPair["Symbol"].toString() == "LEO/EUR"){
+            if (marketPair.contains("Rate"))
+            {
+                currentEURPrice = marketPair["Rate"].toDouble();
+                currentEURBalancePrice = currentBalance * currentEURPrice / 1000000;
+            }
+            this->ui->labelEUR1->setText(QSTRING_DOUBLE(currentEURPrice));
+            this->ui->labelEUR->setText(QSTRING_DOUBLE(currentEURBalancePrice));
+        }else if (marketPair.contains("Symbol") && marketPair["Symbol"].toString() == "LEO/BTC"){
+            if (marketPair.contains("Rate"))
+            {
+                currentBTCPrice = marketPair["Rate"].toDouble();
+                currentBTCBalancePrice = currentBalance * currentBTCPrice / 1000000;
+            }
+            this->ui->labelBTC1->setText(QSTRING_DOUBLE(currentBTCPrice));
+            this->ui->labelBTC->setText(QSTRING_DOUBLE(currentBTCBalancePrice));
+        }else if (marketPair.contains("Symbol") && marketPair["Symbol"].toString() == "LEO/USD"){
+            if (marketPair.contains("Rate"))
+            {
+                currentUSDPrice = marketPair["Rate"].toDouble();
+                currentUSDBalancePrice = currentBalance * currentUSDPrice / 1000000;
+            }
+            this->ui->labelUSD1->setText(QSTRING_DOUBLE(currentUSDPrice));
+            this->ui->labelUSD->setText(QSTRING_DOUBLE(currentUSDBalancePrice));
+        }
     }
 }
 
-void MarketData::setBalance()
+void MarketData::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance)
 {
     int unit = model->getOptionsModel()->getDisplayUnit();
     currentBalance = this->model->getBalance();
     ui->labelBalance->setText(BitcoinUnits::formatWithUnit(unit, currentBalance));
+    this->getRequest(APIURL);
 }
 
 MarketData::~MarketData()

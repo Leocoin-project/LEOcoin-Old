@@ -40,10 +40,12 @@ class MarketData : public QWidget
 public:
     explicit MarketData(QWidget *parent = 0);
     ~MarketData();
+    XmlRateReader(const QString filename);
 
     void setModel(WalletModel *model);
 public slots:
     void updatePrices();
+    void setBalance(qint64, qint64, qint64, qint64);
 signals:
     void networkError(QNetworkReply::NetworkError err);
 
@@ -51,13 +53,25 @@ private:
     Ui::MarketData *ui;
     WalletModel *model;
     qint64 currentBalance;
-    QNetworkAccessManager m_nam;
-    const QString APIURL = "https://bittrex.com/api/v1.1/public/getmarketsummary?market=btc-xwc";
+    QNetworkAccessManager networkAccessManager;
+    QString _filename;
+    QXmlStreamReader xml;
+    const QString APIURL = "http://restapi.leoxchange.com/api/CoinPairRate/GetPairRate?symbol=";
     double currentGBPPrice;
+    double currentEURPrice;
+    double currentUSDPrice;
+    double currentBTCPrice;
+    double currentGBPBalancePrice;
+    double currentEURBalancePrice;
+    double currentUSDBalancePrice;
+    double currentBTCBalancePrice;
 
-    void setBalance();
     void getRequest(const QString &url);
     void parseSummary(QNetworkReply *reply);
+    QString readNextText();
+    QString errorString();
+    void processArray();
+    void processRate();
 
 private slots:
     void parseNetworkResponse(QNetworkReply *finished);
