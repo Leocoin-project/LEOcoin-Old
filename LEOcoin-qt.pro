@@ -1,86 +1,58 @@
 TEMPLATE = app
+QT += core gui network
 TARGET = LEOcoin-qt
 VERSION = 1.3.0
 INCLUDEPATH += src src/json src/qt
-DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE SCRYPT_CHACHA SCRYPT_KECCAK512 BOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN __NO_SYSTEM_INCLUDES
+DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE SCRYPT_CHACHA SCRYPT_KECCAK512
 CONFIG += no_include_pwd
 CONFIG += thread
-CONFIG += static
-USER = yourusername
 
-#Uncomment this section to build on Windows using QtCMD/MinGW. Adjust dep locations as needed!
-#windows:LIBS += -lshlwapi
-#LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
-#LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
-#windows:LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
-#LIBS += -lboost_system-mgw46-mt-sd-1_53 -lboost_filesystem-mgw46-mt-sd-1_53 -lboost_program_options-mgw46-mt-sd-1_53 -lboost_thread-mgw46-mt-sd-1_53
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-# Dependency library locations can be customized with:
-#    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
-#    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
-
-#win32: {
-#BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-#BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-#BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-#BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-#BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-#MINIUPNPC_INCLUDE_PATH=C:/deps/
-#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-#QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
-#QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
-#}
-
-#macx: {
-#BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
-#BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-#BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-#BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-#BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-#MINIUPNPC_INCLUDE_PATH=C:/deps/
-#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-#QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
-#QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
-#}
-#!windows:!macx: {
-#BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
-#BOOST_INCLUDE_PATH=/home/$$USER/deps/boost_1_55_0
-#BOOST_LIB_PATH=/home/$$USER/deps/boost_1_55_0/stage/lib
-#BDB_INCLUDE_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
-#BDB_LIB_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
-#OPENSSL_INCLUDE_PATH=/home/$$USER/deps/openssl-1.0.1h/include
-#OPENSSL_LIB_PATH=/home/$$USER/deps/openssl-1.0.1h
-#MINIUPNPC_INCLUDE_PATH=/home/$$USER/deps/
-#MINIUPNPC_LIB_PATH=/home/$$USER/deps/miniupnpc
-#QRENCODE_INCLUDE_PATH=/home/$$USER/deps/qrencode-3.4.3
-#QRENCODE_LIB_PATH=/home/$$USER/deps/qrencode-3.4.3/.libs
-#}
-
-win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 greaterThan(QT_MAJOR_VERSION, 4) {
     QT += widgets
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
 }
 
+# Dependency library locations can be customized with:
+#    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
+#    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
+#win32:BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
+#win32:BOOST_INCLUDE_PATH=C:/deps/boost_1_57_0
+#win32:BOOST_LIB_PATH=C:/deps/boost_1_57_0/stage/lib
+#win32:BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+#win32:BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+#win32:OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1j/include
+#win32:OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1j/
+#win32:MINIUPNPC_INCLUDE_PATH=C:/deps/
+#win32:MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+#win32:QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
+#win32:QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
+
+#macx:BOOST_LIB_SUFFIX= -mt
+#macx:BOOST_INCLUDE_PATH=/usr/local/include
+#macx:BOOST_LIB_PATH=/usr/local/lib
+#macx:BDB_INCLUDE_PATH = /usr/local/include
+#macx:BDB_LIB_PATH = /usr/local/lib
+#macx:OPENSSL_INCLUDE_PATH=/usr/local/include
+#macx:OPENSSL_LIB_PATH=/usr/local/lib
+#macx:MINIUPNPC_INCLUDE_PATH=/usr/local/include
+#macx:MINIUPNPC_LIB_PATH=/usr/local/lib
+#macx:QRENCODE_INCLUDE_PATH=/usr/local/include
+#macx:QRENCODE_LIB_PATH=/usr/local/lib
 
 OBJECTS_DIR = build
 MOC_DIR = build
 UI_DIR = build
 
-
-
-
 # use: qmake "RELEASE=1"
 contains(RELEASE, 1) {
-    # Mac: compile for maximum compatibility (10.5, 32-bit)
-    macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.5 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk
+    # Mac: compile for maximum compatibility (10.7, 64-bit CPU)
+    macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.7 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+
+    USE_IPV6=1
+    USE_UPNP=1
+    USE_QRCODE=1
+    USE_O3=1
 
     !windows:!macx {
         # Linux: static link
@@ -104,7 +76,7 @@ win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 contains(USE_QRCODE, 1) {
     message(Building with QRCode support)
     DEFINES += USE_QRCODE
-    LIBS += -lqrencode -lpthread
+    LIBS += -lqrencode
 }
 
 # use: qmake "USE_UPNP=1" ( enabled by default; default)
@@ -159,9 +131,22 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
     DEFINES += HAVE_BUILD_INFO
 }
 
-QMAKE_CXXFLAGS += -msse2
-QMAKE_CFLAGS += -O3 -msse2
-QMAKE_CXXFLAGS_WARN_ON = -fdiagnostics-show-option -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wstack-protector
+contains(USE_O3, 1) {
+    message(Building O3 optimization flag)
+    QMAKE_CXXFLAGS_RELEASE -= -O2 -Wno-deprecated
+    QMAKE_CFLAGS_RELEASE -= -O2 -Wno-deprecated
+    QMAKE_CXXFLAGS += -O3 -Wno-deprecated
+    QMAKE_CFLAGS += -O3 -Wno-deprecated
+}
+
+*-g++-32 {
+    message("32 platform, adding -msse2 flag")
+
+    QMAKE_CXXFLAGS += -msse2
+    QMAKE_CFLAGS += -msse2
+}
+
+QMAKE_CXXFLAGS_WARN_ON = -fdiagnostics-show-option -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -Wstack-protector
 
 # Input
 DEPENDPATH += src src/json src/qt
@@ -226,6 +211,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/walletmodel.h \
     src/bitcoinrpc.h \
     src/qt/overviewpage.h \
+    src/qt/marketdata.h \
     src/qt/csvmodelwriter.h \
     src/crypter.h \
     src/qt/sendcoinsentry.h \
@@ -326,6 +312,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/rpcblockchain.cpp \
     src/rpcrawtransaction.cpp \
     src/qt/overviewpage.cpp \
+    src/qt/marketdata.cpp \
     src/qt/csvmodelwriter.cpp \
     src/crypter.cpp \
     src/qt/sendcoinsentry.cpp \
@@ -357,25 +344,26 @@ FORMS += \
     src/qt/forms/editaddressdialog.ui \
     src/qt/forms/transactiondescdialog.ui \
     src/qt/forms/overviewpage.ui \
+    src/qt/forms/marketdata.ui \
     src/qt/forms/sendcoinsentry.ui \
     src/qt/forms/askpassphrasedialog.ui \
     src/qt/forms/rpcconsole.ui \
     src/qt/forms/optionsdialog.ui
 
 contains(USE_QRCODE, 1) {
-HEADERS += src/qt/qrcodedialog.h
-SOURCES += src/qt/qrcodedialog.cpp
-FORMS += src/qt/forms/qrcodedialog.ui
+    HEADERS += src/qt/qrcodedialog.h
+    SOURCES += src/qt/qrcodedialog.cpp
+    FORMS += src/qt/forms/qrcodedialog.ui
 }
 
 contains(BITCOIN_QT_TEST, 1) {
-SOURCES += src/qt/test/test_main.cpp \
-    src/qt/test/uritests.cpp
-HEADERS += src/qt/test/uritests.h
-DEPENDPATH += src/qt/test
-QT += testlib
-TARGET = LEOcoin-qt_test
-DEFINES += BITCOIN_QT_TEST
+    SOURCES += src/qt/test/test_main.cpp \
+     src/qt/test/uritests.cpp
+    HEADERS += src/qt/test/uritests.h
+    DEPENDPATH += src/qt/test
+    QT += testlib
+    TARGET = LEOcoin-qt_test
+    DEFINES += BITCOIN_QT_TEST
 }
 
 CODECFORTR = UTF-8
@@ -388,6 +376,7 @@ isEmpty(QMAKE_LRELEASE) {
     win32:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]\\lrelease.exe
     else:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
 }
+
 isEmpty(QM_DIR):QM_DIR = $$PWD/src/qt/locale
 # automatically build translations, so they can be included in resource file
 TSQM.name = lrelease ${QMAKE_FILE_IN}
@@ -403,7 +392,7 @@ OTHER_FILES += \
 
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
-    macx:BOOST_LIB_SUFFIX = -mt
+    macx:BOOST_LIB_SUFFIX =
     windows:BOOST_LIB_SUFFIX = -mgw48-mt-s-1_55
 }
 
@@ -450,22 +439,27 @@ windows:!contains(MINGW_THREAD_BUGFIX, 0) {
     LIBS += -lrt
 }
 
-macx:HEADERS += src/qt/macdockiconhandler.h
-macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
-macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
+macx:HEADERS +=     \
+                    src/qt/macdockiconhandler.h \
+                    src/qt/macnotificationhandler.h
+macx:OBJECTIVE_SOURCES +=   \
+                            src/qt/macdockiconhandler.mm \
+                            src/qt/macnotificationhandler.mm
+macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit -framework CoreServices
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/bitcoin.icns
+macx:ICON = src/qt/res/icons/leocoin.icns
 macx:TARGET = "LEOcoin-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
+macx:QMAKE_CFLAGS += -no-integrated-as
 
 # Set libraries and includes at end, to use platform-defined defaults if not overridden
 INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$QRENCODE_INCLUDE_PATH
 LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
 LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
 # -lgdi32 has to happen after -lcrypto (see  #681)
-windows:LIBS += -lws2_32 -lshlwapi -lmswsock -lole32 -loleaut32 -luuid -lgdi32
+windows:LIBS += -lws2_32 -lshlwapi -lmswsock -lole32 -loleaut32 -luuid -lgdi32 -lpthread
 LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX
 windows:LIBS += -lboost_chrono$$BOOST_LIB_SUFFIX
 

@@ -11,6 +11,7 @@ class TransactionView;
 class OverviewPage;
 class AddressBookPage;
 class SendCoinsDialog;
+class MarketData;
 class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
@@ -60,6 +61,7 @@ private:
     QStackedWidget *centralWidget;
 
     OverviewPage *overviewPage;
+    MarketData *marketData;
     QWidget *transactionsPage;
     AddressBookPage *addressBookPage;
     AddressBookPage *receiveCoinsPage;
@@ -74,6 +76,7 @@ private:
 
     QMenuBar *appMenuBar;
     QAction *overviewAction;
+    QAction *marketDataAction;
     QAction *historyAction;
     QAction *quitAction;
     QAction *sendCoinsAction;
@@ -142,6 +145,8 @@ private slots:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage();
+    /** Switch to market data page */
+    void gotoMarketDataPage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
