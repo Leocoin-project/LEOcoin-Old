@@ -311,9 +311,9 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(addressBookAction);
 
     QIcon marketDataIcon;
-    marketDataIcon.addFile(":/icons/grey_addressbook", QSize(), QIcon::Normal, QIcon::Off);
-    marketDataIcon.addFile(":/icons/orange_addressbook", QSize(), QIcon::Active, QIcon::Off);
-    marketDataIcon.addFile(":/icons/orange_addressbook", QSize(), QIcon::Normal, QIcon::On);
+    marketDataIcon.addFile(":/icons/leoxchange", QSize(), QIcon::Normal, QIcon::Off);
+    marketDataIcon.addFile(":/icons/leoxchange", QSize(), QIcon::Active, QIcon::Off);
+    marketDataIcon.addFile(":/icons/leoxchange", QSize(), QIcon::Normal, QIcon::On);
     marketDataAction = new QAction(marketDataIcon, tr("&Market Data"), this);
     marketDataAction->setToolTip(tr("A summary of the latest LEOcoin prices."));
     marketDataAction->setCheckable(true);

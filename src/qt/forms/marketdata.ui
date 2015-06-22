@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>544</width>
-    <height>438</height>
+    <width>585</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="font">
@@ -46,7 +46,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>28</pointsize>
+           <pointsize>22</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -89,7 +89,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>18</pointsize>
+           <pointsize>14</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -126,7 +126,7 @@
         <widget class="QLabel" name="labelGBP">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -143,7 +143,7 @@
         <widget class="QLabel" name="label_2">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -152,7 +152,7 @@
           <string notr="true">color: rgb(65, 64, 65);</string>
          </property>
          <property name="text">
-          <string>GBP</string>
+          <string>£</string>
          </property>
         </widget>
        </item>
@@ -177,7 +177,7 @@
         <widget class="QLabel" name="labelEUR">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -194,7 +194,7 @@
         <widget class="QLabel" name="label_3">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -203,7 +203,7 @@
           <string notr="true">color: rgb(65, 64, 65);</string>
          </property>
          <property name="text">
-          <string>EUR</string>
+          <string>€</string>
          </property>
         </widget>
        </item>
@@ -228,7 +228,7 @@
         <widget class="QLabel" name="labelUSD">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -245,7 +245,7 @@
         <widget class="QLabel" name="label">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -254,7 +254,7 @@
           <string notr="true">color: rgb(65, 64, 65);</string>
          </property>
          <property name="text">
-          <string>USD</string>
+          <string>$</string>
          </property>
         </widget>
        </item>
@@ -279,7 +279,7 @@
         <widget class="QLabel" name="labelBTC">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -296,7 +296,7 @@
         <widget class="QLabel" name="label_4">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -305,7 +305,7 @@
           <string notr="true">color: rgb(65, 64, 65);</string>
          </property>
          <property name="text">
-          <string>BTC</string>
+          <string>฿</string>
          </property>
         </widget>
        </item>
@@ -325,10 +325,26 @@
       </layout>
      </item>
      <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
       <widget class="QLabel" name="oneWorth">
        <property name="font">
         <font>
-         <pointsize>18</pointsize>
+         <pointsize>14</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -347,7 +363,7 @@
         <widget class="QLabel" name="labelGBP1">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -364,7 +380,7 @@
         <widget class="QLabel" name="label_5">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -373,7 +389,7 @@
           <string notr="true">color: rgb(65, 64, 65);</string>
          </property>
          <property name="text">
-          <string>GBP</string>
+          <string>£</string>
          </property>
         </widget>
        </item>
@@ -398,7 +414,7 @@
         <widget class="QLabel" name="labelEUR1">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -415,7 +431,7 @@
         <widget class="QLabel" name="label_6">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -424,7 +440,7 @@
           <string notr="true">color: rgb(65, 64, 65);</string>
          </property>
          <property name="text">
-          <string>EUR</string>
+          <string>€</string>
          </property>
         </widget>
        </item>
@@ -449,7 +465,7 @@
         <widget class="QLabel" name="labelUSD1">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -466,7 +482,7 @@
         <widget class="QLabel" name="label_8">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -475,7 +491,7 @@
           <string notr="true">color: rgb(65, 64, 65);</string>
          </property>
          <property name="text">
-          <string>USD</string>
+          <string>$</string>
          </property>
         </widget>
        </item>
@@ -500,7 +516,7 @@
         <widget class="QLabel" name="labelBTC1">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -517,7 +533,7 @@
         <widget class="QLabel" name="label_7">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
+           <pointsize>10</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -526,7 +542,7 @@
           <string notr="true">color: rgb(65, 64, 65);</string>
          </property>
          <property name="text">
-          <string>BTC</string>
+          <string>฿</string>
          </property>
         </widget>
        </item>
@@ -562,6 +578,15 @@
        </item>
        <item>
         <widget class="QPushButton" name="refreshButton">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: black; background-color: #eea734; border: none; text-align: center; min-height: 24px; padding: 0 5 0 5px;</string>
+         </property>
          <property name="text">
           <string>Refresh prices</string>
          </property>
