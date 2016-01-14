@@ -689,8 +689,8 @@ public:
     {
         printf("%s", ToString().c_str());
     }
-
-
+	//IY
+    bool ReadFromDisk(CTxDB& txdb, const uint256& hash, CTxIndex& txindexRet); // ORPHAN BLOCKS ELIMINATOR
     bool ReadFromDisk(CTxDB& txdb, COutPoint prevout, CTxIndex& txindexRet);
     bool ReadFromDisk(CTxDB& txdb, COutPoint prevout);
     bool ReadFromDisk(COutPoint prevout);
