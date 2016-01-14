@@ -1022,18 +1022,15 @@ void ThreadSocketHandler2(void* parg)
             if (GetTime() - pnode->nTimeConnected > 60)
             {
                 if (pnode->nLastRecv == 0 || pnode->nLastSend == 0)
-                {
-                    printf("socket no message in first 60 seconds, %d %d\n", pnode->nLastRecv != 0, pnode->nLastSend != 0);
-                    pnode->fDisconnect = true;
+                {             
+                    pnode->fDisconnect = false;
                 }
                 else if (GetTime() - pnode->nLastSend > 90*60 && GetTime() - pnode->nLastSendEmpty > 90*60)
                 {
-                    printf("socket not sending\n");
                     pnode->fDisconnect = true;
                 }
                 else if (GetTime() - pnode->nLastRecv > 90*60)
                 {
-                    printf("socket inactivity timeout\n");
                     pnode->fDisconnect = true;
                 }
             }
@@ -1196,8 +1193,8 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    {"dnsseed.leocoin.mindfox.net", "dnsseed.leocoin.mindfox.net"},
-    {"dnsseed.leocoin.org", "dnsseed.leocoin.org"},
+	  {"dnsseed.leocoin.org", "dnsseed.leocoin.org"},
+      {"leoseed.leocoin.org", "leoseed.leocoin.org"},
     {NULL,NULL},
 };
 
