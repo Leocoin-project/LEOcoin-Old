@@ -1,6 +1,6 @@
 LEOcoin integration/staging tree
 https://www.leocoin.org   
-Copyright (c) 2009-2013 Bitcoin Developers Copyright (c) 2011-2013 Litecoin Developers Copyright (c) 2014 LEOcoin Developers
+Copyright (c) 2009-2013 Bitcoin Developers Copyright (c) 2011-2013 Litecoin Developers Copyright (c) 2015 LEOcoin Developers
 
 What is LEOcoin?
 
