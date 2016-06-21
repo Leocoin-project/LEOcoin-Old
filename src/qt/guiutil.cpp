@@ -81,7 +81,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    if(uri.scheme() != QString("leocoin"))
+    if(uri.scheme() != QString("LEOcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -131,13 +131,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert leocoin:// to leocoin:
+    // Convert LEOcoin:// to LEOcoin:
     //
-    //    Cannot handle this later, because leocoin:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because LEOcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("leocoin://"))
+    if(uri.startsWith("LEOcoin://"))
     {
-        uri.replace(0, 10, "leocoin:");
+        uri.replace(0, 10, "LEOcoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);

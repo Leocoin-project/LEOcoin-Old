@@ -1195,6 +1195,16 @@ void MapPort()
 static const char *strDNSSeed[][2] = {
 	  {"dnsseed.leocoin.org", "dnsseed.leocoin.org"},
       {"leoseed.leocoin.org", "leoseed.leocoin.org"},
+	  {"node1.leocoin.org", "node1.leocoin.org"},
+	  {"node2.leocoin.org", "node2.leocoin.org"},
+	  {"node3.leocoin.org", "node3.leocoin.org"},
+	  {"node4.leocoin.org", "node4.leocoin.org"},
+	  {"node5.leocoin.org", "node5.leocoin.org"},
+	  {"node6.leocoin.org", "node6.leocoin.org"},
+	  {"node7.leocoin.org", "node7.leocoin.org"},
+	  {"node8.leocoin.org", "node8.leocoin.org"},
+	  {"node9.leocoin.org", "node9.leocoin.org"},
+	  {"node10.leocoin.org", "node10.leocoin.org"},
     {NULL,NULL},
 };
 

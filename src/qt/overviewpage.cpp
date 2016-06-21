@@ -124,7 +124,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
     showOutOfSyncWarning(true);
 
     connect(ui->checkBox, SIGNAL(toggled(bool)), this, SLOT(checkBox_toggled(bool)));
-    ui->checkBox->hide();
+//    ui->checkBox->hide();
 
 }
 

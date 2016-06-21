@@ -498,7 +498,7 @@ QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool
         {
             if (wtx->type == TransactionRecord::StakeInterest) {
                 QString staked = BitcoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), -wtx->debit);
-                str = QString("[") + str + QString("] - ") + staked;
+                str = QString("[") + str + QString("]");
             }
             else {
                 str = QString("[") + str + QString("]");

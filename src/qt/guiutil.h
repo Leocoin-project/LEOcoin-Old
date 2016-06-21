@@ -30,7 +30,7 @@ namespace GUIUtil
     void setupAddressWidget(QLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "leocoin:" URI into recipient object, return true on successful parsing
+    // Parse "LEOcoin:" URI into recipient object, return true on successful parsing
     // See LEOcoin URI definition discussion here: https://???
     bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);

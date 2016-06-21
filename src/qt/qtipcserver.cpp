@@ -42,7 +42,7 @@ static bool ipcScanCmd(int argc, char *argv[], bool fRelay)
     bool fSent = false;
     for (int i = 1; i < argc; i++)
     {
-        if (boost::algorithm::istarts_with(argv[i], "leocoin:"))
+        if (boost::algorithm::istarts_with(argv[i], "LEOcoin:"))
         {
             const char *strURI = argv[i];
             try {
@@ -75,7 +75,7 @@ void ipcScanRelay(int argc, char *argv[])
 static void ipcThread(void* pArg)
 {
     // Make this thread recognisable as the GUI-IPC thread
-    RenameThread("leocoin-gui-ipc");
+    RenameThread("LEOcoin-gui-ipc");
 	
     try
     {
@@ -127,7 +127,7 @@ void ipcInit(int argc, char *argv[])
     try {
         mq = new message_queue(open_or_create, BITCOINURI_QUEUE_NAME, 2, MAX_URI_LENGTH);
 
-        // Make sure we don't lose any leocoin: URIs
+        // Make sure we don't lose any LEOcoin: URIs
         for (int i = 0; i < 2; i++)
         {
             ptime d = boost::posix_time::microsec_clock::universal_time() + millisec(1);

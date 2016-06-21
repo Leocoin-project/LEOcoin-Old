@@ -6,9 +6,6 @@
 
 #include "main.h"
 
-// MODIFIER_INTERVAL: time to elapse before new modifier is computed
-static const unsigned int MODIFIER_INTERVAL = 6 * 60 * 60;
-extern unsigned int nModifierInterval;
 
 // A structure to hold stuff for faster POS mining
 struct PosMiningStuff {

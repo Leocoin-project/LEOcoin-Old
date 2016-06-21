@@ -97,16 +97,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="cpuMining">
-         <property name="toolTip">
-          <string>Enable PoW (Proof-of-Work) CPU mining (generating/minting) of LEOcoins.</string>
-         </property>
-         <property name="text">
-          <string>&amp;Enable CPU mining</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <spacer name="verticalSpacer_Main">
          <property name="orientation">
           <enum>Qt::Vertical</enum>

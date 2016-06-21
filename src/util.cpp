@@ -70,7 +70,7 @@ using namespace std;
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
-bool fDebug = false;
+bool fDebug = true;
 bool fDebugNet = false;
 bool fPrintToConsole = false;
 bool fPrintToDebugger = false;
@@ -1057,7 +1057,7 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
     fprintf(stderr, "\n\n************************\n%s\n", message.c_str());
     strMiscWarning = message;
 }
-
+// Roaming folder.
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;

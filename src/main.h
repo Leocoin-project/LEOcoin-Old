@@ -35,6 +35,7 @@ class CNode;
 // block height where "no consecutive PoS blocks" rule activates
 static const int nConsecutiveStakeSwitchHeight = 420000;
 
+
 static const unsigned int MAX_BLOCK_SIZE = 1000000;
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
 static const unsigned int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE/50;
@@ -73,8 +74,7 @@ extern std::map<uint256, CBlockIndex*> mapBlockIndex;
 extern std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
 extern uint256 hashGenesisBlock;
 extern CBlockIndex* pindexGenesisBlock;
-extern unsigned int nStakeMinAge;
-extern int nCoinbaseMaturity;
+extern int64 LAST_POW_BLOCK;
 extern int nBestHeight;
 extern int nScanned;
 extern int64 nBestHeightTime;
@@ -95,6 +95,7 @@ extern std::set<CWallet*> setpwalletRegistered;
 extern unsigned char pchMessageStart[4];
 extern std::map<uint256, CBlock*> mapOrphanBlocks;
 
+
 // Settings
 extern int64 nTransactionFee;
 
@@ -113,6 +114,10 @@ class CReserveKey;
 class CTxDB;
 class CTxIndex;
 
+unsigned int nStakeMinAge();
+unsigned int nStakeMaxAge();
+unsigned int nModifierInterval();
+int nCoinbaseMaturity();
 void RegisterWallet(CWallet* pwalletIn);
 void UnregisterWallet(CWallet* pwalletIn);
 void SyncWithWallets(const CTransaction& tx, const CBlock* pblock = NULL, bool fUpdate = false, bool fConnect = true);
@@ -135,6 +140,7 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits);
 int64 GetProofOfWorkReward(int nHeight, uint256 prevHash);
 int64 GetProofOfStakeReward(int64 nCoinAge);
 unsigned int ComputeMinWork(unsigned int nBase, int64 nTime);
+unsigned int ComputeMinStake(unsigned int nBase, int64 nTime, unsigned int nBlockTime);
 int GetNumBlocksOfPeers();
 bool IsInitialBlockDownload();
 std::string GetWarnings(std::string strFor);
@@ -150,7 +156,6 @@ void ThreadTxnScanner(void* parg);
 unsigned char GetNfactor(int64 nTimestamp);
 
 #ifdef _MSC_VER
-extern unsigned int nStakeMaxAge;
 extern unsigned int nStakeTargetSpacing;
 #endif
 
@@ -847,7 +852,7 @@ public:
 class CBlockHeader
 {
 public:
-    static const int CURRENT_VERSION=3;
+    static const int CURRENT_VERSION=4;
     int nVersion;
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;

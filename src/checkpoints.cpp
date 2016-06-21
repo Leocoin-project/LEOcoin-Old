@@ -158,6 +158,19 @@ namespace Checkpoints
         ( 211737, uint256("000000005c28e3a4d055bd8c4133b84c32bb769600aafeb35d33b3ca75684055") )
         ( 232000, uint256("00000002562b49a7400fd8df3503bc776228578135f81c4b1137b10356a76ad9") )
         ( 254047, uint256("0000000061de5957a476ae35b1c97bff22041c9e5b674ac1859b47b3a2ee7617") )
+		( 300000, uint256("00000000100ca3165922d5df0b2d371b88e421ab0eed4e6526e8fe5abd29bc78") )
+		( 350000, uint256("daf0fbeb7442b59f38e4a777c63b29fffe5b8403b0f4756444ae1150ddaef61f") )
+		( 400000, uint256("00000002047cc4e9f0dfc63b500561616b1ba9586b9e7178e53cf88b2f94221e") )
+		( 450000, uint256("0000000054eed9907f8180fcfbd525a007685ea4973cca83a1fe5fde30e62cd5") )
+		( 500000, uint256("000000014fba0c9fa28608f6456c1e291388096b77468e02c739533f94890493") )
+		( 550000, uint256("000000010abea9ab10cbd02af7ce39f24ca89411e3e6fa793f6988aea8347e88") )
+		( 600000, uint256("0000000455bd35faac6f2f5d12ae7c0bbdc5a2210ed841fd8c7616e200c6e22e") )
+		( 700000, uint256("000000037a61e8172e37b43648cede86f7d4b5d133099a0f31cb09e3cdc0ccdd") )
+		( 800000, uint256("000000070c5e67fce7a39e55147a2829cf06ac2217c8b2dac713ba511ca14fd4") )
+		( 900000, uint256("000000023d5fbf0579cddcbce2149cbb2321c5d999ba80d6e79a0d632995fc0b") )
+		( 1000000, uint256("000000013fa1b5cf20d499b3f6eb8a841a51ff5b98668632e03ce0cd1632b436") )
+		( 1050000, uint256("00000001f477758ba8680566a6c9c9f1ee6fd32231a936316cbf0c6bc56303e5") )
+			
 
         ;
 
@@ -328,7 +341,7 @@ namespace Checkpoints
         // Select the last proof-of-work block
         const CBlockIndex *pindex = GetLastBlockIndex(pindexBest, false);
         // Search forward for a block within max span and maturity window
-        while (pindex->pnext && (pindex->GetBlockTime() + CHECKPOINT_MAX_SPAN <= pindexBest->GetBlockTime() || pindex->nHeight + std::min(6, nCoinbaseMaturity - 20) <= pindexBest->nHeight))
+        while (pindex->pnext && (pindex->GetBlockTime() + CHECKPOINT_MAX_SPAN <= pindexBest->GetBlockTime() || pindex->nHeight + std::min(6, nCoinbaseMaturity() - 20) <= pindexBest->nHeight))
             pindex = pindex->pnext;
         return pindex->GetBlockHash();
     }
@@ -503,8 +516,8 @@ namespace Checkpoints
         assert(mapBlockIndex.count(hashSyncCheckpoint));
 #endif
         const CBlockIndex* pindexSync = mapBlockIndex[hashSyncCheckpoint];
-        return (nBestHeight >= pindexSync->nHeight + nCoinbaseMaturity ||
-                pindexSync->GetBlockTime() + nStakeMinAge < GetAdjustedTime());
+        return (nBestHeight >= pindexSync->nHeight + nCoinbaseMaturity() ||
+                pindexSync->GetBlockTime() + nStakeMinAge() < GetAdjustedTime());
     }
 
     // Is the sync-checkpoint too old?
