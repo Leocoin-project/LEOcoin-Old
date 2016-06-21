@@ -1,6 +1,6 @@
 LEOcoin integration/staging tree
 https://www.leocoin.org   
-Copyright (c) 2009-2013 Bitcoin Developers Copyright (c) 2011-2013 Litecoin Developers Copyright (c) 2015 LEOcoin Developers
+Copyright(c) 2009-2013 Bitcoin Developers Copyright (c) 2011-2013 Litecoin Developers Copyright (c) 2015 LEOcoin Developers
 
 What is LEOcoin?
 
@@ -35,7 +35,6 @@ qmake BITCOIN_QT_TEST=1 -o Makefile.test bitcoin-qt.pro
 make -f Makefile.test
 ./LEOcoin-qt_test
 
-
 qmake BITCOIN_QT_TEST=1 -o Makefile.test bitcoin-qt.pro
 make -f Makefile.test
 ./LEOcoin-qt_test
@@ -46,4 +45,3 @@ sudo apt-get install git build-essential libboost-all-dev libdb++-dev libminiupn
 git clone https://github.com/Leocoin-project/LEOcoin 
 cd LEOcoin/src
 make -f makefile.unix 
-
