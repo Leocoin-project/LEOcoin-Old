@@ -286,6 +286,7 @@ std::string HelpMessage()
         "  -pid=<file>            " + _("Specify pid file (default: LEOcoind.pid)") + "\n" +
         "  -gen                   " + _("Generate coins") + "\n" +
         "  -gen=0                 " + _("Don't generate coins") + "\n" +
+		"  -staking=0             " + _("Don't Stake") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
 #ifdef WIN32
         "  -walletpath=<file>     " + _( "Specify the wallet patname or filename (default: wallet.dat)" ) + "\n" +
