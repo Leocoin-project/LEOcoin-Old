@@ -1081,7 +1081,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge)
         } else if (Balance <= (5000 * COIN)) {
             nRewardCoinYear = 10 * CENT;
         } else if (Balance <= (50000 * COIN)) {
-            nRewardCoinYear = 15 * COIN;
+            nRewardCoinYear = 15 * CENT;
         } else {
             nRewardCoinYear = 20 * CENT;
         }
@@ -3151,21 +3151,14 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         CAddress addrFrom;
         uint64 nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
-		if (pfrom->nVersion < 70000){
+		if (pfrom->nVersion < MIN_PROTO_VERSION){
 			// Since February 20, 2012, the protocol is initiated at version 209,
 			// and earlier versions are no longer supported
+			// LEOcoin PoS fork, earlier versions are not supported after LAST_POW_BLOCK
 			printf("partner %s using obsolete version %i; disconnecting\n", pfrom->addr.ToString().c_str(), pfrom->nVersion);
 			pfrom->fDisconnect = true;
 			return false;
 		}
-		if (pindexBest->nHeight >= LAST_POW_BLOCK) {
-			if (pfrom->nVersion < MIN_PROTO_VERSION){
-				// LEOcoin PoS fork, earlier versions are not supported after LAST_POW_BLOCK
-				printf("partner %s using obsolete version %i; disconnecting\n", pfrom->addr.ToString().c_str(), pfrom->nVersion);
-				pfrom->fDisconnect = true;
-				return false;
-			}
-        }
         if (pfrom->nVersion == 10300)
             pfrom->nVersion = 300;
         if (!vRecv.empty())

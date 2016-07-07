@@ -21,44 +21,17 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
-BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
-BOOST_INCLUDE_PATH=C:/deps/boost_1_57_0
-BOOST_LIB_PATH=C:/deps/boost_1_57_0/stage/lib
-BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1j/include
-OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1j
-MINIUPNPC_INCLUDE_PATH=C:/deps/
-MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
-QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
-
-#macx: {
-#BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
-#BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-#BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
-#BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
-#BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-#MINIUPNPC_INCLUDE_PATH=C:/deps/
-#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-#QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.3
-#QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
-#}
-#!windows:!macx: {
-#BOOST_LIB_SUFFIX=-gcc46-mt-s-1_55
-#BOOST_INCLUDE_PATH=/home/$$USER/deps/boost_1_55_0
-#BOOST_LIB_PATH=/home/$$USER/deps/boost_1_55_0/stage/lib
-#BDB_INCLUDE_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
-#BDB_LIB_PATH=/home/$$USER/deps/db-4.8.30.NC/build_unix
-#OPENSSL_INCLUDE_PATH=/home/$$USER/deps/openssl-1.0.1h/include
-#OPENSSL_LIB_PATH=/home/$$USER/deps/openssl-1.0.1h
-#MINIUPNPC_INCLUDE_PATH=/home/$$USER/deps/
-#MINIUPNPC_LIB_PATH=/home/$$USER/deps/miniupnpc
-#QRENCODE_INCLUDE_PATH=/home/$$USER/deps/qrencode-3.4.3
-#QRENCODE_LIB_PATH=/home/$$USER/deps/qrencode-3.4.3/.libs
-#}
+win32:BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
+win32:BOOST_INCLUDE_PATH=C:/deps/boost_1_57_0
+win32:BOOST_LIB_PATH=C:/deps/boost_1_57_0/stage/lib
+win32:BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+win32:BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+win32:OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1j/include
+win32:OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1j
+win32:MINIUPNPC_INCLUDE_PATH=C:/deps/
+win32:MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+win32:QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
+win32:QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
 
 win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 greaterThan(QT_MAJOR_VERSION, 4) {
@@ -452,7 +425,7 @@ macx:HEADERS += src/qt/macdockiconhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/bitcoin.icns
+macx:ICON = src/qt/res/icons/LEOcoin.icns
 macx:TARGET = "LEOcoin-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
