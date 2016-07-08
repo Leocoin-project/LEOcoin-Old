@@ -2366,7 +2366,7 @@ CBigNum CBlockIndex::GetBlockTrust() const
         //blocks now as they won't get any trust anyway)
 		if (IsProofOfStake() && pprev->IsProofOfStake())
 			if (nHeight > LAST_POW_BLOCK)
-				return pprev->GetBlockTrust() + 1;
+				return (CBigNum(1)<<256) / (bnTarget+1);
 			return 0;
         // PoS after PoW? trust = prev_trust + 1!
         if (IsProofOfStake() && pprev->IsProofOfWork())
@@ -2386,7 +2386,6 @@ CBigNum CBlockIndex::GetBlockTrust() const
         }
 		
 		return 0;
-		
 	}
    	// old rules
 	return (IsProofOfStake()? (CBigNum(1)<<256) / (bnTarget+1) : 1);
