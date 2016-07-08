@@ -2356,16 +2356,18 @@ CBigNum CBlockIndex::GetBlockTrust() const
         return 0;
 	
     // new trust rules (since specific block on mainnet and always on testnet)
-    if (nHeight >= nConsecutiveStakeSwitchHeight && nHeight <= LAST_POW_BLOCK ) {
+    if (nHeight >= nConsecutiveStakeSwitchHeight) {
 		//printf("Going through the old trust rules @block height=%"PRI64d"\n", nHeight);
         // first block trust - for future compatibility (i.e., forks)
         if (pprev == NULL)
             return 1;
-        // PoS after PoS? no trust for ya!
-        // (no need to explicitly disallow consecutive PoS
-        // blocks now as they won't get any trust anyway)
+		//Alow PoS after PoS block, LEOcoin PoS Fork
+        //no need to explicitly disallow consecutive PoS
+        //blocks now as they won't get any trust anyway)
 		if (IsProofOfStake() && pprev->IsProofOfStake())
-			return 0;	
+			if (nHeight > LAST_POW_BLOCK)
+				return pprev->GetBlockTrust() + 1;
+			return 0;
         // PoS after PoW? trust = prev_trust + 1!
         if (IsProofOfStake() && pprev->IsProofOfWork())
             return pprev->GetBlockTrust() + 1;
@@ -2385,11 +2387,6 @@ CBigNum CBlockIndex::GetBlockTrust() const
 		
 		return 0;
 		
-	}
-	if (nHeight > LAST_POW_BLOCK) {
-		if (IsProofOfStake())
-			return pprev->GetBlockTrust() + 1;
-		return 0;		
 	}
    	// old rules
 	return (IsProofOfStake()? (CBigNum(1)<<256) / (bnTarget+1) : 1);
