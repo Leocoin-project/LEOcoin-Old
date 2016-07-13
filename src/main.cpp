@@ -2364,10 +2364,13 @@ CBigNum CBlockIndex::GetBlockTrust() const
 		//Alow PoS after PoS block, LEOcoin PoS Fork
         //no need to explicitly disallow consecutive PoS
         //blocks now as they won't get any trust anyway)
-		if (IsProofOfStake() && pprev->IsProofOfStake())
-			if (nHeight > LAST_POW_BLOCK)
+		if (IsProofOfStake() && pprev->IsProofOfStake()) {
+			if (nHeight > LAST_POW_BLOCK) {
 				return (CBigNum(1)<<256) / (bnTarget+1);
-			return 0;
+			} else {
+				return 0;
+			}
+		}
         // PoS after PoW? trust = prev_trust + 1!
         if (IsProofOfStake() && pprev->IsProofOfWork())
             return pprev->GetBlockTrust() + 1;
