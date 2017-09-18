@@ -43,7 +43,7 @@ make -f Makefile.test
 To compile on ubuntu:
 sudo apt-get update
 sudo apt-get install git build-essential libboost-all-dev libdb++-dev libminiupnpc-dev libcurl4-openssl-dev
-git clone https://github.com/Leocoin-project/LEOcoin 
+git clone https://github.com/Leocoin-project/LEOcoin-Old
 cd LEOcoin/src
 make -f makefile.unix 
 
